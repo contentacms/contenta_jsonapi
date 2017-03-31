@@ -1,12 +1,14 @@
+uuid: 1bd3a18f-864d-44cd-851b-d5246cf0e748
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: cCiWdBHgLwj5omG35lsKc4LkW4MBdmcctkVop4ol5x0
+  default_config_hash: yJkHpxNibTRmonUJoZ9DCp24MZveigUdd13C6_mL7BA
 name: thumbnail
 label: 'Thumbnail (100×100)'
 effects:
   1cfec298-8620-4749-b100-ccb6c4500779:
+    uuid: ''
     id: image_scale
     weight: 0
     data:

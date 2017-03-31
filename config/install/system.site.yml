@@ -1,5 +1,5 @@
-name: 'API FIRSTG'
-mail: test@example.com
+name: Site-Install
+mail: admin@example.com
 slogan: ''
 page:
   403: ''
@@ -10,4 +10,5 @@ weight_select_max: 100
 langcode: en
 default_langcode: en
 _core:
-  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
+  default_config_hash: p0xNT8wyV811lwYvW2buI5gsqd72SO7VnWSBAUtWyAM
+uuid: dbd0b3f8-6596-4a51-a9fa-e258d671cf85

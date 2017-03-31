@@ -1,8 +1,11 @@
+uuid: a7d2bb11-748c-4ef3-b6a2-fe6d12549905
 langcode: en
 status: true
 dependencies:
   theme:
     - seven
+_core:
+  default_config_hash: '-8tZFbIU6K_dBviWg3ua8p5gW_fs-BrvECqo_SERVDE'
 id: tabs
 theme: seven
 region: header

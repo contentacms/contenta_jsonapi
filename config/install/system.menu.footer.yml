@@ -1,8 +1,9 @@
+uuid: 13d74911-269f-4164-afc4-3154a68a2d40
 langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: 7yrlW5z9zdg2eBucB2GPqXKSMQfH9lSRSO4DbWF7AFc
+  default_config_hash: kL1TlJHX30-Xshk1LuIXLlvXdTHkUlpyaiZuU9tphcc
 id: footer
 label: Footer
 description: 'Site information links'
