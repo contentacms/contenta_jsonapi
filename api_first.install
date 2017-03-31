@@ -1,0 +1,7 @@
+<?php
+
+/**
+ */
+function api_first_install() {
+}
+

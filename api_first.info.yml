@@ -1,0 +1,43 @@
+name: Api first
+type: profile
+description: ''
+core: 8.x
+distribution:
+  name: API First
+  install:
+    theme: seven
+
+# Required modules
+dependencies:
+  # core
+  - block
+  - breakpoint
+  - datetime
+  - dblog
+  - editor
+  - entity_reference
+  - field
+  - field_ui
+  - file
+  - filter
+  - image
+  - language
+  - link
+  - menu_ui
+  - node
+  - options
+  - path
+  - syslog
+  - system
+  - taxonomy
+  - telephone
+  - text
+  - toolbar
+  - user
+  - menu_link_content
+  - views
+  - views_ui
+# contrib
+themes:
+  - stable
+  - seven

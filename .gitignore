@@ -1,0 +1,8 @@
+/.idea
+/vendor
+/node_modules
+/docroot
+/libraries
+/themes/infinite/
+.DS_Store
+composer.lock

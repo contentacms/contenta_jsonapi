@@ -1,0 +1,5 @@
+identity: drupal
+facility: '128'
+format: '!base_url|!timestamp|!type|!ip|!request_uri|!referer|!uid|!link|!message'
+_core:
+  default_config_hash: WTmxqj231v_x1-nwNRyjyI-HzCW8ZAXSadw4W1HtKi4
