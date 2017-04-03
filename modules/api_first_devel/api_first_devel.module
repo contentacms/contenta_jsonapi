@@ -1,0 +1,8 @@
+<?php
+
+function api_first_devel_entity_type_build(array &$entity_types) {
+  /** @var $entity_types \Drupal\Core\Entity\EntityTypeInterface[] */
+  
+  $entity_types['entity_view_display']->set('admin_permission', 'administer display modes');
+  $entity_types['entity_form_display']->set('admin_permission', 'administer display modes');
+}

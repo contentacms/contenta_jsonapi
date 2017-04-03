@@ -37,6 +37,11 @@ dependencies:
   - menu_link_content
   - views
   - views_ui
+  # contrib
+  - jsonapi
+  - simple_oauth
+  # custom
+  - api_first_devel
 # contrib
 themes:
   - stable
