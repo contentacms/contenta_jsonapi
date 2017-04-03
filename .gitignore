@@ -1,3 +1,5 @@
+config/install/core.extension.yml
+
 /.idea
 /vendor
 /node_modules

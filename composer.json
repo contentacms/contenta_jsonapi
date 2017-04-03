@@ -41,7 +41,8 @@
         "composer/installers": "^1.0",
         "cweagans/composer-patches": "~1.0",
         "drupal/core": "^8.3.0",
-        "drupal/jsonapi": "1.0-beta1"
+        "drupal/jsonapi": "1.0-beta1",
+        "drupal/simple_oauth": "2.0-alpha4"
     },
     "provide": {
     },
