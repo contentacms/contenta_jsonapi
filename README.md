@@ -1,5 +1,13 @@
 # TODO
 
+## Usage
+
+```@TODO```
+
+```
+composer create-project dawehner/api_first_project MYPROJECT --stability dev --no-interaction
+```
+
 ## Development
 
 @see docs/development
