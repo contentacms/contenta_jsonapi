@@ -21,6 +21,8 @@ cd docroot
 rm profiles/contrib/api-first/config/install/core.extension.yml
 drush si api_first --db-url=mysql://root@localhost/loc_apifirst --account-pass=test -y
 
+../bin/drush rs & 
+../bin/drush uli
 
 # ??
 # echo "<?php use Drupal\Robo\RoboFileBase; class RoboFile extends RoboFileBase {}" > RoboFile.php
