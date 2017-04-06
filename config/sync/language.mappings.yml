@@ -1,0 +1,13 @@
+map:
+  'no': nb
+  pt: pt-pt
+  zh: zh-hans
+  zh-tw: zh-hant
+  zh-hk: zh-hant
+  zh-mo: zh-hant
+  zh-cht: zh-hant
+  zh-cn: zh-hans
+  zh-sg: zh-hans
+  zh-chs: zh-hans
+_core:
+  default_config_hash: 2Gdi8N2u0DSodFgt7D6z_qTj3Wb7DcQ-cyEHuZHsHMo
