@@ -18,7 +18,7 @@ cd ${DEST_DIR}
 # ??
 # composer require "drupal/api-first:*" "phpunit/phpunit:~4.8" --no-progress
 cd docroot
-drush si api_first --db-url=mysql://root@localhost/loc_apifirst --account-pass=test -y
+drush si api_first --db-url=sqlite://sites/default/files/.ht.sqlite --account-pass=test -y
 
 ../bin/drush rs & 
 ../bin/drush uli
