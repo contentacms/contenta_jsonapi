@@ -18,7 +18,6 @@ cd ${DEST_DIR}
 # ??
 # composer require "drupal/api-first:*" "phpunit/phpunit:~4.8" --no-progress
 cd docroot
-rm profiles/contrib/api-first/config/install/core.extension.yml
 drush si api_first --db-url=mysql://root@localhost/loc_apifirst --account-pass=test -y
 
 ../bin/drush rs & 
