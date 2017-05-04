@@ -2,21 +2,21 @@
 
 BASE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/../.."
 
-DEST_DIR="$BASE_DIR/../test_api_first"
+DEST_DIR="$BASE_DIR/../test_contenta_jsonapi"
 
 if [ $1 ] ; then
   DEST_DIR="$1"
 fi
 
 sudo rm -Rf $DEST_DIR
-composer create-project drupal-http-apis/api_first_project ${DEST_DIR} --stability dev --no-interaction
+composer create-project drupal-http-apis/contenta-jsonapi ${DEST_DIR} --stability dev --no-interaction
 
 cd ${DEST_DIR}
 # ??
 # composer config repositories.api_first path ${BASE_DIR}
 
 # ??
-# composer require "drupal-http-apis/api-first:*" "phpunit/phpunit:~4.8" --no-progress
+# composer require "drupal-http-apis/contenta-jsonapi:*" "phpunit/phpunit:~4.8" --no-progress
 cd docroot
 drush si api_first --db-url=sqlite://sites/default/files/.ht.sqlite --account-pass=test -y
 

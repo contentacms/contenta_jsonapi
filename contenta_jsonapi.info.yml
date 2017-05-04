@@ -1,9 +1,9 @@
-name: Api first
+name: contenta_jsonapi first
 type: profile
 description: ''
 core: 8.x
 distribution:
-  name: API First
+  name: contenta_jsonapi
   install:
     theme: seven
 config_install: true
