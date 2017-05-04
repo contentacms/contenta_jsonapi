@@ -44,6 +44,9 @@
         "drupal/jsonapi": "1.0-beta1",
         "drupal/simple_oauth": "2.0-alpha4"
     },
+    "scripts": {
+        "dev": "scripts/development/build-contenta-jsonapi.sh"
+    },
     "provide": {
     },
     "require-dev": {

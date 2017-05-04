@@ -9,11 +9,11 @@ if [ $1 ] ; then
 fi
 
 sudo rm -Rf $DEST_DIR
-composer create-project drupal-http-apis/contenta-jsonapi ${DEST_DIR} --stability dev --no-interaction
+composer create-project drupal-http-apis/contenta-jsonapi-project ${DEST_DIR} --stability dev --no-interaction
 
 cd ${DEST_DIR}
 # ??
-# composer config repositories.api_first path ${BASE_DIR}
+composer config repositories.contenta_jsonapi path ${BASE_DIR}
 
 # ??
 # composer require "drupal-http-apis/contenta-jsonapi:*" "phpunit/phpunit:~4.8" --no-progress
