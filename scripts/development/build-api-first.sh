@@ -9,14 +9,14 @@ if [ $1 ] ; then
 fi
 
 sudo rm -Rf $DEST_DIR
-composer create-project drupal/api_first_project ${DEST_DIR} --stability dev --no-interaction
+composer create-project drupal-http-apis/api_first_project ${DEST_DIR} --stability dev --no-interaction
 
 cd ${DEST_DIR}
 # ??
 # composer config repositories.api_first path ${BASE_DIR}
 
 # ??
-# composer require "drupal/api-first:*" "phpunit/phpunit:~4.8" --no-progress
+# composer require "drupal-http-apis/api-first:*" "phpunit/phpunit:~4.8" --no-progress
 cd docroot
 drush si api_first --db-url=sqlite://sites/default/files/.ht.sqlite --account-pass=test -y
 
