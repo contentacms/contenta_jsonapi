@@ -18,7 +18,7 @@ cd ${DEST_DIR}
 # ??
 # composer require "drupal-http-apis/contenta-jsonapi:*" "phpunit/phpunit:~4.8" --no-progress
 cd docroot
-drush si api_first --db-url=sqlite://sites/default/files/.ht.sqlite --account-pass=test -y
+drush si contenta_jsonapi --db-url=sqlite://sites/default/files/.ht.sqlite --account-pass=test -y
 
 ../bin/drush rs & 
 ../bin/drush uli
