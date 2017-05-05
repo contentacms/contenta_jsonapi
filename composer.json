@@ -11,11 +11,6 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/drupal-http-apis/recipes_magazin",
-            "no-api" : true
         }
     ],
     "extra": {
@@ -48,7 +43,7 @@
         "drupal/core": "^8.3.0",
         "drupal/jsonapi": "1.0-beta1",
         "drupal/simple_oauth": "2.0-alpha4",
-        "drupal-http-apis/recipes_magazin": "dev-master"
+        "drupal/recipes_magazin": "1.x-dev"
     },
     "scripts": {
         "dev": "scripts/development/build-contenta-jsonapi.sh"
