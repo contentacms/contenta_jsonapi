@@ -1,9 +1,14 @@
-name: contenta_jsonapi first
+name: Contenta JSON API
 type: profile
-description: ''
+description: 'Contenta distribution for API-First Drupal using JSON API.'
 core: 8.x
+
+# Optional: Declare your installation profile as a distribution
+# This will make the installer auto-select this installation profile.
+# The distribution_name property is used in the installer and other places as
+# a label for the software being installed.
 distribution:
-  name: contenta_jsonapi
+  name: Contenta JSON API
   install:
     theme: seven
 config_install: true
