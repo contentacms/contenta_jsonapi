@@ -12,6 +12,12 @@ composer create-project dawehner/api_first_project MYPROJECT --stability dev --n
 
 @see docs/development
 
+To ease things run:
+
+```
+composer run-script dev
+```
+
 ## Credits
 
 This work is based upon a couple of contrib modules.
