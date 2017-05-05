@@ -14,6 +14,5 @@ use Drupal\Core\Form\FormStateInterface;
  */
 function contenta_jsonapi_form_install_configure_form_alter(&$form, FormStateInterface $form_state) {
   // Add a value as example that one can choose an arbitrary site name.
-  $form['site_information']['site_name']['#placeholder'] = t('contenta_jsonapi');
+  $form['site_information']['site_name']['#placeholder'] = t('Contenta JSON API');
 }
-
