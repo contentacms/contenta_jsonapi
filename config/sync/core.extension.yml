@@ -8,6 +8,7 @@ module:
   datetime_range: 0
   dblog: 0
   docson: 0
+  dynamic_page_cache: 0
   editor: 0
   entity_reference: 0
   field: 0
@@ -24,6 +25,7 @@ module:
   menu_ui: 0
   node: 0
   options: 0
+  page_cache: 0
   path: 0
   rest: 0
   restui: 0
