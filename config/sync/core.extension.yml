@@ -2,24 +2,38 @@ module:
   api_first_devel: 0
   block: 0
   breakpoint: 0
+  ckeditor: 0
+  config: 0
+  config_inspector: 0
   datetime: 0
+  datetime_range: 0
   dblog: 0
+  docson: 0
   editor: 0
   entity_reference: 0
   field: 0
   field_ui: 0
+  fieldable_path: 0
   file: 0
   filter: 0
+  hal: 0
   image: 0
   jsonapi: 0
+  jsonapi_extras: 0
   language: 0
   link: 0
   menu_ui: 0
   node: 0
   options: 0
   path: 0
+  rest: 0
+  restui: 0
+  schemata: 0
+  schemata_json_schema: 0
   serialization: 0
   simple_oauth: 0
+  simple_oauth_extras: 0
+  subrequests: 0
   syslog: 0
   system: 0
   taxonomy: 0
@@ -28,14 +42,15 @@ module:
   toolbar: 0
   update: 0
   user: 0
+  views: 0
   views_ui: 0
   menu_link_content: 1
-  views: 0
   contenta_jsonapi: 1000
 theme:
   stable: 0
   classy: 0
   seven: 0
+  adminimal_theme: 0
 profile: contenta_jsonapi
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
