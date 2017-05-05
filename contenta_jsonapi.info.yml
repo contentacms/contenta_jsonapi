@@ -10,7 +10,7 @@ core: 8.x
 distribution:
   name: Contenta JSON API
   install:
-    theme: seven
+    theme: adminimal_theme
 
 config_install: true
 
@@ -39,4 +39,9 @@ dependencies:
   - subrequests
   - simple_oauth
   - docson
+  - fieldable_path
+  - schemata
+  - adminimal_theme
+  - rest
+  - restui
   - recipes_magazin
