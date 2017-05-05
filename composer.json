@@ -14,7 +14,7 @@
         },
         {
             "type": "vcs",
-            "url": "https://github.com/drupal-http-apis/recipes_magazin.git",
+            "url": "https://github.com/drupal-http-apis/recipes_magazin",
             "no-api" : true
         }
     ],
