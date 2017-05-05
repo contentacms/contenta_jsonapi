@@ -41,7 +41,6 @@ dependencies:
   - docson
   - fieldable_path
   - schemata
-  - adminimal_theme
   - rest
   - restui
   - recipes_magazin

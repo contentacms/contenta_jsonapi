@@ -1,7 +1,0 @@
-description:
-  type: textfield
-  length: 128
-icon:
-  directory: core/modules/file/icons
-_core:
-  default_config_hash: hMj-L2jk5lyHdI3qbOvJYPthcymaTob0eZgRI4WZyQg
