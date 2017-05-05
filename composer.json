@@ -41,9 +41,13 @@
         "composer/installers": "^1.0",
         "cweagans/composer-patches": "~1.0",
         "drupal/core": "^8.3.0",
-        "drupal/jsonapi": "1.0-beta1",
-        "drupal/simple_oauth": "2.0-alpha4",
-        "drupal/recipes_magazin": "1.x-dev"
+        "drupal/jsonapi": "^1.0",
+        "drupal/simple_oauth": "^2.0",
+        "drupal/recipes_magazin": "^1.0",
+        "drupal/jsonapi_extras": "^1.0",
+        "drupal/docson": "^1.0",
+        "drupal/subrequests": "^1.0",
+        "drupal/fieldable_path": "^1.0"
     },
     "scripts": {
         "dev": "scripts/development/build-contenta-jsonapi.sh"

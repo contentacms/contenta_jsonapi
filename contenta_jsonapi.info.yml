@@ -11,4 +11,32 @@ distribution:
   name: Contenta JSON API
   install:
     theme: seven
+
 config_install: true
+
+# Required modules
+dependencies:
+  - node
+  - history
+  - block
+  - block_content
+  - config
+  - comment
+  - contact
+  - help
+  - image
+  - options
+  - path
+  - taxonomy
+  - dblog
+  - toolbar
+  - field_ui
+  - file
+  - editor
+  - ckeditor
+  - jsonapi
+  - jsonapi_extras
+  - subrequests
+  - simple_oauth
+  - docson
+  - recipes_magazin
