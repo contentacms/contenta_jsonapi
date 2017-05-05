@@ -48,7 +48,7 @@
         "drupal/core": "^8.3.0",
         "drupal/jsonapi": "1.0-beta1",
         "drupal/simple_oauth": "2.0-alpha4",
-        "drupal/recipes_magazin": "dev-8.x-1.x"
+        "drupal-http-apis/recipes_magazin": "dev-8.x-1.x"
     },
     "scripts": {
         "dev": "scripts/development/build-contenta-jsonapi.sh"
