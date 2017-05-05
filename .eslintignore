@@ -6,5 +6,5 @@ libraries/**/*
 sites/**/libraries/**/*
 profiles/**/libraries/**/*
 **/js_test_files/**/*
-docroot/**/*
+web/**/*
 tests/modules/thunder_test/js/jquery.simulate.js

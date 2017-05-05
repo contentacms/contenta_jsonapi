@@ -6,8 +6,8 @@ drush_download_thunder() {
 
     mkdir -p $DOWNLOAD_PATH
     cd $DOWNLOAD_PATH
-    drush dl thunder --drupal-project-rename="docroot" -y
-    composer install --working-dir=${DOWNLOAD_PATH}/docroot
+    drush dl thunder --drupal-project-rename="web" -y
+    composer install --working-dir=${DOWNLOAD_PATH}/web
 }
 
 # update composer

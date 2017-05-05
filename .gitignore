@@ -1,7 +1,7 @@
 /.idea
 /vendor
 /node_modules
-/docroot
+/web
 /libraries
 /themes/infinite/
 .DS_Store
