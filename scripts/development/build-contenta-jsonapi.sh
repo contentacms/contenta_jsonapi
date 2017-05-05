@@ -17,10 +17,10 @@ composer config repositories.contenta_jsonapi path ${BASE_DIR}
 
 # ??
 # composer require "drupal-http-apis/contenta-jsonapi:*" "phpunit/phpunit:~4.8" --no-progress
-cd docroot
+cd web
 drush si contenta_jsonapi --db-url=sqlite://sites/default/files/.ht.sqlite --account-pass=test -y
 
-../bin/drush rs & 
+../bin/drush rs &
 ../bin/drush uli
 
 # ??

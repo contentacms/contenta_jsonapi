@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 # Rebuild caches and start servers
-cd ${TEST_DIR}/docroot
+cd ${TEST_DIR}/web
 
 # require Selenium2 Driver
 if [[ ${INSTALL_METHOD} == "drush_make" ]]; then
-    composer require "behat/mink-selenium2-driver" "behat/mink-goutte-driver" --no-progress --working-dir ${TEST_DIR}/docroot
+    composer require "behat/mink-selenium2-driver" "behat/mink-goutte-driver" --no-progress --working-dir ${TEST_DIR}/web
 elif [[ ${INSTALL_METHOD} == "composer" ]]; then
     composer require "behat/mink-selenium2-driver" "behat/mink-goutte-driver" --no-progress --working-dir ${TEST_DIR}
 fi

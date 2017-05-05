@@ -13,10 +13,10 @@ install_thunder() {
 # Update thunder to current test version
 update_thunder() {
     # Link sites folder from initial installation
-    mv ${TEST_DIR}/docroot/sites ${TEST_DIR}/docroot/_sites
-    ln -s ${UPDATE_BASE_PATH}/docroot/sites ${TEST_DIR}/docroot/sites
+    mv ${TEST_DIR}/web/sites ${TEST_DIR}/web/_sites
+    ln -s ${UPDATE_BASE_PATH}/web/sites ${TEST_DIR}/web/sites
 
-    cd ${TEST_DIR}/docroot
+    cd ${TEST_DIR}/web
 
     # Execute all required updates
     drush updatedb -y
@@ -26,13 +26,13 @@ drush_make_thunder() {
     cd ${THUNDER_DIST_DIR}
 
     # Build drupal + thunder from makefile
-    drush make --concurrency=5 drupal-org-core.make ${TEST_DIR}/docroot -y
-    mkdir ${TEST_DIR}/docroot/profiles/thunder
+    drush make --concurrency=5 drupal-org-core.make ${TEST_DIR}/web -y
+    mkdir ${TEST_DIR}/web/profiles/thunder
     shopt -s extglob
-    rsync -a . ${TEST_DIR}/docroot/profiles/thunder --exclude docroot
+    rsync -a . ${TEST_DIR}/web/profiles/thunder --exclude web
 
-    drush make -y --no-core ${TEST_DIR}/docroot/profiles/thunder/drupal-org.make ${TEST_DIR}/docroot/profiles/thunder
-    composer install --working-dir=${TEST_DIR}/docroot
+    drush make -y --no-core ${TEST_DIR}/web/profiles/thunder/drupal-org.make ${TEST_DIR}/web/profiles/thunder
+    composer install --working-dir=${TEST_DIR}/web
 }
 
 composer_create_thunder() {
@@ -46,7 +46,7 @@ composer_create_thunder() {
 }
 
 apply_patches() {
-    cd ${TEST_DIR}/docroot
+    cd ${TEST_DIR}/web
 
     #EXAMPLE:
     # apply cookie expire patch for javascript tests
@@ -55,7 +55,7 @@ apply_patches() {
 }
 
 create_testing_dump() {
-    cd ${TEST_DIR}/docroot
+    cd ${TEST_DIR}/web
 
     php ./core/scripts/db-tools.php dump-database-d8-mysql | gzip > thunder.php.gz
 }
@@ -69,10 +69,10 @@ fi
 # Install Thunder
 if [[ ${TEST_UPDATE} == "true" ]]; then
     # Install last drupal org version and update to currently tested version
-    install_thunder ${UPDATE_BASE_PATH}/docroot
+    install_thunder ${UPDATE_BASE_PATH}/web
     update_thunder
 else
-    install_thunder ${TEST_DIR}/docroot
+    install_thunder ${TEST_DIR}/web
 fi
 
 create_testing_dump
