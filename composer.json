@@ -57,6 +57,7 @@
     "provide": {
     },
     "require-dev": {
-        "burdamagazinorg/thunder-dev-tools": "dev-master"
+        "burdamagazinorg/thunder-dev-tools": "dev-master",
+        "drupal/config_inspector": "1.x-dev"
     }
 }

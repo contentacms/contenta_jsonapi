@@ -4,7 +4,6 @@ module:
   breakpoint: 0
   ckeditor: 0
   config: 0
-  config_inspector: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
