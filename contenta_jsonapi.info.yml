@@ -13,34 +13,3 @@ distribution:
     theme: adminimal_theme
 
 config_install: true
-
-# Required modules
-dependencies:
-  - node
-  - history
-  - block
-  - block_content
-  - config
-  - comment
-  - contact
-  - help
-  - image
-  - options
-  - path
-  - taxonomy
-  - dblog
-  - toolbar
-  - field_ui
-  - file
-  - editor
-  - ckeditor
-  - jsonapi
-  - jsonapi_extras
-  - subrequests
-  - simple_oauth
-  - docson
-  - fieldable_path
-  - schemata
-  - rest
-  - restui
-  - recipes_magazin
