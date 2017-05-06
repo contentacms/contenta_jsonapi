@@ -1,0 +1,55 @@
+/* @file
+ * Material Admin 
+ *
+ */
+
+// Make sure the charset is set appropriately
+@charset 'utf-8';
+
+@import "materialize-css/sass/components/normalize";
+
+// Colors need to be called before variables
+@import "materialize-css/sass/components/color";
+
+// Variables;
+@import "materialize-css/sass/components/variables";
+
+//This is your _settings.scss file where you can manage/replace specific variables outside material design framework. 
+@import 'settings';
+
+// material design components
+@import "materialize-css/sass/components/typography";
+@import "materialize-css/sass/components/global";
+@import "materialize-css/sass/components/grid";
+@import "materialize-css/sass/components/collapsible";
+@import "materialize-css/sass/components/tabs";
+@import "materialize-css/sass/components/buttons";
+@import "materialize-css/sass/components/forms/forms";
+@import "materialize-css/sass/components/waves";
+@import "materialize-css/sass/components/dropdown";
+@import "materialize-css/sass/components/modal";
+@import "materialize-css/sass/components/tooltip";
+@import "materialize-css/sass/components/toast";
+@import "materialize-css/sass/components/cards";
+@import "materialize-css/sass/components/date_picker/default";
+@import "materialize-css/sass/components/date_picker/default.date";
+
+//timepicker
+@import "materialize-clockpicker/src/sass/components/variables";
+@import "materialize-clockpicker/src/sass/components/primary";
+
+// Fonts! Using Font awesome due to popularity - though maybe should swap for material icons for consistency 
+@import "base/fonts/font-awesome";
+
+@import "base/common";
+
+@import "base/forms";
+
+@import "admin";
+
+@import "base/views";
+//overrides of core modules. Moved here to utilize sass and variables
+@import "base/overrides/autocomplete-loading.module";
+@import "base/overrides/ajax-progress.module";
+@import "base/overrides/dialog";
+

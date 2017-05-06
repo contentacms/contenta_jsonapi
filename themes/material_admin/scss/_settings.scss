@@ -1,0 +1,59 @@
+/* @file
+ * settings variables
+ *
+ */
+//  Table of Contents:
+//
+//   1. Global
+//   2. Breakpoints
+//   3. Tables
+//   4. Base Typography
+//   5. Typography Helpers
+
+// 1. Global
+// ---------
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i');
+
+$global-font-size: 100%;
+$global-width: rem-calc(1200);
+$global-lineheight: 1.5;
+$light-gray:#ccc;
+$medium-gray:#666;
+$dark-gray:#333;
+$black: #0a0a0a;
+$white: #fefefe;
+$highlight: #f0f4c3;
+$body-background: $white;
+$body-font-color: $black;
+$body-font-family: 'Roboto', sans-serif;
+$body-antialiased: true;
+$global-margin: 1rem;
+$global-padding: 1rem;
+$global-weight-normal: normal;
+$global-weight-bold: bold;
+$global-radius: 0;
+$global-text-direction: ltr;
+
+// 3. Tables 
+
+// 4. Base Typography
+// ------------------
+
+$header-font-family: $body-font-family;
+$header-font-weight: $global-weight-normal;
+$header-font-style: normal;
+$font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
+$header-color: inherit;
+
+// 5. Typography Helpers
+// ---------------------
+
+$lead-font-size: $global-font-size * 1.25;
+$lead-lineheight: 1.6;
+$subheader-lineheight: 1.4;
+$subheader-color: $dark-gray;
+$subheader-font-weight: $global-weight-normal;
+$subheader-margin-top: 0.2rem;
+$subheader-margin-bottom: 0.5rem;
+$stat-font-size: 2.5rem;

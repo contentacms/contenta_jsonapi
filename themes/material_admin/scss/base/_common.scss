@@ -1,0 +1,214 @@
+/* @file
+ * Common low level styles
+ *
+ */
+
+h1 {
+  font-size: 2.5rem;
+  margin: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+body {
+  font-family: $body-font-family;
+  background: $white;
+}
+
+td, th {
+  padding: 15px;
+}
+
+.description {
+  //tooltip readability
+  .material-tooltip {
+    max-width: 36em;
+    line-height: 1.5em;
+    font-weight: 100;
+  }
+  .tooltipped {
+    font-size: .8em;
+  }
+}
+
+.flow-text {
+  @media #{$large-and-up} {
+    font-size: 1.2em;
+  }
+}
+.error-text-color {
+  @extend .red-text, .text-lighten-3;
+}
+
+.warning-text-color {
+  @extend .yellow-text, .text-darken-2;
+}
+
+.status-text-color {
+  @extend .green-text, .text-darken-2;
+}
+
+.color-warning, .warning-color {
+  @extend .yellow, .lighten-4;
+}
+
+.color-success, .status-color {
+  @extend .green, .lighten-4
+}
+
+.color-error, .error-color {
+  @extend .red, .lighten-4;
+}
+
+.button-action {
+  @extend .btn, .red, .accent-2, .white-text;
+  &:before {
+    @extend .fa-standard;
+    content: $fa-var-plus;
+    color: $white;
+    margin: 0 10px 0 0px;
+  }
+  &:hover {
+    @extend .lighten-1;
+  }
+}
+
+.inline {
+  display: inline;
+}
+
+// buttons that appear as flat links
+.button-link {
+  @extend .btn;
+  @extend .btn-flat;
+  @extend .waves-effect;
+  @extend .waves-light;
+}
+
+.fa-standard {
+  vertical-align: top;
+  display: inline-block;
+  font-family: 'FontAwesome';
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+.toast {
+  word-break: normal;
+}
+
+@media #{$medium-and-up} {
+  main .row {
+    margin: 0 10px;
+  }
+}
+
+.row {
+  padding: 20px;
+  margin: 0;
+}
+
+.region-status {
+  .row {
+    padding: 0;
+  }
+}
+
+.select-wrapper input.select-dropdown {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none; // latest Opera versions support -webkit-
+  user-select: none;
+}
+
+input.button {
+  @extend .btn;
+  @extend .waves-effect;
+}
+
+nav {
+  background: transparent;
+  box-shadow: none;
+}
+
+.action-links {
+  margin-bottom: 2rem;
+  li {
+    list-style: none;
+    display: inline-block;
+    padding-right: 10px;
+  }
+}
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+a.button {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.card {
+  .card-content {
+    .card-title {
+      line-height: 35px;
+    }
+  }
+}
+
+.card-action {
+  li {
+    display: inline;
+  }
+  a {
+    color: $card-link-color;
+    margin-right: $card-padding;
+    transition: color .3s ease;
+    text-transform: uppercase;
+    &:hover {
+      color: $card-link-color-light;
+    }
+  }
+}
+
+.shadow {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+.shadow-box {
+  @extend .shadow;
+  padding: 10px 15px;
+  border-top: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+
+.views-field-node-bulk-form {
+  padding-left: 10px;
+}
+
+.button--small {
+  @extend .btn-flat;
+  font-size: .8em;
+}
+
+//change how clear fix works so it doesnt disrupt OOTB drupal clearfix
+.clearfix {
+  clear:none;
+  &:after {
+
+  }
+}

@@ -1,0 +1,24 @@
+/**
+ * @file
+ * Visual styles for animated throbber.
+ *
+ * @see autocomplete.js
+ */
+
+.js input.form-autocomplete {
+  background-image: url('../images/spinner-static.svg');
+  background-size: 20px;
+  background-position: 100% center;
+  background-repeat: no-repeat;
+}
+.js[dir="rtl"] input.form-autocomplete {
+  background-position: 0% center;
+}
+.js input.form-autocomplete.ui-autocomplete-loading {
+  background-image: url('../images/spinner.svg');
+  background-size: 20px;
+  background-position: 100% center;
+}
+.js[dir="rtl"] input.form-autocomplete.ui-autocomplete-loading {
+  background-position: 0% center;
+}

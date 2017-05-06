@@ -1,0 +1,137 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the material_admin theme.
+ */
+
+use Drupal\Component\Utility\Xss;
+use Drupal\Core\Render\Element;
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Template\Attribute;
+use Drupal\node\NodeInterface;
+
+require_once('inc/form.inc');
+
+/**
+ * Implements hook_preprocess_html () for HTML document templates.
+ *
+ * Adds overall theme class to the body.
+ */
+function material_admin_preprocess_html(&$variables) {
+  $variables['attributes']['class'][] = 'material_admin';
+}
+
+/**
+ * Implements hook_preprocess_breadcrumb().
+ *
+ * Adds the "title" variable so that the current page can be added as a breadcrumb.
+ */
+function material_admin_preprocess_breadcrumb(&$variables) {
+  $request = \Drupal::request();
+  $route_match = \Drupal::routeMatch();
+  $title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+  $variables['title'] = $title;
+}
+
+
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ */
+function material_admin_preprocess_menu_local_task(&$variables) {
+
+  $link = $variables['element']['#link'];
+  $link += array(
+    'localized_options' => array(),
+  );
+  $link_text = $link['title'];
+
+//add class active so that the materialize tabs js works
+  if (!empty($variables['element']['#active'])) {
+    $variables['is_active'] = TRUE;
+    $variables['link']['#attributes']['class'] = 'active'; 
+     }
+
+ // set target to self so the links work properly with tabs.js
+  $variables['link']['#attributes']['target'] = '_self'; 
+
+}
+
+//if there is an empty placeholder, materialize does weird things. ref: https://github.com/Dogfalo/materialize/pull/1737/files
+function material_admin_preprocess_input(&$variables) {
+  $element = $variables['element'];
+  if (isset($variables['attributes']['placeholder']) && empty((string) $variables['attributes']['placeholder'])) {
+    unset($variables['attributes']['placeholder']);
+  }
+  $variables['children'] = $element['#children'];
+}
+
+
+function material_admin_preprocess_node_add_list(&$variables) {
+  if (!empty($variables['content'])) {
+    /** @var \Drupal\node\NodeTypeInterface $type */
+    foreach ($variables['content'] as $type) {
+      $variables['types'][$type->id()]['label'] = $type->label();
+    }
+  }
+}
+
+// force the checkbox to use a new twig template input--switch so that the markup can be differet.
+function material_admin_preprocess_system_modules_details(&$variables) {
+  $form = $variables['form'];
+
+  $variables['modules'] = [];
+  // Iterate through all the modules, which are children of this element.
+  foreach (Element::children($form) as $key) {
+    // Stick the key into $module for easier access.
+    $module = $form[$key];
+    unset($module['enable']['#title']);
+    $module['enable']['#theme'] = 'input__switch';
+    $module['enable']['#attributes']['class'][] = 'item-switch';
+    $module['#requires'] = array_filter($module['#requires']);
+    $module['#required_by'] = array_filter($module['#required_by']);
+    // Add the checkbox to allow installing new modules and to show the
+    // installation status of the module.
+    $module['checkbox'] = $module['enable'];
+
+    // Add the module label and expand/collapse functionality.
+    $id = Html::getUniqueId('module-' . $key);
+    $module['id'] = $id;
+    $module['enable_id'] = $module['enable']['#id'];
+
+
+    // @todo Remove early rendering and use safe_join in the Twig template once
+    //   https://www.drupal.org/node/2579091 is fixed.
+    $renderer = \Drupal::service('renderer');
+    $machine_name_render = [
+      '#prefix' => '<span dir="ltr" class="table-filter-text-source">',
+      '#plain_text' => $key,
+      '#suffix' => '</span>',
+    ];
+    $module['machine_name'] = $renderer->render($machine_name_render);
+
+    if (!empty($module['#requires'])) {
+      $requires = [
+        '#theme' => 'item_list',
+        '#items' => $module['#requires'],
+        '#context' => ['list_style' => 'comma-list'],
+      ];
+      $module['requires'] = $renderer->render($requires);
+    }
+    if (!empty($module['#required_by'])) {
+      $required_by = [
+        '#theme' => 'item_list',
+        '#items' => $module['#required_by'],
+        '#context' => ['list_style' => 'comma-list'],
+      ];
+      $module['required_by'] = $renderer->render($required_by);
+    }
+
+    if (!empty($module['version'])) {
+      $module['version'] = $renderer->render($module['version']);
+    }
+
+    $module['attributes'] = new Attribute($module['#attributes']);
+    $variables['modules'][] = $module;
+  }
+}

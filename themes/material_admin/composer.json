@@ -1,0 +1,14 @@
+{
+    "name": "drupal/material_admin",
+    "description": "Material Design Inspired Admin Theme Utilizing http://materialcss.com Framework",
+    "type": "drupal-theme",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Brian Wald",
+            "email": "briancwald@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

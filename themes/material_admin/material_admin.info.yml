@@ -1,0 +1,42 @@
+name: Material Admin
+type: theme
+description: 'Material Design Admin Theme'
+core: 8.x
+base theme: classy
+
+# Image appears on admin/appearance
+screenshot: images/screenshot.png
+
+libraries:
+  - material_admin/global-styling
+
+stylesheets-remove:
+  - '@classy/css/components/action-links.css'
+  - '@classy/css/components/tabs.css'
+  - '@classy/css/components/button.css'
+  - '@classy/css/components/inline-form.css'
+  - '@classy/css/components/form.css'
+  - '@classy/css/components/dialog.css'
+  - '@classy/css/components/item-list.css'
+  - '@classy/css/components/tablesort.css'
+  - '@stable/css/system/components/container-inline.module.css'
+  - '@stable/css/system/system.admin.css'
+  - '@stable/css/system/components/autocomplete-loading.module.css'
+  - '@stable/css/system/components/ajax-progress.module.css'
+
+libraries-override:
+  core/drupal.dropbutton: material_admin/dropbutton
+        
+regions:
+  header: 'Header'
+  status: 'Status area'
+  pre_content: 'Pre-content'
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  sidebar_first: 'First sidebar'
+regions_hidden:
+  - sidebar_first
