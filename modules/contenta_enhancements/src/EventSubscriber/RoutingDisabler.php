@@ -12,7 +12,7 @@ class RoutingDisabler implements EventSubscriberInterface {
    * A list of disabled routes.
    */
   protected static $disabledRoutes = [
-//    'user.page',
+    'user.page',
   ];
 
   /**
