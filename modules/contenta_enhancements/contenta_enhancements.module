@@ -5,7 +5,7 @@ use Drupal\Core\Entity\EntityTypeInterface;
 /**
  * Implements hook_entity_type_build().
  */
-function api_first_devel_entity_type_build(array &$entity_types) {
+function contenta_enhancements_entity_type_build(array &$entity_types) {
   /** @var $entity_types \Drupal\Core\Entity\EntityTypeInterface[] */
   
   $entity_types['entity_view_display']->set('admin_permission', 'administer display modes');
@@ -16,7 +16,7 @@ function api_first_devel_entity_type_build(array &$entity_types) {
 /**
  * Implements hook_entity_base_field_info_alter().
  */
-function api_first_devel_entity_base_field_info_alter(&$fields, EntityTypeInterface $entity_type) {
+function contenta_enhancements_entity_base_field_info_alter(&$fields, EntityTypeInterface $entity_type) {
   if ($entity_type->id() === 'node') {
     $fields['title']->setDisplayConfigurable('view', TRUE);
   }
