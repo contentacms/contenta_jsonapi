@@ -1,0 +1,18 @@
+uuid: a83da26c-4b5e-409a-8acd-58f8a2295694
+langcode: en
+status: true
+dependencies:
+  theme:
+    - adminimal_theme
+id: primaryadminactions
+theme: adminimal_theme
+region: help
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

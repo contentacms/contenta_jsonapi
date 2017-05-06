@@ -1,0 +1,13 @@
+uuid: b5ffd23a-f2b3-4738-94e4-b0cee849f695
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: mH-VsmvNH753aBVQQTFJ1yH2NOFeasoTNTkb_fO0Eqk
+name: Recipe
+type: recipe
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

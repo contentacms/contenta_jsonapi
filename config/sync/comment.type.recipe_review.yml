@@ -1,0 +1,10 @@
+uuid: 75f80004-7647-45e1-b0da-2563a5467205
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: JPPinzBBmghMGikn68ApmS1fScyHWNqSga0V0_d7lAM
+id: recipe_review
+label: 'Recipe review'
+target_entity_type_id: node
+description: ''

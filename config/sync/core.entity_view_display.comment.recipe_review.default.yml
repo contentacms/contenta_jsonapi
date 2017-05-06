@@ -1,0 +1,28 @@
+uuid: 7bad6b5e-d56c-4f36-ab2b-3ff00a6f3c30
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.recipe_review
+    - field.field.comment.recipe_review.comment_body
+  module:
+    - text
+_core:
+  default_config_hash: 78ctuay8KQ04MSwZuw0I5f_4eNKZg6Ia5wQpiDXDp7w
+id: comment.recipe_review.default
+targetEntityType: comment
+bundle: recipe_review
+mode: default
+content:
+  comment_body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

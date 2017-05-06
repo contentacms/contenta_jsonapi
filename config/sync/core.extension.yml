@@ -3,6 +3,7 @@ module:
   block: 0
   breakpoint: 0
   ckeditor: 0
+  comment: 0
   config: 0
   datetime: 0
   datetime_range: 0

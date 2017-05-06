@@ -1,0 +1,20 @@
+uuid: 07fd26dd-f497-4644-aa90-751640df1281
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - adminimal_theme
+id: messages
+theme: adminimal_theme
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  provider: system
+  label_display: '0'
+visibility: {  }

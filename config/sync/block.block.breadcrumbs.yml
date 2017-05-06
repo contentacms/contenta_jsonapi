@@ -1,0 +1,20 @@
+uuid: 342d1fe7-f1fa-4568-b5da-9d53d48509fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - adminimal_theme
+id: breadcrumbs
+theme: adminimal_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }
