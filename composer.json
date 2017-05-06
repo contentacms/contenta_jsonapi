@@ -48,7 +48,8 @@
         "drupal/docson": "^1.0",
         "drupal/subrequests": "^1.0",
         "drupal/fieldable_path": "^1.0",
-        "drupal/restui": "^1.14"
+        "drupal/restui": "^1.14",
+        "roave/security-advisories": "dev-master"
     },
     "scripts": {
         "dev": "scripts/development/build-contenta-jsonapi.sh"
