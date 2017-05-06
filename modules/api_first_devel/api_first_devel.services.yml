@@ -1,5 +1,0 @@
-services:
-  api_first_devel.routing_disabler:
-    class: \Drupal\api_first_devel\EventSubscriber\RoutingDisabler
-    tags:
-      - { name: event_subscriber }
