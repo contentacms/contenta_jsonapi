@@ -10,6 +10,6 @@ core: 8.x
 distribution:
   name: Contenta JSON API
   install:
-    theme: material_admin
+    theme: seven
 
 config_install: true
