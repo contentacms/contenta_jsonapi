@@ -1,0 +1,22 @@
+uuid: 9fa3ada9-5527-4b46-8a4a-2420a9024347
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - material_admin
+_core:
+  default_config_hash: v0-ASRRJal7Yj2vaNtpmTtQGrfcX1BNif-S7nwh8ekg
+id: material_admin_login
+theme: material_admin
+region: content
+weight: 10
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  provider: user
+  label_display: visible
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 0a2c0472-94eb-4f4e-b1a4-1b3a66417cc0
+langcode: en
+status: true
+dependencies:
+  theme:
+    - material_admin
+_core:
+  default_config_hash: bO8fBXGlS1178pNs_EdlrUqmbrlENg9iYnSsxPW2P8A
+id: material_admin_primary_local_tasks
+theme: material_admin
+region: header
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: false
+visibility: {  }
