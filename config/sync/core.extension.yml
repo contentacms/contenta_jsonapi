@@ -28,6 +28,7 @@ module:
   options: 0
   page_cache: 0
   path: 0
+  recipes_magazin: 0
   rest: 0
   restui: 0
   schemata: 0
