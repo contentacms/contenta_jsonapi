@@ -49,7 +49,8 @@
         "drupal/subrequests": "^1.0",
         "drupal/fieldable_path": "^1.0",
         "drupal/restui": "^1.14",
-        "roave/security-advisories": "dev-master"
+        "roave/security-advisories": "dev-master",
+        "drupal/material_admin": "1.x-dev"
     },
     "scripts": {
         "dev": "scripts/development/build-contenta-jsonapi.sh"
