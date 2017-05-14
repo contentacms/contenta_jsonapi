@@ -8,8 +8,9 @@ if [ $1 ] ; then
   DEST_DIR="$1"
 fi
 
-rm -Rf $DEST_DIR
-composer create-project drupal-http-apis/contenta_jsonapi-project ${DEST_DIR} --stability dev --no-interaction
+echo $DEST_DIR
+sudo rm -Rf $DEST_DIR
+composer create-project drupal-http-apis/contenta-jsonapi-project ${DEST_DIR} --stability dev --no-interaction
 
 cd ${DEST_DIR}
 # ??
