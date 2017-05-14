@@ -1,5 +1,5 @@
 {
-    "name": "drupal-http-apis/contenta-jsonapi",
+    "name": "drupal-http-apis/contenta_jsonapi",
     "description": "",
     "type": "drupal-profile",
     "authors": [
@@ -53,7 +53,7 @@
         "drupal/material_admin": "1.x-dev"
     },
     "scripts": {
-        "dev": "scripts/development/build-contenta-jsonapi.sh"
+        "dev": "scripts/development/build-contenta_jsonapi.sh"
     },
     "provide": {
     },
