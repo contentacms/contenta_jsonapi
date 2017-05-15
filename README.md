@@ -10,7 +10,7 @@ composer create-project dawehner/api_first_project MYPROJECT --stability dev --n
 
 ## Development
 
-Discussions are done in [#contenta on slack](slack://channel?id=contenta&team=drupal)
+Discussions are done in <[#contenta on slack](https://drupal.slack.com/messages/C5A70F7D1/)
 
 @see docs/development
 
