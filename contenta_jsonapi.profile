@@ -21,7 +21,7 @@ function contenta_jsonapi_form_install_configure_form_alter(&$form, FormStateInt
     '#title' => t('Contenta settings'),
     '#weight' => -10,
   ];
- 
+
   $form['contenta_jsonapi']['include_recipes_magazin'] = [
     '#title' => t('Install the demo content'),
     '#type' => 'checkbox',
@@ -37,7 +37,11 @@ function contenta_jsonapi_form_install_configure_form_alter(&$form, FormStateInt
  */
 function contenta_jsonapi_install_configure_form_submit(&$form, FormStateInterface $form_state) {
   if ($form_state->getValue('include_recipes_magazin')) {
-    drupal_set_message(t('Recipe magazin installed'));
-    \Drupal::service('module_installer')->install(['recipes_magazin']);
+    if (\Drupal::service('module_installer')->install(['recipes_magazin'])) {
+      drupal_set_message(t('Recipe magazin installed'));
+    }
+    else {
+      drupal_set_message(t('Unable to install Recipe magazin'), 'error');
+    }
   }
 }
