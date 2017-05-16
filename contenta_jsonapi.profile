@@ -21,10 +21,12 @@ function contenta_jsonapi_form_install_configure_form_alter(&$form, FormStateInt
     '#title' => t('Contenta settings'),
     '#weight' => -10,
   ];
-    
+ 
   $form['contenta_jsonapi']['include_recipes_magazin'] = [
-    '#title' => t('Include the recipes magazin'),
+    '#title' => t('Install the demo content'),
     '#type' => 'checkbox',
+    '#default_value' => TRUE,
+    '#description' => t('By installing the demo content Contenta will create a set of content types and populate them with real data. You can remove the demo content and the associated content types with a single click whenever you want.')
   ];
 
   $form['#submit'][] = 'contenta_jsonapi_install_configure_form_submit';
