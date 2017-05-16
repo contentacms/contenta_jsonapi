@@ -15,4 +15,29 @@ use Drupal\Core\Form\FormStateInterface;
 function contenta_jsonapi_form_install_configure_form_alter(&$form, FormStateInterface $form_state) {
   // Add a value as example that one can choose an arbitrary site name.
   $form['site_information']['site_name']['#placeholder'] = t('Contenta JSON API');
+
+  $form['contenta_jsonapi'] = [
+    '#type' => 'fieldset',
+    '#title' => t('Contenta settings'),
+    '#weight' => -10,
+  ];
+ 
+  $form['contenta_jsonapi']['include_recipes_magazin'] = [
+    '#title' => t('Install the demo content'),
+    '#type' => 'checkbox',
+    '#default_value' => TRUE,
+    '#description' => t('By installing the demo content Contenta will create a set of content types and populate them with real data. You can remove the demo content and the associated content types with a single click whenever you want.')
+  ];
+
+  $form['#submit'][] = 'contenta_jsonapi_install_configure_form_submit';
+}
+
+/**
+ * Submit handler for install_configure_form().
+ */
+function contenta_jsonapi_install_configure_form_submit(&$form, FormStateInterface $form_state) {
+  if ($form_state->getValue('include_recipes_magazin')) {
+    drupal_set_message(t('Recipe magazin installed'));
+    \Drupal::service('module_installer')->install(['recipes_magazin']);
+  }
 }
