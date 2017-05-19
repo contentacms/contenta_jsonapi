@@ -37,7 +37,7 @@ function contenta_jsonapi_form_install_configure_form_alter(&$form, FormStateInt
  */
 function contenta_jsonapi_install_configure_form_submit(&$form, FormStateInterface $form_state) {
   if ($form_state->getValue('include_recipes_magazin')) {
-    if (\Drupal::service('module_installer')->install(['recipes_magazin'])) {
+    if (\Drupal::service('module_installer')->install(['recipes_magazin', 'recipes_magazin_contenta'])) {
       drupal_set_message(t('Recipe magazin installed'));
     }
     else {

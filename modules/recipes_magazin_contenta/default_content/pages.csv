@@ -1,0 +1,25 @@
+title,body,author,slug
+"Welcome to Contenta","<p>Contenta is an API-First distribution. If you are seeing this page, it means that you have installed the demo content for the distribution. After installing the demo content, you can start making requests right away.</p>
+<h2 id=""json-api-server""><a name=""user-content-json-api-server"" href=""#json-api-server"" class=""headeranchor-link"" aria-hidden=""true""><span class=""headeranchor""></span></a>JSON API server</h2>
+<p>Contenta ships with the <a href=""https://drupal.org/project/jsonapi"">JSON API</a> module to expose your data model and to start interacting with it right away. To get started use your favorite HTTP client and issue the following request:</p>
+<pre><code>GET /jsonapi HTTP/1.1
+Host: example.org
+Accept: application/vnd.api+json
+</code></pre>
+<p>That will return you a list of resources you can explore. In particular, the <code>/jsonapi/node/recipe</code> resource will give you information about all the existing entities. Please read <a href=""https://www.drupal.ƒﬁrg/docs/8/modules/json-api/json-api"">the documentation in Drupal.org</a> and <a href=""https://www.youtube.com/playlist?list=PLZOQ_ZMpYrZsyO-3IstImK1okrpfAjuMZ"">the video series in YouTube</a> to find out more about how to interact with the JSON API server.</p>
+<p><a href=""https://www.youtube.com/playlist?list=PLZOQ_ZMpYrZsyO-3IstImK1okrpfAjuMZ""><img src=""/sites/default/files/json-api-drupal-youtube.jpg"" title=""JSON API in Youtube"" alt=""JSON API in Youtube""></a></p>
+<h2 id=""oauth2-authentication""><a name=""user-content-oauth2-authentication"" href=""#oauth2-authentication"" class=""headeranchor-link"" aria-hidden=""true""><span class=""headeranchor""></span></a>OAuth2 Authentication</h2>
+<p>Contenta enables OAuth2 authentication out of the box using the <a href=""https://drupal.org/project/simple_oauth"">Simple OAuth</a> module. It enables the <a href=""https://www.youtube.com/watch?v=BEKKFExaBMM&amp;index=3&amp;list=PLZOQ_ZMpYrZtqy5-o7KoDhM3n6M0duBjX"">password grant</a>, but it also comes configured with the <a href=""https://www.youtube.com/watch?v=B6xlW7RsUUk&amp;index=7&amp;list=PLZOQ_ZMpYrZtqy5-o7KoDhM3n6M0duBjX"">client credentials</a>, <a href=""https://www.youtube.com/watch?v=khh8MmY9jm4&amp;index=8&amp;list=PLZOQ_ZMpYrZtqy5-o7KoDhM3n6M0duBjX"">authentication code</a> and <a href=""https://www.youtube.com/watch?v=sZbzcCXMmEA&amp;index=9&amp;list=PLZOQ_ZMpYrZtqy5-o7KoDhM3n6M0duBjX"">implicit</a> grants.</p>
+<p>Depending on the application you are building you will need one or another grant. You can use <a href=""http://oauth2.thephpleague.com/authorization-server/which-grant/"">this diagram</a> to decide which grant is the most appropriate for you.</p>
+<h2 id=""automatic-data-model-documentation""><a name=""user-content-automatic-data-model-documentation"" href=""#automatic-data-model-documentation"" class=""headeranchor-link"" aria-hidden=""true""><span class=""headeranchor""></span></a>Automatic data model documentation</h2>
+<p>One of the goals of Contenta is to allow front end developers to create amazing digital experiences. To help them Contenta ships with the <a href=""https://drupal.org/project/docson"">Docson</a> to expose automatically generated rich documentation of the API. To use it, navigate to the docson schema selector page:</p>
+<pre><code>https://example.org/docson
+</code></pre>",Kinnikuman,/welcome
+"About us","<p>The Contenta team is a group of people passionate about Drupal that believe that the future of the web is in the multi-distribution channels.</p>
+<p>This distribution is the result of many discussions on how to have a Drupal installation that is ready for ambitious decoupled projects in a single click.</p>
+<p>Among others, main contributors are:</p>
+<ul>
+<li>Daniel Wehner (dawehner).</li>
+<li>Mateu Aguiló Bosch (e0ipso).</li>
+</ul>
+<p>You can find us and ask questions in the <a href=""https://drupal.slack.com/messages/C5A70F7D1"">Contenta slack channel</a> for the Drupal organization.</p>",Kinnikuman,/about-us

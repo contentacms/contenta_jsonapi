@@ -43,7 +43,7 @@
         "drupal/core": "^8.3.0",
         "drupal/jsonapi": "^1.0",
         "drupal/simple_oauth": "^2.0",
-        "drupal/recipes_magazin": "^1.0",
+        "drupal/recipes_magazin": "1.x-dev",
         "drupal/jsonapi_extras": "^1.0",
         "drupal/docson": "^1.0",
         "drupal/subrequests": "^1.0",

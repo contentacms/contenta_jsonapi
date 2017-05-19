@@ -1,0 +1,5 @@
+name: Recipe magazin (Contenta content)
+type: module
+core: 8.x
+dependencies:
+  - recipes_magazin
