@@ -2,7 +2,7 @@ id: recipes_magazin_contenta__pages
 status: true
 source:
   plugin: recipe_magazin__csv
-  path: %provider_path%/default_content/pages.csv
+  path: default_content/pages.csv
   header_row_count: 1
   keys:
     - title
@@ -15,14 +15,14 @@ process:
   path: slug
   uid:
     plugin: migration_lookup
-    migration: recipes_magazin__author
+    migration: recipes_magazin_contenta__authors
     source: author
 destination:
   plugin: 'entity:node'
   default_bundle: page
 migration_dependencies:
   required:
-    - recipes_magazin__author
+    - recipes_magazin_contenta__authors
     - recipes_magazin_contenta__images
 dependencies:
   config:

@@ -1,4 +1,5 @@
-name: Recipe magazin (Contenta content)
+name: Recipes Magazin Contenta
+description: Create the content model and default content for the contenta distribution.
 type: module
 core: 8.x
 dependencies:
