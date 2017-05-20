@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Module file.
+ */
+
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_toolbar().
+ */
+function recipes_magazin_contenta_toolbar() {
+   $items['contenta'] = [
+    '#type' => 'toolbar_item',
+    'tab' => [
+      '#type' => 'link',
+      '#title' => t('Contenta'),
+      '#url' => Url::fromUserInput('/welcome'),
+      '#attributes' => [
+        'title' => t('About contenta'),
+        // @todo Ship with our logo here?
+        'class' => ['toolbar-icon', 'toolbar-icon-menu'],
+      ],
+    ],
+    '#weight' => -15,
+  ]; 
+   return $items;
+}
+
