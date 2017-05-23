@@ -11,6 +11,8 @@ module:
   docson: 0
   dynamic_page_cache: 0
   editor: 0
+  entity: 0
+  entity_browser: 0
   entity_reference: 0
   field: 0
   field_ui: 0
@@ -23,6 +25,8 @@ module:
   jsonapi_extras: 0
   language: 0
   link: 0
+  media_entity: 0
+  media_entity_image: 0
   menu_ui: 0
   node: 0
   options: 0
