@@ -50,7 +50,10 @@
         "drupal/fieldable_path": "^1.0",
         "drupal/restui": "^1.14",
         "roave/security-advisories": "dev-master",
-        "drupal/material_admin": "1.x-dev"
+        "drupal/material_admin": "1.x-dev",
+        "drupal/media_entity": "^1.6",
+        "drupal/entity_browser": "^1.0",
+        "drupal/media_entity_image": "^1.2"
     },
     "scripts": {
         "dev": "scripts/development/build-contenta_jsonapi.sh"
