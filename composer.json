@@ -56,7 +56,7 @@
         "drupal/media_entity_image": "^1.2"
     },
     "scripts": {
-        "dev": "scripts/development/build-contenta_jsonapi.sh"
+        "install-contenta": "scripts/development/build-contenta_jsonapi.sh"
     },
     "provide": {
     },
