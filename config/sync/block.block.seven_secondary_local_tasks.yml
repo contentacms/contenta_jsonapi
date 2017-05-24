@@ -1,13 +1,13 @@
-uuid: 817a6b60-532d-4163-bf67-2f6e4f122416
+uuid: 5a24d0b0-e264-4a05-84df-831fa4d99c4a
 langcode: en
 status: true
 dependencies:
   theme:
-    - material_admin
+    - seven
 _core:
   default_config_hash: gXspqW_d6aD4vynN61LxERX3q5RcQ9rJhANxU5cdfbY
-id: material_admin_secondary_local_tasks
-theme: material_admin
+id: seven_secondary_local_tasks
+theme: seven
 region: highlighted
 weight: 1
 provider: null

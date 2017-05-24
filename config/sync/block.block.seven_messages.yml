@@ -1,16 +1,16 @@
-uuid: 482bc00c-ed1e-4178-8ed2-5f5a53a278cd
+uuid: d1adab5d-0b7a-4901-98c4-0b370f6b0148
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - material_admin
+    - seven
 _core:
   default_config_hash: 6ANfHFYdqyPgGyd6fgurzphLbqLUVo2aa7rcjNyZ-_0
-id: material_admin_messages
-theme: material_admin
-region: status
+id: seven_messages
+theme: seven
+region: header
 weight: 0
 provider: null
 plugin: system_messages_block

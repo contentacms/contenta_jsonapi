@@ -1,15 +1,15 @@
-uuid: c2fa786c-7212-4e90-91b8-751eb6d1c94e
+uuid: d6dcd0c2-9961-4730-a5e6-4db97636c235
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - material_admin
+    - seven
 _core:
   default_config_hash: NgLsbLszEUM6yHAE9EUvz8meZCPjf9g959hMEwrai6o
-id: material_admin_content
-theme: material_admin
+id: seven_content
+theme: seven
 region: content
 weight: 0
 provider: null

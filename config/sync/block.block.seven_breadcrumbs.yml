@@ -1,15 +1,15 @@
-uuid: 65c03f93-405d-4397-a9ba-e5f42625aff9
+uuid: f227ac55-000c-4ada-b585-7f759a032ac5
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - material_admin
+    - seven
 _core:
   default_config_hash: PcRFtXbWSdAO7-sBGefC9tVMMFahAnLWi-kJXx22sh0
-id: material_admin_breadcrumbs
-theme: material_admin
+id: seven_breadcrumbs
+theme: seven
 region: breadcrumb
 weight: 0
 provider: null
