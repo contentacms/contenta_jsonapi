@@ -10,14 +10,14 @@ fi
 
 echo $DEST_DIR
 sudo rm -Rf $DEST_DIR
-composer create-project drupal-http-apis/contenta-jsonapi-project ${DEST_DIR} --stability dev --no-interaction
+composer create-project contentacms/contenta-jsonapi-project ${DEST_DIR} --stability dev --no-interaction
 
 cd ${DEST_DIR}
 # ??
 composer config repositories.contenta_jsonapi path ${BASE_DIR}
 
 # ??
-# composer require "drupal-http-apis/contenta_jsonapi:*" "phpunit/phpunit:~4.8" --no-progress
+# composer require "contentacms/contenta_jsonapi:*" "phpunit/phpunit:~4.8" --no-progress
 cd web
 ../bin/drush si contenta_jsonapi --db-url=sqlite://sites/default/files/.ht.sqlite --account-pass=test -y
 
