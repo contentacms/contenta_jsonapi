@@ -1,5 +1,6 @@
 langcode: en
 status: true
+dependencies: {  }
 name: medium
 label: 'Medium (220×220)'
 effects:
