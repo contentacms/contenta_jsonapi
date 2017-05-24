@@ -22,6 +22,7 @@ module:
   image: 0
   jsonapi: 0
   jsonapi_extras: 0
+  language: 0
   link: 0
   media_entity: 0
   media_entity_image: 0
