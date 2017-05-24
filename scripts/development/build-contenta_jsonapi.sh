@@ -8,7 +8,7 @@ if [ $1 ] ; then
   DEST_DIR="$1"
 fi
 
-echo $DEST_DIR
+echo -e "Drush adds some permissions that need extra powers to delete.\n\n  * You are about to delete $DEST_DIR"
 sudo rm -Rf $DEST_DIR
 composer create-project contentacms/contenta-jsonapi-project ${DEST_DIR} --stability dev --no-interaction
 
