@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Module installation file.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function recipes_magazin_install() {
+  \Drupal::service('recipes.migration_runner')->run([
+    'recipes_magazin__category',
+    'recipes_magazin__tags',
+    'recipes_magazin__images',
+    'recipes_magazin__authors',
+    'recipes_magazin__pages',
+    'recipes_magazin__recipes',
+  ]);
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function recipes_magazin_uninstall() {
+  \Drupal::service('recipes.migration_runner')->remove([
+    'recipes_magazin__category',
+    'recipes_magazin__tags',
+    'recipes_magazin__images',
+    'recipes_magazin__authors',
+    'recipes_magazin__pages',
+    'recipes_magazin__recipes',
+  ]);
+}

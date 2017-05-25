@@ -1,0 +1,16 @@
+name: Recipes Magazin
+description: Create the content model and default content for a food magazine application.
+type: module
+core: 8.x
+dependencies:
+  - comment
+  - field
+  - file
+  - image
+  - node
+  - options
+  - path
+  - taxonomy
+  - text
+  - user
+  - migrate

@@ -1,0 +1,4 @@
+services:
+  recipes.migration_runner:
+    class: Drupal\recipes_magazin\MigrationRunner
+    arguments: ['@plugin.manager.migration']
