@@ -11,6 +11,7 @@
 function recipes_magazin_contenta_install() {
   \Drupal::service('recipes.migration_runner')->run([
     'recipes_magazin_contenta__images',
+    'recipes_magazin_contenta__media_images',
     'recipes_magazin_contenta__authors',
     'recipes_magazin_contenta__pages',
   ]);
@@ -22,6 +23,7 @@ function recipes_magazin_contenta_install() {
 function recipes_magazin_contenta_uninstall() {
   \Drupal::service('recipes.migration_runner')->remove([
     'recipes_magazin_contenta__images',
+    'recipes_magazin_contenta__media_images',
     'recipes_magazin_contenta__authors',
     'recipes_magazin_contenta__pages',
   ]);
