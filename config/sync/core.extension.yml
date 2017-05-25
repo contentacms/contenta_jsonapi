@@ -8,6 +8,8 @@ module:
   datetime: 0
   datetime_range: 0
   docson: 0
+  dropzonejs: 0
+  dropzonejs_eb_widget: 0
   dynamic_page_cache: 0
   editor: 0
   entity: 0
@@ -32,8 +34,6 @@ module:
   options: 0
   page_cache: 0
   path: 0
-  recipes_magazin: 0
-  recipes_magazin_contenta: 0
   rest: 0
   schemata: 0
   schemata_json_schema: 0
