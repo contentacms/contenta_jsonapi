@@ -3,8 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - media_entity.bundle.image
     - views.view.image_library
   module:
+    - dropzonejs_eb_widget
+    - media_entity
     - views
 name: image_library
 label: 'Image library'
@@ -23,9 +26,22 @@ widgets:
     settings:
       view: image_library
       view_display: entity_browser_1
-      submit_text: Library
+      submit_text: Select
       auto_select: false
     uuid: da6dec11-70df-4462-9ac5-186d4f16b33c
     weight: 2
-    label: view
+    label: Library
     id: view
+  2f1c5348-a446-4eff-bdc3-7629b2bfeff9:
+    settings:
+      media_entity_bundle: image
+      upload_location: 'public://[date:custom:Y]-[date:custom:m]'
+      dropzone_description: 'Drop files here to upload them'
+      max_filesize: 8M
+      extensions: 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp'
+      submit_text: Select
+      auto_select: false
+    uuid: 2f1c5348-a446-4eff-bdc3-7629b2bfeff9
+    weight: 2
+    label: Upload
+    id: dropzonejs_media_entity
