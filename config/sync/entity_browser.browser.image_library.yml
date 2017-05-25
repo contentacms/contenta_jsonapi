@@ -1,0 +1,31 @@
+uuid: 69ef058a-207d-4eca-8c03-d22705985623
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.image_library
+  module:
+    - views
+name: image_library
+label: 'Image library'
+display: modal
+display_configuration:
+  width: '800'
+  height: '600'
+  link_text: 'Select images'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  da6dec11-70df-4462-9ac5-186d4f16b33c:
+    settings:
+      view: image_library
+      view_display: entity_browser_1
+      submit_text: Library
+      auto_select: false
+    uuid: da6dec11-70df-4462-9ac5-186d4f16b33c
+    weight: 2
+    label: view
+    id: view
