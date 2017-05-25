@@ -9,7 +9,7 @@ source:
 process:
   field_image:
     plugin: migration_lookup
-    migration: recipes_magazin__images
+    migration: recipes_magazin_contenta__images
     source: filename
   name: filename
 destination:
@@ -17,4 +17,4 @@ destination:
   default_bundle: image
 migration_dependencies:
   required:
-    - recipes_magazin__images
+    - recipes_magazin_contenta__images
