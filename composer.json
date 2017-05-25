@@ -63,6 +63,7 @@
     "require-dev": {
         "burdamagazinorg/thunder-dev-tools": "dev-master",
         "drupal/config_inspector": "1.x-dev",
-        "drupal/coder": "^8.2"
+        "drupal/coder": "^8.2",
+        "drupal/features": "^3.5"
     }
 }
