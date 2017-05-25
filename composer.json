@@ -11,19 +11,6 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "enyo-library/dropzone",
-                "version": "4.2.0",
-                "type": "drupal-library",
-                "source": {
-                    "url": "https://github.com/enyo/dropzone",
-                    "type": "git",
-                    "reference": "origin/master"
-                }
-            }
         }
 
     ],
@@ -70,8 +57,7 @@
         "drupal/media_entity": "^1.6",
         "drupal/entity_browser": "^1.0",
         "drupal/media_entity_image": "^1.2",
-        "drupal/dropzonejs": "^1.0@alpha",
-        "enyo-library/dropzone": "4.2.0"
+        "drupal/dropzonejs": "^1.0@alpha"
     },
     "scripts": {
         "install-contenta": "scripts/development/build-contenta_jsonapi.sh"
