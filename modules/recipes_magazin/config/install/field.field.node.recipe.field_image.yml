@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.image
+    - field.storage.node.field_image
     - media_entity.bundle.field_image
     - node.type.recipe
 id: node.recipe.field_image
