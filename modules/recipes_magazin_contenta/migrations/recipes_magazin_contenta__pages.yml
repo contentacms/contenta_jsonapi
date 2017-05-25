@@ -23,6 +23,7 @@ destination:
 migration_dependencies:
   required:
     - recipes_magazin_contenta__authors
+    - recipes_magazin_contenta__media_images
     - recipes_magazin_contenta__images
 dependencies:
   config:
