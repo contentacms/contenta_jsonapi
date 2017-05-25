@@ -15,7 +15,7 @@
         {
             "type": "package",
             "package": {
-                "name": "enyo/dropzone-library",
+                "name": "enyo-library/dropzone",
                 "version": "4.2.0",
                 "type": "drupal-library",
                 "source": {
@@ -71,7 +71,7 @@
         "drupal/entity_browser": "^1.0",
         "drupal/media_entity_image": "^1.2",
         "drupal/dropzonejs": "^1.0@alpha",
-        "enyo/dropzone-library": "4.2.0"
+        "enyo-library/dropzone": "4.2.0"
     },
     "scripts": {
         "install-contenta": "scripts/development/build-contenta_jsonapi.sh"
