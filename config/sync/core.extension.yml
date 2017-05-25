@@ -8,6 +8,8 @@ module:
   datetime: 0
   datetime_range: 0
   docson: 0
+  dropzonejs: 0
+  dropzonejs_eb_widget: 0
   dynamic_page_cache: 0
   editor: 0
   entity: 0
