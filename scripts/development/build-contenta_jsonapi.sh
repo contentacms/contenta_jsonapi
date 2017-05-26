@@ -1,33 +1,83 @@
 #!/usr/bin/env bash
 
-BASE_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/../.."
+# Move up 3 levels since we are in contenta_jsonapi/script/development.
+BASE_DIR="$(dirname $(dirname $(dirname $(cd ${0%/*} && pwd))))"
+COMPOSER="$(which composer)"
+DOCROOT="web"
 
-DEST_DIR="$BASE_DIR/../test_contenta_jsonapi"
+# Define the color scheme.
+FG_C='\033[1;37m'
+BG_C='\033[42m'
+WBG_C='\033[43m'
+EBG_C='\033[41m'
+NO_C='\033[0m'
 
+echo -e "\n"
 if [ $1 ] ; then
   DEST_DIR="$1"
+  echo $1
+else
+  DEST_DIR="$( dirname $BASE_DIR )/test_contenta_jsonapi"
+  echo -e "${FG_C}${WBG_C} WARNING ${NO_C} No installation path provided.\nContenta will be installed in $DEST_DIR."
+  echo -e "${FG_C}${BG_C} USAGE ${NO_C} ${0} [install_path] # to install in a different directory."
+fi
+DRUSH="$DEST_DIR/bin/drush"
+
+echo -e "\n\n\n"
+echo -e "\t********************************"
+echo -e "\t*   Installing Contenta CMS    *"
+echo -e "\t********************************"
+echo -e "\n\n\n"
+echo -e "Installing to: $DEST_DIR\n"
+
+if [ -d "$DEST_DIR" ]; then
+  echo -e "${FG_C}${WBG_C} WARNING ${NO_C} You are about to delete $DEST_DIR to install Contenta CMS in that location."
+  rm -Rf $DEST_DIR
+  if [ $? -ne 0 ]; then
+    echo -e "${FG_C}${EBG_C} ERROR ${NO_C} Sometimes drush adds some files with permissions that are not deletable by the current user."
+    echo "Please delete the destination directory. Execute: sudo rm -Rf $DEST_DIR"
+    echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} sudo rm -Rf $DEST_DIR"
+    sudo rm -Rf $DEST_DIR
+  fi
+fi
+echo "-----------------------------------------------"
+echo " (1/4) Downloading Contenta CMS using composer "
+echo "-----------------------------------------------"
+echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $COMPOSER create-project contentacms/contenta-jsonapi-project ${DEST_DIR} --stability dev --no-interaction\n\n"
+$COMPOSER create-project contentacms/contenta-jsonapi-project ${DEST_DIR} --stability dev --no-interaction
+if [ $? -ne 0 ]; then
+  echo -e "${FG_C}${EBG_C} ERROR ${NO_C} There was a problem setting up Contenta CMS using composer."
+  echo "Please check your composer configuration and try again."
+  exit 2
 fi
 
-echo -e "Drush adds some permissions that need extra powers to delete.\n\n  * You are about to delete $DEST_DIR"
-echo "Clearing the destination directory. It requires your sudo password."
-sudo rm -Rf $DEST_DIR
-echo -e "Downloading Contenta CMS using composer.\n\t* Executing: composer create-project contentacms/contenta-jsonapi-project ${DEST_DIR} --stability dev --no-interaction"
-composer create-project contentacms/contenta-jsonapi-project ${DEST_DIR} --stability dev --no-interaction
-
 cd ${DEST_DIR}
-# ??
-composer config repositories.contenta_jsonapi path ${BASE_DIR}
+$COMPOSER config repositories.contenta_jsonapi path ${BASE_DIR}
 
-# ??
-# composer require "contentacms/contenta_jsonapi:*" "phpunit/phpunit:~4.8" --no-progress
-cd web
-echo "Installing Contenta CMS for local usage."
-../bin/drush si contenta_jsonapi --db-url=sqlite://sites/default/files/.ht.sqlite --account-pass=test -y
+cd $DOCROOT
+echo "-----------------------------------------------"
+echo " (2/4) Installing Contenta CMS for local usage "
+echo "-----------------------------------------------"
+echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $DRUSH si contenta_jsonapi --db-url=sqlite://sites/default/files/.ht.sqlite --account-pass=test -y\n\n"
+$DRUSH si contenta_jsonapi --db-url=sqlite://sites/default/files/.ht.sqlite --account-pass=test -y
+if [ $? -ne 0 ]; then
+  echo -e "${FG_C}${EBG_C} ERROR ${NO_C} The Drupal installer failed to install Contenta CMS."
+  exit 3
+fi
 
-echo "Initializing local PHP server."
-../bin/drush rs &
+echo "-------------------------------------"
+echo " (3/4) Initializing local PHP server "
+echo "-------------------------------------"
+echo -e "${FG_C}${WBG_C} INFO ${NO_C} Server started. Use Ctrl+C to stop it."
+echo -e "${FG_C}${WBG_C} INFO ${NO_C} If you want to start the server manually use: $DRUSH runserver"
+# Start the server in the background to be able to get the one time login link.
+$DRUSH runserver &
 
-../bin/drush uli
+echo "---------------------------------"
+echo " (4/4) One time admin login link "
+echo "---------------------------------"
+echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $DRUSH uli --uri=\"http://127.0.0.1:8888\"\n\n"
+$DRUSH user-login --uri="http://127.0.0.1:8888"
 
-# ??
-# echo "<?php use Drupal\Robo\RoboFileBase; class RoboFile extends RoboFileBase {}" > RoboFile.php
+# Bring the server execution to the foreground.
+fg
