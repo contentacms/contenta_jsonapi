@@ -35,7 +35,6 @@ if [ -d "$DEST_DIR" ]; then
   rm -Rf $DEST_DIR
   if [ $? -ne 0 ]; then
     echo -e "${FG_C}${EBG_C} ERROR ${NO_C} Sometimes drush adds some files with permissions that are not deletable by the current user."
-    echo "Please delete the destination directory. Execute: sudo rm -Rf $DEST_DIR"
     echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} sudo rm -Rf $DEST_DIR"
     sudo rm -Rf $DEST_DIR
   fi
@@ -65,19 +64,23 @@ if [ $? -ne 0 ]; then
   exit 3
 fi
 
+echo -e "\n\n\n"
+echo -e "\t********************************"
+echo -e "\t*    Installation finished     *"
+echo -e "\t********************************"
+echo -e "\n\n\n"
+
+echo "---------------------------------"
+echo " (3/4) One time admin login link "
+echo "---------------------------------"
+echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $DRUSH user-login --no-browser --uri=\"http://127.0.0.1:8888\""
+echo -e "${FG_C}${WBG_C} INFO ${NO_C} Use this link to login as an administrator in your new site:"
+$DRUSH user-login --no-browser --uri="http://127.0.0.1:8888"
+
 echo "-------------------------------------"
-echo " (3/4) Initializing local PHP server "
+echo " (4/4) Initializing local PHP server "
 echo "-------------------------------------"
 echo -e "${FG_C}${WBG_C} INFO ${NO_C} Server started. Use Ctrl+C to stop it."
-echo -e "${FG_C}${WBG_C} INFO ${NO_C} If you want to start the server manually use: $DRUSH runserver"
+echo -e "${FG_C}${WBG_C} INFO ${NO_C} If you want to start the server manually use:\n\t$DRUSH runserver"
 # Start the server in the background to be able to get the one time login link.
-$DRUSH runserver &
-
-echo "---------------------------------"
-echo " (4/4) One time admin login link "
-echo "---------------------------------"
-echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $DRUSH uli --uri=\"http://127.0.0.1:8888\"\n\n"
-$DRUSH user-login --uri="http://127.0.0.1:8888"
-
-# Bring the server execution to the foreground.
-fg
+$DRUSH runserver
