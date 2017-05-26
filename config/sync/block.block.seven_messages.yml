@@ -10,7 +10,7 @@ _core:
   default_config_hash: 6ANfHFYdqyPgGyd6fgurzphLbqLUVo2aa7rcjNyZ-_0
 id: seven_messages
 theme: seven
-region: header
+region: highlighted
 weight: 0
 provider: null
 plugin: system_messages_block
