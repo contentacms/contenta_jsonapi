@@ -20,3 +20,4 @@ else
     echo -e "\nBye!"
     exit
 fi
+rm -Rf $mytmpdir
