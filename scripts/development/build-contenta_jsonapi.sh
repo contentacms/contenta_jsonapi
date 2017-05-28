@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 # Move up 3 levels since we are in contenta_jsonapi/script/development.
-BASE_DIR="$(dirname $(dirname $(dirname $(cd ${0%/*} && pwd))))"
+BASE_DIR="$(dirname $(dirname $(cd ${0%/*} && pwd)))"
+
 COMPOSER="$(which composer)"
 DOCROOT="web"
 
