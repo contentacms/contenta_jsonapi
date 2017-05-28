@@ -10,3 +10,4 @@ weight: 1
 is_admin: false
 permissions:
   - 'access content'
+  - 'view media'
