@@ -1,0 +1,51 @@
+uuid: 669d42d0-7a33-45c1-9e5d-f4d426c112f3
+langcode: en
+status: true
+dependencies: {  }
+id: menu--menu
+disabled: false
+path: menus
+resourceType: menus
+resourceFields:
+  id:
+    fieldName: id
+    publicName: internalId
+    enhancer:
+      id: ''
+    disabled: false
+  label:
+    fieldName: label
+    publicName: label
+    enhancer:
+      id: ''
+    disabled: false
+  revision:
+    disabled: true
+    fieldName: revision
+    publicName: revision
+    enhancer:
+      id: ''
+  bundle:
+    fieldName: bundle
+    publicName: bundle
+    enhancer:
+      id: ''
+    disabled: false
+  langcode:
+    disabled: true
+    fieldName: langcode
+    publicName: langcode
+    enhancer:
+      id: ''
+  default_langcode:
+    disabled: true
+    fieldName: default_langcode
+    publicName: default_langcode
+    enhancer:
+      id: ''
+  uuid:
+    disabled: true
+    fieldName: uuid
+    publicName: uuid
+    enhancer:
+      id: ''
