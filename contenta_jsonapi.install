@@ -1,6 +1,22 @@
 <?php
 
+use \Drupal\Component\Serialization\Yaml;
+
 /**
+ * Implements hook_install().
  */
 function contenta_jsonapi_install() {
+  // Enable CORS for localhost.
+  /** @var \Drupal\Core\DrupalKernelInterface $drupal_kernel */
+  $drupal_kernel = \Drupal::service('kernel');
+  $file_path = $drupal_kernel->getAppRoot() . '/' . $drupal_kernel->getSitePath();
+  $services_yml = file_get_contents($file_path . '/default.services.yml');
+
+  $yml_data = Yaml::decode($services_yml);
+  $yml_data['parameters']['cors.config']['enabled'] = TRUE;
+  $yml_data['parameters']['cors.config']['allowedHeaders'] = ['*'];
+  $yml_data['parameters']['cors.config']['allowedMethods'] = ['*'];
+  $yml_data['parameters']['cors.config']['allowedOrigins'] = ['localhost:8000', 'localhost:4000', 'localhost:3000'];
+
+  file_put_contents($file_path . '/services.yml', Yaml::encode($yml_data));
 }
