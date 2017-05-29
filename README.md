@@ -19,6 +19,31 @@ composer create-project contentacms/contenta-jsonapi-project MYPROJECT --stabili
 ```
 * After that install Drupal normally.
 
+### CORS
+
+When you actually build a frontend you will likely have [CORS (Cross-Origin Resource Sharing)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
+issues.
+
+In order to allow browsers to request the contenta backend you need to:
+
+* Copy sites/default/default.services.yml to sites/default/services.yml
+* Allow your app to access it, by replacing the end of this configuration file.
+```
+  cors.config:
+    enabled: true
+    allowedHeaders:
+      - '*'
+    allowedMethods:
+      - '*'
+    allowedOrigins:
+       # Note: you need to specify the host + port where your app will run.
+      - localhost:8000
+    exposedHeaders: false
+    maxAge: false
+    supportsCredentials: false
+```
+* Run drush: ```cd web && ../bin/drush rc```
+
 ## Development
 
 Join the discussion in the [#contenta Slack channel](https://drupal.slack.com/messages/C5A70F7D1).
