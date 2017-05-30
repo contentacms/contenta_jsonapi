@@ -57,7 +57,7 @@ resourceFields:
     disabled: false
   uid:
     fieldName: uid
-    publicName: author
+    publicName: owner
     enhancer:
       id: ''
     disabled: false
@@ -109,7 +109,7 @@ resourceFields:
     disabled: false
   entity_type:
     fieldName: entity_type
-    publicName: entityType
+    publicName: entityTypeId
     enhancer:
       id: ''
     disabled: false

@@ -51,7 +51,7 @@ resourceFields:
     disabled: false
   uid:
     fieldName: uid
-    publicName: author
+    publicName: owner
     enhancer:
       id: ''
     disabled: false
