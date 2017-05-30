@@ -1,0 +1,51 @@
+uuid: 2763f554-cd5d-4c4e-a9df-4cd228f1a8b2
+langcode: en
+status: true
+dependencies: {  }
+id: block--block
+disabled: false
+path: blocks
+resourceType: blocks
+resourceFields:
+  id:
+    fieldName: id
+    publicName: internalId
+    enhancer:
+      id: ''
+    disabled: false
+  status:
+    fieldName: status
+    publicName: isPublished
+    enhancer:
+      id: ''
+    disabled: false
+  revision:
+    disabled: true
+    fieldName: revision
+    publicName: revision
+    enhancer:
+      id: ''
+  bundle:
+    fieldName: bundle
+    publicName: bundle
+    enhancer:
+      id: ''
+    disabled: false
+  langcode:
+    disabled: true
+    fieldName: langcode
+    publicName: langcode
+    enhancer:
+      id: ''
+  default_langcode:
+    disabled: true
+    fieldName: default_langcode
+    publicName: default_langcode
+    enhancer:
+      id: ''
+  uuid:
+    disabled: true
+    fieldName: uuid
+    publicName: uuid
+    enhancer:
+      id: ''
