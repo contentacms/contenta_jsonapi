@@ -4,7 +4,7 @@ slogan: ''
 page:
   403: ''
   404: ''
-  front: /user/login
+  front: /welcome
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en
