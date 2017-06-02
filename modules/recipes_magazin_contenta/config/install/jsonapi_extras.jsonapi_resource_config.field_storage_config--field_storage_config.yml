@@ -1,7 +1,10 @@
 uuid: d4c1f528-c8d9-4f8d-98c6-150c57cd5100
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - recipes_magazin_contenta
 id: field_storage_config--field_storage_config
 disabled: true
 path: field_storage_config/field_storage_config

@@ -1,7 +1,10 @@
 uuid: a5f98153-c56f-43f8-97fb-74c5dfa03abc
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - recipes_magazin_contenta
 id: entity_form_display--entity_form_display
 disabled: true
 path: entity_form_display/entity_form_display

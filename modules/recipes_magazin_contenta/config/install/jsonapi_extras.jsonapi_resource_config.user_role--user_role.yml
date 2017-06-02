@@ -1,7 +1,10 @@
 uuid: 8e9cd071-be9b-4ad0-bbcc-b082647fa716
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - recipes_magazin_contenta
 id: user_role--user_role
 disabled: false
 path: roles

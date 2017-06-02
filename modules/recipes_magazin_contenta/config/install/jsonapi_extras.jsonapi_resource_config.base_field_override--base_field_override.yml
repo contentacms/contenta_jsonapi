@@ -1,7 +1,10 @@
 uuid: 2ed2e71e-8121-4371-a72f-daa8e93d9853
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - recipes_magazin_contenta
 id: base_field_override--base_field_override
 disabled: true
 path: base_field_override/base_field_override

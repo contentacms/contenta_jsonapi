@@ -1,7 +1,10 @@
 uuid: c7112c48-3b79-464e-bb18-dd293d4871c5
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - recipes_magazin_contenta
 id: rest_resource_config--rest_resource_config
 disabled: true
 path: rest_resource_config/rest_resource_config

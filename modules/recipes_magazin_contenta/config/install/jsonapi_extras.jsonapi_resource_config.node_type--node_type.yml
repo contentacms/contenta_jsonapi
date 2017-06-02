@@ -1,7 +1,10 @@
 uuid: 7cf06d76-dfce-47fb-81b4-711e84e32dcf
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - recipes_magazin_contenta
 id: node_type--node_type
 disabled: false
 path: contentTypes

@@ -1,7 +1,10 @@
 uuid: 6bd7ab70-a11b-4f38-86e0-e18ab6793048
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - recipes_magazin_contenta
 id: filter_format--filter_format
 disabled: true
 path: filter_format/filter_format

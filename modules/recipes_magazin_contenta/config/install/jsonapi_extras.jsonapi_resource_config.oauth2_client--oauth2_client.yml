@@ -1,7 +1,10 @@
 uuid: 475df688-5444-4825-b4c0-8c38dfadae7e
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - recipes_magazin_contenta
 id: oauth2_client--oauth2_client
 disabled: true
 path: oauth2_client/oauth2_client

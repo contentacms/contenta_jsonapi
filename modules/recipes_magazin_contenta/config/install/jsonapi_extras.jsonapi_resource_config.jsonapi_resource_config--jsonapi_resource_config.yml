@@ -1,7 +1,10 @@
 uuid: 69828020-a9cf-4757-b877-0685797c7e31
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - recipes_magazin_contenta
 id: jsonapi_resource_config--jsonapi_resource_config
 disabled: true
 path: jsonapi_resource_config/jsonapi_resource_config
