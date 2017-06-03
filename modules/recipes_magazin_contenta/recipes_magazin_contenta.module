@@ -16,15 +16,15 @@ function recipes_magazin_contenta_toolbar() {
     'tab' => [
       '#type' => 'link',
       '#title' => t('Contenta'),
-      '#url' => Url::fromUserInput('/welcome'),
+      '#url' => Url::fromUserInput('/quick-overview'),
       '#attributes' => [
-        'title' => t('About contenta'),
+        'title' => t('Quick Overview'),
         // @todo Ship with our logo here?
         'class' => ['toolbar-icon', 'toolbar-icon-menu'],
       ],
     ],
     '#weight' => -15,
-  ]; 
+  ];
    return $items;
 }
 
