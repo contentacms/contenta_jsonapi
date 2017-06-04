@@ -1,0 +1,11 @@
+uuid: f070b714-a7f5-4c8d-b58f-56b040472013
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.embeddable
+id: node.embeddable
+target_entity_type_id: node
+target_bundle: embeddable
+default_langcode: site_default
+language_alterable: false

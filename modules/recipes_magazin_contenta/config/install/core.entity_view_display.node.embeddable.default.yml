@@ -1,0 +1,52 @@
+uuid: 417aac21-8390-4586-a1c3-41bcc566bd60
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.embeddable.background_image
+    - field.field.node.embeddable.reference
+    - field.field.node.embeddable.text
+    - node.type.embeddable
+  module:
+    - user
+id: node.embeddable.default
+targetEntityType: node
+bundle: embeddable
+mode: default
+content:
+  background_image:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+  reference:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  text:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true
