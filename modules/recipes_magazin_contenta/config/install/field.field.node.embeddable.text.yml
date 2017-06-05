@@ -1,0 +1,19 @@
+uuid: 6e0901e0-2952-4e47-9309-80a953143798
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.text
+    - node.type.embeddable
+id: node.embeddable.text
+field_name: text
+entity_type: node
+bundle: embeddable
+label: Text
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

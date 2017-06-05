@@ -1,0 +1,27 @@
+uuid: a543ca20-5ad1-495d-ad73-06a27a1a8dd5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.embeddable
+  module:
+    - user
+id: node.embeddable.teaser
+targetEntityType: node
+bundle: embeddable
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true
