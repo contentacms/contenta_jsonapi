@@ -27,4 +27,3 @@ function recipes_magazin_contenta_toolbar() {
   ];
    return $items;
 }
-
