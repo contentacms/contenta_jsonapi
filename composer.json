@@ -56,7 +56,8 @@
         "drupal/media_entity": "^1.6",
         "drupal/entity_browser": "^1.0",
         "drupal/media_entity_image": "^1.2",
-        "drupal/dropzonejs": "^1.0@alpha"
+        "drupal/dropzonejs": "^1.0@alpha",
+        "drupal/bootstrap": "^3.5"
     },
     "scripts": {
         "install-contenta": "scripts/development/build-contenta_jsonapi.sh"

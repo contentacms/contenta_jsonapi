@@ -10,6 +10,6 @@ core: 8.x
 distribution:
   name: Contenta JSON API
   install:
-    theme: seven
+    theme: bootstrap
 
 config_install: true
