@@ -14,6 +14,7 @@ function recipes_magazin_contenta_install() {
     'recipes_magazin_contenta__media_images',
     'recipes_magazin_contenta__authors',
     'recipes_magazin_contenta__pages',
+    'recipes_magazin_contenta__embeddable',
   ]);
 }
 
@@ -26,5 +27,6 @@ function recipes_magazin_contenta_uninstall() {
     'recipes_magazin_contenta__media_images',
     'recipes_magazin_contenta__authors',
     'recipes_magazin_contenta__pages',
+    'recipes_magazin_contenta__embeddable',
   ]);
 }
