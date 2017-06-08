@@ -1,0 +1,26 @@
+uuid: ec04ca0f-c19c-4ac7-a132-20221444d87e
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - materialize_contenta
+_core:
+  default_config_hash: _Uhx8ZGCJhQWHr11kSy9edX861JFnecHvH-0GXT31X0
+id: materialize_contenta_tools
+theme: materialize_contenta
+region: footer_second
+weight: -6
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 1
+visibility: {  }

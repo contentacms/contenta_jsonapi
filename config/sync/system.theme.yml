@@ -1,4 +1,4 @@
-admin: ''
-default: seven
+admin: seven
+default: materialize_contenta
 _core:
   default_config_hash: YxPlTS5n89GF8P3LtmZdDTmTge1wxdbyBdlH-riwY58

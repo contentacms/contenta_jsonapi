@@ -1,0 +1,26 @@
+uuid: d9105891-1cc6-41ad-8302-19fe496d7473
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - materialize_contenta
+_core:
+  default_config_hash: z9Rb4LLoqumS_ct8BHuFxZ6hxJuFCNJKSyFrpgVphEo
+id: materialize_contenta_secondary_navigation
+theme: materialize_contenta
+region: header
+weight: -6
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Secondary navigation'
+  provider: system
+  label_display: '0'
+  level: 2
+  depth: 0
+visibility: {  }

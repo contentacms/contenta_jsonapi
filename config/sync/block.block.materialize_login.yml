@@ -1,0 +1,22 @@
+uuid: d3c7dbfa-0a63-4346-b769-3da844eedca7
+langcode: en
+status: false
+dependencies:
+  module:
+    - user
+  theme:
+    - materialize
+_core:
+  default_config_hash: 8LEyMO8BKhrdirJnCGpbVdYsn8sUmp7R9U6mus8e7UU
+id: materialize_login
+theme: materialize
+region: content
+weight: 10
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  provider: user
+  label_display: visible
+visibility: {  }

@@ -1,0 +1,38 @@
+{
+  "name": "materialize-subtheme",
+  "author": "You!",
+  "description": "The node.js requirements to build this project.",
+  "version": "1.0.0",
+  "repository": {},
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-decompress": "^2.0.1",
+    "gulp-eslint": "^2.0.0",
+    "gulp-if": "^2.0.0",
+    "gulp-load-plugins": "^1.2.2",
+    "gulp-path": "^3.0.3",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "2.3.1",
+    "gulp-sass-lint": "^1.1.1",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "node-sass": "^4.5.0",
+    "node-sass-import-once": "^1.2.0",
+    "request": "^2.79.0",
+    "run-sequence": "^1.2.2",
+    "support-for": "^1.0.6",
+    "uuid": "^3.0.1",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "test": "gulp"
+  }
+}

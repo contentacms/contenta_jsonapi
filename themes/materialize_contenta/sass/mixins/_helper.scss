@@ -1,0 +1,140 @@
+/*******************
+  Utility Classes
+*******************/
+@mixin hide() {
+  display: none !important;
+}
+
+@mixin show($display: "block") {
+  display: #{$display} !important;
+}
+
+@mixin invisible() {
+  visibility: hidden;
+}
+
+@mixin visually-hidden() {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+}
+
+// Z-levels.
+@mixin z-level($level: 0) {
+  @if ($level == 0) {
+    box-shadow: none !important;
+  }
+  @if ($level == 1) {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  }
+  @if ($level == 1.5) {
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+  }
+  @if ($level == 2) {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  }
+  @if ($level == 3) {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+  }
+  @if ($level == 4) {
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3);
+  }
+  @if ($level == 5) {
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+  }
+}
+
+// Alias for z-level().
+@mixin z-depth($level: 0) {
+  @include z-level($level);
+}
+
+/*********************
+  Media Query Classes
+**********************/
+@mixin hide-on-small-only() {
+  @media #{$small-and-down} {
+    display: none !important;
+  }
+}
+@mixin hide-on-small-and-down() {
+  @include hide-on-small-only();
+}
+
+@mixin hide-on-med-and-down() {
+  @media #{$medium-and-down} {
+    display: none !important;
+  }
+}
+
+@mixin hide-on-med-and-up() {
+  @media #{$medium-and-up} {
+    display: none !important;
+  }
+}
+
+@mixin hide-on-med-only() {
+  @media only screen and (min-width: $small-screen) and (max-width: $medium-screen) {
+    display: none !important;
+  }
+}
+
+@mixin hide-on-large-only() {
+  @media #{$large-and-up} {
+    display: none !important;
+  }
+}
+
+@mixin show-on-large($display: "block") {
+  @media #{$large-and-up} {
+    display: #{$display} !important;
+  }
+}
+
+@mixin show-on-medium($display: "block") {
+  @media only screen and (min-width: $small-screen) and (max-width: $medium-screen) {
+    display: #{$display} !important;
+  }
+}
+
+@mixin show-on-small($display: "block") {
+  @media #{$small-and-down} {
+    display: #{$display} !important;
+  }
+}
+
+@mixin show-on-medium-and-up($display: "block") {
+  @media #{$medium-and-up} {
+    display: #{$display} !important;
+  }
+}
+
+@mixin show-on-medium-and-down($display: "block") {
+  @media #{$medium-and-down} {
+    display: #{$display} !important;
+  }
+}
+
+
+// Center text on mobile
+@mixin center-on-small-only() {
+  @media #{$small-and-down} {
+    text-align: center;
+  }
+}
+
+// Hoverable.
+@mixin hoverable() {
+  transition: box-shadow .25s;
+  box-shadow: 0;
+
+  &:hover {
+    transition: box-shadow .25s;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+
+

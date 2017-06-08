@@ -1,0 +1,22 @@
+uuid: bde10217-d43c-44c7-8b1b-43a2d17fa268
+langcode: en
+status: true
+dependencies:
+  theme:
+    - materialize_contenta
+_core:
+  default_config_hash: NTafFq8GP5IF0OGY5WCAxljQE_P7YD2mTN23KC3H6o8
+id: materialize_contenta_local_tasks
+theme: materialize_contenta
+region: top_nav
+weight: -6
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

@@ -1,0 +1,24 @@
+uuid: cda069bf-275e-48cc-9f6b-21485f2fe975
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - materialize_contenta
+id: mainnavigation
+theme: materialize_contenta
+region: mobile_nav
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }
