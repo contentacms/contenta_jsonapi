@@ -8,7 +8,7 @@ chmod a+x contentacms.sh
 ./contentacms.sh
 ```
 
-For this to work you will need to have composer installed in your local machine. See [get composer](getcomposer.org) for more details.
+For this to work you will need to have composer installed in your local machine. See [get composer](getcomposer.org) for more details. Also, make sure that the sqlite-extension is installed (`sudo apt-get install php-sqlite3` in debian/ubuntu).
 
 ## Installation
 
