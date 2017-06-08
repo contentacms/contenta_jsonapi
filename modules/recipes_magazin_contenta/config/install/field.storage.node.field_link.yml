@@ -1,19 +1,19 @@
-uuid: f28f8486-e6ce-4ddb-a9a4-649992a1d7a4
+uuid: 804064a1-e511-4377-b1d4-83656fa5a4fb
 langcode: en
 status: true
 dependencies:
   module:
+    - link
     - node
   enforced:
     module:
       - recipes_magazin_contenta
-id: node.text
-field_name: text
+id: node.field_link
+field_name: field_link
 entity_type: node
-type: string_long
-settings:
-  case_sensitive: false
-module: core
+type: link
+settings: {  }
+module: link
 locked: false
 cardinality: 1
 translatable: true

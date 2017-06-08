@@ -1,0 +1,21 @@
+uuid: b8ea2901-b8bb-466a-b674-8366f6dd0f2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary
+    - node.type.tutorial
+  module:
+    - text
+id: node.tutorial.field_summary
+field_name: field_summary
+entity_type: node
+bundle: tutorial
+label: Summary
+description: 'Describe the documentation item in a few lines.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

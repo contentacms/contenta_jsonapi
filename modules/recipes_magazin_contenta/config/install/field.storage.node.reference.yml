@@ -4,6 +4,9 @@ status: true
 dependencies:
   module:
     - node
+  enforced:
+    module:
+      - recipes_magazin_contenta
 id: node.reference
 field_name: reference
 entity_type: node

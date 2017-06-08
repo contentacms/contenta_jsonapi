@@ -4,6 +4,9 @@ dependencies:
   module:
     - media_entity
     - node
+  enforced:
+    module:
+      - recipes_magazin_contenta
 id: node.background_image
 field_name: background_image
 entity_type: node

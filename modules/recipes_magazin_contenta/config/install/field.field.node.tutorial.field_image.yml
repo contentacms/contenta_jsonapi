@@ -1,0 +1,29 @@
+uuid: 7d6e5d31-edaf-443d-8498-defcc959afc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - media_entity.bundle.image
+    - node.type.tutorial
+id: node.tutorial.field_image
+field_name: field_image
+entity_type: node
+bundle: tutorial
+label: Image
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: created
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

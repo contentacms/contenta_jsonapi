@@ -1,0 +1,23 @@
+uuid: 4af1ddbe-18b5-444b-998e-5bf2151c0a8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.tutorial
+  module:
+    - link
+id: node.tutorial.field_link
+field_name: field_link
+entity_type: node
+bundle: tutorial
+label: Link
+description: 'Link to the external documentation source.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

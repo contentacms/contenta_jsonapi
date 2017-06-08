@@ -1,0 +1,18 @@
+uuid: 7f2ace28-3ff3-431a-a1ef-59b3fb28867c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.tutorial
+id: node.tutorial.title
+field_name: title
+entity_type: node
+bundle: tutorial
+label: Subject
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
