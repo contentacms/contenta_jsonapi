@@ -1,0 +1,44 @@
+global-styling:
+  css:
+    theme:
+      css/materialize-drupal.css: {}
+      css/style.css: {}
+
+  # If this library had JavaScript you could specify it like this:
+  # js:
+  #   js/script.js: {}
+
+materialize-scripts:
+  js:
+    js/animation.js: {}
+    js/buttons.js: {}
+    js/cards.js: {}
+    js/carousel.js: {}
+    js/character_counter.js: {}
+    js/chips.js: {}
+    js/collapsible.js: {}
+    js/dropdown.js: {}
+    js/forms.js: {}
+    js/global.js: {}
+    js/hammer.min.js: {}
+    js/initial.js: {}
+    js/jquery.easing.1.3.js: {}
+    js/jquery.hammer.js: {}
+    js/materialbox.js: {}
+    js/modal.js: {}
+    js/parallax.js: {}
+    js/pushpin.js: {}
+    js/scrollFire.js: {}
+    js/scrollspy.js: {}
+    js/sideNav.js: {}
+    js/slider.js: {}
+    js/tabs.js: {}
+    js/toasts.js: {}
+    js/tooltip.js: {}
+    js/transitions.js: {}
+    js/velocity.min.js: {}
+    # Old waves.js
+    # js/waves.js: {}
+    # Upgraded to the latest waves 0.7.5.
+    js/waves-0.7.5.js: {}
+

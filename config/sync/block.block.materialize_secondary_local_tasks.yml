@@ -1,0 +1,22 @@
+uuid: 2d3f6bad-2957-43b6-a45f-e9d8d3e279af
+langcode: en
+status: true
+dependencies:
+  theme:
+    - materialize
+_core:
+  default_config_hash: gXspqW_d6aD4vynN61LxERX3q5RcQ9rJhANxU5cdfbY
+id: materialize_secondary_local_tasks
+theme: materialize
+region: highlighted
+weight: 1
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  provider: core
+  label_display: '0'
+  primary: false
+  secondary: true
+visibility: {  }

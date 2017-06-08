@@ -1,0 +1,22 @@
+uuid: caed28da-4ab4-4dfc-b19a-d112ca033c2f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - materialize
+_core:
+  default_config_hash: bO8fBXGlS1178pNs_EdlrUqmbrlENg9iYnSsxPW2P8A
+id: materialize_primary_local_tasks
+theme: materialize
+region: header
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: false
+visibility: {  }

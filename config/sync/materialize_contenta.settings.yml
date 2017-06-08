@@ -1,0 +1,22 @@
+breadcrumbs: 1
+breadcrumbs_home: true
+breadcrumbs_title: true
+fixed_header: 0
+_core:
+  default_config_hash: lEjYHX-Q2v9LPe0DJ6-ufViXbaNPgoekNkub3Q9DGtI
+schemas: {  }
+button_size: btn-lg
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: ''
+  url: ''
+  use_default: false
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: false
+  node_user_picture: true
+logo:
+  path: ''
+  url: ''
+  use_default: false

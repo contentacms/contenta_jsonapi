@@ -1,0 +1,32 @@
+# Default settings should not be located here. This file is only used to
+# override existing settings. If your theme is the one that introduces a new
+# theme setting, it should use the Drupal Materialize base theme's
+# @MaterializeSetting annotation discovery process. This ensures that sub-theme
+# settings are inherited from base themes themes properly and to determine when
+# a setting should be saved to config as "overridden".
+#
+# @see \Drupal\materialize\Plugin\SettingBase
+# @see \Drupal\materialize\Plugin\SettingInterface
+# @see \Drupal\materialize\Plugin\SettingManager
+# @see \Drupal\materialize\Plugin\Form\SystemThemeSettings
+# @see \Drupal\materialize\ThemeSettings
+
+# Buttons size
+#---------------
+button_size: btn
+
+# Breadcrumbs
+#---------------
+breadcrumbs: 1
+
+# Breadcrumbs home
+# --------------
+breadcrumbs_home: TRUE
+
+# Breadcrumbs title
+# --------------
+breadcrumbs_title: TRUE
+
+# Navbar position
+# --------------
+fixed_header: 0

@@ -1,0 +1,30 @@
+name: Materialize Contenta
+description: 'Uses the Materialize framework SASS source files and must be compiled (not for beginners).'
+package: 'Materialize'
+
+core: 8.x
+type: theme
+base theme: materialize
+
+regions:
+  top_nav: 'Top navigation'
+  branding_nav: 'Nav bar branding'
+  primary_nav: 'Nav bar primary navigation'
+  mobile_nav: 'Mobile navigation'
+  header: 'Top Bar'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  footer_first: 'Footer first'
+  footer_second: 'Footer second'
+  footer_third: 'Footer third'
+  copy: 'Footer copyright'
+  # The page_top and page_bottom regions are hidden, which means they will not
+  # show up on the block layout page. But they are required in order for the
+  # html.html.twig to work properly, so do not delete them.
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+
+libraries:
+  - 'materialize_contenta/global-styling'
+  - 'materialize_contenta/materialize-scripts'

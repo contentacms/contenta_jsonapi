@@ -1,0 +1,22 @@
+uuid: 73060791-b403-4336-9cf2-babf33c9db37
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - materialize_contenta
+_core:
+  default_config_hash: 7LFl8o52GX2HM0IrdliXH8-6aJVEDCS1fEqhxF7ZxJU
+id: materialize_contenta_powered
+theme: materialize_contenta
+region: copy
+weight: -7
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

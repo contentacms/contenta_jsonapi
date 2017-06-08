@@ -1,0 +1,29 @@
+
+@mixin text-hide() {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+@mixin font-weight($weight: "normal") {
+  @if ($weight == "thin") {
+    font-weight: $font-weight-thin;
+  }
+  @else if($weight == "light") {
+    font-weight: $font-weight-light;
+  }
+  @else if($weight == "normal") {
+    font-weight: $font-weight-normal;
+  }
+  @else if($weight == "strong" or $weight == "bold") {
+    font-weight: $font-weight-strong;
+  }
+}
+
+@mixin small($size: $font-size-small) {
+  font-size: $size;
+}
+
+// todo: flow-text().
