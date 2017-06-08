@@ -1,0 +1,124 @@
+@mixin card-panel() {
+  transition: box-shadow .25s;
+  padding: $card-padding;
+  margin: $element-top-margin 0 $element-bottom-margin 0;
+  border-radius: 2px;
+  @include z-depth(1);
+  background-color: $card-bg-color;
+}
+
+@mixin card($size: "default") {
+  position: relative;
+  margin: $element-top-margin 0 $element-bottom-margin 0;
+  background-color: $card-bg-color;
+  transition: box-shadow .25s;
+  border-radius: 2px;
+  @include z-depth(1);
+
+  @if ($size == "small") {
+    height: 300px;
+  }
+
+  @if ($size == "medium") {
+    height: 400px;
+  }
+
+  @if ($size == "large") {
+    height: 500px;
+  }
+
+  // todo: $size in px? Set height?
+}
+
+@mixin card-title() {
+  display: block;
+  line-height: 32px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: 300;
+
+  i {
+    line-height: 32px;
+  }
+
+  &.activator {
+    cursor: pointer;
+  }
+}
+
+@mixin card-image($size: "default") {
+  position: relative;
+
+  @if ($size == "small" or $size == "medium" or $size == "large") {
+    max-height: 60%;
+    overflow: hidden;
+  }
+
+  // Image background for content
+  img {
+    display: block;
+    border-radius: 2px 2px 0 0;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+@mixin card-image-title {
+  @include card-title();
+  color: $card-bg-color;
+  position: absolute;
+  margin: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  padding: $card-padding;
+}
+
+@mixin card-content($size: "default") {
+  max-height: 100%;
+  @if ($size == "small" or $size == "medium" or $size == "large") {
+    max-height: 40%;
+  }
+  overflow: hidden;
+
+  padding: $card-padding;
+  border-radius: 0 0 2px 2px;
+
+  p {
+    margin: 0;
+    color: inherit;
+  }
+}
+
+@mixin card-action($size: "default") {
+  position: relative;
+  background-color: inherit;
+  border-top: 1px solid rgba(160,160,160,.2);
+  padding: 16px $card-padding;
+
+  @if ($size == "small" or $size == "medium" or $size == "large") {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  a:not(.btn):not(.btn-large):not(.btn-floating) {
+    color: $card-link-color;
+    margin-right: $card-padding;
+    transition: color .3s ease;
+    text-transform: uppercase;
+
+    &:hover { color: $card-link-color-light; }
+  }
+}
+
+// todo: horizontal card
+// todo: card reveal - need js work.
+

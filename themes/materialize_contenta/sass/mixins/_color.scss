@@ -1,0 +1,55 @@
+
+// Helper Mixin to generate theme aliased classes.
+@mixin _gen_aliased_color_classes($color_name, $color-alias: "default") {
+  $curr_color: map-get($colors, $color_name);
+  @each $alias_type, $alias_value in $curr_color {
+    @if $alias_type == "base" {
+      .#{$color_alias} {
+        background-color: $alias_value !important;
+      }
+      .#{$color_alias}-text {
+        color: $alias_value !important;
+      }
+    }
+    @else if $alias_type != "shades" {
+      .#{$color_alias}.#{$alias_type} {
+        background-color: $alias_value !important;
+      }
+      .#{$color_alias}-text.text-#{$alias_type} {
+        color: $alias_value !important;
+      }
+    }
+  }
+}
+
+
+
+// Background color helper.
+@mixin bg-color($color, $type: "base", $alpha: 1) {
+  @if map-has-key($shades, $color) {
+    @if alpha == 1 {
+      background-color: map-get($shades, $color);
+    }
+    @else {
+      background-color: rgba(map-get($shades, $color), $alpha);
+    }
+  }
+  @else {
+    @if alpha == 1 {
+      background-color: color($color, $type);
+    }
+    @else {
+      background-color: rgba(color($color, $type), $alpha);
+    }
+  }
+}
+
+// Text color helper.
+@mixin text-color($color, $type: "base") {
+  @if map-has-key($shades, $color) {
+    color: map-get($shades, $color);
+  }
+  @else {
+    color: color($color, $type);
+  }
+}

@@ -1,0 +1,136 @@
+@import url("//fonts.googleapis.com/icon?family=Material+Icons");
+
+html{
+  @media #{$mobile} {
+    font-size: 15px;
+  }
+
+  @media #{$large-and-up} {
+    font-size: 15.5px;
+  }
+
+  @media #{$extra-large-and-up} {
+    font-size: 16px;
+  }
+}
+
+body {
+  background-color: $primary-color-light;
+}
+
+.block-block-content,
+article {
+  ul {
+    &:not(.browser-default) {
+      padding-left: 2em;
+      list-style-type: square;
+
+      li {
+        list-style-type: square;
+      }
+    }
+  }
+  h2 .material-icons {
+    background: $badge-bg-color;
+    padding: 0.4rem;
+    border-radius: 1.5rem;
+    font-size: 1.5rem;
+    color: $primary-color-text;
+  }
+}
+
+ol {
+  padding-left: 2em;
+}
+
+
+// Breadcrumbs
+.breadcrumb {
+  color: $breadcrumb-link-color;
+  font-size: $font-size-small;
+
+  &:before {
+    content: $breadcrumb-separator;
+    color: $breadcrumb-separator-color;
+    font-size: inherit;
+    font-weight: $font-weight-thin;
+    vertical-align: middle;
+  }
+
+  &:last-child {
+    color: $breadcrumb-color;
+  }
+}
+
+// Messages.
+
+.messages {
+  .message {
+    @include make-s-column(12);
+    @include make-m-column(8);
+    @include make-m-column-offset(2);
+    @include make-l-column(6);
+    @include make-l-column-offset(3);
+    @include z-level(1);
+  }
+  .row {
+    margin-top: 20px;
+  }
+
+  &.messages--status .message {
+    background-color: $message-status-bg;
+    color: $message-status-text;
+  }
+
+  &.messages--warning .message {
+    background-color: $message-warning-bg;
+    color: $message-warning-text;
+  }
+
+  &.messages--error .message {
+    background-color: $message-error-bg;
+    color: $message-error-text;
+  }
+}
+
+// Buttons
+.btn-noclick {
+  cursor: default;
+}
+
+// Tabs
+ul.tabs {
+  padding-left: 0;
+  border-bottom: 1px solid color('grey', 'lighten-2');
+}
+
+ul.tabs.tabs--secondary {
+  border-bottom: 1px solid color('grey', 'lighten-3');
+
+  li {
+    &, a {
+      font-size: 90%;
+    }
+  }
+}
+
+// Pager
+
+nav.pager {
+  @include z-depth(0);
+  @include bg-color('transparent');
+}
+
+.pagination {
+  text-align: center;
+
+  li {
+    &.is-active a { color: #fff; }
+    &.is-active { background-color: $primary-color; }
+  }
+}
+
+/* Firefox Bug: link not triggered - remove materilaize's fix */
+.waves-effect .waves-ripple {
+  z-index: auto;
+}

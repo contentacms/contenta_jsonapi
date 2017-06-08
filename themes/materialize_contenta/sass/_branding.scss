@@ -1,0 +1,21 @@
+nav {
+  .brand-logo {
+    position: static;
+    padding-right: 10px;
+    line-height: 1;
+  }
+
+  .block-system-branding-block {
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    a.brand-logo,
+    a.brand-name {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+uuid: ef52ed55-715d-424e-a85c-4cd1c1aa7585
+langcode: en
+status: true
+dependencies:
+  theme:
+    - materialize_contenta
+_core:
+  default_config_hash: gzgiyq1BJl6TaZm7m2hzEaxgtrau0wu-dAkq2PBIWoU
+id: materialize_contenta_page_title
+theme: materialize_contenta
+region: top_nav
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

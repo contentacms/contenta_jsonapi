@@ -1,0 +1,149 @@
+// Grid helper mixins.
+@mixin make-container() {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 90%;
+
+  @media #{$medium-and-up} {
+    width: 85%;
+  }
+
+  @media #{$large-and-up} {
+    width: 70%;
+  }
+
+  @include clearfix();
+}
+
+@mixin make-row($gutter: $gutter-width) {
+  margin-left: ($gutter / -2);
+  margin-right: ($gutter-width / -2);
+  @include clearfix();
+}
+
+
+// Make .col class as the grid base.
+@mixin make-column($column: 0, $gutter: $gutter-width) {
+  float: left;
+  box-sizing: border-box;
+  left: auto;
+  margin-left: auto;
+  min-height: 1px;
+  padding-left:  ($gutter / 2);
+  padding-right: ($gutter / 2);
+  right: auto;
+
+  @if ($column > 0) {
+    width: percentage(($column / $num-cols));
+  }
+}
+
+// Column offset helper.
+@mixin make-column-offset($column) {
+  margin-left: percentage(($column / $num-cols));
+}
+
+// Column pull helper.
+@mixin make-column-pull($column) {
+  right: percentage(($column / $num-cols));
+}
+
+// Column push helper.
+@mixin make-column-push($column) {
+  left: percentage(($column / $num-cols));
+}
+
+// Generate a small column
+@mixin make-s-column($column, $gutter: $gutter-width) {
+  @include make-column($column, $gutter: $gutter-width);
+}
+
+@mixin make-s-column-offset($column) {
+  @include make-column-offset($column);
+}
+
+@mixin make-s-column-pull($column) {
+  @include make-column-pull($column);
+}
+
+@mixin make-s-column-push($column) {
+  @include make-column-push($column);
+}
+
+// Generate a medium column
+@mixin make-m-column($column, $gutter: $gutter-width) {
+  @media #{$medium-and-up} {
+    @include make-column($column, $gutter: $gutter-width);
+  }
+}
+
+@mixin make-m-column-offset($column) {
+  @media #{$medium-and-up} {
+    @include make-column-offset($column);
+  }
+}
+
+@mixin make-m-column-pull($column) {
+  @media #{$medium-and-up} {
+    @include make-column-pull($column);
+  }
+}
+
+@mixin make-m-column-push($column) {
+  @media #{$medium-and-up} {
+    @include make-column-push($column);
+  }
+}
+
+// Generate a large column
+@mixin make-l-column($column, $gutter: $gutter-width) {
+  @media #{$large-and-up} {
+    @include make-column($column, $gutter: $gutter-width);
+  }
+}
+
+@mixin make-l-column-offset($column) {
+  @media #{$large-and-up} {
+    @include make-column-offset($column);
+  }
+}
+
+@mixin make-l-column-pull($column) {
+  @media #{$large-and-up} {
+    @include make-column-pull($column);
+  }
+}
+
+@mixin make-l-column-push($column) {
+  @media #{$large-and-up} {
+    @include make-column-push($column);
+  }
+}
+
+// Generate an extra-large column
+@mixin make-xl-column($column, $gutter: $gutter-width) {
+  @media #{$extra-large-and-up} {
+    @include make-column($column, $gutter: $gutter-width);
+  }
+}
+
+@mixin make-xl-column-offset($column) {
+  @media #{$extra-large-and-up} {
+    @include make-column-offset($column);
+  }
+}
+
+@mixin make-xl-column-pull($column) {
+  @media #{$extra-large-and-up} {
+    @include make-column-pull($column);
+  }
+}
+
+@mixin make-xl-column-push($column) {
+  @media #{$extra-large-and-up} {
+    @include make-column-push($column);
+  }
+}
+
+
+

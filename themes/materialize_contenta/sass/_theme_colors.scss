@@ -1,0 +1,48 @@
+/* Generated Color Classes for primary-light and dark colors. */
+
+.primary-color-light {
+  background-color: $primary-color-light;
+}
+
+.primary-color-light-text {
+  color: $primary-color-light;
+}
+
+.primary-color-dark {
+  background-color: $primary-color-dark;
+}
+
+.primary-color-light-dark {
+  color: $primary-color-dark;
+}
+
+.primary-text-color {
+  color: $primary-text-color;
+}
+
+.accent-color,
+.secondary-text-color{
+  color: $secondary-text-color;
+}
+
+.divider-color{
+  color: $divider-color;
+}
+
+/* Generated Color Classes for primary/secondary colors. */
+
+@each $color_name, $color in $colors {
+
+    $color_alias: "primary-color";
+  @each $color_type, $color_value in $color {
+    @if $color_type == "base" {
+
+      @if ($color_value == $primary-color) {
+        @include _gen_aliased_color_classes($color_name, "primary-color");
+      }
+      @if ($color_value == $secondary-color) {
+        @include _gen_aliased_color_classes($color_name, "primary-color");
+      }
+    }
+  }
+}
