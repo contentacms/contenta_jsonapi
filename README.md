@@ -8,11 +8,11 @@ chmod a+x contentacms.sh
 ./contentacms.sh
 ```
 
-For this to work you will need to have composer installed in your local machine. See [get composer](getcomposer.org) for more details. Also, make sure that the sqlite-extension is installed (`sudo apt-get install php-sqlite3` in debian/ubuntu).
+For this to work you will need to have composer installed in your local machine. See [get composer](https://getcomposer.org/) for more details. Also, make sure that the sqlite-extension is installed (`sudo apt-get install php-sqlite3` in debian/ubuntu).
 
 ## Installation
 
-* [Get composer](getcomposer.org)
+* [Get composer](https://getcomposer.org/)
 * Create a new project using a command like this. This will pull down the installation profile + core + modules, so maybe get a cup of tea:
 ```
 composer create-project contentacms/contenta-jsonapi-project MYPROJECT --stability dev --no-interaction
