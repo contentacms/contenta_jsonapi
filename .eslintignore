@@ -7,4 +7,3 @@ sites/**/libraries/**/*
 profiles/**/libraries/**/*
 **/js_test_files/**/*
 web/**/*
-tests/modules/thunder_test/js/jquery.simulate.js
