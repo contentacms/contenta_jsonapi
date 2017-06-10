@@ -6,17 +6,17 @@ _core:
   default_config_hash: lEjYHX-Q2v9LPe0DJ6-ufViXbaNPgoekNkub3Q9DGtI
 schemas: {  }
 button_size: btn-lg
-favicon:
-  mimetype: image/vnd.microsoft.icon
-  path: ''
+logo:
+  path: profiles/contrib/contenta_jsonapi/themes/materialize_contenta/logo.svg
   url: ''
   use_default: false
+favicon:
+  mimetype: image/svg+xml
+  path: ''
+  url: 'http://127.0.0.1:8888/profiles/contrib/contenta_jsonapi/themes/materialize_contenta/favicon.ico'
+  use_default: true
 features:
   comment_user_picture: true
   comment_user_verification: true
-  favicon: false
+  favicon: true
   node_user_picture: true
-logo:
-  path: ''
-  url: ''
-  use_default: false

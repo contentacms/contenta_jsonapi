@@ -6,25 +6,48 @@
  */
 
 use Drupal\Core\Url;
+use Drupal\Core\Menu\MenuTreeParameters;
 
 /**
  * Implements hook_toolbar().
  */
 function recipes_magazin_contenta_toolbar() {
-   $items['contenta'] = [
-    '#type' => 'toolbar_item',
-    'tab' => [
-      '#type' => 'link',
-      '#title' => t('Contenta'),
-      '#url' => Url::fromUserInput('/quick-overview'),
-      '#attributes' => [
-        'title' => t('Quick Overview'),
-        // @todo Ship with our logo here?
-        'class' => ['toolbar-icon', 'toolbar-icon-menu'],
+  $menu_tree = \Drupal::service('toolbar.menu_tree');
+  $parameters = new MenuTreeParameters();
+  $parameters->setMinDepth(1)->setMaxDepth(3)->onlyEnabledLinks();
+  $tree = $menu_tree->load('contenta', $parameters);
+  $manipulators = array(
+    array('callable' => 'menu.default_tree_manipulators:checkAccess'),
+    array('callable' => 'menu.default_tree_manipulators:generateIndexAndSort'),
+    array('callable' => 'toolbar_menu_navigation_links'),
+  );
+  $tree = $menu_tree->transform($tree, $manipulators);
+  $renderable_menu = $menu_tree->build($tree);
+  return [
+    'contenta' => [
+      '#type' => 'toolbar_item',
+      'tab' => [
+        '#type' => 'link',
+        '#title' => t('Contenta CMS'),
+        '#url' => Url::fromUserInput('/welcome'),
+        '#attributes' => [
+          'title' => t('Welcome to Contenta CMS'),
+          'class' => [
+            'toolbar-icon',
+            'toolbar-icon-menu',
+            'toolbar-icon-contenta',
+          ],
+        ],
       ],
+      'tray' => [
+        '#heading' => t('Environment switcher'),
+        '#wrapper_attributes' => [],
+        'menu' => $renderable_menu,
+      ],
+      '#attached' => [
+        'library' => ['recipes_magazin_contenta/recipes_magazin_contenta'],
+      ],
+      '#weight' => -15,
     ],
-    '#weight' => -15,
   ];
-   return $items;
 }
-
