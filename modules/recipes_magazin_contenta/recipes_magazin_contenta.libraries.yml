@@ -1,0 +1,7 @@
+recipes_magazin_contenta:
+  version: '1.0'
+  css:
+    component:
+      css/recipes_magazin_contenta.css: {}
+  dependencies:
+    - color/drupal.color
