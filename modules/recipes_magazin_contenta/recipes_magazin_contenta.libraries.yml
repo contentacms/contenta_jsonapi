@@ -3,5 +3,3 @@ recipes_magazin_contenta:
   css:
     component:
       css/recipes_magazin_contenta.css: {}
-  dependencies:
-    - color/drupal.color
