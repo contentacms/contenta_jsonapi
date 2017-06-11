@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.card
     - node.type.tutorial
   module:
     - node
@@ -53,21 +54,19 @@ display:
           items_per_page: null
           offset: 0
       style:
-        type: grid
+        type: html_list
         options:
+          row_class: ''
+          default_row_class: true
           uses_fields: false
-          columns: 2
-          automatic_width: true
-          alignment: horizontal
-          col_class_default: true
-          col_class_custom: ''
-          row_class_default: true
-          row_class_custom: ''
+          type: ul
+          wrapper_class: item-list
+          class: ''
       row:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: default
+          view_mode: card
       fields:
         title:
           id: title

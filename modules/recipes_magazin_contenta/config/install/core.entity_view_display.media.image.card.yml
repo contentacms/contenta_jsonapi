@@ -1,0 +1,30 @@
+uuid: f3a042df-24ad-438c-b9ac-8fece439a456
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.card
+    - field.field.media.image.field_image
+    - media_entity.bundle.image
+  module:
+    - image
+id: media.image.card
+targetEntityType: media
+bundle: image
+mode: card
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  created: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true
