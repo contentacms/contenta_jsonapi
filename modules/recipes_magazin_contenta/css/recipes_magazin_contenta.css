@@ -16,3 +16,6 @@
 .no-svg .toolbar-bar .toolbar-icon-menu.toolbar-icon-contenta.is-active:before {
   background-image: url("../images/contenta-logo-dark.png");
 }
+.toolbar nav.toolbar-bar {
+  background-color: #2AABDD;
+}
