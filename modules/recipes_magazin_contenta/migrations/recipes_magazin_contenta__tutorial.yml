@@ -10,7 +10,7 @@ process:
   title: title
   field_image:
     plugin: migration_lookup
-    migration: recipes_magazin__media_images
+    migration: recipes_magazin_contenta__media_images
     source: image
   'field_link/uri': link
   'field_link/title':
