@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.card
     - node.type.tutorial
+    - system.menu.contenta
   module:
     - node
     - user
@@ -175,6 +176,15 @@ display:
     display_options:
       display_extenders: {  }
       path: help/tutorials
+      menu:
+        type: normal
+        title: Tutorials
+        description: 'List of external documentation sources.'
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: contenta
     cache_metadata:
       max-age: -1
       contexts:
