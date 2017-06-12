@@ -2,12 +2,12 @@ uuid: 4f195fab-c413-4a98-b49f-91c6329fe171
 langcode: en
 status: true
 dependencies:
-  module:
-    - node
-    - text
   enforced:
     module:
       - recipes_magazin_contenta
+  module:
+    - node
+    - text
 id: node.field_summary
 field_name: field_summary
 entity_type: node

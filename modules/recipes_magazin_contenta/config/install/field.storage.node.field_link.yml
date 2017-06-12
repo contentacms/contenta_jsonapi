@@ -2,12 +2,14 @@ uuid: 804064a1-e511-4377-b1d4-83656fa5a4fb
 langcode: en
 status: true
 dependencies:
-  module:
-    - link
-    - node
   enforced:
     module:
       - recipes_magazin_contenta
+  module:
+    - link
+    - node
+_core:
+  default_config_hash: L1lZquBLi2OEmqP2SQmqF8tN3NCu2xAxTF0uSNCQx-E
 id: node.field_link
 field_name: field_link
 entity_type: node

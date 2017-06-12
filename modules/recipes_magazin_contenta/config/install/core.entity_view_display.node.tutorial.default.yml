@@ -6,9 +6,11 @@ dependencies:
     - field.field.node.tutorial.field_image
     - field.field.node.tutorial.field_link
     - field.field.node.tutorial.field_summary
+    - field.field.node.tutorial.field_topic
     - node.type.tutorial
   module:
     - link
+    - options
     - text
     - user
 id: node.tutorial.default
@@ -43,9 +45,18 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
+  field_topic:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   links:
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
   title:
     label: hidden
     type: string

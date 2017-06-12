@@ -2,11 +2,11 @@ uuid: 0a5084f8-7f8a-4cdb-8016-1ed9ee8231b7
 langcode: en
 status: true
 dependencies:
-  module:
-    - node
   enforced:
     module:
       - recipes_magazin_contenta
+  module:
+    - node
 id: node.reference
 field_name: reference
 entity_type: node

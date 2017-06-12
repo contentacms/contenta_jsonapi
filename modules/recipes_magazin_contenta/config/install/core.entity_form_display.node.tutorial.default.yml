@@ -53,6 +53,12 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
+  field_topic:
+    weight: 34
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   langcode:
     type: language_select
     weight: 2
