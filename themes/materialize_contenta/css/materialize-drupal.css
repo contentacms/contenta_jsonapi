@@ -3295,7 +3295,7 @@ span.badge.new {
   font-weight: 300;
   font-size: 0.8rem;
   color: #fff;
-  background-color: #9E9E9E;
+  background-color: #03A9F4;
   border-radius: 2px;
 }
 
@@ -4838,14 +4838,14 @@ small {
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
-  color: #ffab40;
+  color: #40c4ff;
   margin-right: 24px;
   transition: color .3s ease;
   text-transform: uppercase;
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating):hover {
-  color: #ffd8a6;
+  color: #a6e4ff;
 }
 
 .card .card-reveal {
@@ -5784,8 +5784,8 @@ button.btn-floating {
 }
 
 .chips.focus {
-  border-bottom: 1px solid #bdbdbd;
-  box-shadow: 0 1px 0 0 #bdbdbd;
+  border-bottom: 1px solid #29b6f6;
+  box-shadow: 0 1px 0 0 #29b6f6;
 }
 
 .chips:hover {
@@ -5793,7 +5793,7 @@ button.btn-floating {
 }
 
 .chips .chip.selected {
-  background-color: #bdbdbd;
+  background-color: #29b6f6;
   color: #fff;
 }
 

@@ -2369,7 +2369,7 @@ article ul:not(.browser-default) li {
 
 .block-block-content h2 .material-icons,
 article h2 .material-icons {
-  background: #9E9E9E;
+  background: #03A9F4;
   padding: 0.4rem;
   border-radius: 1.5rem;
   font-size: 1.5rem;
@@ -2381,20 +2381,20 @@ ol {
 }
 
 .breadcrumb {
-  color: #e0e0e0;
+  color: #4fc3f7;
   font-size: 75%;
 }
 
 .breadcrumb:before {
   content: "";
-  color: #616161;
+  color: #0288d1;
   font-size: inherit;
   font-weight: 200;
   vertical-align: middle;
 }
 
 .breadcrumb:last-child {
-  color: #bdbdbd;
+  color: #29b6f6;
 }
 
 .messages .message {
