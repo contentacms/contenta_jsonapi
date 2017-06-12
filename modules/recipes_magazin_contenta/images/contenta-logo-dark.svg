@@ -1,33 +1,38 @@
-<svg width="117" height="108" viewBox="0 0 117 108" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<title>symbol</title>
+<svg width="351" height="351" viewBox="0 0 351 351" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>Frame</title>
 <desc>Created using Figma</desc>
-<g id="Canvas" transform="translate(-1669 431)">
+<g id="Canvas" transform="matrix(3 0 0 3 -5202 399)">
+<clipPath id="clip-0" clip-rule="evenodd">
+<path d="M 1734 -133L 1851 -133L 1851 -16L 1734 -16L 1734 -133Z" fill="#FFFFFF"/>
+</clipPath>
+<g id="Frame" clip-path="url(#clip-0)">
 <g id="symbol">
 <g id="Vector">
-<use xlink:href="#path0_fill" transform="matrix(0.7071 -0.7071 0.7071 0.7071 1678 -377.119)" fill="#FFFFFF"/>
+<use xlink:href="#path0_fill" transform="matrix(0.7071 -0.7071 0.7071 0.7071 1743 -75.1189)" fill="#2AABDD"/>
 </g>
 <g id="Vector">
-<use xlink:href="#path0_fill" transform="matrix(0.7071 -0.7071 0.7071 0.7071 1669 -377.119)" fill="#212D35"/>
+<use xlink:href="#path0_fill" transform="matrix(0.7071 -0.7071 0.7071 0.7071 1734 -75.119)" fill="#212D35"/>
 </g>
 <g id="Group">
 <g id="Group">
 <g id="Vector">
-<use xlink:href="#path1_fill" transform="translate(1694.38 -397.928)" fill="#FFFFFF"/>
+<use xlink:href="#path1_fill" transform="translate(1759.38 -95.9278)" fill="#FFFFFF"/>
 </g>
 <g id="Vector">
-<use xlink:href="#path2_fill" transform="translate(1738.47 -398.302)" fill="#FFFFFF"/>
+<use xlink:href="#path2_fill" transform="translate(1803.47 -96.3025)" fill="#FFFFFF"/>
 </g>
 </g>
 <g id="Group">
 <g id="Vector">
-<use xlink:href="#path3_fill" transform="translate(1712.57 -378.503)" fill="#FFFFFF"/>
+<use xlink:href="#path3_fill" transform="translate(1777.57 -76.5025)" fill="#FFFFFF"/>
 </g>
 <g id="Group">
 <g id="Vector">
-<use xlink:href="#path4_fill" transform="translate(1714.38 -394.003)" fill="#FFFFFF"/>
+<use xlink:href="#path4_fill" transform="translate(1779.38 -92.0025)" fill="#FFFFFF"/>
 </g>
 <g id="Vector">
-<use xlink:href="#path5_fill" transform="translate(1726.47 -394.003)" fill="#FFFFFF"/>
+<use xlink:href="#path5_fill" transform="translate(1791.47 -92.0025)" fill="#FFFFFF"/>
+</g>
 </g>
 </g>
 </g>
