@@ -1,0 +1,18 @@
+status: true
+id: recipes_magazin__images_url
+source:
+  plugin: recipe_magazin__external_images
+  path: default_content/recipes.csv
+  header_row_count: 1
+  column: image
+  keys:
+    - image
+process:
+  _skip:
+    plugin: skip_on_empty
+    source: image
+    method: row
+  filename: image
+  uri: image
+destination:
+  plugin: 'entity:file'
