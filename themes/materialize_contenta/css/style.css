@@ -2334,6 +2334,10 @@
   color: #212121 !important;
 }
 
+html {
+  font-weight: 300;
+}
+
 @media only screen and (min-width: 0) {
   html {
     font-size: 15px;
@@ -2365,15 +2369,6 @@ article ul:not(.browser-default) {
 .block-block-content ul:not(.browser-default) li,
 article ul:not(.browser-default) li {
   list-style-type: square;
-}
-
-.block-block-content h2 .material-icons,
-article h2 .material-icons {
-  background: #03A9F4;
-  padding: 0.4rem;
-  border-radius: 1.5rem;
-  font-size: 1.5rem;
-  color: #FFFFFF;
 }
 
 ol {
@@ -2556,4 +2551,18 @@ nav .block-system-branding-block a.brand-name {
   margin-top: 0;
   padding-top: 2rem;
   font-weight: lighter;
+}
+
+.card.horizontal .card-stack .card-action.right, .card.horizontal .card-stack .card-action.left {
+  width: 100%;
+}
+
+.card .card-content p, .card .card-content ul, .card .card-content ol {
+  color: #757575;
+}
+
+.card .card-content > i.material-icons.right {
+  color: #03A9F4;
+  padding: 1.5rem;
+  font-size: 7rem;
 }
