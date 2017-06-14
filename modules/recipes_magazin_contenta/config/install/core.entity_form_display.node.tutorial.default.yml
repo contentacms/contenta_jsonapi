@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.tutorial.field_image
     - field.field.node.tutorial.field_link
     - field.field.node.tutorial.field_summary
+    - field.field.node.tutorial.field_topic
     - node.type.tutorial
   module:
     - entity_browser

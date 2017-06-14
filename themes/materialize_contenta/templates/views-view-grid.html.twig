@@ -57,7 +57,7 @@
       <div{{ row.attributes.addClass(row_classes, options.row_class_default ? 'row-' ~ loop.index) }}>
         {% for column in row.content %}
           <div{{ column.attributes.addClass(col_classes, options.col_class_default ? 'col-' ~ loop.index) }}>
-            <div class="card">
+            <div class="card hoverable">
               {{ column.content }}
             </div>
           </div>
@@ -69,7 +69,7 @@
       <div{{ column.attributes.addClass(col_classes, options.col_class_default ? 'col-' ~ loop.index) }}>
         {% for row in column.content %}
           <div{{ row.attributes.addClass(row_classes, options.row_class_default ? 'row-' ~ loop.index) }}>
-            <div class="card">
+            <div class="card hoverable">
               {{ row.content }}
             </div>
           </div>

@@ -2513,6 +2513,10 @@ nav .brand-logo {
   line-height: 1;
 }
 
+nav .brand-logo img {
+  height: 50px;
+}
+
 nav .block-system-branding-block {
   -webkit-box-align: stretch;
           align-items: stretch;
