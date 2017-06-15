@@ -56,7 +56,7 @@ Please implement your own frontends and talk about it
 
 Existing frontends (all in development):
 
-* https://github.com/contentacms/contenta_angular2
+* https://github.com/contentacms/contenta_angular
 * https://github.com/contentacms/contenta_react
 * https://github.com/contentacms/contenta_jsonapi__elm
 
