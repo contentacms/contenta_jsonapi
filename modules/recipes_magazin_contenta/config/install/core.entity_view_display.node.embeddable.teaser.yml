@@ -4,6 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.embeddable.background_image
+    - field.field.node.embeddable.reference
+    - field.field.node.embeddable.text
     - node.type.embeddable
   module:
     - user
@@ -24,4 +27,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
 hidden:
+  background_image: true
   langcode: true
+  reference: true
+  text: true

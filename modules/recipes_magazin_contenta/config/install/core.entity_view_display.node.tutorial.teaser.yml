@@ -1,9 +1,13 @@
 uuid: 6d8b0a61-24c8-4ce4-afb6-a526c983502f
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.tutorial.field_image
+    - field.field.node.tutorial.field_link
+    - field.field.node.tutorial.field_summary
+    - field.field.node.tutorial.field_topic
     - node.type.tutorial
   module:
     - user
@@ -24,4 +28,8 @@ content:
       link_to_entity: false
     third_party_settings: {  }
 hidden:
+  field_image: true
+  field_link: true
+  field_summary: true
+  field_topic: true
   langcode: true

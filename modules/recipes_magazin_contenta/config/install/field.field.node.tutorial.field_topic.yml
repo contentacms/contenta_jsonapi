@@ -1,0 +1,21 @@
+uuid: 29af74c5-b547-40a3-ba06-f0459d409b54
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_topic
+    - node.type.tutorial
+  module:
+    - options
+id: node.tutorial.field_topic
+field_name: field_topic
+entity_type: node
+bundle: tutorial
+label: Topic
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

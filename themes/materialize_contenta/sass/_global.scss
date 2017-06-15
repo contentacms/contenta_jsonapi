@@ -12,6 +12,8 @@ html{
   @media #{$extra-large-and-up} {
     font-size: 16px;
   }
+
+  font-weight: $font-weight-light;
 }
 
 body {
@@ -29,13 +31,6 @@ article {
         list-style-type: square;
       }
     }
-  }
-  h2 .material-icons {
-    background: $badge-bg-color;
-    padding: 0.4rem;
-    border-radius: 1.5rem;
-    font-size: 1.5rem;
-    color: $primary-color-text;
   }
 }
 

@@ -2,11 +2,11 @@ uuid: 5deefdd5-0e81-4d51-97a5-1e0a5d8bd6c0
 langcode: en
 status: true
 dependencies:
-  module:
-    - menu_ui
   enforced:
     module:
       - recipes_magazin_contenta
+  module:
+    - menu_ui
 third_party_settings:
   menu_ui:
     available_menus:

@@ -2,11 +2,11 @@ uuid: f28f8486-e6ce-4ddb-a9a4-649992a1d7a4
 langcode: en
 status: true
 dependencies:
-  module:
-    - node
   enforced:
     module:
       - recipes_magazin_contenta
+  module:
+    - node
 id: node.text
 field_name: text
 entity_type: node

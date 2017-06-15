@@ -3295,7 +3295,7 @@ span.badge.new {
   font-weight: 300;
   font-size: 0.8rem;
   color: #fff;
-  background-color: #9E9E9E;
+  background-color: #03A9F4;
   border-radius: 2px;
 }
 
@@ -4458,33 +4458,33 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 h1 {
+  font-size: 4.2rem;
+  line-height: 110%;
+  margin: 2.1rem 0 1.68rem 0;
+}
+
+h2 {
+  font-size: 3.56rem;
+  line-height: 110%;
+  margin: 1.78rem 0 1.424rem 0;
+}
+
+h3 {
   font-size: 2.92rem;
   line-height: 110%;
   margin: 1.46rem 0 1.168rem 0;
 }
 
-h2 {
+h4 {
   font-size: 2.28rem;
   line-height: 110%;
   margin: 1.14rem 0 0.912rem 0;
 }
 
-h3 {
+h5 {
   font-size: 1.64rem;
   line-height: 110%;
   margin: 0.82rem 0 0.656rem 0;
-}
-
-h4 {
-  font-size: 1rem;
-  line-height: 110%;
-  margin: 0.5rem 0 0.4rem 0;
-}
-
-h5 {
-  font-size: 1rem;
-  line-height: 110%;
-  margin: 0.5rem 0 0.4rem 0;
 }
 
 h6 {
@@ -4838,14 +4838,14 @@ small {
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
-  color: #ffab40;
+  color: #40c4ff;
   margin-right: 24px;
   transition: color .3s ease;
   text-transform: uppercase;
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating):hover {
-  color: #ffd8a6;
+  color: #a6e4ff;
 }
 
 .card .card-reveal {
@@ -5784,8 +5784,8 @@ button.btn-floating {
 }
 
 .chips.focus {
-  border-bottom: 1px solid #bdbdbd;
-  box-shadow: 0 1px 0 0 #bdbdbd;
+  border-bottom: 1px solid #29b6f6;
+  box-shadow: 0 1px 0 0 #29b6f6;
 }
 
 .chips:hover {
@@ -5793,7 +5793,7 @@ button.btn-floating {
 }
 
 .chips .chip.selected {
-  background-color: #bdbdbd;
+  background-color: #29b6f6;
   color: #fff;
 }
 
