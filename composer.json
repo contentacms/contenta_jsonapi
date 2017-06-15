@@ -40,7 +40,7 @@
                 "Allow a profile to be installed from existing config": "https://www.drupal.org/files/issues/2788777-33.patch"
             },
             "asm89/stack-cors": {
-              "Add origin matcher for wildcard matching": "https://github.com/asm89/stack-cors/pull/42/files.patch"
+              "Add origin matcher for wildcard matching": "https://patch-diff.githubusercontent.com/raw/asm89/stack-cors/pull/42.patch"
             }
         }
     },
