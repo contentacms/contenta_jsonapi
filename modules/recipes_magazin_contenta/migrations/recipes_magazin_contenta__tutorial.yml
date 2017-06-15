@@ -13,7 +13,7 @@ process:
     migration: recipes_magazin_contenta__media_images
     source: image
   'field_link/uri': link
-  'field_link/title': linkt_text
+  'field_link/title': link_text
   'field_summary/value': summary
   'field_summary/format':
     plugin: default_value
