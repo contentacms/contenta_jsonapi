@@ -1,4 +1,4 @@
 contenta.overview:
   title: Quick Overview
   description: 'Summary of what Contenta is.'
-  url: /quick-overview
+  url: internal:/quick-overview
