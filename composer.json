@@ -58,6 +58,7 @@
         "roave/security-advisories": "dev-master",
         "drupal/media_entity": "^1.6",
         "drupal/entity_browser": "^1.0",
+        "drupal/remote_stream_wrapper": "1.0",
         "drupal/media_entity_image": "^1.2",
         "drupal/dropzonejs": "^1.0@alpha",
         "drupal/materialize": "1.x-dev"
