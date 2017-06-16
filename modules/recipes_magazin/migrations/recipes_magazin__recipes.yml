@@ -53,7 +53,8 @@ process:
     source: author
   field_image:
     plugin: migration_lookup
-    migration: recipes_magazin__media_images
+    migration:
+      - recipes_magazin__media_images_url
     source: image
 destination:
   plugin: 'entity:node'
@@ -63,5 +64,5 @@ migration_dependencies:
     - recipes_magazin__category
     - recipes_magazin__tags
     - recipes_magazin__authors
-    - recipes_magazin__media_images
-    - recipes_magazin__images
+    - recipes_magazin__media_images_url
+    - recipes_magazin__images_url
