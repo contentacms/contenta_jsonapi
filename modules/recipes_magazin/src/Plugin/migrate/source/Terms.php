@@ -15,15 +15,18 @@ class Terms extends CSV {
    * {@inheritdoc}
    */
   public function initializeIterator() {
+    $values = [];
     foreach (parent::initializeIterator() as $row) {
       if (isset($row[$this->configuration['column']])) {
-        foreach (explode(',', $row[$this->configuration['column']]) as $single_term) {
-          yield [
+        $terms = explode(',', $row[$this->configuration['column']]);
+        foreach (array_filter(array_map('trim', $terms)) as $single_term) {
+          $values[$single_term] = [
             $this->configuration['column'] => $single_term,
           ];
         }
       }
     }
+    return new \ArrayIterator($values);
   }
 
 }
