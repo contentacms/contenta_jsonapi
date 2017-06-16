@@ -50,6 +50,16 @@ Join the discussion in the [#contenta Slack channel](https://drupal.slack.com/me
 
 For documention on the development on contenta_jsonapi itself, see [docs/development](https://github.com/contentacms/contenta_jsonapi/blob/master/docs/development.md).
 
+## Frontends
+
+Please implement your own frontends and talk about it
+
+Existing frontends (all in development):
+
+* https://github.com/contentacms/contenta_angular
+* https://github.com/contentacms/contenta_react
+* https://github.com/contentacms/contenta_jsonapi__elm
+
 
 ## Credits
 
