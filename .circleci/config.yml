@@ -33,7 +33,7 @@ jobs:
             - run:
                 name: Cleanup
                 command: |
-                    rm -r contenta_jsonapi_demo
+                    rm -fr contenta_jsonapi_demo
 workflows:
     version: 2
     deploy_demo_site:
