@@ -17,18 +17,13 @@ jobs:
             - run:
                 name: Clone demo site repo
                 command: git clone git@github.com:contentacms/contenta_jsonapi_demo.git contenta_jsonapi_demo
-            - run: |
-                cd contenta_jsonapi_demo
-                ls -lisa
-            - run:
-                name: Add deploy record
-                command: |
-                    echo -e "  * Profile update -> buildNum=[$CIRCLE_BUILD_NUM]($CIRCLE_BUILD_URL) on [$CIRCLE_PR_REPONAME]($CIRCLE_REPOSITORY_URL)@CIRCLE_SHA1\n" >> DEPLOYS.md
-                    cat DEPLOYS.md
             - run:
                 name: Add and commit trigger
                 command: |
+                    cd contenta_jsonapi_demo
                     pwd
+                    echo -e "  * Profile update -> buildNum=[$CIRCLE_BUILD_NUM]($CIRCLE_BUILD_URL) on [$CIRCLE_PR_REPONAME]($CIRCLE_REPOSITORY_URL)@CIRCLE_SHA1\n" >> DEPLOYS.md
+                    cat DEPLOYS.md
                     git status
                     git add DEPLOYS.md
                     git commit -m 'ci(Deploy): Trigger a deploy to the demo site'
@@ -36,8 +31,7 @@ jobs:
             - run:
                 name: Cleanup
                 command: |
-                    cd ..
-                    rm -fr contenta_jsonapi_demo
+                    rm -r contenta_jsonapi_demo
 workflows:
     version: 2
     deploy_demo_site:
