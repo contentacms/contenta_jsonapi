@@ -22,10 +22,13 @@ jobs:
                 ls -lisa
             - run:
                 name: Add deploy record
-                command: echo -e "  * Profile update -> buildNum=[$CIRCLE_BUILD_NUM]($CIRCLE_BUILD_URL) on [$CIRCLE_PR_REPONAME]($CIRCLE_REPOSITORY_URL)@CIRCLE_SHA1\n" >> DEPLOYS.md
+                command: |
+                    echo -e "  * Profile update -> buildNum=[$CIRCLE_BUILD_NUM]($CIRCLE_BUILD_URL) on [$CIRCLE_PR_REPONAME]($CIRCLE_REPOSITORY_URL)@CIRCLE_SHA1\n" >> DEPLOYS.md
+                    cat DEPLOYS.md
             - run:
                 name: Add and commit trigger
                 command: |
+                    pwd
                     git status
                     git add DEPLOYS.md
                     git commit -m 'ci(Deploy): Trigger a deploy to the demo site'
