@@ -9,7 +9,7 @@ jobs:
     trigger_build:
         working_directory: ~/contentacms
         docker:
-            - image: buildpack-deps:trusty
+            - image: notnoopci/php:7.1.5-browsers
         steps:
             - run: echo -e "Host *\n  StrictHostKeyChecking no\n  HashKnownHosts no\n  SendEnv LANG LC_*\n" >> ~/.ssh/config
             - run:
