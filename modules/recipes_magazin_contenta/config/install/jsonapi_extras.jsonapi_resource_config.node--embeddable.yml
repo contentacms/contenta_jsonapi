@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: node--embeddable
-disabled: false
+disabled: true
 path: embeddables
 resourceType: embeddables
 resourceFields:
