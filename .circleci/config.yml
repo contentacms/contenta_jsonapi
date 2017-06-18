@@ -11,6 +11,7 @@ jobs:
         docker:
             - image: buildpack-deps:trusty
         steps:
+            - run: echo -e "Host *\n  StrictHostKeyChecking no\n  HashKnownHosts no\n  SendEnv LANG LC_*\n" >> ~/.ssh/config
             - run:
                 name: Clone demo site repo
                 command: git clone git@github.com:contentacms/contenta_jsonapi_demo.git contenta_jsonapi_demo
