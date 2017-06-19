@@ -44,6 +44,9 @@
             },
             "asm89/stack-cors": {
               "Add origin matcher for wildcard matching": "https://patch-diff.githubusercontent.com/raw/asm89/stack-cors/pull/42.patch"
+            },
+            "drupal/schemata": {
+              "https://www.drupal.org/files/issues/2870904-22.patch": "https://www.drupal.org/files/issues/2870904-22.patch"
             }
         }
     },
@@ -55,6 +58,7 @@
         "drupal/simple_oauth": "^2.0",
         "drupal/jsonapi_extras": "^1.0",
         "drupal/docson": "^1.0",
+        "drupal/openapi": "1.x-dev",
         "drupal/subrequests": "^1.0",
         "drupal/fieldable_path": "^1.0",
         "drupal/restui": "^1.14",
