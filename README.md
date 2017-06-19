@@ -2,13 +2,17 @@
 
 ## Quick Install
 
+- Install [composer](https://getcomposer.org/)
+- Make sure you have the sqlite extension for PHP (if you're using the default install on a mac, this should already be there)
+`sudo apt-get install php-sqlite3`
+- Run the following:
 ```bash
 php -r "readfile('https://raw.githubusercontent.com/contentacms/contenta_jsonapi/8.x-1.x/installer.sh');" > contentacms.sh
 chmod a+x contentacms.sh
 ./contentacms.sh
 ```
 
-For this to work you will need to have composer installed in your local machine. See [get composer](https://getcomposer.org/) for more details. Also, make sure that the sqlite-extension is installed (`sudo apt-get install php-sqlite3` in debian/ubuntu).
+- Visit [http://127.0.0.1:8888/](http://127.0.0.1:8888/) and log into your site with `admin`/`test`
 
 ## Installation
 
