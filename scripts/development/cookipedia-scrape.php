@@ -25,7 +25,28 @@ function fetchFields(\Goutte\Client $client, $url) {
     $fields[] = $data['image'];
     $fields[] = $data['description'];
     $fields[] = $data['author']['name'];
-    $fields[] = $data['recipeCategory'];
+
+    if (strpos($data['recipeCategory'], 'Starter') !== FALSE) {
+      $category = 'Starter';
+    }
+    elseif (strpos($data['recipeCategory'], 'Snack') !== FALSE) {
+      $category = 'Snack';
+    }
+    elseif (strpos($data['recipeCategory'], 'Salad') !== FALSE) {
+      $category = 'Salad';
+    }
+    else {
+      $category = 'Main course';
+    }
+
+    $tags = array_map('trim', explode(',', $data['recipeCategory']));
+    $tags = array_filter($tags, function ($tag) {
+      return !in_array($tag, ['Main course', 'Salad', 'Snack', 'Starter']);
+    });
+    $tags[] = $data['recipeCuisine'];
+
+    $fields[] = $category;
+
     try {
       $fields[] = isset($data['prepTime']) ? (new DateInterval($data['prepTime']))->i : NULL;
     }
@@ -69,7 +90,7 @@ function fetchFields(\Goutte\Client $client, $url) {
     else {
       $fields[] = 0;
     }
-    $fields[] = $data['recipeCuisine'];
+    $fields[] = implode(',', $tags);
     $fields[] = NULL;
   }
 
