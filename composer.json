@@ -67,7 +67,8 @@
         "drupal/media_entity_image": "^1.2",
         "drupal/dropzonejs": "^1.0@alpha",
         "drupal/materialize": "1.x-dev",
-        "drupal/openapi": "1.x-dev"
+        "drupal/openapi": "1.x-dev",
+        "drupal/material_admin": "1.x-dev"
     },
     "scripts": {
         "install-contenta": "scripts/development/build-contenta_jsonapi.sh"

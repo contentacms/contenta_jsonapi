@@ -1,0 +1,22 @@
+uuid: 7f463876-dd42-445c-a870-743cee1b91e2
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - material_admin
+_core:
+  default_config_hash: CByUiQBlpQzpbNY4H2AMzmX6ml23iqLd34hR-qw62kw
+id: material_admin_help
+theme: material_admin
+region: help
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }
