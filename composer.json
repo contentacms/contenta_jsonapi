@@ -59,7 +59,6 @@
         "drupal/jsonapi_extras": "^1.0",
         "drupal/subrequests": "^1.0",
         "drupal/fieldable_path": "^1.0",
-        "drupal/restui": "^1.14",
         "roave/security-advisories": "dev-master",
         "drupal/media_entity": "^1.6",
         "drupal/entity_browser": "^1.0",
