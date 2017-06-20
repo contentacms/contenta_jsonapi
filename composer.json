@@ -57,8 +57,6 @@
         "drupal/jsonapi": "^1.0",
         "drupal/simple_oauth": "^2.0",
         "drupal/jsonapi_extras": "^1.0",
-        "drupal/docson": "^1.0",
-        "drupal/openapi": "1.x-dev",
         "drupal/subrequests": "^1.0",
         "drupal/fieldable_path": "^1.0",
         "drupal/restui": "^1.14",
@@ -68,7 +66,8 @@
         "drupal/remote_stream_wrapper": "1.0",
         "drupal/media_entity_image": "^1.2",
         "drupal/dropzonejs": "^1.0@alpha",
-        "drupal/materialize": "1.x-dev"
+        "drupal/materialize": "1.x-dev",
+        "drupal/openapi": "1.x-dev"
     },
     "scripts": {
         "install-contenta": "scripts/development/build-contenta_jsonapi.sh"
