@@ -10,5 +10,6 @@ weight: 1
 is_admin: false
 permissions:
   - 'access content'
-  - 'view media'
   - 'access jsonapi resource list'
+  - 'access toolbar'
+  - 'view media'

@@ -1,0 +1,14 @@
+uuid: 059b95f3-514a-4b44-9b9f-d67c0b86be2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.client_developer
+  module:
+    - user
+id: user_add_role_action.client_developer
+label: 'Add the Client developer role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: client_developer

@@ -1,0 +1,12 @@
+uuid: 934b5300-6c51-4526-89f2-86e8add0cdb0
+langcode: en
+status: true
+dependencies: {  }
+id: client_developer
+label: 'Client developer'
+weight: 4
+is_admin: null
+permissions:
+  - 'access openapi api docs'
+  - 'administer simple_oauth entities'
+  - 'grant simple_oauth codes'
