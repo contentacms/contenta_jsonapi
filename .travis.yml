@@ -14,6 +14,7 @@ branches:
     - 8.x-1.x
 
 before_install:
+  - composer self-update
   - nvm install 6.11.0
   - nvm use 6.11.0
   # Repo for Yarn
