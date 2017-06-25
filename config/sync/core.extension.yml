@@ -40,7 +40,6 @@ module:
   rest: 0
   schemata: 0
   schemata_json_schema: 0
-  search: 0
   serialization: 0
   simple_oauth: 0
   simple_oauth_extras: 0
