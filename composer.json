@@ -69,8 +69,12 @@
         "drupal/openapi": "1.x-dev",
         "drupal/material_admin": "1.x-dev"
     },
+    "config": {
+      "process-timeout": 0
+    },
     "scripts": {
-        "install-contenta": "scripts/development/build-contenta_jsonapi.sh"
+        "install-contenta": "scripts/development/build-contenta_jsonapi.sh",
+        "start-contenta": "scripts/development/start-contenta_jsonapi.sh"
     },
     "provide": {
     },

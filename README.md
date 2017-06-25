@@ -13,6 +13,7 @@ chmod a+x contentacms.sh
 ```
 
 - Visit [http://127.0.0.1:8888/](http://127.0.0.1:8888/) and log into your site with `admin`/`test`
+- The host and port can be overridden by copying `.env` to `.env.local`
 
 ## Installation
 
