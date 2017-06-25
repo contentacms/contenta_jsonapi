@@ -46,7 +46,7 @@ In order to allow browsers to request the contenta backend you need to:
     maxAge: false
     supportsCredentials: false
 ```
-* Run drush: ```cd web && ../bin/drush rc```
+* Run drush: ```cd web && ../bin/drush cr```
 
 ## Development
 
