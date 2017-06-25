@@ -11,6 +11,7 @@ php -r "readfile('https://raw.githubusercontent.com/contentacms/contenta_jsonapi
 chmod a+x contentacms.sh
 ./contentacms.sh
 ```
+- To restart the webserver, run `composer run-script start-contenta <install location>`
 
 - Visit [http://127.0.0.1:8888/](http://127.0.0.1:8888/) and log into your site with `admin`/`test`
 - The host and port can be overridden by copying `.env` to `.env.local`
