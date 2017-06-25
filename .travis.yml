@@ -5,13 +5,6 @@ language: php
 addons:
   chrome: stable
 
-cache:
-  apt: true
-  directories:
-  - "$HOME/.composer/cache"
-  - "$HOME/.drush/cache"
-  - "vendor"
-
 php:
   - 7.1
   - 5.6
