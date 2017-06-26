@@ -15,9 +15,9 @@ jobs:
             - run:
                 name: Install PHP SQLite & GD
                 command: |
-                    sudo apt-get update -y
-                    sudo apt-get install -y libpng-dev libjpeg-dev php7.0-gd php-sqlite3
-                    sudo php5enmod gd
+                    apt-get update -y
+                    apt-get install -y libpng-dev libjpeg-dev php7.0-gd php-sqlite3
+                    php5enmod gd
                     php -r 'print_r(get_loaded_extensions());'
                     curl -s -f -L -o /tmp/installer.php https://raw.githubusercontent.com/composer/getcomposer.org/da290238de6d63faace0343efbdd5aa9354332c5/web/installer
                     php -r " \
