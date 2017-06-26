@@ -12,9 +12,8 @@ jobs:
             - image: notnoopci/php:7.1.5-browsers
             - image: node:7.10.0
         steps:
-            - run: |
-                cd ~/contentacms
-                composer run-script install-contenta ~/contenta-env --timeout=0
+            - checkout
+            - run: composer run-script install-contenta ~/contenta-env --timeout=0
             - run: |
                 export DISPLAY=:99.0
                 # Prevent chrome deadlock when running Nightwatch tests.
@@ -66,7 +65,4 @@ workflows:
                         only: 8.x-1.x
     run_tests:
         jobs:
-            - build
-            - test_pr_environment:
-                requires:
-                    - build
+            - test_pr_environment
