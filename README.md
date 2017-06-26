@@ -30,7 +30,6 @@ $ composer run-script install-contenta /var/www/contenta --timeout=0
 $ composer run-script start-contenta /var/www/contenta --timeout=0
 ```
 
-- To restart the webserver, run `composer run-script start-contenta <install location>`
 - Visit [http://127.0.0.1:8888/](http://127.0.0.1:8888/) and log into your site with `admin`/`test`
 - The host and port can be overridden by copying `.env` to `.env.local`
 
@@ -64,6 +63,17 @@ In order to allow browsers to request the contenta backend you need to:
 Join the discussion in the [#contenta Slack channel](https://drupal.slack.com/messages/C5A70F7D1).
 
 For documention on the development on contenta_jsonapi itself, see [docs/development](https://github.com/contentacms/contenta_jsonapi/blob/master/docs/development.md).
+
+### Testing
+
+#### Nightwatch
+
+[Nightwatch](http://nightwatchjs.org/) provides automated browser testing and can be found in the `tests/nightwatch` directory. To install and run locally, you will need [Yarn](https://yarnpkg.com/) and Chrome.
+
+```
+$ yarn install
+$ yarn run nightwatch
+```
 
 ## Frontends
 
