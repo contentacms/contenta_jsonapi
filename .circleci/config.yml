@@ -16,8 +16,7 @@ jobs:
                 name: Install Composer
                 command: |
                     sudo apt-get update -y
-                    sudo apt-cache search php
-                    sudo apt-get install -y sqlite3 libsqlite3-dev php7.0-sqlite3
+                    sudo apt-get install -y php5-sqlite
                     php --ini
                     export PHP_CONF_DIR=$(php --ini|grep -e '^Scan for additional'|cut -f2 -d:|sed -e 's:^ *::g')
                     echo $PHP_CONF_DIR
