@@ -17,6 +17,7 @@ jobs:
                 command: |
                     sudo apt-get update -y
                     sudo apt-get install -y libpng-dev libjpeg-dev php5-gd php5-sqlite
+                    sudo phpenmod gd
                     php -r 'print_r(get_loaded_extensions());'
             - run: composer run-script install-contenta ~/contenta-env --timeout=0
             - run: |
