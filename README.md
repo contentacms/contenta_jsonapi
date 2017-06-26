@@ -24,7 +24,7 @@ chmod a+x contentacms.sh
 Clone this repo and install Contenta from the `install` folder.
 
 ```
-$ git clone git@github.com:contentacms/contenta_jsonapi.git`
+$ git clone git@github.com:contentacms/contenta_jsonapi.git
 $ cd contenta_jsonapi
 $ composer run-script install-contenta /var/www/contenta --timeout=0
 $ composer run-script start-contenta /var/www/contenta --timeout=0
