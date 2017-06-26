@@ -18,6 +18,7 @@ jobs:
                 command: |
                     echo "memory_limit=-1" > "$PHP_INI_DIR/conf.d/memory-limit.ini" \
                     && echo "date.timezone=${PHP_TIMEZONE:-UTC}" > "$PHP_INI_DIR/conf.d/date_timezone.ini"
+                    apt-get install curl git subversion openssh openssl tini bash
                     export PATH="/composer/vendor/bin:$PATH"
                     export COMPOSER_ALLOW_SUPERUSER=1
                     export COMPOSER_HOME=/composer
