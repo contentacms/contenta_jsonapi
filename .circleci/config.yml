@@ -16,7 +16,7 @@ jobs:
                 name: Install PHP SQLite & GD
                 command: |
                     sudo apt-get update -y
-                    sudo apt-get install -y php5-sqlite php5-gd
+                    sudo apt-get install -y libpng-dev libjpeg-dev php5-gd php5-sqlite
                     php -r 'print_r(get_loaded_extensions());'
             - run: composer run-script install-contenta ~/contenta-env --timeout=0
             - run: |
