@@ -9,16 +9,28 @@ jobs:
     test_pr_environment:
         working_directory: ~/contentacms
         docker:
-            - image: notnoopci/php:5.6.30-node-browsers
+            - image: 'php:7.1'
         steps:
             - checkout
             - run:
                 name: Install PHP SQLite & GD
                 command: |
                     sudo apt-get update -y
-                    sudo apt-get install -y libpng-dev libjpeg-dev php5-gd php5-sqlite
+                    sudo apt-get install -y libpng-dev libjpeg-dev php7.0-gd php-sqlite3
                     sudo php5enmod gd
                     php -r 'print_r(get_loaded_extensions());'
+                    curl -s -f -L -o /tmp/installer.php https://raw.githubusercontent.com/composer/getcomposer.org/da290238de6d63faace0343efbdd5aa9354332c5/web/installer
+                    php -r " \
+                        \$signature = '669656bab3166a7aff8a7506b8cb2d1c292f042046c5a994c43155c0be6190fa0355160742ab2e1c88d40d5be660b410'; \
+                        \$hash = hash('SHA384', file_get_contents('/tmp/installer.php')); \
+                        if (!hash_equals(\$signature, \$hash)) { \
+                            unlink('/tmp/installer.php'); \
+                            echo 'Integrity check failed, installer is either corrupt or worse.' . PHP_EOL; \
+                            exit(1); \
+                        }"
+                    php /tmp/installer.php --no-ansi --install-dir=/usr/bin --filename=composer --version=${COMPOSER_VERSION}
+                    rm /tmp/installer.php
+                    composer --ansi --version --no-interaction
             - run: composer run-script install-contenta ~/contenta-env --timeout=0
             - run: |
                 export DISPLAY=:99.0
