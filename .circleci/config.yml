@@ -3,22 +3,21 @@ jobs:
     build:
         working_directory: ~/contentacms
         docker:
-            - image: notnoopci/php:7.1.5-browsers
+            - image: php:7.1
         steps:
             - checkout
     test_pr_environment:
         working_directory: ~/contentacms
         docker:
-            - image: 'php:7.1'
+            - image: php:5.6
         steps:
             - checkout
             - run:
                 name: Install PHP SQLite & GD
                 command: |
-                    apt-cache search php
-                    apt-get update -y
-                    apt-get install -y libpng-dev libjpeg-dev php7.1-gd php-sqlite3
-                    php5enmod gd
+                    sudo apt-get update -y
+                    sudo apt-get install -y libpng-dev libjpeg-dev php5-gd php5-sqlite
+                    sudo php5enmod gd
                     php -r 'print_r(get_loaded_extensions());'
                     curl -s -f -L -o /tmp/installer.php https://raw.githubusercontent.com/composer/getcomposer.org/da290238de6d63faace0343efbdd5aa9354332c5/web/installer
                     php -r " \
