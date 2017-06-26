@@ -12,14 +12,18 @@ jobs:
             - image: notnoopci/php:7.1.5-browsers
             - image: node:7.10.0
         steps:
-            - run: composer run-script install-contenta $HOME/contentacms --timeout=0
-            - run: export DISPLAY=:99.0
-            # Prevent chrome deadlock when running Nightwatch tests.
-            # See https://stackoverflow.com/questions/41487659/nightwatch-selenium-socket-hang-up
-            - run: export DBUS_SESSION_BUS_ADDRESS=/dev/null
-            - run: sh -e /etc/init.d/xvfb start
-            - run: sleep 3 # give xvfb some time to start
-            - run: composer run-script start-contenta $HOME/contentacms --timeout=0
+            - run: |
+                cd ~/contentacms
+                composer run-script install-contenta ~/contenta-env --timeout=0
+            - run: |
+                export DISPLAY=:99.0
+                # Prevent chrome deadlock when running Nightwatch tests.
+                # See https://stackoverflow.com/questions/41487659/nightwatch-selenium-socket-hang-up
+                export DBUS_SESSION_BUS_ADDRESS=/dev/null
+                sh -e /etc/init.d/xvfb start
+            - run: |
+                sleep 3 # give xvfb some time to start
+                composer run-script start-contenta ~/contenta-env --timeout=0
             - run: yarn run nightwatch
     trigger_build:
         working_directory: ~/contentacms
