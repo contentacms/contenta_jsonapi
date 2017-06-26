@@ -40,9 +40,6 @@ if [ -d "$DEST_DIR" ]; then
     sudo rm -Rf $DEST_DIR
   fi
 fi
-
-$COMPOSER config --global repositories.contenta_jsonapi path ${BASE_DIR}
-
 echo "-----------------------------------------------"
 echo " (1/3) Downloading Contenta CMS using composer "
 echo "-----------------------------------------------"
@@ -55,8 +52,9 @@ if [ $? -ne 0 ]; then
 fi
 
 cd ${DEST_DIR}
-cd $DOCROOT
+$COMPOSER config repositories.contenta_jsonapi path ${BASE_DIR}
 
+cd $DOCROOT
 echo "-----------------------------------------------"
 echo " (2/3) Installing Contenta CMS for local usage "
 echo "-----------------------------------------------"
