@@ -66,6 +66,7 @@ workflows:
                         only: 8.x-1.x
     run_tests:
         jobs:
+            - build
             - test_pr_environment:
                 requires:
                     - build
