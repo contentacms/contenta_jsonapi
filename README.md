@@ -1,29 +1,38 @@
 # Contenta
 
-## Quick Install
+## Requirements
 
 - Install [composer](https://getcomposer.org/)
 - Make sure you have the sqlite extension for PHP (if you're using the default install on a mac, this should already be there)
 `sudo apt-get install php-sqlite3`
-- Run the following:
+
+## Quick Install
+
 ```bash
 php -r "readfile('https://raw.githubusercontent.com/contentacms/contenta_jsonapi/8.x-1.x/installer.sh');" > contentacms.sh
 chmod a+x contentacms.sh
 ./contentacms.sh
 ```
-- To restart the webserver, run `composer run-script start-contenta <install location>`
 
+- To restart the webserver, run `composer run-script start-contenta <install location>`
 - Visit [http://127.0.0.1:8888/](http://127.0.0.1:8888/) and log into your site with `admin`/`test`
 - The host and port can be overridden by copying `.env` to `.env.local`
 
 ## Installation
 
-* [Get composer](https://getcomposer.org/)
-* Create a new project using a command like this. This will pull down the installation profile + core + modules, so maybe get a cup of tea:
+- Install [composer](https://getcomposer.org/)
+Clone this repo and install Contenta from the `install` folder.
+
 ```
-composer create-project contentacms/contenta-jsonapi-project MYPROJECT --stability dev --no-interaction
+$ git clone git@github.com:contentacms/contenta_jsonapi.git`
+$ cd contenta_jsonapi
+$ composer run-script install-contenta /var/www/contenta --timeout=0
+$ composer run-script start-contenta /var/www/contenta --timeout=0
 ```
-* After that install Drupal normally.
+
+- To restart the webserver, run `composer run-script start-contenta <install location>`
+- Visit [http://127.0.0.1:8888/](http://127.0.0.1:8888/) and log into your site with `admin`/`test`
+- The host and port can be overridden by copying `.env` to `.env.local`
 
 ### CORS
 
