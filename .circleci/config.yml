@@ -64,6 +64,8 @@ workflows:
                 filters:
                     branches:
                         only: 8.x-1.x
+    run_tests:
+        jobs:
             - test_pr_environment:
                 requires:
                     - build
