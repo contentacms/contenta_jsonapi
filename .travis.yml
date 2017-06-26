@@ -13,9 +13,10 @@ branches:
   only:
     - 8.x-1.x
 
+env:
+  COMPOSER_HOME=$HOME/composer
+
 before_install:
-  - composer self-update
-  - composer clear-cache
   - nvm install 6.11.0
   - nvm use 6.11.0
   # Repo for Yarn
@@ -24,6 +25,7 @@ before_install:
   - sudo apt-get update -qq
   - sudo apt-get install -y -qq yarn
   - mkdir $HOME/contentacms
+  - mkdir $HOME/composer
 
 install:
   - composer run-script install-contenta $HOME/contentacms --timeout=0
