@@ -77,14 +77,3 @@ echo "---------------------------------"
 echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $DRUSH user-login --no-browser --uri=\"http://127.0.0.1:8888\""
 echo -e "${FG_C}${WBG_C} INFO ${NO_C} Use this link to login as an administrator in your new site:"
 $DRUSH user-login --no-browser --uri="http://127.0.0.1:8888"
-
-while getopts ":s" opt; do
-  case $opt in
-    s)
-
-      ;;
-    \?)
-      echo "Invalid option: -$OPTARG" >&2
-      ;;
-  esac
-done
