@@ -13,10 +13,11 @@ jobs:
         steps:
             - checkout
             - run:
-                name: Install Composer
+                name: Install PHP SQLite
                 command: |
                     sudo apt-get update -y
                     sudo apt-get install -y php5-sqlite
+                    php -r 'print_r(get_loaded_extensions());'
             - run: composer run-script install-contenta ~/contenta-env --timeout=0
             - run: |
                 export DISPLAY=:99.0
