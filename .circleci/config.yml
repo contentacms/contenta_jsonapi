@@ -9,7 +9,8 @@ jobs:
     test_pr_environment:
         working_directory: ~/contentacms
         docker:
-            - image: notnoopci/php:7.1.5-cli-node-browsers
+            - image: php:7.1
+            - image: node:7.10.0
         steps:
             - checkout
             - run: composer run-script install-contenta ~/contenta-env --timeout=0
