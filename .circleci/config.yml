@@ -15,7 +15,7 @@ jobs:
             - run:
                 name: Install PHP SQLite & GD
                 command: |
-                    add-apt-repository ppa:ondrej/php -y
+                    apt-cache search php
                     apt-get update -y
                     apt-get install -y libpng-dev libjpeg-dev php7.1-gd php-sqlite3
                     php5enmod gd
