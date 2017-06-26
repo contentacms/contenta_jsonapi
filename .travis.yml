@@ -24,6 +24,7 @@ before_install:
   - mkdir $HOME/contentacms
 
 install:
+  - yarn install
   - composer run-script install-contenta $HOME/contentacms --timeout=0
 
 before_script:
@@ -33,7 +34,7 @@ before_script:
   - export DBUS_SESSION_BUS_ADDRESS=/dev/null
   - sh -e /etc/init.d/xvfb start
   - sleep 3 # give xvfb some time to start
-  - composer run-script start-contenta $HOME/contentacms --timeout=0
+  - composer run-script start-contenta $HOME/contentacms --timeout=0 &
 
 script:
   - yarn run nightwatch
