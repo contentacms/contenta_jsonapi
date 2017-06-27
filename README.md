@@ -1,5 +1,7 @@
 # Contenta
 
+Contenta is a content API and CMS based on Drupal 8. It provides a standard, jsonapi-based platform for building decoupled applications and websites.
+
 ## Quick Install
 
 - Install [composer](https://getcomposer.org/)
