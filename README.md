@@ -1,7 +1,5 @@
 # Contenta
 
-## Requirements
-
 ## Quick Install
 
 - Install [composer](https://getcomposer.org/)
