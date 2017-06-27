@@ -66,11 +66,16 @@
         "drupal/media_entity_image": "^1.2",
         "drupal/dropzonejs": "^1.0@alpha",
         "drupal/materialize": "1.x-dev",
-        "drupal/openapi": "1.x-dev",
+        "drupal/schemata": "1.x-dev#8325d172e1d6880aa24073f8f751ef089282cf9a",
+        "drupal/openapi": "1.x-dev#e8a82f87dbbb83dc89f9455f7a2e5ba6c6d2cdff",
         "drupal/material_admin": "1.x-dev"
     },
+    "config": {
+      "process-timeout": 0
+    },
     "scripts": {
-        "install-contenta": "scripts/development/build-contenta_jsonapi.sh"
+        "install-contenta": "scripts/development/build-contenta_jsonapi.sh",
+        "start-contenta": "scripts/development/start-contenta_jsonapi.sh"
     },
     "provide": {
     },

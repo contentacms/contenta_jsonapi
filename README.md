@@ -5,30 +5,39 @@
 - Install [composer](https://getcomposer.org/)
 - Make sure you have the sqlite extension for PHP (if you're using the default install on a mac, this should already be there)
 `sudo apt-get install php-sqlite3`
-- Run the following:
+
 ```bash
 php -r "readfile('https://raw.githubusercontent.com/contentacms/contenta_jsonapi/8.x-1.x/installer.sh');" > contentacms.sh
 chmod a+x contentacms.sh
 ./contentacms.sh
 ```
 
-- Visit [http://127.0.0.1:8888/](http://127.0.0.1:8888/) and log into your site with `admin`/`test`
+- In your console will be a one-time login link to access your site.
 
-## Installation
+Check the full installation instructions below for the commands to restart the web server and regenerate the login link. You will need to install Drush.
 
-* [Get composer](https://getcomposer.org/)
-* Create a new project using a command like this. This will pull down the installation profile + core + modules, so maybe get a cup of tea:
+## Installation for Building Your Own Site
+
+- Install [composer](https://getcomposer.org/)
+- Install [drush](http://docs.drush.org/en/8.x/install/)
+
+```bash
+composer create-project contentacms/contenta-jsonapi-project <DESTINATION> --stability dev --no-interaction
+cd <DESTINATION>
 ```
-composer create-project contentacms/contenta-jsonapi-project MYPROJECT --stability dev --no-interaction
-```
-* After that install Drupal normally.
+
+- Decide whether you want to install with either SQLite `drush si contenta_jsonapi --db-url=sqlite://sites/default/files/.ht.sqlite -y`
+- or MySQL `drush si contenta_jsonapi --db-url=mysql://root:pass@localhost:port/dbname -y`
+- or PostgreSQL `drush si contenta_jsonapi --db-url=pgsql://root:pass@localhost:port/dbname -y`
+- Start the web server with `drush runserver`. This defaults to `127.0.0.1:8888`, you can change this by appending a new host and port, e.g. `drush runserver local.contentacms.io:8000`
+- Generate a one-time login link `drush user-login --uri="http://127.0.0.1:8888"`
 
 ### CORS
 
-When you actually build a frontend you will likely have [CORS (Cross-Origin Resource Sharing)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
+When you actually build a front-end you will likely have [CORS (Cross-Origin Resource Sharing)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
 issues.
 
-In order to allow browsers to request the contenta backend you need to:
+In order to allow browsers to request the contenta back-end you need to:
 
 * Copy sites/default/default.services.yml to sites/default/services.yml
 * Allow your app to access it, by replacing the end of this configuration file.
@@ -54,11 +63,33 @@ Join the discussion in the [#contenta Slack channel](https://drupal.slack.com/me
 
 For documention on the development on contenta_jsonapi itself, see [docs/development](https://github.com/contentacms/contenta_jsonapi/blob/master/docs/development.md).
 
-## Frontends
+### Development Installation
 
-Please implement your own frontends and talk about it
+- If you want a setup which allows you to contribute back to Contenta, follow the installation instructions above
+- Replace the <DESTINATION>/web directory with a checkout of this repo
 
-Existing frontends (all in development):
+```bash
+cd <DESTINATION>
+rm -rf web/profiles/contrib/contenta_jsonapi
+git clone git@github.com:contentacms/contenta_jsonapi.git web/profiles/contrib/contenta_jsonapi
+```
+
+### Testing
+
+#### Nightwatch
+
+[Nightwatch](http://nightwatchjs.org/) provides automated browser testing and can be found in the `tests/nightwatch` directory. To install and run locally, you will need [Yarn](https://yarnpkg.com/) and Chrome.
+
+```
+yarn install
+yarn run nightwatch
+```
+
+## Front-ends
+
+Please implement your own front-ends and talk about it
+
+Existing front-ends (all in development):
 
 * https://github.com/contentacms/contenta_angular
 * https://github.com/contentacms/contenta_react
