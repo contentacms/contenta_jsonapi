@@ -70,8 +70,8 @@ For documention on the development on contenta_jsonapi itself, see [docs/develop
 
 ```bash
 cd <DESTINATION>
-rm -rf web
-git clone git@github.com:contentacms/contenta_jsonapi.git web
+rm -rf web/profiles/contrib/contenta_jsonapi
+git clone git@github.com:contentacms/contenta_jsonapi.git web/profiles/contrib/contenta_jsonapi
 ```
 
 ### Testing
