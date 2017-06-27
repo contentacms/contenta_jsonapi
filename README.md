@@ -2,36 +2,37 @@
 
 ## Requirements
 
+## Quick Install
+
 - Install [composer](https://getcomposer.org/)
 - Make sure you have the sqlite extension for PHP (if you're using the default install on a mac, this should already be there)
 `sudo apt-get install php-sqlite3`
 
-## Quick Install
-
 ```bash
-php -r "readfile('https://raw.githubusercontent.com/contentacms/contenta_jsonapi/8.x-1.x/installer.sh');" > contentacms.sh
-chmod a+x contentacms.sh
-./contentacms.sh
+$ php -r "readfile('https://raw.githubusercontent.com/contentacms/contenta_jsonapi/8.x-1.x/installer.sh');" > contentacms.sh
+$ chmod a+x contentacms.sh
+$ ./contentacms.sh
 ```
 
-- To restart the webserver, run `composer run-script start-contenta <install location>`
-- Visit [http://127.0.0.1:8888/](http://127.0.0.1:8888/) and log into your site with `admin`/`test`
-- The host and port can be overridden by copying `.env` to `.env.local`
+- In your console will be a one-time login link to access your site.
 
-## Installation
+Check the full installation instructions below for the commands to restart the web server and regenerate the login link. You will need to install Drush.
+
+## Installation for Building Your Own Site
 
 - Install [composer](https://getcomposer.org/)
-Clone this repo and install Contenta from the `install` folder.
+- Install [drush](http://docs.drush.org/en/8.x/install/)
 
-```
-$ git clone git@github.com:contentacms/contenta_jsonapi.git
-$ cd contenta_jsonapi
-$ composer run-script install-contenta /var/www/contenta --timeout=0
-$ composer run-script start-contenta /var/www/contenta --timeout=0
+```bash
+$ composer create-project contentacms/contenta-jsonapi-project <DESTINATION> --stability dev --no-interaction
+$ cd <DESTINATION>
 ```
 
-- Visit [http://127.0.0.1:8888/](http://127.0.0.1:8888/) and log into your site with `admin`/`test`
-- The host and port can be overridden by copying `.env` to `.env.local`
+- Decide whether you want to install with either SQLite `drush si contenta_jsonapi --db-url=sqlite://sites/default/files/.ht.sqlite -y`
+- or MySQL `drush si contenta_jsonapi --db-url=mysql://root:pass@localhost:port/dbname -y`
+- or PostgreSQL `drush si contenta_jsonapi --db-url=pgsql://root:pass@localhost:port/dbname -y`
+- Start the web server `drush runserver`. This defaults to `127.0.0.1:8888`, you can change this by appending a new host and port. `drush runserver local.contentacma.io:8000`
+- Generate a one-time login link `drush user-login --uri="http://127.0.0.1:8888"`
 
 ### CORS
 
@@ -63,6 +64,19 @@ In order to allow browsers to request the contenta backend you need to:
 Join the discussion in the [#contenta Slack channel](https://drupal.slack.com/messages/C5A70F7D1).
 
 For documention on the development on contenta_jsonapi itself, see [docs/development](https://github.com/contentacms/contenta_jsonapi/blob/master/docs/development.md).
+
+### Development Installation
+
+- If you want a setup which allows you to contribute back to Contenta, follow the installation instructions above
+- Replace the <DESTINATION>/web directory with a checkout of this repo
+
+```bash
+$ cd <DESTINATION>
+$ ls
+README.md     bin           composer.json composer.lock scripts       vendor        web
+$ rm -rf web
+$ git clone git@github.com:contentacms/contenta_jsonapi.git web
+```
 
 ### Testing
 
