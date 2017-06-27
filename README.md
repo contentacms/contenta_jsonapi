@@ -7,9 +7,9 @@
 `sudo apt-get install php-sqlite3`
 
 ```bash
-$ php -r "readfile('https://raw.githubusercontent.com/contentacms/contenta_jsonapi/8.x-1.x/installer.sh');" > contentacms.sh
-$ chmod a+x contentacms.sh
-$ ./contentacms.sh
+php -r "readfile('https://raw.githubusercontent.com/contentacms/contenta_jsonapi/8.x-1.x/installer.sh');" > contentacms.sh
+chmod a+x contentacms.sh
+./contentacms.sh
 ```
 
 - In your console will be a one-time login link to access your site.
@@ -22,8 +22,8 @@ Check the full installation instructions below for the commands to restart the w
 - Install [drush](http://docs.drush.org/en/8.x/install/)
 
 ```bash
-$ composer create-project contentacms/contenta-jsonapi-project <DESTINATION> --stability dev --no-interaction
-$ cd <DESTINATION>
+composer create-project contentacms/contenta-jsonapi-project <DESTINATION> --stability dev --no-interaction
+cd <DESTINATION>
 ```
 
 - Decide whether you want to install with either SQLite `drush si contenta_jsonapi --db-url=sqlite://sites/default/files/.ht.sqlite -y`
@@ -69,11 +69,9 @@ For documention on the development on contenta_jsonapi itself, see [docs/develop
 - Replace the <DESTINATION>/web directory with a checkout of this repo
 
 ```bash
-$ cd <DESTINATION>
-$ ls
-README.md     bin           composer.json composer.lock scripts       vendor        web
-$ rm -rf web
-$ git clone git@github.com:contentacms/contenta_jsonapi.git web
+cd <DESTINATION>
+rm -rf web
+git clone git@github.com:contentacms/contenta_jsonapi.git web
 ```
 
 ### Testing
@@ -83,8 +81,8 @@ $ git clone git@github.com:contentacms/contenta_jsonapi.git web
 [Nightwatch](http://nightwatchjs.org/) provides automated browser testing and can be found in the `tests/nightwatch` directory. To install and run locally, you will need [Yarn](https://yarnpkg.com/) and Chrome.
 
 ```
-$ yarn install
-$ yarn run nightwatch
+yarn install
+yarn run nightwatch
 ```
 
 ## Front-ends
