@@ -1,0 +1,58 @@
+{
+    "name": "contentacms/contenta-jsonapi-project",
+    "description": "Project template for ",
+    "type": "project",
+    "license": "GPL-2.0+",
+    "authors": [
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "require": {
+        "contentacms/contenta_jsonapi": "dev-8.x-1.x",
+        "composer/installers": "^1.2",
+        "drupal-composer/drupal-scaffold": "^2.2",
+        "cweagans/composer-patches": "~1.0",
+        "drush/drush": "~8.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "classmap": [
+            "scripts/composer/ScriptHandler.php"
+        ]
+    },
+    "scripts": {
+        "dependency-cleanup": [
+            "Drupal\\composer\\ScriptHandler::dependencyCleanup"
+        ],
+        "drupal-scaffold": "Drupal\\DrupalScaffold\\Plugin::scaffold",
+        "post-install-cmd": [
+            "Drupal\\composer\\ScriptHandler::buildScaffold",
+            "Drupal\\composer\\ScriptHandler::createRequiredFiles",
+            "Drupal\\composer\\ScriptHandler::deployLibraries"
+        ],
+        "post-update-cmd": [
+            "Drupal\\composer\\ScriptHandler::buildScaffold",
+            "Drupal\\composer\\ScriptHandler::createRequiredFiles",
+            "Drupal\\composer\\ScriptHandler::deployLibraries"
+        ]
+    },
+    "extra": {
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/contrib/{$name}": ["type:drupal-drush"]
+        },
+        "enable-patching": true
+    },
+    "config": {
+        "bin-dir": "bin/"
+    }
+}

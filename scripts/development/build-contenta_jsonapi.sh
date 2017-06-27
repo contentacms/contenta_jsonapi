@@ -41,22 +41,22 @@ if [ -d "$DEST_DIR" ]; then
   fi
 fi
 echo "-----------------------------------------------"
-echo " (1/4) Downloading Contenta CMS using composer "
+echo " (1/3) Downloading Contenta CMS using composer "
 echo "-----------------------------------------------"
-echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $COMPOSER create-project contentacms/contenta-jsonapi-project ${DEST_DIR} --stability dev --no-interaction\n\n"
-$COMPOSER create-project contentacms/contenta-jsonapi-project ${DEST_DIR} --stability dev --no-interaction
+cp -R ${BASE_DIR}/install ${DEST_DIR}
+cd ${DEST_DIR}
+$COMPOSER install --no-interaction
 if [ $? -ne 0 ]; then
   echo -e "${FG_C}${EBG_C} ERROR ${NO_C} There was a problem setting up Contenta CMS using composer."
   echo "Please check your composer configuration and try again."
   exit 2
 fi
 
-cd ${DEST_DIR}
 $COMPOSER config repositories.contenta_jsonapi path ${BASE_DIR}
 
 cd $DOCROOT
 echo "-----------------------------------------------"
-echo " (2/4) Installing Contenta CMS for local usage "
+echo " (2/3) Installing Contenta CMS for local usage "
 echo "-----------------------------------------------"
 echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $DRUSH si contenta_jsonapi --db-url=sqlite://sites/default/files/.ht.sqlite --account-pass=test -y\n\n"
 $DRUSH si contenta_jsonapi --db-url=sqlite://sites/default/files/.ht.sqlite --account-pass=test -y
@@ -72,16 +72,8 @@ echo -e "\t********************************"
 echo -e "\n\n\n"
 
 echo "---------------------------------"
-echo " (3/4) One time admin login link "
+echo " (3/3) One time admin login link "
 echo "---------------------------------"
 echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $DRUSH user-login --no-browser --uri=\"http://127.0.0.1:8888\""
 echo -e "${FG_C}${WBG_C} INFO ${NO_C} Use this link to login as an administrator in your new site:"
 $DRUSH user-login --no-browser --uri="http://127.0.0.1:8888"
-
-echo "-------------------------------------"
-echo " (4/4) Initializing local PHP server "
-echo "-------------------------------------"
-echo -e "${FG_C}${WBG_C} INFO ${NO_C} Server started. Use Ctrl+C to stop it."
-echo -e "${FG_C}${WBG_C} INFO ${NO_C} If you want to start the server manually use:\n\t$DRUSH runserver"
-# Start the server in the background to be able to get the one time login link.
-$DRUSH runserver
