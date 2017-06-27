@@ -41,7 +41,7 @@ if [ -d "$DEST_DIR" ]; then
   fi
 fi
 echo "-----------------------------------------------"
-echo " (1/3) Downloading Contenta CMS using composer "
+echo " Downloading Contenta CMS using composer "
 echo "-----------------------------------------------"
 echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $COMPOSER create-project contentacms/contenta-jsonapi-project ${DEST_DIR} --stability dev --no-interaction\n\n"
 $COMPOSER create-project contentacms/contenta-jsonapi-project ${DEST_DIR} --stability dev --no-interaction --no-install
@@ -58,7 +58,7 @@ $COMPOSER require "contentacms/contenta_jsonapi:*" "phpunit/phpunit:~4.8" --no-p
 
 cd $DOCROOT
 echo "-----------------------------------------------"
-echo " (2/3) Installing Contenta CMS for local usage "
+echo " Installing Contenta CMS for local usage "
 echo "-----------------------------------------------"
 echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $DRUSH si contenta_jsonapi --db-url=sqlite://sites/default/files/.ht.sqlite --account-pass=test -y\n\n"
 $DRUSH si contenta_jsonapi --db-url=sqlite://sites/default/files/.ht.sqlite --account-pass=test -y
@@ -72,10 +72,3 @@ echo -e "\t********************************"
 echo -e "\t*    Installation finished     *"
 echo -e "\t********************************"
 echo -e "\n\n\n"
-
-echo "---------------------------------"
-echo " (3/3) One time admin login link "
-echo "---------------------------------"
-echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $DRUSH user-login --no-browser --uri=\"http://127.0.0.1:8888\""
-echo -e "${FG_C}${WBG_C} INFO ${NO_C} Use this link to login as an administrator in your new site:"
-$DRUSH user-login --no-browser --uri="http://127.0.0.1:8888"
