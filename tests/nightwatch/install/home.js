@@ -5,7 +5,7 @@ module.exports = {
   homepageLoads(browser) {
     browser
       .url(`${url}/`)
-      .waitForElementVisible('body', 1000)
+      .waitForElementVisible('#block-materialize-contenta-page-title', 3000)
       .assert.containsText('#block-materialize-contenta-page-title', 'Welcome to Contenta CMS!')
       .end();
   }
