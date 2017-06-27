@@ -34,10 +34,10 @@ $ cd <DESTINATION>
 
 ### CORS
 
-When you actually build a frontend you will likely have [CORS (Cross-Origin Resource Sharing)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
+When you actually build a front-end you will likely have [CORS (Cross-Origin Resource Sharing)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
 issues.
 
-In order to allow browsers to request the contenta backend you need to:
+In order to allow browsers to request the contenta back-end you need to:
 
 * Copy sites/default/default.services.yml to sites/default/services.yml
 * Allow your app to access it, by replacing the end of this configuration file.
@@ -87,11 +87,11 @@ $ yarn install
 $ yarn run nightwatch
 ```
 
-## Frontends
+## Front-ends
 
-Please implement your own frontends and talk about it
+Please implement your own front-ends and talk about it
 
-Existing frontends (all in development):
+Existing front-ends (all in development):
 
 * https://github.com/contentacms/contenta_angular
 * https://github.com/contentacms/contenta_react
