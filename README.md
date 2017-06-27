@@ -21,18 +21,17 @@ Check the full installation instructions below for the commands to restart the w
 ## Installation for Building Your Own Site
 
 - Install [composer](https://getcomposer.org/)
-- Install [drush](http://docs.drush.org/en/8.x/install/)
 
 ```bash
 composer create-project contentacms/contenta-jsonapi-project <DESTINATION> --stability dev --no-interaction
-cd <DESTINATION>
+cd <DESTINATION>/web 
 ```
-
-- Decide whether you want to install with either SQLite `drush si contenta_jsonapi --db-url=sqlite://sites/default/files/.ht.sqlite -y`
-- or MySQL `drush si contenta_jsonapi --db-url=mysql://root:pass@localhost:port/dbname -y`
-- or PostgreSQL `drush si contenta_jsonapi --db-url=pgsql://root:pass@localhost:port/dbname -y`
-- Start the web server with `drush runserver`. This defaults to `127.0.0.1:8888`, you can change this by appending a new host and port, e.g. `drush runserver local.contentacms.io:8000`
-- Generate a one-time login link `drush user-login --uri="http://127.0.0.1:8888"`
+- Install the site with  either of these databases:
+  - SQLite `../bin/drush si contenta_jsonapi --db-url=sqlite://sites/default/files/.ht.sqlite -y` or
+  - MySQL `../bin/drush si contenta_jsonapi --db-url=mysql://root:pass@localhost:3306/dbname -y`
+  - PostgreSQL `../bin/drush si contenta_jsonapi --db-url=pgsql://root:pass@localhost:5432/dbname -y`
+- Start the web server with `../bin/drush runserver`. This defaults to `127.0.0.1:8888`, you can change this by appending a new host and port, e.g. `../bin/drush runserver local.contentacms.io:8000`
+- Generate a one-time login link `../bin/drush user-login --uri="http://127.0.0.1:8888"`
 
 ### CORS
 
