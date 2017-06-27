@@ -43,16 +43,18 @@ fi
 echo "-----------------------------------------------"
 echo " (1/3) Downloading Contenta CMS using composer "
 echo "-----------------------------------------------"
-cp -R ${BASE_DIR}/install ${DEST_DIR}
-cd ${DEST_DIR}
-$COMPOSER install --no-interaction
+echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $COMPOSER create-project contentacms/contenta-jsonapi-project ${DEST_DIR} --stability dev --no-interaction\n\n"
+$COMPOSER create-project contentacms/contenta-jsonapi-project ${DEST_DIR} --stability dev --no-interaction --no-install
 if [ $? -ne 0 ]; then
   echo -e "${FG_C}${EBG_C} ERROR ${NO_C} There was a problem setting up Contenta CMS using composer."
   echo "Please check your composer configuration and try again."
   exit 2
 fi
 
+cd ${DEST_DIR}
 $COMPOSER config repositories.contenta_jsonapi path ${BASE_DIR}
+
+$COMPOSER require "contentacms/contenta_jsonapi:*" "phpunit/phpunit:~4.8" --no-progress
 
 cd $DOCROOT
 echo "-----------------------------------------------"
