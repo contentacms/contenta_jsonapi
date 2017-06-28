@@ -1,6 +1,8 @@
 <?php
 
 use \Drupal\Component\Serialization\Yaml;
+use \Drupal\Core\Link;
+use \Drupal\Core\Url;
 
 /**
  * Implements hook_install().
@@ -54,13 +56,21 @@ function contenta_jsonapi_install() {
     }
   }
 
+  $link = Link::fromTextAndUrl(t('generating a key pair'),
+    Url::fromUri('https://github.com/contentacms/contenta_jsonapi/wiki/Generating-a-key-pair-for-Simple-OAuth', [
+      'https' => TRUE,
+    ]));
+
   if ($keypair_success) {
-    drupal_set_message(t('An temporary public/private key pair has been generated in ":tempdir" for OAuth2 authentication. See [link] generating a key pair for production use.', [
+    drupal_set_message(t('An temporary public/private key pair has been generated in ":tempdir" for OAuth2 authentication. See :link for production use.', [
       ':tempdir' => sys_get_temp_dir(),
+      ':link' => $link->toString(),
     ]), 'warning');
   }
   else {
-    drupal_set_message(t('Unable to generate a temporary key pair for OAuth2 authentication. See [link] generating a key pair.'), 'error');
+    drupal_set_message(t('Unable to generate a temporary key pair for OAuth2 authentication. See :link.', [
+      ':link' => $link->toString(),
+    ]), 'error');
   }
 }
 
