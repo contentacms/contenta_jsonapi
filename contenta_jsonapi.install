@@ -3,6 +3,7 @@
 use \Drupal\Component\Serialization\Yaml;
 use \Drupal\Core\Link;
 use \Drupal\Core\Url;
+use \Drupal\simple_oauth\Entity\Oauth2Client;
 
 /**
  * Implements hook_install().
@@ -72,6 +73,15 @@ function contenta_jsonapi_install() {
       ':link' => $link->toString(),
     ]), 'error');
   }
+
+  // Create demo OAuth2 client.
+  Oauth2Client::create([
+    'owner_id' => 1,
+    'label' => 'Demo app',
+    'secret' => '',
+    'confidential' => FALSE,
+    'roles' => [],
+  ])->save();
 }
 
 /**
