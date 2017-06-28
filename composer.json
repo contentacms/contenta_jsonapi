@@ -43,7 +43,8 @@
                 "Module installation fails when shipped as part of an install profile": "https://www.drupal.org/files/issues/2886691-2.patch"
             },
             "asm89/stack-cors": {
-              "Add origin matcher for wildcard matching": "https://patch-diff.githubusercontent.com/raw/asm89/stack-cors/pull/42.patch"
+              "Add origin matcher for wildcard matching": "https://patch-diff.githubusercontent.com/raw/asm89/stack-cors/pull/42.patch",
+              "Do not modify request with same origin": "https://github.com/asm89/stack-cors/commit/6daf5757971173b79ddabbd755d59d333c278f42.patch"
             },
             "drupal/schemata": {
               "https://www.drupal.org/files/issues/2870904-22.patch": "https://www.drupal.org/files/issues/2870904-22.patch"
