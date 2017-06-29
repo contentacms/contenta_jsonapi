@@ -1,9 +1,6 @@
 <?php
 
 use \Drupal\Component\Serialization\Yaml;
-use \Drupal\Core\Link;
-use \Drupal\Core\Url;
-use \Drupal\simple_oauth\Entity\Oauth2Client;
 
 /**
  * Implements hook_install().
@@ -24,96 +21,4 @@ function contenta_jsonapi_install() {
 
     file_put_contents($file_path . '/services.yml', Yaml::encode($yml_data));
   }
-
-  // Generate temporary public/private keys for use by Simple OAuth.
-  $keypair_success = FALSE;
-  if (function_exists('openssl_pkey_new')) {
-    $keys = _contenta_generate_keypair();
-
-    if (!empty($keys['public']) && !empty($keys['private'])) {
-      try {
-        // Keys were generated successfully, so use them in Simple OAuth.
-        $oauth_settings = \Drupal::configFactory()
-          ->getEditable('simple_oauth.settings');
-
-        foreach ($keys as $kind => $key) {
-          // Create a key file in the temporary directory.
-          $path = sys_get_temp_dir() . '/' . sha1($key) . '.key';
-          if (!file_exists($path) && !touch($path)) {
-            throw new \RuntimeException('Key file could not be created at "%s"', $path);
-          }
-          file_put_contents($path, $key);
-
-          // Configure the key in Simple OAuth.
-          $oauth_settings->set("{$kind}_key", $path);
-        }
-
-        $oauth_settings->save(TRUE);
-        $keypair_success = TRUE;
-      }
-      catch(\RuntimeException $e) {
-        drupal_set_message($e->getMessage(), 'error');
-      }
-    }
-  }
-
-  $link = Link::fromTextAndUrl(t('generating a key pair'),
-    Url::fromUri('https://github.com/contentacms/contenta_jsonapi/wiki/Generating-a-key-pair-for-Simple-OAuth', [
-      'https' => TRUE,
-    ]));
-
-  if ($keypair_success) {
-    drupal_set_message(t('An temporary public/private key pair has been generated in ":tempdir" for OAuth2 authentication. See :link for production use.', [
-      ':tempdir' => sys_get_temp_dir(),
-      ':link' => $link->toString(),
-    ]), 'warning');
-  }
-  else {
-    drupal_set_message(t('Unable to generate a temporary key pair for OAuth2 authentication. See :link.', [
-      ':link' => $link->toString(),
-    ]), 'error');
-  }
-
-  // Create demo OAuth2 client.
-  Oauth2Client::create([
-    'owner_id' => 1,
-    'label' => 'Demo app',
-    'secret' => '',
-    'confidential' => FALSE,
-    'roles' => [],
-  ])->save();
-}
-
-/**
- * Generates a 4096-bit public/private RSA key pair in memory.
- *
- * @return array - Contains:
- *  'private' - The private RSA key
- *  'public'  - The public RSA key
- */
-function _contenta_generate_keypair() {
-  $keys = [
-    'public' => NULL,
-    'private' => NULL,
-  ];
-
-  // Generate 4096-bit RSA key.
-  $pk_Generate = openssl_pkey_new(array(
-    'private_key_bits' => 4096,
-    'private_key_type' => OPENSSL_KEYTYPE_RSA
-  ));
-
-  if (!empty($pk_Generate)) {
-    // Get the private key.
-    openssl_pkey_export($pk_Generate, $keys['private']);
-
-    // Get the public key.
-    $pk_Generate_Details = openssl_pkey_get_details($pk_Generate);
-    $keys['public'] = isset($pk_Generate_Details['key']) ? $pk_Generate_Details['key'] : NULL;
-
-    // free resources
-    openssl_pkey_free($pk_Generate);
-  }
-
-  return $keys;
 }
