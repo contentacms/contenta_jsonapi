@@ -44,9 +44,6 @@
             },
             "asm89/stack-cors": {
               "Add origin matcher for wildcard matching": "https://patch-diff.githubusercontent.com/raw/asm89/stack-cors/pull/42.patch"
-            },
-            "drupal/schemata": {
-              "https://www.drupal.org/files/issues/2870904-22.patch": "https://www.drupal.org/files/issues/2870904-22.patch"
             }
         }
     },
@@ -66,8 +63,8 @@
         "drupal/media_entity_image": "^1.2",
         "drupal/dropzonejs": "^1.0@alpha",
         "drupal/materialize": "1.x-dev",
-        "drupal/schemata": "1.x-dev#8325d172e1d6880aa24073f8f751ef089282cf9a",
-        "drupal/openapi": "1.x-dev#e8a82f87dbbb83dc89f9455f7a2e5ba6c6d2cdff",
+        "drupal/schemata": "^1.0@alpha",
+        "drupal/openapi": "^1.0@alpha",
         "drupal/material_admin": "1.x-dev"
     },
     "config": {
