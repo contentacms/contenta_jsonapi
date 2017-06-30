@@ -17,7 +17,7 @@ function contenta_jsonapi_install() {
     $yml_data['parameters']['cors.config']['enabled'] = TRUE;
     $yml_data['parameters']['cors.config']['allowedHeaders'] = ['*'];
     $yml_data['parameters']['cors.config']['allowedMethods'] = ['*'];
-    $yml_data['parameters']['cors.config']['allowedOrigins'] = ['localhost:*'];
+    $yml_data['parameters']['cors.config']['allowedOrigins'] = ['localhost','*'];
 
     file_put_contents($file_path . '/services.yml', Yaml::encode($yml_data));
   }
