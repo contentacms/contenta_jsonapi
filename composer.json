@@ -44,7 +44,7 @@
             },
             "asm89/stack-cors": {
               "Add origin matcher for wildcard matching": "https://patch-diff.githubusercontent.com/raw/asm89/stack-cors/pull/42.patch",
-              "Do not modify request with same origin": "https://github.com/raw/asm89/stack-cors/commit/6daf5757971173b79ddabbd755d59d333c278f42.patch"
+              "Do not modify request with same origin": "https://github.com/asm89/stack-cors/commit/6daf5757971173b79ddabbd755d59d333c278f42.patch"
             }
         }
     },
