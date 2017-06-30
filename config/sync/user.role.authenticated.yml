@@ -12,4 +12,5 @@ permissions:
   - 'access content'
   - 'access jsonapi resource list'
   - 'access toolbar'
+  - 'issue subrequests'
   - 'view media'
