@@ -11,4 +11,5 @@ is_admin: false
 permissions:
   - 'access content'
   - 'access jsonapi resource list'
+  - 'issue subrequests'
   - 'view media'
