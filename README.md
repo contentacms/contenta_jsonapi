@@ -64,6 +64,8 @@ Join the discussion in the [#contenta Slack channel](https://drupal.slack.com/me
 
 For documention on the development on contenta_jsonapi itself, see [docs/development](https://github.com/contentacms/contenta_jsonapi/blob/master/docs/development.md).
 
+[Code of conduct](https://https://github.com/contentacms/contenta_jsonapi/blob/8.x-1.x/CODE_OF_CONDUCT.md)
+
 ### Development Installation
 
 - If you want a setup which allows you to contribute back to Contenta, follow the installation instructions above
