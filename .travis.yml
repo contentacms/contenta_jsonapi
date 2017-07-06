@@ -59,10 +59,10 @@ before_deploy:
   # Remove Site files
   - ./scripts/deployment/travis_before_deploy.sh rm_site "$PROJECT_BASE_PATH/web"
   # Zip Folder
+  - "echo `pwd`"
+  - "echo $HOME --- $PROJECT_NAME --- $TRAVIS_TAG"
   - ./scripts/deployment/travis_before_deploy.sh zip_folder "$HOME" "$PROJECT_NAME" "$TRAVIS_TAG"
 
-# Deploying GitHub Releases works only for tags, not for branches.
-# Due to this issue we most tag every release that we wish to publish
 deploy:
   provider: releases
   api_key:

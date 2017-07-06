@@ -46,7 +46,7 @@ rm_site(){
 
     default_dir=$1/sites/default
 
-    rm -rf $default_dir/settings.php \
+    sudo rm -rf $default_dir/settings.php \
            $default_dir/services.yml \
            $default_dir/files
 }
