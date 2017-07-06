@@ -56,7 +56,7 @@ In order to allow browsers to request the contenta back-end you need to:
     maxAge: false
     supportsCredentials: false
 ```
-* Run drush: ```cd web && ../bin/drush cr```
+* Run drush: ```cd <DESTINATION>/web && ../bin/drush cr```
 
 ## Development
 
@@ -69,7 +69,7 @@ For documention on the development on contenta_jsonapi itself, see [docs/develop
 ### Development Installation
 
 - If you want a setup which allows you to contribute back to Contenta, follow the installation instructions above
-- Replace the <DESTINATION>/web directory with a checkout of this repo
+- Replace the <DESTINATION>/web/profiles/contrib/contenta_jsonapi directory with a checkout of this repo
 
 ```bash
 cd <DESTINATION>
