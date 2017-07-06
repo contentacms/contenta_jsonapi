@@ -2565,8 +2565,15 @@ nav .block-system-branding-block a.brand-name {
   color: #757575;
 }
 
-.card .card-content > i.material-icons.right {
+.card .card-content > i.material-icons {
   color: #03A9F4;
-  padding: 1.5rem;
-  font-size: 7rem;
+}
+
+.card .card-content .section h5 {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.card .card-image img {
+  height: auto;
 }
