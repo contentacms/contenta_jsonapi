@@ -14,7 +14,6 @@ env:
     - PROJECT_NAME=contentacms
     - PROJECT_BASE_PATH=$HOME/$PROJECT_NAME
     - PROJECT_RELEASE_BRANCH=feature/91_Generate_GitHub_Releases #8.x-1.x
-    -
 
 branches:
   only:
@@ -51,30 +50,38 @@ script:
 after_script:
   - killall php
 
-before_deploy:
-  # Set Deployment Variable
-  - TRAVIS_BRANCH="${TRAVIS_BRANCH:-TAG}"
-  - TAG_NAME="${PROJECT_NAME}_${TRAVIS_BRANCH}_release-$( date +%Y-%m-%d)_build_${TRAVIS_BUILD_NUMBER}"
-  - TRAVIS_TAG="${TRAVIS_TAG:-$TAG_NAME}"
-  # Remove Site files
-  - ./scripts/deployment/travis_before_deploy.sh rm_site "$PROJECT_BASE_PATH/web"
-  # Zip Folder
-  - "echo `pwd`"
-  - "echo $HOME --- $PROJECT_NAME --- $TRAVIS_TAG"
-  - ./scripts/deployment/travis_before_deploy.sh zip_folder "$HOME" "$PROJECT_NAME" "$TRAVIS_TAG"
+# This stanza creates Travis Stages that are sequentially dependent.
+jobs:
+  include:
+    # Deployment Stage
+    # This stage promotes a successful artifact from the deployment branch to Github
+    - stage: Release
+      php: 7.1
+      script: skip
+      before_deploy:
+        # Set Deployment Variable
+        - TRAVIS_BRANCH="${TRAVIS_BRANCH:-TAG}"
+        - TAG_NAME="${PROJECT_NAME}_${TRAVIS_BRANCH}_release-$( date +%Y-%m-%d)_build_${TRAVIS_BUILD_NUMBER}"
+        - TRAVIS_TAG="$( echo ${TRAVIS_TAG:-$TAG_NAME} | sed -E 's/(\/|\\)/-/g')" # Escape forward and backward slashes that are used sometimes on branch names
+        # Remove Site files
+        - ./scripts/deployment/travis_before_deploy.sh rm_site "$PROJECT_BASE_PATH/web"
+        # Zip Folder
+        - "echo `pwd`"
+        - "echo $HOME --- $PROJECT_NAME --- $TRAVIS_TAG"
+        - ./scripts/deployment/travis_before_deploy.sh zip_folder "$HOME" "$PROJECT_NAME" "$TRAVIS_TAG"
 
-deploy:
-  provider: releases
-  api_key:
-    secure: $SECURE_TOKEN
-  file:
-    - "$TRAVIS_TAG.zip"
-  skip_cleanup: true
-  name: "$TAG_NAME"
-  on:
-    branch: "$PROJECT_RELEASE_BRANCH"
-    repo: "$TRAVIS_REPO_SLUG"
-    php: 7.1
+      deploy:
+        provider: releases
+        api_key:
+          secure: $SECURE_TOKEN
+        file:
+          - "$TRAVIS_TAG.zip"
+        skip_cleanup: true
+        name: "$TAG_NAME"
+        on:
+          # Only release if it $PROJECT_RELEASE_BRANCH gets updated
+          branch: $PROJECT_RELEASE_BRANCH
+          repo: "contentacms/contenta_jsonapi"
 
-#after_failure:
-#  - ./scripts/deployment/create_github_issue.sh post_github_issue
+      after_deploy:
+        - ./scripts/deployment/create_github_issue.sh manage_github_issue
