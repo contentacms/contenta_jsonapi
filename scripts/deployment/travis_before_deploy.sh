@@ -20,7 +20,7 @@ validate_env_var() {
 zip_folder(){
 
     # Validate that 2 arguments were passed
-    if [ -z "${!1}" ] || [ -z "${!2}" ] || [ -z "${!3}" ]; then
+    if [ -z $1 ] || [ -z $2 ] || [ -z $3 ]; then
         echo "Please pass a parent folder path, the folder name and zip name to the zip_folder function" 1>&2
         exit 1
     fi
@@ -38,7 +38,8 @@ zip_folder(){
 # This function receives one argument:
 #   $1 -> The Drupal Base Path
 rm_site(){
-    if [ -z "${!1}" ] ; then
+
+    if [ -z $1 ] ; then
         echo "Please pass a Drupal Base Path to the rm_site function" 1>&2
         exit 1
     fi
