@@ -427,6 +427,51 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
+        field_topic_value:
+          id: field_topic_value
+          table: node__field_topic
+          field: field_topic_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_topic_value_op
+            label: Topic
+            description: ''
+            use_operator: false
+            operator: field_topic_value_op
+            identifier: field_topic_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              content_administrator: '0'
+              client_developer: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: 'Topic (field_topic)'
+            description: null
+            identifier: field_topic_value
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1: {  }
+              2: {  }
+              3: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
       sorts:
         created:
           id: created
@@ -477,6 +522,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -506,6 +552,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - 'user.node_grants:view'
         - user.permissions
       tags:
