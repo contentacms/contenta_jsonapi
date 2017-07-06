@@ -72,7 +72,7 @@ display:
               rendered: false
               rendered_strip: false
           columns: 2
-          automatic_width: true
+          automatic_width: false
           alignment: horizontal
           col_class_default: true
           col_class_custom: 'col s12 m6'
