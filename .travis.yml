@@ -13,12 +13,11 @@ env:
   global:
     - PROJECT_NAME=contentacms
     - PROJECT_BASE_PATH=$HOME/$PROJECT_NAME
-    - PROJECT_RELEASE_BRANCH=${PROJECT_RELEASE_BRANCH:-"8.x-1.x"}
+    - PROJECT_RELEASE_BRANCH=${PROJECT_RELEASE_BRANCH:-8.x-1.x}
 
 branches:
   only:
     - 8.x-1.x
-    - $PROJECT_RELEASE_BRANCH
 
 before_install:
   - nvm install 6.11.0
@@ -57,12 +56,11 @@ jobs:
     # This stage promotes a successful artifact from the deployment branch to Github
     - stage: Release
       php: 7.1
+      before_script: skip
       script: skip
       before_deploy:
         # Set Deployment Variable
-        - TRAVIS_BRANCH="${TRAVIS_BRANCH:-TAG}"
-        - TAG_NAME="${PROJECT_NAME}_${TRAVIS_BRANCH}_release-$( date +%Y-%m-%d)_build_${TRAVIS_BUILD_NUMBER}"
-        - TRAVIS_TAG="$( echo ${TRAVIS_TAG:-$TAG_NAME} | sed -E 's/(\/|\\)/-/g')" # Escape forward and backward slashes that are used sometimes on branch names
+        - TRAVIS_TAG="${PROJECT_NAME}_release-$( date +%Y-%m-%d)_build_${TRAVIS_BUILD_NUMBER}"
         # Remove Site files
         - ./scripts/deployment/travis_before_deploy.sh rm_site "$PROJECT_BASE_PATH/web"
         # Zip Folder
@@ -75,7 +73,7 @@ jobs:
         file:
           - "$TRAVIS_TAG.zip"
         skip_cleanup: true
-        name: "$TAG_NAME"
+        name: "$TRAVIS_TAG"
         on:
           # Only release if it $PROJECT_RELEASE_BRANCH gets updated
           branch: $PROJECT_RELEASE_BRANCH
