@@ -12,6 +12,9 @@ type: list_string
 settings:
   allowed_values:
     -
+      value: GraphQL
+      label: GraphQL
+    -
       value: 'JSON API'
       label: 'JSON API'
     -
