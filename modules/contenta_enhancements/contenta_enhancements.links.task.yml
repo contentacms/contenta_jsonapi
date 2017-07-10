@@ -1,0 +1,21 @@
+contenta_enhancements.api:
+  route_name: contenta_enhancements.api
+  title: API
+  base_route: contenta_enhancements.api
+
+contenta_enhancements.api.config:
+  route_name: contenta_enhancements.api.config
+  title: Configuration API
+  base_route: contenta_enhancements.api
+
+contenta_enhancements.api.authentication:
+  route_name: contenta_enhancements.api.authentication
+  title: Authentication
+  base_route: contenta_enhancements.api
+  weight: 90
+
+contenta_enhancements.api.advanced:
+  route_name: contenta_enhancements.api.advanced
+  title: Advanced
+  base_route: contenta_enhancements.api
+  weight: 100
