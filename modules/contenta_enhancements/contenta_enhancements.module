@@ -315,8 +315,10 @@ HTML;
  * Implements hook_entity_type_alter().
  */
 function contenta_enhancements_entity_type_alter(array &$entity_types) {
-  /** @var $entity_types \Drupal\Core\Entity\EntityTypeInterface[] */
-  $entity_types['oauth2_client']->setLinkTemplate('canonical', '/client/{oauth2_client}');
+  if (!empty($entity_types['oauth2_client'])) {
+    /** @var $entity_types \Drupal\Core\Entity\EntityTypeInterface[] */
+    $entity_types['oauth2_client']->setLinkTemplate('canonical', '/client/{oauth2_client}');
+  }
 }
 
 /**
