@@ -23,6 +23,7 @@ function recipes_magazin_contenta_toolbar() {
   );
   $tree = $menu_tree->transform($tree, $manipulators);
   $renderable_menu = $menu_tree->build($tree);
+
   return [
     'contenta' => [
       '#type' => 'toolbar_item',
@@ -40,14 +41,14 @@ function recipes_magazin_contenta_toolbar() {
         ],
       ],
       'tray' => [
-        '#heading' => t('Environment switcher'),
+        '#heading' => t('Contenta CMS'),
         '#wrapper_attributes' => [],
         'menu' => $renderable_menu,
       ],
       '#attached' => [
         'library' => ['recipes_magazin_contenta/recipes_magazin_contenta'],
       ],
-      '#weight' => -15,
+      '#weight' => -45,
     ],
   ];
 }

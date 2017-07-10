@@ -1,0 +1,13 @@
+# https://www.drupal.org/node/2886816
+fix-2886816:
+  version: VERSION
+  css:
+    theme:
+      css/fix-2886816.css: {}
+
+# https://www.drupal.org/node/2887220
+fix-2887220:
+  version: VERSION
+  css:
+    theme:
+      css/fix-2887220.css: {}
