@@ -72,7 +72,13 @@
     },
     "scripts": {
         "install-contenta": "scripts/development/build-contenta_jsonapi.sh",
-        "start-contenta": "scripts/development/start-contenta_jsonapi.sh"
+        "start-contenta": "scripts/development/start-contenta_jsonapi.sh",
+        "post-package-install": [
+            "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup"
+        ],
+        "post-package-update": [
+            "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup"
+        ]
     },
     "provide": {
     },

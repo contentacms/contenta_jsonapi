@@ -12,6 +12,31 @@ validate_env_var() {
     done
 }
 
+# ContentaCMS Files List Function
+# This function receives no argument
+# List of least minimum files needed for Contenta CMS to work
+contentacms_files_list() {
+     list=(
+    'modules'
+    'scripts'
+    'themes'
+    'config'
+    'composer.json'
+    'composer.lock'
+    'vendor'
+    'humans.txt'
+    '.env'
+    'CHANGELOG.md'
+    'contenta_jsonapi.info.yml'
+    'contenta_jsonapi.install'
+    'contenta_jsonapi.profile'
+    'README.md'
+    'LICENSE.txt'
+    )
+
+    echo ${list[*]}
+}
+
 # Zip Folder Function
 # This function receives two argument:
 #   $1 -> Parent path of the folder that is going to be compressed
@@ -49,6 +74,35 @@ rm_site(){
     sudo rm -rf $default_dir/settings.php \
            $default_dir/services.yml \
            $default_dir/files
+}
+
+# ContentaCMS Profile Cleanup Function
+# Cleanup every unnecessary file/folder inside the ContentaCMS Profile folder
+# This function receives one argument:
+#   $1 -> The Drupal Base Path
+contentacms_profile_cleanup(){
+
+     if [ -z $1 ] ; then
+        echo "Please pass a Drupal Base Path to the contenta_profile_cleanup function" 1>&2
+        exit 1
+    fi
+
+    list=$(contentacms_files_list)
+
+    profile_contenta=$1 #/profiles/contrib/contenta_jsonapi
+
+    list_of_files=$(ls -a $profile_contenta)
+
+    for VAR in $list_of_files
+    do
+        if [ "$VAR" == "." ] || [ "$VAR" == ".." ]; then
+            continue
+        elif [[ ! " ${list[@]} " =~ " $VAR " ]]; then
+            echo "Removing: $VAR"
+            rm -rf $profile_contenta/$VAR
+        fi
+
+    done
 }
 
 $@
