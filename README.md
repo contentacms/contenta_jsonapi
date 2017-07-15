@@ -103,13 +103,7 @@ yarn run nightwatch
 
 ## Front-ends
 
-Please implement your own front-ends and talk about it
-
-Existing front-ends (all in development):
-
-* https://github.com/contentacms/contenta_angular
-* https://github.com/contentacms/contenta_react
-* https://github.com/contentacms/contenta_jsonapi__elm
+There are a bunch of example consumers, see http://www.contentacms.org/#example-consumers for a list of them.
 
 
 ## Credits
