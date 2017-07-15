@@ -4,6 +4,7 @@
 BASE_DIR="$(dirname $(dirname $(cd ${0%/*} && pwd)))"
 
 COMPOSER="$(which composer)"
+PHP="$(which php)"
 DOCROOT="web"
 
 # Define the color scheme.
@@ -44,7 +45,7 @@ echo "-----------------------------------------------"
 echo " Downloading Contenta CMS using composer "
 echo "-----------------------------------------------"
 echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $COMPOSER create-project contentacms/contenta-jsonapi-project ${DEST_DIR} --stability dev --no-interaction\n\n"
-$COMPOSER create-project contentacms/contenta-jsonapi-project ${DEST_DIR} --stability dev --no-interaction --no-install
+$PHP -d memory_limit=-1 $COMPOSER create-project contentacms/contenta-jsonapi-project ${DEST_DIR} --stability dev --no-interaction --no-install
 if [ $? -ne 0 ]; then
   echo -e "${FG_C}${EBG_C} ERROR ${NO_C} There was a problem setting up Contenta CMS using composer."
   echo "Please check your composer configuration and try again."

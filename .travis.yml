@@ -31,7 +31,10 @@ branches:
     - feature/117_remove_node_modules_from_release
 
 before_install:
+  # Fixes Composer exhausting the memory when using PHP 5.6.
+  - echo "memory_limit=-1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
   - nvm install 6.11.0
+  - php -r "echo ini_get('memory_limit').PHP_EOL;"
   - nvm use 6.11.0
   # Repo for Yarn
   - sudo apt-key adv --keyserver pgp.mit.edu --recv D101F7899D41F3C3
@@ -43,6 +46,7 @@ before_install:
 install:
   - yarn install
   - composer run-script install-contenta $PROJECT_BASE_PATH --timeout=0
+
 
 before_script:
   - export DISPLAY=:99.0
@@ -73,7 +77,8 @@ jobs:
       script: skip
       before_deploy:
         # Set Deployment Variable
-        - TRAVIS_TAG="${PROJECT_NAME}_release-$( date +%Y-%m-%d)_build_${TRAVIS_BUILD_NUMBER}"
+        - RELEASE_DATE=$( date +%Y-%m-%d)
+        - TRAVIS_TAG="${PROJECT_NAME}_release-${RELEASE_DATE}_build_${TRAVIS_BUILD_NUMBER}"
         # Clean the Contenta Profile Folder
         - ./scripts/deployment/travis_before_deploy.sh contentacms_profile_cleanup "$PROJECT_BASE_PATH/web"
         # Remove Site files
@@ -83,12 +88,11 @@ jobs:
 
       deploy:
         provider: releases
-        user: $GITHUB_USER_USERNAME
-        password: $GITHUB_USER_PASSWORD
-        file:
-          - "$TRAVIS_TAG.zip"
+        api_key:
+          secure: $SECURE_TOKEN
+        file: "$TRAVIS_TAG.zip"
         skip_cleanup: true
-        name: "$TRAVIS_TAG"
+        name: "Release: ${RELEASE_DATE} build ${TRAVIS_BUILD_NUMBER}"
         on:
           # Only release if it $PROJECT_RELEASE_BRANCH gets updated
           branch: feature/117_remove_node_modules_from_release

@@ -32,6 +32,7 @@ contentacms_files_list() {
     'contenta_jsonapi.profile'
     'README.md'
     'LICENSE.txt'
+    'sites'
     )
 
     echo ${list[*]}
@@ -89,7 +90,7 @@ contentacms_profile_cleanup(){
 
     list=$(contentacms_files_list)
 
-    profile_contenta=$1 #/profiles/contrib/contenta_jsonapi
+    profile_contenta=$1/profiles/contrib/contenta_jsonapi
 
     list_of_files=$(ls -a $profile_contenta)
 
@@ -98,7 +99,7 @@ contentacms_profile_cleanup(){
         if [ "$VAR" == "." ] || [ "$VAR" == ".." ]; then
             continue
         elif [[ ! " ${list[@]} " =~ " $VAR " ]]; then
-            echo "Removing: $VAR"
+            echo "Removing: $profile_contenta/$VAR"
             rm -rf $profile_contenta/$VAR
         fi
 
