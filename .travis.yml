@@ -20,8 +20,8 @@ branches:
     - 8.x-1.x
 
 before_install:
-  - nvm install 6.11.0
-  - nvm use 6.11.0
+  - nvm install 6.11.1
+  - nvm use 6.11.1
   # Repo for Yarn
   - sudo apt-key adv --keyserver pgp.mit.edu --recv D101F7899D41F3C3
   - echo "deb http://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
