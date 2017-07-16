@@ -7,7 +7,7 @@
 - [npm](https://nodejs.org/en/download/)
 
 ```bash
-git clone git@github.com:drupal-http-apis/contenta_jsonapi.git
+git clone git@github.com:contentacms/contenta_jsonapi.git
 cd contenta_jsonapi
 sh scripts/development/build-contenta_jsonapi.sh
 ```
