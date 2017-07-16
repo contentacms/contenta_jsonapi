@@ -40,3 +40,20 @@ Recipes:
 Recipes categories : 
 [https://dev-contentacms.pantheonsite.io/api/categories](https://dev-contentacms.pantheonsite.io/api/categories)
 
+## Pages documentation
+
+It follows some documentation describing the various pages of the wireframe, in case someone gets stuck
+
+### Front page
+
+The frontpage consists of several elements:
+
+* A list of promoted articles and recipes: This should contain the 3 last "promoted" items. As of now
+  there is no easy way to query that instead of querying for both the last 3 recipes and articles and merge them manually.
+* A list of links:
+  * Dinners to impress: Filter by category 'Main Dessert': ```"&filter[category.name][value]=Main course"```
+  * Learn to cook: ```"&filter[difficulty][value]=easy"```
+  * Baked up:  ```"&filter[category.name][value]=Dessert"```
+  * Quick and easy: ``` "&filter[totalTime][condition][path]=totalTime&filter[totalTime][condition][value]=20&filter[totalTime][condition][operator]=<```
+* A grid of the 4 latest recipes, ordered by create time
+
