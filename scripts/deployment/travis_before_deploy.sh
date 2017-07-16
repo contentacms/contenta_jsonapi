@@ -19,7 +19,6 @@ contentacms_files_to_delete_list() {
      list=(
     '.circleci'
     '.babelrc'
-    'docs'
     'CODE_OF_CONDUCT.md'
     '.editorconfig'
     '.eslintignore'

@@ -4,7 +4,6 @@
 BASE_DIR="$(dirname $(dirname $(cd ${0%/*} && pwd)))"
 
 COMPOSER="$(which composer)"
-PHP="$(which php)"
 DOCROOT="web"
 
 # Define the color scheme.
