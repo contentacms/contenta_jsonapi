@@ -1,11 +1,10 @@
 # Site Information
-site_name: ContentaCMS Documantation
+site_name: ContentaCMS
 repo_url: https://github.com/contentacms/contenta_jsonapi/
 repo_name: contentacms/contenta_jsonapi
-edit_uri: edit/8.x-1.x/docs/
 site_description: ContentaCMS Documentation
 docs_dir: docs
-
+site_favicon: favicon.ico
 
 # Site Structure
 pages:
