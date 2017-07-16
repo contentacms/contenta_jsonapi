@@ -1,7 +1,10 @@
 uuid: 73aaf9c9-acd8-4f21-a954-b7f00bd27060
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - recipes_magazin_contenta
 id: contenta
 label: Contenta
 description: 'Contenta CMS menu'

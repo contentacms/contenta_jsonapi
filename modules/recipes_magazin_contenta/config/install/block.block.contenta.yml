@@ -4,6 +4,9 @@ status: true
 dependencies:
   config:
     - system.menu.contenta
+  enforced:
+    module:
+      - recipes_magazin_contenta
   module:
     - system
   theme:

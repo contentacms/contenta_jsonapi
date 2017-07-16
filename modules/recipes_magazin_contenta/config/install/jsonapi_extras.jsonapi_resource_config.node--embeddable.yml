@@ -1,7 +1,10 @@
 uuid: cdff182d-eda4-44c3-a626-28c9297f5532
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - recipes_magazin_contenta
 id: node--embeddable
 disabled: true
 path: embeddables
