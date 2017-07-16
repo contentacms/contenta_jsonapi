@@ -2,6 +2,9 @@ uuid: fe665cef-1525-4ec2-9d41-f533653d75d9
 langcode: en
 status: true
 dependencies:
+  enforced:
+    module:
+      - recipes_magazin_contenta
   module:
     - node
     - options

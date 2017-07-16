@@ -1,7 +1,10 @@
 uuid: d7f1c959-771d-496f-b866-08db96b88f10
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - recipes_magazin_contenta
 name: car
 label: 'Card image (574×323)'
 effects:
