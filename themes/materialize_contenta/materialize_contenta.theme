@@ -6,4 +6,11 @@
  *
  * Place your custom PHP code in this file.
  */
+use Drupal\Component\Utility\Html;
 
+/**
+ * Implements hook_preprocess_html().
+ */
+function materialize_contenta_preprocess_html(array &$vars) {
+  $vars['attributes']['class'][] = Html::getClass('route__' . \Drupal::routeMatch()->getRouteName());
+}
