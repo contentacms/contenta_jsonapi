@@ -31,3 +31,11 @@ contenta_enhancements.api.advanced:
     _title: 'Advanced'
   requirements:
     _access: 'TRUE'
+
+contenta_enhancements.revert:
+  path: '/admin/contenta/revert'
+  defaults:
+    _form: 'Drupal\contenta_enhancements\Form\RevertForm'
+    _title: 'Revert'
+  requirements:
+    _permission: 'administer site configuration'
