@@ -132,7 +132,7 @@ function contenta_enhancements_toolbar_alter(&$items) {
       '#type' => 'toolbar_item',
       'tab' => [
         '#type' => 'link',
-        '#title' => t('Assets'),
+        '#title' => t('Media'),
         '#url' => Url::fromRoute('view.media.media_page_list'),
         '#options' => [
           'set_active_class' => TRUE,
@@ -142,12 +142,12 @@ function contenta_enhancements_toolbar_alter(&$items) {
         ],
       ],
       'tray' => [
-        '#heading' => t('Assets'),
+        '#heading' => t('Media'),
         'items' => [
           '#theme' => 'menu__toolbar',
           '#items' => [
             'content' => [
-              'title' => t('Assets'),
+              'title' => t('Media'),
               'url' => Url::fromRoute('view.media.media_page_list'),
               'attributes' => ['class' => ['menu-item']]
             ],
