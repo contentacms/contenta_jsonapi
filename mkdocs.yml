@@ -10,7 +10,7 @@ site_favicon: favicon.ico
 pages:
   - Home: index.md
   - Development: development.md
-  - Demo:
+  - Guidelines:
     - 'Consumers Implementation Guidelines': demos-consumers-implementation-guidelines.md
   - About: about.md
 
