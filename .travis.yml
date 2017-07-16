@@ -28,6 +28,7 @@ env:
 branches:
   only:
     - 8.x-1.x
+    - feature/117_testing
 
 before_install:
   # Fixes Composer exhausting the memory when using PHP 5.6.

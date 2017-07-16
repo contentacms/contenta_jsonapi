@@ -12,27 +12,28 @@ validate_env_var() {
     done
 }
 
-# ContentaCMS Files List Function
+# ContentaCMS Files To Delete List Function
 # This function receives no argument
 # List of least minimum files needed for Contenta CMS to work
-contentacms_files_list() {
+contentacms_files_to_delete_list() {
      list=(
-    'modules'
-    'scripts'
-    'themes'
-    'config'
-    'composer.json'
-    'composer.lock'
-    'vendor'
-    'humans.txt'
-    '.env'
-    'CHANGELOG.md'
-    'contenta_jsonapi.info.yml'
-    'contenta_jsonapi.install'
-    'contenta_jsonapi.profile'
-    'README.md'
-    'LICENSE.txt'
-    'sites'
+    '.circleci'
+    '.babelrc'
+    'docs'
+    'CODE_OF_CONDUCT.md'
+    '.editorconfig'
+    '.eslintignore'
+    '.eslintrc'
+    '.git'
+    '.github'
+    '.gitignore'
+    'installer.sh'
+    'nightwatch.json'
+    'package.json'
+    'tests'
+    '.travis.yml'
+    'yarn.lock'
+    'node_modules'
     )
 
     echo ${list[*]}
@@ -88,7 +89,7 @@ contentacms_profile_cleanup(){
         exit 1
     fi
 
-    list=$(contentacms_files_list)
+    list=$(contentacms_files_to_delete_list)
 
     profile_contenta=$1/profiles/contrib/contenta_jsonapi
 
@@ -98,9 +99,9 @@ contentacms_profile_cleanup(){
     do
         if [ "$VAR" == "." ] || [ "$VAR" == ".." ]; then
             continue
-        elif [[ ! " ${list[@]} " =~ " $VAR " ]]; then
+        elif [[ " ${list[@]} " =~ " $VAR " ]]; then
             echo "Removing: $profile_contenta/$VAR"
-            rm -rf $profile_contenta/$VAR
+            sudo rm -rf $profile_contenta/$VAR
         fi
 
     done
