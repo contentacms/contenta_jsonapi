@@ -28,16 +28,23 @@ class RevertForm extends ConfirmFormBase {
   protected $themeConfig;
 
   /**
+   * @var \Drupal\Core\Config\Config
+   */
+  protected $siteConfig;
+
+  /**
    * RevertForm constructor.
    *
    * @param \Drupal\Core\Extension\ModuleInstallerInterface $module_installer
    * @param \Drupal\Core\Extension\ModuleInstallerInterface $module_installer
    * @param \Drupal\Core\Config\Config $theme_config
+   * @param \Drupal\Core\Config\Config $site_config
    */
-  public function __construct(ModuleInstallerInterface $module_installer, ThemeInstallerInterface $theme_installer, Config $theme_config) {
+  public function __construct(ModuleInstallerInterface $module_installer, ThemeInstallerInterface $theme_installer, Config $theme_config, Config $site_config) {
     $this->moduleInstaller = $module_installer;
     $this->themeInstaller = $theme_installer;
     $this->themeConfig = $theme_config;
+    $this->siteConfig = $site_config;
   }
 
   /**
@@ -47,7 +54,8 @@ class RevertForm extends ConfirmFormBase {
     return new static(
       $container->get('module_installer'),
       $container->get('theme_installer'),
-      $container->get('config.factory')->getEditable('system.theme')
+      $container->get('config.factory')->getEditable('system.theme'),
+      $container->get('config.factory')->getEditable('system.site')
     );
   }
 
@@ -63,6 +71,8 @@ class RevertForm extends ConfirmFormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     // Use the admin theme in the front-end.
+    $this->siteConfig->set('page.front', '/admin/content');
+    $this->siteConfig->save();
     $this->themeConfig->set('default', 'material_admin');
     $this->themeConfig->save();
     $this->themeInstaller->uninstall(['materialize_contenta', 'materialize']);
