@@ -1,5 +1,0 @@
-# Schema for the theme setting configuration file of the Materialize Contenta theme.
-
-materialize_contenta.settings:
-  type: theme_settings
-  label: 'Materialize Contenta settings'

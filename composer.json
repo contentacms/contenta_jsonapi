@@ -62,7 +62,6 @@
         "drupal/remote_stream_wrapper": "1.0",
         "drupal/media_entity_image": "^1.2",
         "drupal/dropzonejs": "^1.0@alpha",
-        "drupal/materialize": "1.x-dev",
         "drupal/schemata": "^1.0@alpha",
         "drupal/openapi": "^1.0@alpha",
         "drupal/material_admin": "1.x-dev"
