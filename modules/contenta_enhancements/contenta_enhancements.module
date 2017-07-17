@@ -283,6 +283,7 @@ function contenta_enhancements_toolbar_alter(&$items) {
         '#url' => Url::fromRoute('user.login'),
       ],
       '#attributes' => ['class' => ['login-tab']],
+      '#wrapper_attributes' => ['class' => ['login-tab']],
       '#weight' => 99,
     ];
   }
@@ -297,7 +298,7 @@ function contenta_enhancements_toolbar_alter(&$items) {
         '#title' => t('Log out'),
         '#url' => Url::fromRoute('user.logout'),
       ],
-      '#attributes' => ['class' => ['login-tab']],
+      '#wrapper_attributes' => ['class' => ['login-tab']],
       '#weight' => 99,
     ];
   }
