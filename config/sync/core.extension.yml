@@ -58,8 +58,6 @@ module:
 theme:
   stable: 0
   classy: 0
-  materialize: 0
-  materialize_contenta: 0
   material_admin: 0
 profile: contenta_jsonapi
 _core:

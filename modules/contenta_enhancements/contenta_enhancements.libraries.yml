@@ -11,3 +11,9 @@ fix-2887220:
   css:
     theme:
       css/fix-2887220.css: {}
+
+custom:
+  version: VERSION
+  css:
+    theme:
+      css/custom.css: {}

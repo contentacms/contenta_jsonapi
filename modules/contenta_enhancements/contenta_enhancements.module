@@ -55,6 +55,7 @@ function contenta_enhancements_entity_base_field_info_alter(&$fields, EntityType
 function contenta_enhancements_page_attachments(array &$page) {
   $page['#attached']['library'][] = 'contenta_enhancements/fix-2886816';
   $page['#attached']['library'][] = 'contenta_enhancements/fix-2887220';
+  $page['#attached']['library'][] = 'contenta_enhancements/custom';
 }
 
 /**
@@ -268,6 +269,37 @@ function contenta_enhancements_toolbar_alter(&$items) {
   }
   else {
     $items['reports'] = $empty_item_cacheability;
+  }
+
+  if ($current_user->isAnonymous()) {
+    $items['login'] = [
+      '#type' => 'toolbar_item',
+      'tab' => [
+        '#type' => 'link',
+        '#options' => [
+          'set_active_class' => TRUE,
+        ],
+        '#title' => t('Log in'),
+        '#url' => Url::fromRoute('user.login'),
+      ],
+      '#attributes' => ['class' => ['login-tab']],
+      '#weight' => 99,
+    ];
+  }
+  else {
+    $items['login'] = [
+      '#type' => 'toolbar_item',
+      'tab' => [
+        '#type' => 'link',
+        '#options' => [
+          'set_active_class' => TRUE,
+        ],
+        '#title' => t('Log out'),
+        '#url' => Url::fromRoute('user.logout'),
+      ],
+      '#attributes' => ['class' => ['login-tab']],
+      '#weight' => 99,
+    ];
   }
 
   $items['administration']['tab']['#title'] = t('Advanced');

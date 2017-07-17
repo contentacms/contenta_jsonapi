@@ -30,7 +30,7 @@ function recipes_magazin_contenta_toolbar() {
       'tab' => [
         '#type' => 'link',
         '#title' => t('Contenta CMS'),
-        '#url' => Url::fromUserInput('/welcome'),
+        '#url' => Url::fromRoute('<front>'),
         '#attributes' => [
           'title' => t('Welcome to Contenta CMS'),
           'class' => [
@@ -51,4 +51,11 @@ function recipes_magazin_contenta_toolbar() {
       '#weight' => -45,
     ],
   ];
+}
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function recipes_magazin_contenta_theme_registry_alter(&$theme_registry) {
+  $theme_registry['views_view_grid']['path'] = drupal_get_path('module', 'recipes_magazin_contenta') . '/templates';
 }
