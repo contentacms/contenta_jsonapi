@@ -4,7 +4,7 @@ status: true
 dependencies:
   enforced:
     module:
-      - recipes_magazin_contenta
+      - contenta_enhancements
 id: contenta
 label: Contenta
 description: 'Contenta CMS menu'

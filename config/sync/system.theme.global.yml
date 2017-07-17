@@ -1,6 +1,6 @@
 favicon:
   mimetype: image/vnd.microsoft.icon
-  path: profiles/contrib/contenta_jsonapi/themes/materialize_contenta/favicon.ico
+  path: profiles/contrib/contenta_jsonapi/modules/contenta_enhancements/favicon.ico
   url: ''
   use_default: false
 features:
@@ -9,7 +9,7 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  path: profiles/contrib/contenta_jsonapi/themes/materialize_contenta/logo.svg
+  path: profiles/contrib/contenta_jsonapi/modules/contenta_enhancements/logo.svg
   url: ''
   use_default: false
 _core:

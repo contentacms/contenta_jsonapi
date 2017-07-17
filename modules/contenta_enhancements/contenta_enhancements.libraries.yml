@@ -17,3 +17,9 @@ custom:
   css:
     theme:
       css/custom.css: {}
+
+contenta_enhancements:
+  version: '1.0'
+  css:
+    component:
+      css/contenta_enhancements.css: {}

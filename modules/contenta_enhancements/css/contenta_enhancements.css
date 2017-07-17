@@ -1,20 +1,20 @@
 .toolbar-bar .toolbar-icon-menu.toolbar-icon-contenta:before,
 .toolbar-bar .toolbar-icon-menu.toolbar-icon-contenta:before {
-  background-image: url("../images/contenta-logo.svg");
+  background-image: url("../img/contenta-logo.svg");
 }
 
 .no-svg .toolbar-bar .toolbar-icon-menu.toolbar-icon-contenta:before,
 .no-svg .toolbar-bar .toolbar-icon-menu.toolbar-icon-contenta:before {
-  background-image: url("../images/contenta-logo.png");
+  background-image: url("../img/contenta-logo.png");
 }
 .toolbar-bar .toolbar-icon-menu.toolbar-icon-contenta:active:before,
 .toolbar-bar .toolbar-icon-menu.toolbar-icon-contenta.is-active:before {
-  background-image: url("../images/contenta-logo-dark.svg");
+  background-image: url("../img/contenta-logo-dark.svg");
 }
 
 .no-svg .toolbar-bar .toolbar-icon-menu.toolbar-icon-contenta:active:before,
 .no-svg .toolbar-bar .toolbar-icon-menu.toolbar-icon-contenta.is-active:before {
-  background-image: url("../images/contenta-logo-dark.png");
+  background-image: url("../img/contenta-logo-dark.png");
 }
 .toolbar nav.toolbar-bar {
   background-color: #212D35;
