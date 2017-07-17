@@ -11,7 +11,7 @@ _core:
 id: material_admin_breadcrumbs
 theme: material_admin
 region: breadcrumb
-weight: 0
+weight: -4
 provider: null
 plugin: system_breadcrumb_block
 settings:

@@ -9,7 +9,7 @@ _core:
 id: material_admin_local_actions
 theme: material_admin
 region: content
-weight: -10
+weight: 3
 provider: null
 plugin: local_actions_block
 settings:

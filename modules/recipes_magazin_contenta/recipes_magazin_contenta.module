@@ -5,50 +5,9 @@
  * Module file.
  */
 
-use Drupal\Core\Url;
-use Drupal\Core\Menu\MenuTreeParameters;
-
 /**
- * Implements hook_toolbar().
+ * Implements hook_theme_registry_alter().
  */
-function recipes_magazin_contenta_toolbar() {
-  $menu_tree = \Drupal::service('toolbar.menu_tree');
-  $parameters = new MenuTreeParameters();
-  $parameters->setMinDepth(1)->setMaxDepth(3)->onlyEnabledLinks();
-  $tree = $menu_tree->load('contenta', $parameters);
-  $manipulators = array(
-    array('callable' => 'menu.default_tree_manipulators:checkAccess'),
-    array('callable' => 'menu.default_tree_manipulators:generateIndexAndSort'),
-    array('callable' => 'toolbar_menu_navigation_links'),
-  );
-  $tree = $menu_tree->transform($tree, $manipulators);
-  $renderable_menu = $menu_tree->build($tree);
-
-  return [
-    'contenta' => [
-      '#type' => 'toolbar_item',
-      'tab' => [
-        '#type' => 'link',
-        '#title' => t('Contenta CMS'),
-        '#url' => Url::fromUserInput('/welcome'),
-        '#attributes' => [
-          'title' => t('Welcome to Contenta CMS'),
-          'class' => [
-            'toolbar-icon',
-            'toolbar-icon-menu',
-            'toolbar-icon-contenta',
-          ],
-        ],
-      ],
-      'tray' => [
-        '#heading' => t('Contenta CMS'),
-        '#wrapper_attributes' => [],
-        'menu' => $renderable_menu,
-      ],
-      '#attached' => [
-        'library' => ['recipes_magazin_contenta/recipes_magazin_contenta'],
-      ],
-      '#weight' => -45,
-    ],
-  ];
+function recipes_magazin_contenta_theme_registry_alter(&$theme_registry) {
+  $theme_registry['views_view_grid']['path'] = drupal_get_path('module', 'recipes_magazin_contenta') . '/templates';
 }

@@ -55,6 +55,7 @@ function contenta_enhancements_entity_base_field_info_alter(&$fields, EntityType
 function contenta_enhancements_page_attachments(array &$page) {
   $page['#attached']['library'][] = 'contenta_enhancements/fix-2886816';
   $page['#attached']['library'][] = 'contenta_enhancements/fix-2887220';
+  $page['#attached']['library'][] = 'contenta_enhancements/custom';
 }
 
 /**
@@ -86,6 +87,44 @@ function contenta_enhancements_toolbar_alter(&$items) {
         'user.permissions',
       ],
     ],
+  ];
+
+  $manipulators = array(
+    array('callable' => 'menu.default_tree_manipulators:checkAccess'),
+    array('callable' => 'menu.default_tree_manipulators:generateIndexAndSort'),
+    array('callable' => 'toolbar_menu_navigation_links'),
+  );
+  $menu_tree_contenta = \Drupal::service('toolbar.menu_tree');
+  $parameters = new MenuTreeParameters();
+  $parameters->setMinDepth(1)->setMaxDepth(3)->onlyEnabledLinks();
+  $tree = $menu_tree_contenta->load('contenta', $parameters);
+  $tree = $menu_tree_contenta->transform($tree, $manipulators);
+  $renderable_menu = $menu_tree_contenta->build($tree);
+
+  $items['contenta'] = [
+    '#type' => 'toolbar_item',
+    'tab' => [
+      '#type' => 'link',
+      '#title' => t('Contenta CMS'),
+      '#url' => Url::fromRoute('<front>'),
+      '#attributes' => [
+        'title' => t('Welcome to Contenta CMS'),
+        'class' => [
+          'toolbar-icon',
+          'toolbar-icon-menu',
+          'toolbar-icon-contenta',
+        ],
+      ],
+    ],
+    'tray' => [
+      '#heading' => t('Contenta CMS'),
+      '#wrapper_attributes' => [],
+      'menu' => $renderable_menu,
+    ],
+    '#attached' => [
+      'library' => ['contenta_enhancements/contenta_enhancements'],
+    ],
+    '#weight' => -45,
   ];
 
   if ($current_user->hasPermission('access content overview')) {
@@ -232,18 +271,13 @@ function contenta_enhancements_toolbar_alter(&$items) {
   }
 
   if ($current_user->hasPermission('access site reports')) {
-    $menu_tree = \Drupal::service('toolbar.menu_tree');
+    $menu_tree_contenta = \Drupal::service('toolbar.menu_tree');
     $parameters = new MenuTreeParameters();
     $parameters->setMinDepth(1)->setMaxDepth(3)->onlyEnabledLinks();
     $parameters->setRoot('system.admin_reports');
-    $tree = $menu_tree->load('administration', $parameters);
-    $manipulators = array(
-      array('callable' => 'menu.default_tree_manipulators:checkAccess'),
-      array('callable' => 'menu.default_tree_manipulators:generateIndexAndSort'),
-      array('callable' => 'toolbar_menu_navigation_links'),
-    );
-    $tree = $menu_tree->transform($tree, $manipulators);
-    $renderable_reports = $menu_tree->build($tree);
+    $tree = $menu_tree_contenta->load('administration', $parameters);
+    $tree = $menu_tree_contenta->transform($tree, $manipulators);
+    $renderable_reports = $menu_tree_contenta->build($tree);
     $items['reports'] = [
       '#type' => 'toolbar_item',
       'tab' => [
@@ -268,6 +302,38 @@ function contenta_enhancements_toolbar_alter(&$items) {
   }
   else {
     $items['reports'] = $empty_item_cacheability;
+  }
+
+  if ($current_user->isAnonymous()) {
+    $items['login'] = [
+      '#type' => 'toolbar_item',
+      'tab' => [
+        '#type' => 'link',
+        '#options' => [
+          'set_active_class' => TRUE,
+        ],
+        '#title' => t('Log in'),
+        '#url' => Url::fromRoute('user.login'),
+      ],
+      '#attributes' => ['class' => ['login-tab']],
+      '#wrapper_attributes' => ['class' => ['login-tab']],
+      '#weight' => 99,
+    ];
+  }
+  else {
+    $items['login'] = [
+      '#type' => 'toolbar_item',
+      'tab' => [
+        '#type' => 'link',
+        '#options' => [
+          'set_active_class' => TRUE,
+        ],
+        '#title' => t('Log out'),
+        '#url' => Url::fromRoute('user.logout'),
+      ],
+      '#wrapper_attributes' => ['class' => ['login-tab']],
+      '#weight' => 99,
+    ];
   }
 
   $items['administration']['tab']['#title'] = t('Advanced');

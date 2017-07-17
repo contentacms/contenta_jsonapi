@@ -1,6 +1,0 @@
-homepage:
-  title: Welcome to Contenta!
-  description: 'Welcome to Contenta, here are a bunch of things you can do next.'
-  url: internal:/welcome
-  menu_name: contenta
-  weight: -10

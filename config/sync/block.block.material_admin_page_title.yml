@@ -9,7 +9,7 @@ _core:
 id: material_admin_page_title
 theme: material_admin
 region: header
-weight: -30
+weight: -5
 provider: null
 plugin: page_title_block
 settings:

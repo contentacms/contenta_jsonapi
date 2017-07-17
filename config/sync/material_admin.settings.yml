@@ -5,10 +5,10 @@ features:
   favicon: 1
 logo:
   use_default: 0
-  path: profiles/contrib/contenta_jsonapi/themes/materialize_contenta/logo.svg
+  path: profiles/contrib/contenta_jsonapi/modules/contenta_enhancements/logo.svg
 favicon:
   use_default: 0
-  path: profiles/contrib/contenta_jsonapi/themes/materialize_contenta/favicon.ico
+  path: profiles/contrib/contenta_jsonapi/modules/contenta_enhancements/favicon.ico
   mimetype: image/vnd.microsoft.icon
 material_admin_node_actions: 0
 material_admin_message_length: '88'
