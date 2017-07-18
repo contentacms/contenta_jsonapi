@@ -62,5 +62,15 @@ The frontpage consists of several elements:
   * Quick and easy: ``` "&filter[totalTime][condition][path]=totalTime&filter[totalTime][condition][value]=20&filter[totalTime][condition][operator]=<```
 * A grid of the 4 latest recipes, ordered by create time
 
+### Footer
+
+'Get in touch' is links to a Contact Form, plus we are proposing that we have a page providing information about the demo theme itself
+
+### Not yet implemented by PUBLIC API
+
+Here are the actions and resources not yet avalaible on PUBLIC API : 
+- Posting a contact form and sending mail (Posting to contact currently is broken in core : https://www.drupal.org/node/2843755 )
+
+
 
 
