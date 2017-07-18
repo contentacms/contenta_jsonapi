@@ -113,10 +113,10 @@ Expanded/expandable search field that send you to a list of results.
 
 ## known limitations of public API
 
-- [ ] We can't use imagestyles to scale and crop images
-- [ ] Posting a contact form and sending mail is not yet possible (see https://www.drupal.org/node/2843755 )
-- [ ] Getting Recipes Image from imageFile property is not possible, use "image_field" or "thumbnail" proprety as a workaround for now (https://www.drupal.org/node/2890762 . Maybe related to Json Api extras aliasing ? )
-- [ ] There is not yet something like a "slug" field to create front-end SEO-friendly paths
+- We can't use imagestyles to scale and crop images
+- Posting a contact form and sending mail is not yet possible (see https://www.drupal.org/node/2843755 )
+- Getting Recipes Image from imageFile property is not possible, use "image_field" or "thumbnail" proprety as a workaround for now (https://www.drupal.org/node/2890762 . Maybe related to Json Api extras aliasing ? )
+- There is not yet something like a "slug" field to create front-end SEO-friendly paths
 
 
 
