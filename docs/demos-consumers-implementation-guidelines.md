@@ -26,13 +26,18 @@ Angular and Ionic consumers may be interested in :
 
 [jsonapi-parse](https://www.npmjs.com/package/jsonapi-parse) : resolve nicely included and relationships from JSON response object.
 
-[Subrequests](https://www.npmjs.com/package/d8-subrequests) : experimental for now : allows to create several json api requests in one single http request
+[Subrequests](https://www.npmjs.com/package/d8-subrequests) : experimental for now : allows to create several json api requests in one single http request. This will be soon implemented by waterwheel.
 
-Transform an object to a json api query string, use this only if a more complete library is not a solution for you, because for example waterwheel do almost the same things with params :
+Minimalistic package that transforms an object to a json api query string, use this only if a more complete library is not a solution for you.
 [d8-jsonapi-querystring](https://www.npmjs.com/package/d8-jsonapi-querystring)
 
 
 ## API endpoints usage examples :
+
+Public API endpoint is : 
+[https://dev-contentacms.pantheonsite.io/api](https://dev-contentacms.pantheonsite.io/api)
+
+**links** key list all existing resources. For example :
 
 Recipes:
 [https://dev-contentacms.pantheonsite.io/api/recipes](https://dev-contentacms.pantheonsite.io/api/recipes)
