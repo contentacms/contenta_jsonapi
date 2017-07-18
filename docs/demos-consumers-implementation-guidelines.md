@@ -9,7 +9,7 @@ Consumers MUST implement those [wireframes](https://www.drupal.org/node/2818741#
 
 Consumers are free to choose tools which fits best their projects concerning those points; because there is a wide variety of consumers with sometimes very different needs.
 
-If you need hosting with node.js support, you may consider [Heroku](https://dashboard.heroku.com/login) or [now](https://zeit.co/now) free plans.
+For hosting, Github pages are totally free. If you need node.js support, you may consider [Heroku](https://dashboard.heroku.com/login) or [now](https://zeit.co/now) free (but limited) plans. 
 
 ## public API
 
@@ -42,7 +42,7 @@ Recipes categories :
 
 ## Pages documentation
 
-It follows some documentation describing the various pages of the wireframe, in case someone gets stuck
+It follows some documentation describing the various pages of the wireframes, in case someone gets stuck
 
 ### Front page
 
@@ -56,4 +56,6 @@ The frontpage consists of several elements:
   * Baked up:  ```"&filter[category.name][value]=Dessert"```
   * Quick and easy: ``` "&filter[totalTime][condition][path]=totalTime&filter[totalTime][condition][value]=20&filter[totalTime][condition][operator]=<```
 * A grid of the 4 latest recipes, ordered by create time
+
+
 
