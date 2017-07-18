@@ -67,7 +67,8 @@ The frontpage consists of several elements:
 
 ### Footer
 
-'Get in touch' is links to a Contact Form, plus we are proposing that we have a page providing information about the demo theme itself
+'Get in touch' is links to a Contact Form, 
+'About Umami Theme' links to a page providing information about the demo theme itself
 
 ### Not yet implemented by PUBLIC API
 
