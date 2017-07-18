@@ -71,8 +71,9 @@ The frontpage consists of several elements:
 ## Features listing page
 wireframe : https://www.drupal.org/files/issues/2%20-%20Umami%20features%20wirefame%20v4.png
 API endpoint : https://dev-contentacms.pantheonsite.io/api/articles
-
 Features is a list of articles, with a promoted article at the top
+There is not yet articles content for now in public API
+
 
 ## Features detail page
 
@@ -109,12 +110,13 @@ Expanded/expandable search field that send you to a list of results.
 - 'Get in touch' is links to a Contact Form
 -'About Umami Theme' links to a page providing information about the demo theme itself
 
-## Not yet implemented by PUBLIC API
 
-Here are the actions and resources not yet avalaible on PUBLIC API : 
-- [ ] Posting a contact form and sending mail (Posting to contact currently is broken in core : https://www.drupal.org/node/2843755 )
-- [ ] There is not articles content for now : https://dev-contentacms.pantheonsite.io/api/articles
-- [ ] Getting Recipes Image from imageFile property (https://www.drupal.org/node/2890762 . Maybe related to Json Api extras aliasing ? )
+## known limitations of public API
+
+- [ ] We can't use imagestyles to scale and crop images
+- [ ] Posting a contact form and sending mail is not yet possible (see https://www.drupal.org/node/2843755 )
+- [ ] Getting Recipes Image from imageFile property is not possible, use "image_field" or "thumbnail" proprety as a workaround for now (https://www.drupal.org/node/2890762 . Maybe related to Json Api extras aliasing ? )
+- [ ] There is not yet something like a "slug" field to create front-end SEO-friendly paths
 
 
 
