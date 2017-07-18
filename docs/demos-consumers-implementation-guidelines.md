@@ -60,6 +60,7 @@ The frontpage consists of several elements:
 ```javascript
   const data = [...recipes, ...articles].sort((item1, item2) => item1.createdAt > item2.createdAt).slice(0, 3)
 ```
+* Month Editions : The magazine promotion block in the center links to the "Magazine" page
 * A list of links:
   * Dinners to impress: Filter by category 'Main Dessert': ```"&filter[category.name][value]=Main course"```
   * Learn to cook: ```"&filter[difficulty][value]=easy"```
@@ -69,8 +70,8 @@ The frontpage consists of several elements:
 
 ### Footer
 
-'Get in touch' is links to a Contact Form, 
-'About Umami Theme' links to a page providing information about the demo theme itself
+- 'Get in touch' is links to a Contact Form
+-'About Umami Theme' links to a page providing information about the demo theme itself
 
 ### Not yet implemented by PUBLIC API
 
