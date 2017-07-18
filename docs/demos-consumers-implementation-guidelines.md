@@ -49,29 +49,6 @@ Recipes categories :
 
 It follows some documentation describing the various pages of the wireframes, in case someone gets stuck
 
-### Getting Recipes Images and Images
-
-Here is a working example representation of JSON API parameters to get recipes images
-```
-{
-      page: { limit: 3 },
-      filter: {
-        isPromoted: {
-          path: 'isPromoted',
-          value: 1
-        }
-      },
-      include: 'contentType,image,image.thumbnail',
-      fields: {
-        recipes: 'contentType,title,difficulty,image',
-        images: 'name,thumbnail',
-        files: 'filename,url',
-        contentTypes: 'type'
-      },
-      sort: '-created'
-    }
-```
-
 ### Front page
 wireframe : https://www.drupal.org/files/issues/1%20-%20Umami%20Front%20wirefame%20v4.png
 
@@ -101,6 +78,19 @@ wireframe : https://www.drupal.org/files/issues/3%20-%20Umami%20feature%20wirefa
 
 Main body will be a long text field with full html with the possibility to have images inside. We haven’t faced the idea of having responsive images inside WYSIWYG yet. Just to point out that the main image is a separate field.
 
+### Recipes 
+wireframe : https://www.drupal.org/files/issues/4%20-%20Umami%20recipes%20wirefame%20v4.png
+
+### Recipe page
+wireframe : https://www.drupal.org/files/issues/5%20-%20Umami%20recipe%20wirefame%20v4.png
+
+### Magazine page
+wireframe : https://www.drupal.org/files/issues/6%20-%20Umami%20page%20wirefame%20v4.png
+
+### Get in touch page :
+
+https://www.drupal.org/files/issues/7%20-%20Umami%20contact%20wirefame%20v4.png
+
 ### Searh field
 
 Expanded/expandable search field that send you to a list of results.
@@ -110,11 +100,8 @@ Expanded/expandable search field that send you to a list of results.
 - 'Get in touch' is links to a Contact Form
 -'About Umami Theme' links to a page providing information about the demo theme itself
 
-### Recipes 
-wireframe : https://www.drupal.org/files/issues/4%20-%20Umami%20recipes%20wirefame%20v4.png
 
-
-### Not yet implemented by PUBLIC API
+## Not yet implemented by PUBLIC API
 
 Here are the actions and resources not yet avalaible on PUBLIC API : 
 - [ ] Posting a contact form and sending mail (Posting to contact currently is broken in core : https://www.drupal.org/node/2843755 )
