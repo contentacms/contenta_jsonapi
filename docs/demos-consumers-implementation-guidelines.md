@@ -51,7 +51,29 @@ It follows some documentation describing the various pages of the wireframes, in
 
 ### Getting Recipes Images and Images
 
+Here is a working example representation of JSON API parameters to get recipes images
+```
+{
+      page: { limit: 3 },
+      filter: {
+        isPromoted: {
+          path: 'isPromoted',
+          value: 1
+        }
+      },
+      include: 'contentType,image,image.thumbnail',
+      fields: {
+        recipes: 'contentType,title,difficulty,image',
+        images: 'name,thumbnail',
+        files: 'filename,url',
+        contentTypes: 'type'
+      },
+      sort: '-created'
+    }
+```
+
 ### Front page
+wireframe : https://www.drupal.org/files/issues/1%20-%20Umami%20Front%20wirefame%20v4.png
 
 The frontpage consists of several elements:
 
@@ -68,16 +90,37 @@ The frontpage consists of several elements:
   * Quick and easy: ``` "&filter[totalTime][condition][path]=totalTime&filter[totalTime][condition][value]=20&filter[totalTime][condition][operator]=<```
 * A grid of the 4 latest recipes, ordered by create time
 
+### Features
+wireframe : https://www.drupal.org/files/issues/2%20-%20Umami%20features%20wirefame%20v4.png
+
+Features is a list of articles : https://dev-contentacms.pantheonsite.io/api/articles
+
+### Article page
+
+wireframe : https://www.drupal.org/files/issues/3%20-%20Umami%20feature%20wirefame%20v4.png
+
+Main body will be a long text field with full html with the possibility to have images inside. We haven’t faced the idea of having responsive images inside WYSIWYG yet. Just to point out that the main image is a separate field.
+
+### Searh field
+
+Expanded/expandable search field that send you to a list of results.
+
 ### Footer
 
 - 'Get in touch' is links to a Contact Form
 -'About Umami Theme' links to a page providing information about the demo theme itself
 
+### Recipes 
+wireframe : https://www.drupal.org/files/issues/4%20-%20Umami%20recipes%20wirefame%20v4.png
+
+
 ### Not yet implemented by PUBLIC API
 
 Here are the actions and resources not yet avalaible on PUBLIC API : 
-- Posting a contact form and sending mail (Posting to contact currently is broken in core : https://www.drupal.org/node/2843755 )
-- Getting Recipes Image from imageFile property (https://www.drupal.org/node/2890762 . Maybe related to Json Api extras aliasing ? )
+- [ ] Posting a contact form and sending mail (Posting to contact currently is broken in core : https://www.drupal.org/node/2843755 )
+- [ ] There is not articles content for now : https://dev-contentacms.pantheonsite.io/api/articles
+- [ ] Getting Recipes Image from imageFile property (https://www.drupal.org/node/2890762 . Maybe related to Json Api extras aliasing ? )
+
 
 
 
