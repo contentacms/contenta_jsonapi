@@ -47,7 +47,8 @@ Recipes categories :
 
 ## Pages documentation
 
-It follows some documentation describing the various pages of the wireframes, in case someone gets stuck
+It follows some documentation describing the various pages of the wireframes, in case someone gets stuck.
+Informations are comming from this drupal issue : https://www.drupal.org/node/2818741
 
 ### Front page
 wireframe : https://www.drupal.org/files/issues/1%20-%20Umami%20Front%20wirefame%20v4.png
@@ -67,12 +68,13 @@ The frontpage consists of several elements:
   * Quick and easy: ``` "&filter[totalTime][condition][path]=totalTime&filter[totalTime][condition][value]=20&filter[totalTime][condition][operator]=<```
 * A grid of the 4 latest recipes, ordered by create time
 
-### Features
+### Features listing page
 wireframe : https://www.drupal.org/files/issues/2%20-%20Umami%20features%20wirefame%20v4.png
+API endpoint : https://dev-contentacms.pantheonsite.io/api/articles
 
-Features is a list of articles : https://dev-contentacms.pantheonsite.io/api/articles
+Features is a list of articles, with a promoted article at the top
 
-### Article page
+### Features detail page
 
 wireframe : https://www.drupal.org/files/issues/3%20-%20Umami%20feature%20wirefame%20v4.png
 
@@ -81,13 +83,20 @@ Main body will be a long text field with full html with the possibility to have 
 ### Recipes 
 wireframe : https://www.drupal.org/files/issues/4%20-%20Umami%20recipes%20wirefame%20v4.png
 
-### Recipe page
+- The idea of having a list of tags has been bought back into the wireframes and placed in the pre-footer and these can link through to list the tagged recipes - plans for this View will likely be discussed in our next call
+
+### Recipe detail page
 wireframe : https://www.drupal.org/files/issues/5%20-%20Umami%20recipe%20wirefame%20v4.png
 
-### Magazine page
+The "more recipes" is **recipes of the same category**  (we had the choice here, this still may be discussed : https://www.drupal.org/node/2818741#comment-12122853)
+
+### Magazine detail page
 wireframe : https://www.drupal.org/files/issues/6%20-%20Umami%20page%20wirefame%20v4.png
 
-### Get in touch page :
+- The magazine page will use the page content type with an aside containing a block that promotes the contact form. The idea is to simply have this content type work in a consistent way for any further pages that may be added to the theme. The contents of the aside can be reviewed as the requirements come together
+- The contents illustrated for the page can all be provided via the ckeditor, keeping the design for the page simple but with plenty of opportunity to have some great looking sample content
+
+### Get in touch page / Contact page :
 
 https://www.drupal.org/files/issues/7%20-%20Umami%20contact%20wirefame%20v4.png
 
@@ -99,7 +108,6 @@ Expanded/expandable search field that send you to a list of results.
 
 - 'Get in touch' is links to a Contact Form
 -'About Umami Theme' links to a page providing information about the demo theme itself
-
 
 ## Not yet implemented by PUBLIC API
 
