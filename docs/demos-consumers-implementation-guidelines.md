@@ -49,6 +49,8 @@ Recipes categories :
 
 It follows some documentation describing the various pages of the wireframes, in case someone gets stuck
 
+### Getting Recipes Images and Images
+
 ### Front page
 
 The frontpage consists of several elements:
@@ -74,6 +76,7 @@ The frontpage consists of several elements:
 
 Here are the actions and resources not yet avalaible on PUBLIC API : 
 - Posting a contact form and sending mail (Posting to contact currently is broken in core : https://www.drupal.org/node/2843755 )
+- Getting Recipes Image from imageFile property (https://www.drupal.org/node/2890762 . Maybe related to Json Api extras aliasing ? )
 
 
 
