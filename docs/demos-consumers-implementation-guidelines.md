@@ -55,9 +55,9 @@ The frontpage consists of several elements:
 
 * A list of promoted articles and recipes: This should contain the 3 last "promoted" items. As of now
   there is no easy way to query that instead of querying for both the last 3 recipes and articles and merge them manually.
-  ```javascript
+```javascript
   const data = [...recipes, ...articles].sort((item1, item2) => item1.createdAt > item2.createdAt).slice(0, 3)
-  ```
+```
 * A list of links:
   * Dinners to impress: Filter by category 'Main Dessert': ```"&filter[category.name][value]=Main course"```
   * Learn to cook: ```"&filter[difficulty][value]=easy"```
