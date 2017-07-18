@@ -108,7 +108,7 @@ Expanded/expandable search field that send you to a list of results.
 ## Footer
 
 - 'Get in touch' is links to a Contact Form
--'About Umami Theme' links to a page providing information about the demo theme itself
+- 'About Umami Theme' links to a page providing information about the demo theme itself
 
 
 ## known limitations of public API
