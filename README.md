@@ -33,6 +33,21 @@ cd <DESTINATION>/web
 - Start the web server with `../bin/drush runserver`. This defaults to `127.0.0.1:8888`, you can change this by appending a new host and port, e.g. `../bin/drush runserver local.contentacms.io:8000`
 - Generate a one-time login link `../bin/drush user-login --uri="http://127.0.0.1:8888"`
 
+### Drupal 8.4.x
+
+For Drupal 8.4 use the `drupal-8.4.x` branch and update some composer dependencies: 
+
+```bash
+composer create-project contentacms/contenta-jsonapi-project <DESTINATION> --stability dev --no-interaction
+cd <DESTINATION>/web 
+composer require drupal/core "dev-drupal-8.4.x as dev-8.x-1.x"
+composer require webflo/drupal-core-strict "8.4.x-dev"
+composer require drush/drush "dev-master"
+composer install
+```
+
+Continue with the database installation as described above. 
+
 ### CURL
 
 Once your site is running locally, you might want to use Curl to examine the pre-installed content:
