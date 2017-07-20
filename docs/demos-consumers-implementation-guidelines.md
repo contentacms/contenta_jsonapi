@@ -111,12 +111,21 @@ Expanded/expandable search field that send you to a list of results.
 - 'About Umami Theme' links to a page providing information about the demo theme itself
 
 
-## known limitations of public API
+## known limitations of current public API
 
-- We can't use imagestyles to scale and crop images
+### API
+
+- We can't use imagestyles to scale and crop imported images
 - Posting a contact form and sending mail is not yet possible (see https://www.drupal.org/node/2843755 )
-- Getting Recipes Image from imageFile property is not possible, use "image_field" or "thumbnail" proprety as a workaround for now (https://www.drupal.org/node/2890762 . Maybe related to Json Api extras aliasing ? )
-- There is not yet something like a "slug" field to create front-end SEO-friendly paths
+- Getting Recipes Image from imageFile property is not yet possible due to a bug, use "image_field" or "thumbnail" proprety as a workaround for now (https://www.drupal.org/node/2890762 . Maybe related to Json Api extras aliasing ? )
+- There is not yet something like a "slug" field to create front-end SEO-friendly paths ( but snail module should allow to fix this https://github.com/contentacms/snail )
+
+### Content contribution
+
+- there are not articles for now to create "features" pages : https://dev-contentacms.pantheonsite.io/api/articles
+- Month Edition block : how to implement this ?
+- unique path for content : when snail will be ready, we may want to fill "path" field for nodes
+
 
 
 
