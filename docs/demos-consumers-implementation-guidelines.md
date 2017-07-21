@@ -9,7 +9,7 @@ Consumers MUST implement those [wireframes](https://www.drupal.org/node/2818741#
 
 Consumers are free to choose tools which fits best their projects concerning those points; because there is a wide variety of consumers with sometimes very different needs.
 
-For hosting, Github pages are totally free. If you need node.js support, you may consider [Heroku](https://dashboard.heroku.com/login) or [now](https://zeit.co/now) free (but limited) plans. 
+For hosting, [Github pages](https://pages.github.com/) are totally free. If you need node.js support, you may consider [Heroku](https://dashboard.heroku.com/login) or [now](https://zeit.co/now) free (but limited) plans. 
 
 ## public API
 
@@ -26,7 +26,7 @@ Angular and Ionic consumers may be interested in :
 
 [jsonapi-parse](https://www.npmjs.com/package/jsonapi-parse) : resolve nicely included and relationships from JSON response object.
 
-[Subrequests](https://www.npmjs.com/package/d8-subrequests) : experimental for now : allows to create several json api requests in one single http request. This will be soon implemented by waterwheel.
+[Subrequests](https://www.npmjs.com/package/d8-subrequests) : experimental for now : allows to create several json api requests in one single http request. This will be soon implemented by [waterwheel](https://github.com/acquia/waterwheel.js).
 
 Minimalistic package that transforms an object to a json api query string, use this only if a more complete library is not a solution for you.
 [d8-jsonapi-querystring](https://www.npmjs.com/package/d8-jsonapi-querystring)
@@ -34,21 +34,18 @@ Minimalistic package that transforms an object to a json api query string, use t
 
 ## API endpoints usage examples :
 
-Public API endpoint is : 
-[https://dev-contentacms.pantheonsite.io/api](https://dev-contentacms.pantheonsite.io/api)
+The public API endpoint: [https://dev-contentacms.pantheonsite.io/api](https://dev-contentacms.pantheonsite.io/api)
 
-**links** key list all existing resources. For example :
+A list of important resources:
 
-Recipes:
-[https://dev-contentacms.pantheonsite.io/api/recipes](https://dev-contentacms.pantheonsite.io/api/recipes)
+Recipes: [https://dev-contentacms.pantheonsite.io/api/recipes](https://dev-contentacms.pantheonsite.io/api/recipes)
 
-Recipes categories : 
-[https://dev-contentacms.pantheonsite.io/api/categories](https://dev-contentacms.pantheonsite.io/api/categories)
+Recipes categories : [https://dev-contentacms.pantheonsite.io/api/categories](https://dev-contentacms.pantheonsite.io/api/categories)
 
 # Pages documentation
 
-It follows some documentation describing the various pages of the wireframes, in case someone gets stuck.
-Informations are comming from this drupal issue : https://www.drupal.org/node/2818741
+Content model and wireframes have been provided by the [Outside of the box initiative](https://www.drupal.org/node/2818741).
+Frontend consumers should try to follow that. 
 
 ## Front page
 wireframe : https://www.drupal.org/files/issues/1%20-%20Umami%20Front%20wirefame%20v4.png
@@ -68,19 +65,6 @@ The frontpage consists of several elements:
   * Quick and easy: ``` "&filter[totalTime][condition][path]=totalTime&filter[totalTime][condition][value]=20&filter[totalTime][condition][operator]=<```
 * A grid of the 4 latest recipes, ordered by create time
 
-## Features listing page
-wireframe : https://www.drupal.org/files/issues/2%20-%20Umami%20features%20wirefame%20v4.png
-API endpoint : https://dev-contentacms.pantheonsite.io/api/articles
-Features is a list of articles, with a promoted article at the top
-There is not yet articles content for now in public API
-
-
-## Features detail page
-
-wireframe : https://www.drupal.org/files/issues/3%20-%20Umami%20feature%20wirefame%20v4.png
-
-Main body will be a long text field with full html with the possibility to have images inside. We haven’t faced the idea of having responsive images inside WYSIWYG yet. Just to point out that the main image is a separate field.
-
 ## Recipes 
 wireframe : https://www.drupal.org/files/issues/4%20-%20Umami%20recipes%20wirefame%20v4.png
 
@@ -90,6 +74,19 @@ wireframe : https://www.drupal.org/files/issues/4%20-%20Umami%20recipes%20wirefa
 wireframe : https://www.drupal.org/files/issues/5%20-%20Umami%20recipe%20wirefame%20v4.png
 
 The "more recipes" is **recipes of the same category**  (we had the choice here, this still may be discussed : https://www.drupal.org/node/2818741#comment-12122853)
+
+## Features listing page
+wireframe : https://www.drupal.org/files/issues/2%20-%20Umami%20features%20wirefame%20v4.png
+API endpoint : https://dev-contentacms.pantheonsite.io/api/articles
+Features is a list of articles, with a promoted article at the top
+There is not yet articles content for now in public API
+
+## Features detail page
+
+wireframe : https://www.drupal.org/files/issues/3%20-%20Umami%20feature%20wirefame%20v4.png
+
+Main body will be a long text field with full html with the possibility to have images inside. We haven’t faced the idea of having responsive images inside WYSIWYG yet. Just to point out that the main image is a separate field.
+
 
 ## Magazine detail page
 wireframe : https://www.drupal.org/files/issues/6%20-%20Umami%20page%20wirefame%20v4.png
@@ -101,7 +98,7 @@ wireframe : https://www.drupal.org/files/issues/6%20-%20Umami%20page%20wirefame%
 
 https://www.drupal.org/files/issues/7%20-%20Umami%20contact%20wirefame%20v4.png
 
-## Searh field
+## Search field
 
 Expanded/expandable search field that send you to a list of results.
 
@@ -111,7 +108,7 @@ Expanded/expandable search field that send you to a list of results.
 - 'About Umami Theme' links to a page providing information about the demo theme itself
 
 
-## known limitations of current public API
+## Known limitations of current public API
 
 ### API
 
