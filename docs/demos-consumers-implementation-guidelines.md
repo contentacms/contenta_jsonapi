@@ -34,13 +34,14 @@ Minimalistic package that transforms an object to a json api query string, use t
 
 ## API endpoints usage examples :
 
-The public API endpoint: [https://dev-contentacms.pantheonsite.io/api](https://dev-contentacms.pantheonsite.io/api)
+The public API endpoint is : [http://live-contentacms.pantheonsite.io/api](http://live-contentacms.pantheonsite.io/api)
+there is also a dev version (more unstable) : [https://dev-contentacms.pantheonsite.io/api](https://dev-contentacms.pantheonsite.io/api)
 
 A list of important resources:
 
-Recipes: [https://dev-contentacms.pantheonsite.io/api/recipes](https://dev-contentacms.pantheonsite.io/api/recipes)
+Recipes: [http://live-contentacms.pantheonsite.io/api/recipes](http://live-contentacms.pantheonsite.io/api/recipes)
 
-Recipes categories : [https://dev-contentacms.pantheonsite.io/api/categories](https://dev-contentacms.pantheonsite.io/api/categories)
+Recipes categories : [http://live-contentacms.pantheonsite.io/api/categories](http://live-contentacms.pantheonsite.io/api/categories)
 
 # Pages documentation
 
@@ -77,7 +78,7 @@ The "more recipes" is **recipes of the same category**  (we had the choice here,
 
 ## Features listing page
 wireframe : https://www.drupal.org/files/issues/2%20-%20Umami%20features%20wirefame%20v4.png
-API endpoint : https://dev-contentacms.pantheonsite.io/api/articles
+API endpoint : http://live-contentacms.pantheonsite.io/api/articles
 Features is a list of articles, with a promoted article at the top
 There is not yet articles content for now in public API
 
@@ -119,12 +120,6 @@ Expanded/expandable search field that send you to a list of results.
 
 ### Content contribution
 
-- there are not articles for now to create "features" pages : https://dev-contentacms.pantheonsite.io/api/articles
+- there are not articles for now to create "features" pages : http://live-contentacms.pantheonsite.io/api/articles
 - Month Edition block : how to implement this ?
 - unique path for content : when snail will be ready, we may want to fill "path" field for nodes
-
-
-
-
-
-
