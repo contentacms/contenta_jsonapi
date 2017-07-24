@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpunit>
+    <php>
+        <ini name="memory_limit" value="-1" />
+        <env name="WEB_HOST" value="127.0.0.1" />
+        <env name="WEB_HOST" value="8888" />
+
+    </php>
+    <testsuites>
+        <testsuite name="functional">
+            <file>./tests/src/Functional/FunctionalTestSuite.php</file>
+        </testsuite>
+    </testsuites>
+    <listeners>
+        <listener class="\Drupal\Tests\Listeners\DrupalStandardsListener">
+        </listener>
+    </listeners>
+    <filter>
+        <whitelist>
+            <directory>./includes</directory>
+            <directory>./lib</directory>
+            <directory>./modules</directory>
+            <directory>../modules</directory>
+            <directory>../sites</directory>
+            <exclude>
+                <directory suffix="Test.php">./</directory>
+                <directory suffix="TestBase.php">./</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>

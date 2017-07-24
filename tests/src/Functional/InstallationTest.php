@@ -11,7 +11,7 @@ use GuzzleHttp\Exception\ServerException;
 /**
  * Tests the interactive installer installing the standard profile.
  *
- * @group ContentaInstaller
+ * @group Contenta
  */
 class InstallationTest extends BrowserTestBase {
 
