@@ -39,6 +39,6 @@ $DRUSH runserver ${WEB_HOST}:${WEB_PORT}
 echo "---------------------------------"
 echo " One time admin login link "
 echo "---------------------------------"
-echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $DRUSH user-login --no-browser --uri=\"http://127.0.0.1:8888\""
+echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $DRUSH user-login --no-browser --uri=\"http://${WEB_HOST}:${WEB_PORT}\""
 echo -e "${FG_C}${WBG_C} INFO ${NO_C} Use this link to login as an administrator in your new site:"
 $DRUSH user-login --no-browser --uri="http://127.0.0.1:8888"
