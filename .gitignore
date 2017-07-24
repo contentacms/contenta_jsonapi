@@ -8,3 +8,4 @@
 composer.lock
 .env.local
 /tests/reports
+/nbproject/private/

@@ -1,12 +1,5 @@
 #!/usr/bin/env bash
 
-export $(cat .env | xargs)
-if [ -e .env.local ]
-then
-    export $(cat .env.local | xargs)
-fi
-
-
 BASE_DIR="$(dirname $(dirname $(cd ${0%/*} && pwd)))"
 COMPOSER="$(which composer)"
 DOCROOT="web"
@@ -30,6 +23,9 @@ cd ${DOCROOT}
 echo -e "\n"
 DRUSH="$DEST_DIR/bin/drush"
 
+WEB_HOST=${WEB_HOST:-127.0.0.1}
+WEB_PORT=${WEB_PORT:-8888}
+
 echo "-------------------------------------"
 echo " Initializing local PHP server "
 echo "-------------------------------------"
@@ -41,4 +37,4 @@ echo " One time admin login link "
 echo "---------------------------------"
 echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $DRUSH user-login --no-browser --uri=\"http://${WEB_HOST}:${WEB_PORT}\""
 echo -e "${FG_C}${WBG_C} INFO ${NO_C} Use this link to login as an administrator in your new site:"
-$DRUSH user-login --no-browser --uri="http://127.0.0.1:8888"
+$DRUSH user-login --no-browser --uri="http://$WEB_HOST:$WEB_PORT"

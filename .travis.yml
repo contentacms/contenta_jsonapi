@@ -10,6 +10,7 @@ php:
   - 5.6
 
 notifications:
+  email: false
   webhooks:
     urls:
       - http://ec2-54-244-218-244.us-west-2.compute.amazonaws.com/issue
@@ -38,15 +39,18 @@ before_install:
   - mkdir $PROJECT_BASE_PATH
 
 install:
-  - composer run-script install-contenta $PROJECT_BASE_PATH --timeout=0
-
+ - composer run-script install-contenta $PROJECT_BASE_PATH --timeout=0
+ - cd $PROJECT_BASE_PATH/web/
+ - ../bin/drush en simpletest -y
+ - ../bin/drush cr -y
 
 before_script:
-  - composer run-script start-contenta $PROJECT_BASE_PATH --timeout=0 &
+  - composer run-script start-contenta $PROJECT_BASE_PATH --timeout=0
   - sleep 5 # give web server some time to start
 
 script:
-  - php ${$PROJECT_BASE_PATH}/web/core/scripts/run-tests.sh --php `which php` --verbose --color --url http://${WEB_HOST}:${WEB_PORT} ContentaInstaller
+  - cd $PROJECT_BASE_PATH/web/
+  - php core/scripts/run-tests.sh --php $(which php) --verbose --color --url http://${WEB_HOST}:${WEB_PORT}/ Contenta
 
 after_script:
   - killall php
