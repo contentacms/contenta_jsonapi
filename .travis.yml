@@ -39,18 +39,18 @@ before_install:
   - mkdir $PROJECT_BASE_PATH
 
 install:
- - composer run-script install-contenta $PROJECT_BASE_PATH --timeout=0
- - cd $PROJECT_BASE_PATH/web/
- - ../bin/drush en simpletest -y
- - ../bin/drush cr -y
+  - composer run-script install-contenta $PROJECT_BASE_PATH --timeout=0
+  - ./scripts/ci/travis/tests/contenta_ci_tests_helper.sh setup_anonymous_user "$PROJECT_BASE_PATH"
+  - ./scripts/ci/travis/tests/contenta_ci_tests_helper.sh install_phpunit_composer "$PROJECT_BASE_PATH"
 
 before_script:
-  - composer run-script start-contenta $PROJECT_BASE_PATH --timeout=0
-  - sleep 5 # give web server some time to start
+  # Start Contenta Local Server
+  - composer run-script start-contenta $PROJECT_BASE_PATH --timeout=0 &> /dev/null &
+  - sleep 8 # give web server some time to start
 
 script:
-  - cd $PROJECT_BASE_PATH/web/
-  - php core/scripts/run-tests.sh --php $(which php) --verbose --color --url http://${WEB_HOST}:${WEB_PORT}/ Contenta
+  - curl http://$WEB_HOST:$WEB_PORT
+  - ./scripts/ci/travis/tests/contenta_ci_tests_helper.sh run_functional_tests "$PROJECT_BASE_PATH"
 
 after_script:
   - killall php
@@ -62,21 +62,21 @@ jobs:
     # This stage promotes a successful artifact from the deployment branch to GitHub
     - stage: Release
       php: 7.1
-      install:
-        - composer run-script install-contenta $PROJECT_BASE_PATH --timeout=0
+      install: skip
       before_script: skip
       script: skip
       before_deploy:
+        # Install Contenta
+        - composer run-script install-contenta $PROJECT_BASE_PATH --timeout=0
         # Set Deployment Variable
         - RELEASE_DATE=$( date +%Y-%m-%d)
         - TRAVIS_TAG="${PROJECT_NAME}_release-${RELEASE_DATE}_build_${TRAVIS_BUILD_NUMBER}"
         # Clean the Contenta Profile Folder
-        - ./scripts/deployment/travis_before_deploy.sh contentacms_profile_cleanup "$PROJECT_BASE_PATH/web"
+        - ./scripts/ci/travis/before_deploy.sh contentacms_profile_cleanup "$PROJECT_BASE_PATH/web"
         # Remove Site files
-        - ./scripts/deployment/travis_before_deploy.sh rm_site "$PROJECT_BASE_PATH/web"
+        - ./scripts/ci/travis/before_deploy.sh rm_site "$PROJECT_BASE_PATH/web"
         # Zip Folder
-        - ./scripts/deployment/travis_before_deploy.sh zip_folder "$HOME" "$PROJECT_NAME" "$TRAVIS_TAG"
-
+        - .scripts/ci/travis/before_deploy.sh zip_folder "$HOME" "$PROJECT_NAME" "$TRAVIS_TAG"
       deploy:
         provider: releases
         api_key:

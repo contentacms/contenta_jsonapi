@@ -86,6 +86,8 @@
         "burdamagazinorg/thunder-dev-tools": "dev-master",
         "drupal/config_inspector": "1.x-dev",
         "drupal/coder": "^8.2",
-        "drupal/features": "^3.5"
+        "drupal/features": "^3.5",
+        "phpunit/phpunit": "~6.2",
+        "guzzlehttp/guzzle": "~6.0"
     }
 }

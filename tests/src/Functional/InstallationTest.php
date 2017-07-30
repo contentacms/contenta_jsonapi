@@ -3,47 +3,50 @@
 namespace  Drupal\Tests\contenta_jsonapi\Functional;
 
 use Drupal\Component\Serialization\Json;
-use Drupal\Core\Url;
-use Drupal\user\Entity\Role;
-use Drupal\user\RoleInterface;
-use Drupal\Tests\BrowserTestBase;
-
+use PHPUnit\Framework\TestCase;
+use GuzzleHttp\Client;
 /**
- * Tests the interactive installer installing the standard profile.
+ * Tests that installation finished correctly and
  *
- * @group Contenta
+ * @group ContentaInstaller
  */
-class InstallationTest extends BrowserTestBase {
+class InstallationTest extends TestCase {
 
-  /**
-   * Test paths in the Standard profile.
-   */
-  protected $profile = 'contenta_jsonapi';
+    /**
+     * @var Client
+     */
+    private $httpClient;
 
-  /**
-   * @var \GuzzleHttp\ClientInterface
-   */
-  protected $httpClient;
+    /**
+     * @var string
+     */
+    private $baseUrl;
 
+    /**
+     * @var array
+     */
+    private $extras;
   /**
    * {@inheritdoc}
    */
   protected function setUp() {
-    parent::setUp();
+      echo "Running";
+      $Url = getenv('WEB_HOST');
+      $Port = getenv('WEB_PORT');
+      $this->baseUrl = "http://$Url:$Port";
+
     // Set up a HTTP client that accepts relative URLs.
-    $this->httpClient = $this->container->get('http_client_factory')
-      ->fromOptions(['base_uri' => $this->baseUrl]);
-    $this->grantPermissions(Role::load(RoleInterface::ANONYMOUS_ID), [
-      'access jsonapi resource list',
-    ]);
+    $this->httpClient = new Client();
+
+    $this->extras = ['http_errors' => false];
   }
 
-  public function testKnownResources() {
-
-      $extras = ['http_errors' => false];
-      $response = $this->httpClient->request('GET', Url::fromRoute('<front>'), $extras);
+  public function testLandingPage() {
+      $response = $this->httpClient->request('GET', $this->baseUrl .'/', $this->extras);
       $this->assertEquals(200, $response->getStatusCode());
-      $response = $this->httpClient->request('GET', Url::fromRoute('jsonapi.resource_list'), $extras);
+  }
+  public function testKnownResources() {
+      $response = $this->httpClient->request('GET', $this->baseUrl . '/jsonapi', $this->extras);
       $body = $response->getBody()->getContents();
       $output = Json::decode($body);
       $resources = array_keys($output['links']);
@@ -68,4 +71,5 @@ class InstallationTest extends BrowserTestBase {
           $this->assertContains($resource, $resources);
       });
   }
+
 }

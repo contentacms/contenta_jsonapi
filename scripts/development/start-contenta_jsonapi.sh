@@ -30,7 +30,7 @@ echo "-------------------------------------"
 echo " Initializing local PHP server "
 echo "-------------------------------------"
 echo -e "${FG_C}${WBG_C} INFO ${NO_C} Server started. Use Ctrl+C to stop it."
-$DRUSH runserver ${WEB_HOST}:${WEB_PORT}
+$DRUSH runserver --default-server=builtin ${WEB_HOST}:${WEB_PORT}
 
 echo "---------------------------------"
 echo " One time admin login link "
