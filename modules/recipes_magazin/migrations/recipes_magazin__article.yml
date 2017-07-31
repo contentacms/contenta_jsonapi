@@ -1,0 +1,44 @@
+id: recipes_magazin__article
+status: true
+source:
+  plugin: recipe_magazin__csv
+  path: default_content/articles.csv
+  header_row_count: 1
+  keys:
+    - title
+process:
+  title: title
+  'body/value': body
+  'body/format':
+    plugin: default_value
+    default_value: 'full_html'
+  path: slug
+  field_tags:
+    -
+      plugin: explode
+      delimiter: ','
+      source: tags
+    -
+      plugin: migration_lookup
+      migration: recipes_magazin__article_tags
+  field_image:
+    plugin: migration_lookup
+    migration:
+      - recipes_magazin__article_media_images_url
+    source: image
+  uid:
+    plugin: migration_lookup
+    migration: recipes_magazin__article_authors
+    source: author
+destination:
+  plugin: 'entity:node'
+  default_bundle: article
+migration_dependencies:
+  required:
+    - recipes_magazin__article_authors
+    - recipes_magazin__article_media_images_url
+    - recipes_magazin__article_tags
+    - recipes_magazin__article_images_url
+dependencies:
+  config:
+    - filter.format.full_html.yml

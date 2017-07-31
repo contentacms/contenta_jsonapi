@@ -25,6 +25,13 @@ abstract class ReinstallationTestBase extends BrowserTestBase {
       ->count()
       ->execute();
     $this->assertGreaterThan(0, $count);
+
+    $count = \Drupal::entityTypeManager()->getStorage('node')->getQuery()
+      ->condition('type', 'article')
+      ->count()
+      ->execute();
+    $this->assertGreaterThan(0, $count);
+
     // 3. Uninstall the feature.
     $this->assertTrue($module_installer->uninstall(['recipes_magazin']));
     // 4. Make sure that there is no recipe content type with some content in

@@ -1,0 +1,17 @@
+id: recipes_magazin__article_tags
+status: true
+source:
+  plugin: recipe_magazin__terms
+  path: default_content/articles.csv
+  header_row_count: 1
+  column: tags
+  keys:
+    - tags
+process:
+  name: tags
+  langcode:
+    plugin: default_value
+    default_value: 'en'
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: tags
