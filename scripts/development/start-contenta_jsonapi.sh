@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+export $(cat .env | xargs)
+
+if [ -e .env.local ]; then
+    export $(cat .env.local | xargs)
+fi
+
 BASE_DIR="$(dirname $(dirname $(cd ${0%/*} && pwd)))"
 COMPOSER="$(which composer)"
 DOCROOT="web"
@@ -23,8 +29,6 @@ cd ${DOCROOT}
 echo -e "\n"
 DRUSH="$DEST_DIR/bin/drush"
 
-WEB_HOST=${WEB_HOST:-127.0.0.1}
-WEB_PORT=${WEB_PORT:-8888}
 
 echo "-------------------------------------"
 echo " Initializing local PHP server "

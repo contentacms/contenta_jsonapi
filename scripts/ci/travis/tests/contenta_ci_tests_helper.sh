@@ -36,7 +36,7 @@ install_phpunit_composer() {
 
     current_path=`pwd`
     cd $1
-    composer require --dev phpunit/phpunit:~6.2
+    composer require --dev phpunit/phpunit:~5.7
 
     cd $current_path
 }
@@ -51,16 +51,26 @@ run_functional_tests() {
         exit 1
     fi
 
+    if [[ -z $WEB_HOST ]] || [[ -z $WEB_PORT ]] ; then
+        echo "Please ensure that WEB_HOST and WEB_PORT environment variables are set." 1>&2
+        exit 1
+    fi
+
     current_path=`pwd`
     CONTENTA_PATH=$1/web/profiles/contrib/contenta_jsonapi/
     PHPUNIT=$1/bin/phpunit
-    WEB_HOST=${WEB_HOST:-127.0.0.1}
-    WEB_PORT=${WEB_PORT:-8888}
 
     cd $CONTENTA_PATH
 
     WEB_HOST=$WEB_HOST WEB_PORT=$WEB_PORT $PHPUNIT --testsuite ContentaFunctional
     exit $?
+}
+
+load_env() {
+    export $(cat .env | xargs)
+    if [ -e .env.local ]; then
+        export $(cat .env.local | xargs)
+    fi
 }
 
 $@

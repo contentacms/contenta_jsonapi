@@ -26,6 +26,8 @@ contentacms_files_to_delete_list() {
     'installer.sh'
     'tests'
     '.travis.yml'
+    '.mkdocks.yml'
+    'phpunit.xml'
     )
 
     echo ${list[*]}

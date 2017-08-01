@@ -51,9 +51,10 @@ if [ $? -ne 0 ]; then
 fi
 
 cd ${DEST_DIR}
+
 $COMPOSER config repositories.contenta_jsonapi path ${BASE_DIR}
 
-$COMPOSER require "contentacms/contenta_jsonapi:*" --no-progress
+$COMPOSER require "contentacms/contenta_jsonapi:*" "phpunit/phpunit:~4.8" --no-progress
 
 cd $DOCROOT
 echo "-----------------------------------------------"
