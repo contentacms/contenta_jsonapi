@@ -6,7 +6,7 @@ use Drupal\Component\Serialization\Json;
 use PHPUnit\Framework\TestCase;
 use GuzzleHttp\Client;
 /**
- * Tests that installation finished correctly and
+ * Tests that installation finished correctly and known resources are available.
  *
  * @group ContentaInstaller
  */
@@ -46,7 +46,7 @@ class InstallationTest extends TestCase {
       $this->assertEquals(200, $response->getStatusCode());
   }
   public function testKnownResources() {
-      $response = $this->httpClient->request('GET', $this->baseUrl . '/jsonapi', $this->extras);
+      $response = $this->httpClient->request('GET', $this->baseUrl . '/api', $this->extras);
       $body = $response->getBody()->getContents();
       $output = Json::decode($body);
       $resources = array_keys($output['links']);
