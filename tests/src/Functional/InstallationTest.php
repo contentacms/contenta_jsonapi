@@ -59,7 +59,7 @@ class InstallationTest extends TestCase {
           'articles',
           'pages',
           'recipes',
-          'node',
+          'node--tutorial',
           'contentTypes',
           'categories',
           'tags',
