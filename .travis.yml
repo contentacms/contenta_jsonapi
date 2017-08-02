@@ -24,8 +24,6 @@ env:
     - PROJECT_NAME=contentacms
     - PROJECT_BASE_PATH=$HOME/$PROJECT_NAME
     - PROJECT_RELEASE_BRANCH=${PROJECT_RELEASE_BRANCH:-8.x-1.x}
-    - WEB_HOST=127.0.0.1
-    - WEB_PORT=8888
 
 branches:
   only:
@@ -35,11 +33,12 @@ before_install:
   # Fixes Composer exhausting the memory when using PHP 5.6.
   - echo "memory_limit=-1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
   - mkdir $PROJECT_BASE_PATH
+  # Load .env and .local.env
+  - source ./scripts/ci/travis/load_env.sh
 
 install:
   - composer run-script install-contenta $PROJECT_BASE_PATH --timeout=0
-  - ./scripts/ci/travis/tests/contenta_ci_tests_helper.sh setup_anonymous_user "$PROJECT_BASE_PATH"
-  - ./scripts/ci/travis/tests/contenta_ci_tests_helper.sh install_phpunit_composer "$PROJECT_BASE_PATH"
+  - composer run-script ci:helper setup_anonymous_user "$PROJECT_BASE_PATH" --timeout=0
 
 before_script:
   # Start Contenta Local Server
@@ -47,7 +46,7 @@ before_script:
   - sleep 8 # give web server some time to start
 
 script:
-  - ./scripts/ci/travis/tests/contenta_ci_tests_helper.sh run_functional_tests "$PROJECT_BASE_PATH"
+  - composer run-script ci:helper run_functional_tests "$PROJECT_BASE_PATH" --timeout=0
 
 after_script:
   - killall php
@@ -69,11 +68,11 @@ jobs:
         - RELEASE_DATE=$( date +%Y-%m-%d)
         - TRAVIS_TAG="${PROJECT_NAME}_release-${RELEASE_DATE}_build_${TRAVIS_BUILD_NUMBER}"
         # Clean the Contenta Profile Folder
-        - ./scripts/ci/travis/before_deploy.sh contentacms_profile_cleanup "$PROJECT_BASE_PATH/web"
+        - composer run-script ci:before-deploy contentacms_profile_cleanup "$PROJECT_BASE_PATH/web" --timeout=0
         # Remove Site files
-        - ./scripts/ci/travis/before_deploy.sh rm_site "$PROJECT_BASE_PATH/web"
+        - composer run-script ci:before-deploy rm_site "$PROJECT_BASE_PATH/web" --timeout=0
         # Zip Folder
-        - .scripts/ci/travis/before_deploy.sh zip_folder "$HOME" "$PROJECT_NAME" "$TRAVIS_TAG"
+        - composer run-script ci:before-deploy zip_folder "$HOME" "$PROJECT_NAME" "$TRAVIS_TAG" --timeout=0
       deploy:
         provider: releases
         api_key:

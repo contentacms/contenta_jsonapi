@@ -40,13 +40,13 @@ class InstallationTest extends TestCase
 
   public function testLandingPage()
   {
-    $response = $this->httpClient->request('GET', $this->baseUrl . '/', $this->extras);
+    $response = $this->httpClient->request('GET', $this->baseUrl . '/');
     $this->assertEquals(200, $response->getStatusCode());
   }
 
   public function testKnownResources()
   {
-    $response = $this->httpClient->request('GET', $this->baseUrl . '/api', $this->extras);
+    $response = $this->httpClient->request('GET', $this->baseUrl . '/api');
     $body = $response->getBody()->getContents();
     $output = Json::decode($body);
     $resources = array_keys($output['links']);

@@ -24,23 +24,6 @@ setup_anonymous_user() {
     cd $current_path
 }
 
-# Install PHPUnit Composer Function
-# Install PHPUnit through Composer
-# This function receives one argument:
-#   $1 -> The Drupal Base Path
-install_phpunit_composer() {
-    if [ -z $1 ] ; then
-        echo "Please pass the Contenta Project Base Path to the install_phpunit_composer function " 1>&2
-        exit 1
-    fi
-
-    current_path=`pwd`
-    cd $1
-    composer require --dev phpunit/phpunit:~5.7
-
-    cd $current_path
-}
-
 # Run Functional Tests Function
 # Run Contenta CMS Functional Tests
 # This function receives one argument:
@@ -64,13 +47,6 @@ run_functional_tests() {
 
     WEB_HOST=$WEB_HOST WEB_PORT=$WEB_PORT $PHPUNIT --testsuite ContentaFunctional
     exit $?
-}
-
-load_env() {
-    export $(cat .env | xargs)
-    if [ -e .env.local ]; then
-        export $(cat .env.local | xargs)
-    fi
 }
 
 $@

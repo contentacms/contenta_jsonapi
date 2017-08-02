@@ -73,7 +73,8 @@
     "scripts": {
         "install-contenta": "scripts/development/build-contenta_jsonapi.sh",
         "start-contenta": "scripts/development/start-contenta_jsonapi.sh",
-        "load-env": ["source scripts/ci/travis/tests/contenta_ci_tests_helper.sh load_env", "echo $WEB_HOST"],
+        "ci:helper": "scripts/ci/travis/tests/contenta_ci_tests_helper.sh",
+        "ci:before-deploy": "scripts/ci/travis/before_deploy.sh",
         "post-package-install": [
             "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup"
         ],
@@ -88,7 +89,6 @@
         "drupal/config_inspector": "1.x-dev",
         "drupal/coder": "^8.2",
         "drupal/features": "^3.5",
-        "phpunit/phpunit": "~5.7",
         "guzzlehttp/guzzle": "~6.0"
     }
 }
