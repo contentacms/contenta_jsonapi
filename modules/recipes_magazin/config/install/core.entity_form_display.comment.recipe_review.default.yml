@@ -1,3 +1,4 @@
+uuid: 82cd6f0d-41a2-4502-96c2-3505b939159b
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - field.field.comment.recipe_review.comment_body
   module:
     - text
+_core:
+  default_config_hash: yiKm7r58hKrdYboxXYiR8AxtjKVTkEvVJoIDShw3ErQ
 id: comment.recipe_review.default
 targetEntityType: comment
 bundle: recipe_review
