@@ -1,16 +1,17 @@
-features:
-  node_user_picture: 1
-  comment_user_picture: 1
-  comment_user_verification: 1
-  favicon: 1
-logo:
-  use_default: 0
-  path: profiles/contrib/contenta_jsonapi/modules/contenta_enhancements/logo.svg
 favicon:
-  use_default: 0
+  use_default: false
   path: profiles/contrib/contenta_jsonapi/modules/contenta_enhancements/favicon.ico
   mimetype: image/vnd.microsoft.icon
-material_admin_node_actions: 0
-material_admin_message_length: '88'
-_core:
-  default_config_hash: 5_yz7HdXL2SBVGN_T99xcCs6PiGxgVfcXwQD-E8s-i4
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: false
+logo:
+  path: profiles/contrib/contenta_jsonapi/modules/contenta_enhancements/logo.svg
+  use_default: false
+material_admin_node_actions: false
+material_admin_message_length: 88
+material_admin_portal_login: true
+material_admin_jqueryui_dialog_background: true
+material_admin_jqueryui_dialog_close: true

@@ -24,6 +24,8 @@ env:
     - PROJECT_NAME=contentacms
     - PROJECT_BASE_PATH=$HOME/$PROJECT_NAME
     - PROJECT_RELEASE_BRANCH=${PROJECT_RELEASE_BRANCH:-8.x-1.x}
+    - WEB_HOST=127.0.0.1
+    - WEB_PORT=8888
 
 branches:
   only:
@@ -32,32 +34,18 @@ branches:
 before_install:
   # Fixes Composer exhausting the memory when using PHP 5.6.
   - echo "memory_limit=-1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
-  - nvm install 6.11.0
-  - nvm use 6.11.0
-  # Repo for Yarn
-  - sudo apt-key adv --keyserver pgp.mit.edu --recv D101F7899D41F3C3
-  - echo "deb http://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-  - sudo apt-get update -qq
-  - sudo apt-get install -y -qq yarn
   - mkdir $PROJECT_BASE_PATH
 
 install:
-  - yarn install
   - composer run-script install-contenta $PROJECT_BASE_PATH --timeout=0
 
 
 before_script:
-  - export DISPLAY=:99.0
-  # Prevent chrome deadlock when running Nightwatch tests.
-  # See https://stackoverflow.com/questions/41487659/nightwatch-selenium-socket-hang-up
-  - export DBUS_SESSION_BUS_ADDRESS=/dev/null
-  - sh -e /etc/init.d/xvfb start
-  - sleep 3 # give xvfb some time to start
   - composer run-script start-contenta $PROJECT_BASE_PATH --timeout=0 &
   - sleep 5 # give web server some time to start
 
 script:
-  - yarn run nightwatch
+  - php ${DEST_DIR}/web/core/scripts/run-tests.sh --php `which php` --verbose --color --url http://${WEB_HOST}:${WEB_PORT} ContentaInstaller
 
 after_script:
   - killall php
@@ -66,7 +54,7 @@ after_script:
 jobs:
   include:
     # Deployment Stage
-    # This stage promotes a successful artifact from the deployment branch to Github
+    # This stage promotes a successful artifact from the deployment branch to GitHub
     - stage: Release
       php: 7.1
       install:
