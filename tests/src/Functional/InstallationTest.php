@@ -11,8 +11,7 @@ use GuzzleHttp\Client;
  *
  * @group ContentaInstaller
  */
-class InstallationTest extends TestCase
-{
+class InstallationTest extends TestCase {
 
   /**
    * @var Client
@@ -27,25 +26,21 @@ class InstallationTest extends TestCase
   /**
    * {@inheritdoc}
    */
-  protected function setUp()
-  {
-    $Url = getenv('WEB_HOST');
-    $Port = getenv('WEB_PORT');
-    $this->baseUrl = "http://$Url:$Port";
+  protected function setUp() {
+    $url = getenv('WEB_HOST');
+    $port = getenv('WEB_PORT');
+    $this->baseUrl = "http://$url:$port";
 
     // Set up a HTTP client that accepts relative URLs.
-    $this->httpClient = new Client(['http_errors' => false]);
-
+    $this->httpClient = new Client(['http_errors' => FALSE]);
   }
 
-  public function testLandingPage()
-  {
+  public function testLandingPage() {
     $response = $this->httpClient->request('GET', $this->baseUrl . '/');
     $this->assertEquals(200, $response->getStatusCode());
   }
 
-  public function testKnownResources()
-  {
+  public function testKnownResources() {
     $response = $this->httpClient->request('GET', $this->baseUrl . '/api');
     $body = $response->getBody()->getContents();
     $output = Json::decode($body);
@@ -67,9 +62,11 @@ class InstallationTest extends TestCase
       'roles',
       'users',
     ];
-    array_walk($expected_resources, function ($resource) use ($resources) {
-      $this->assertContains($resource, $resources);
-    });
+    array_walk(
+        $expected_resources, function ($resource) use ($resources) {
+            $this->assertContains($resource, $resources);
+        }
+    );
   }
 
 }
