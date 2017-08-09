@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.image_library
+    - entity_browser.browser.media_entity_browser
     - field.field.node.recipe.field_category
     - field.field.node.recipe.field_difficulty
     - field.field.node.recipe.field_image
@@ -13,13 +13,14 @@ dependencies:
     - field.field.node.recipe.field_recipe_reviews_and_testimo
     - field.field.node.recipe.field_tags
     - field.field.node.recipe.field_total_time
-    - field.field.node.recipe.field_image
     - node.type.recipe
   module:
     - comment
     - entity_browser
     - path
     - text
+_core:
+  default_config_hash: aycXzVYFsiPKcpg_G2en-M4Ffi2yduIcxFarkWfGRBE
 id: node.recipe.default
 targetEntityType: node
 bundle: recipe
@@ -49,7 +50,7 @@ content:
   field_image:
     weight: 7
     settings:
-      entity_browser: image_library
+      entity_browser: media_entity_browser
       field_widget_display: label
       field_widget_edit: true
       field_widget_remove: true

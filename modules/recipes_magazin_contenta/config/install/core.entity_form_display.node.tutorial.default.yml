@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.image_library
+    - entity_browser.browser.media_entity_browser
     - field.field.node.tutorial.field_image
     - field.field.node.tutorial.field_link
     - field.field.node.tutorial.field_summary
@@ -28,7 +28,7 @@ content:
   field_image:
     weight: 33
     settings:
-      entity_browser: image_library
+      entity_browser: media_entity_browser
       field_widget_display: label
       field_widget_edit: true
       field_widget_remove: true

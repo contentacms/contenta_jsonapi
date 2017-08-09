@@ -27,6 +27,7 @@ module:
   language: 0
   link: 0
   media_entity: 0
+  media_entity_browser: 0
   media_entity_image: 0
   menu_ui: 0
   migrate: 0
