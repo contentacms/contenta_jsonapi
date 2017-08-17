@@ -44,6 +44,7 @@ module:
   serialization: 0
   simple_oauth: 0
   simple_oauth_extras: 0
+  snail: 0
   subrequests: 0
   syslog: 0
   system: 0
