@@ -1,20 +1,19 @@
-uuid: 69ef058a-207d-4eca-8c03-d22705985623
+uuid: 3feb2151-fd06-4616-af0c-2b8e0dd04e58
 langcode: en
 status: true
 dependencies:
   config:
     - media_entity.bundle.image
-    - views.view.image_library
   module:
     - dropzonejs_eb_widget
     - media_entity
     - views
-name: image_library
-label: 'Image library'
+name: media_entity_browser
+label: 'Media Entity Browser'
 display: modal
 display_configuration:
-  width: '800'
-  height: '600'
+  width: '1070'
+  height: '840'
   link_text: 'Select images'
   auto_open: false
 selection_display: no_display
@@ -22,17 +21,17 @@ selection_display_configuration: {  }
 widget_selector: tabs
 widget_selector_configuration: {  }
 widgets:
-  da6dec11-70df-4462-9ac5-186d4f16b33c:
+  6586703a-6976-4124-8a49-cbb07ceaa3b1:
     settings:
-      view: image_library
+      view: media_entity_browser
       view_display: entity_browser_1
       submit_text: Select
       auto_select: false
-    uuid: da6dec11-70df-4462-9ac5-186d4f16b33c
-    weight: 2
+    uuid: 6586703a-6976-4124-8a49-cbb07ceaa3b1
+    weight: 3
     label: Library
     id: view
-  2f1c5348-a446-4eff-bdc3-7629b2bfeff9:
+  fa8a606b-934a-470e-8c9e-e24535857dae:
     settings:
       media_entity_bundle: image
       upload_location: 'public://[date:custom:Y]-[date:custom:m]'
@@ -41,7 +40,7 @@ widgets:
       extensions: 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp'
       submit_text: Select
       auto_select: false
-    uuid: 2f1c5348-a446-4eff-bdc3-7629b2bfeff9
-    weight: 2
+    uuid: fa8a606b-934a-470e-8c9e-e24535857dae
+    weight: 1
     label: Upload
     id: dropzonejs_media_entity

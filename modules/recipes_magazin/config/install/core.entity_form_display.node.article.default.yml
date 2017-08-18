@@ -2,18 +2,20 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.media_entity_browser
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_image
     - field.field.node.article.field_recipes
     - field.field.node.article.field_tags
-    - image.style.thumbnail
     - node.type.article
   module:
     - comment
-    - image
+    - entity_browser
     - path
     - text
+_core:
+  default_config_hash: N7Oootb5XKr4sai1qYgJkCMekTASv4pwtAqwdUYnvO8
 id: node.article.default
 targetEntityType: node
 bundle: article
@@ -41,18 +43,26 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_image:
-    type: image_image
+    type: entity_browser_entity_reference
     weight: 4
     region: content
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      entity_browser: media_entity_browser
+      field_widget_display: label
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      open: false
+      field_widget_display_settings: {  }
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete_tags
     weight: 3
     region: content
-    settings: {  }
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   langcode:
     type: language_select
