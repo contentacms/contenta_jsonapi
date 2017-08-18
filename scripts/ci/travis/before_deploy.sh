@@ -18,21 +18,16 @@ validate_env_var() {
 contentacms_files_to_delete_list() {
      list=(
     '.circleci'
-    '.babelrc'
     'CODE_OF_CONDUCT.md'
     '.editorconfig'
-    '.eslintignore'
-    '.eslintrc'
     '.git'
     '.github'
     '.gitignore'
     'installer.sh'
-    'nightwatch.json'
-    'package.json'
     'tests'
     '.travis.yml'
-    'yarn.lock'
-    'node_modules'
+    '.mkdocks.yml'
+    'phpunit.xml'
     )
 
     echo ${list[*]}
