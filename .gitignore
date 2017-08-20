@@ -6,5 +6,5 @@
 /themes/infinite/
 .DS_Store
 composer.lock
-.env.local
 /tests/reports
+.env.local

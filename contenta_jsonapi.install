@@ -10,15 +10,18 @@ function contenta_jsonapi_install() {
   /** @var \Drupal\Core\DrupalKernelInterface $drupal_kernel */
   $drupal_kernel = \Drupal::service('kernel');
   $file_path = $drupal_kernel->getAppRoot() . '/' . $drupal_kernel->getSitePath();
-  $services_yml = file_get_contents($file_path . '/default.services.yml');
+  $filename = $file_path . '/default.services.yml';
+  if (file_exists($filename)) {
+    $services_yml = file_get_contents($filename);
 
-  $yml_data = Yaml::decode($services_yml);
-  if (empty($yml_data['parameters']['cors.config']['enabled'])) {
-    $yml_data['parameters']['cors.config']['enabled'] = TRUE;
-    $yml_data['parameters']['cors.config']['allowedHeaders'] = ['*'];
-    $yml_data['parameters']['cors.config']['allowedMethods'] = ['*'];
-    $yml_data['parameters']['cors.config']['allowedOrigins'] = ['localhost:*'];
+    $yml_data = Yaml::decode($services_yml);
+    if (empty($yml_data['parameters']['cors.config']['enabled'])) {
+      $yml_data['parameters']['cors.config']['enabled'] = TRUE;
+      $yml_data['parameters']['cors.config']['allowedHeaders'] = ['*'];
+      $yml_data['parameters']['cors.config']['allowedMethods'] = ['*'];
+      $yml_data['parameters']['cors.config']['allowedOrigins'] = ['localhost:*'];
 
-    file_put_contents($file_path . '/services.yml', Yaml::encode($yml_data));
+      file_put_contents($filename, Yaml::encode($yml_data));
+    }
   }
 }
