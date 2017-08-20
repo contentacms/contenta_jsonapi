@@ -5,6 +5,10 @@
 
 Consumers MUST implement those [wireframes](https://www.drupal.org/node/2818741#comment-12114776)
 
+## designs
+
+The official design from the out of the box initiative can be found on https://www.drupal.org/node/2900720
+
 ## Hosting, CSS & html, Urls structure, Models, Architecture, Cache, Service workers etc ...
 
 Consumers are free to choose tools which fits best their projects concerning those points; because there is a wide variety of consumers with sometimes very different needs.
