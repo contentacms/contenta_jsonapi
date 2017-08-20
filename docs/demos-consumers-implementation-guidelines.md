@@ -7,7 +7,7 @@ Consumers MUST implement those [wireframes](https://www.drupal.org/node/2818741#
 
 ## designs
 
-The official design from the out of the box initiative can be found on https://www.drupal.org/node/2900720
+The official design from the out of the box initiative can be found on [https://www.drupal.org/node/2900720](https://www.drupal.org/node/2900720)
 
 ## Hosting, CSS & html, Urls structure, Models, Architecture, Cache, Service workers etc ...
 
