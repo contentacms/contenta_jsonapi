@@ -84,3 +84,12 @@ jobs:
           # Only release if it $PROJECT_RELEASE_BRANCH gets updated
           branch: $PROJECT_RELEASE_BRANCH
           repo: "contentacms/contenta_jsonapi"
+      after_deploy:
+        # Clone the demo site repo to trigger an automated.
+        - git clone git@github.com:contentacms/contenta_jsonapi_demo.git contenta_jsonapi_demo
+        # Navigate inside the cloned project.
+        - cd contenta_jsonapi_demo
+        - echo -e "  * Profile update -> buildNum=[$CIRCLE_BUILD_NUM]($CIRCLE_BUILD_URL) on [$CIRCLE_PR_REPONAME]($CIRCLE_REPOSITORY_URL)@CIRCLE_SHA1\n" >> DEPLOYS.md
+        - git add DEPLOYS.md
+        - 'git commit -m "ci(Deploy): Trigger a deploy to the demo site"'
+        - git push origin master
