@@ -32,32 +32,21 @@ branches:
 before_install:
   # Fixes Composer exhausting the memory when using PHP 5.6.
   - echo "memory_limit=-1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
-  - nvm install 6.11.0
-  - nvm use 6.11.0
-  # Repo for Yarn
-  - sudo apt-key adv --keyserver pgp.mit.edu --recv D101F7899D41F3C3
-  - echo "deb http://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-  - sudo apt-get update -qq
-  - sudo apt-get install -y -qq yarn
   - mkdir $PROJECT_BASE_PATH
+  # Load .env and .local.env
+  - source ./scripts/ci/travis/load_env.sh
 
 install:
-  - yarn install
   - composer run-script install-contenta $PROJECT_BASE_PATH --timeout=0
-
+  - composer run-script ci:helper setup_anonymous_user "$PROJECT_BASE_PATH" --timeout=0
 
 before_script:
-  - export DISPLAY=:99.0
-  # Prevent chrome deadlock when running Nightwatch tests.
-  # See https://stackoverflow.com/questions/41487659/nightwatch-selenium-socket-hang-up
-  - export DBUS_SESSION_BUS_ADDRESS=/dev/null
-  - sh -e /etc/init.d/xvfb start
-  - sleep 3 # give xvfb some time to start
-  - composer run-script start-contenta $PROJECT_BASE_PATH --timeout=0 &
-  - sleep 5 # give web server some time to start
+  # Start Contenta Local Server
+  - composer run-script start-contenta $PROJECT_BASE_PATH --timeout=0 &> /dev/null &
+  - sleep 8 # give web server some time to start
 
 script:
-  - yarn run nightwatch
+  - composer run-script ci:helper run_functional_tests "$PROJECT_BASE_PATH" --timeout=0
 
 after_script:
   - killall php
@@ -66,24 +55,24 @@ after_script:
 jobs:
   include:
     # Deployment Stage
-    # This stage promotes a successful artifact from the deployment branch to Github
+    # This stage promotes a successful artifact from the deployment branch to GitHub
     - stage: Release
       php: 7.1
-      install:
-        - composer run-script install-contenta $PROJECT_BASE_PATH --timeout=0
+      install: skip
       before_script: skip
       script: skip
       before_deploy:
+        # Install Contenta
+        - composer run-script install-contenta $PROJECT_BASE_PATH --timeout=0
         # Set Deployment Variable
         - RELEASE_DATE=$( date +%Y-%m-%d)
         - TRAVIS_TAG="${PROJECT_NAME}_release-${RELEASE_DATE}_build_${TRAVIS_BUILD_NUMBER}"
         # Clean the Contenta Profile Folder
-        - ./scripts/deployment/travis_before_deploy.sh contentacms_profile_cleanup "$PROJECT_BASE_PATH/web"
+        - composer run-script ci:before-deploy contentacms_profile_cleanup "$PROJECT_BASE_PATH/web" --timeout=0
         # Remove Site files
-        - ./scripts/deployment/travis_before_deploy.sh rm_site "$PROJECT_BASE_PATH/web"
+        - composer run-script ci:before-deploy rm_site "$PROJECT_BASE_PATH/web" --timeout=0
         # Zip Folder
-        - ./scripts/deployment/travis_before_deploy.sh zip_folder "$HOME" "$PROJECT_NAME" "$TRAVIS_TAG"
-
+        - composer run-script ci:before-deploy zip_folder "$HOME" "$PROJECT_NAME" "$TRAVIS_TAG" --timeout=0
       deploy:
         provider: releases
         api_key:

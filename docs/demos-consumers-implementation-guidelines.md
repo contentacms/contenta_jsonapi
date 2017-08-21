@@ -34,14 +34,14 @@ Minimalistic package that transforms an object to a json api query string, use t
 
 ## API endpoints usage examples :
 
-The public API endpoint is : [http://live-contentacms.pantheonsite.io/api](http://live-contentacms.pantheonsite.io/api)
+The public API endpoint is : [https://live-contentacms.pantheonsite.io/api](https://live-contentacms.pantheonsite.io/api)
 there is also a dev version (more unstable) : [https://dev-contentacms.pantheonsite.io/api](https://dev-contentacms.pantheonsite.io/api)
 
 A list of important resources:
 
-Recipes: [http://live-contentacms.pantheonsite.io/api/recipes](http://live-contentacms.pantheonsite.io/api/recipes)
+Recipes: [https://live-contentacms.pantheonsite.io/api/recipes](https://live-contentacms.pantheonsite.io/api/recipes)
 
-Recipes categories : [http://live-contentacms.pantheonsite.io/api/categories](http://live-contentacms.pantheonsite.io/api/categories)
+Recipes categories : [https://live-contentacms.pantheonsite.io/api/categories](https://live-contentacms.pantheonsite.io/api/categories)
 
 # Pages documentation
 

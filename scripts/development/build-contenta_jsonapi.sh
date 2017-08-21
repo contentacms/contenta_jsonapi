@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 # Move up 3 levels since we are in contenta_jsonapi/script/development.
 BASE_DIR="$(dirname $(dirname $(cd ${0%/*} && pwd)))"
 
@@ -52,9 +51,10 @@ if [ $? -ne 0 ]; then
 fi
 
 cd ${DEST_DIR}
+
 $COMPOSER config repositories.contenta_jsonapi path ${BASE_DIR}
 
-$COMPOSER require "contentacms/contenta_jsonapi:*" "phpunit/phpunit:~4.8" --no-progress
+$COMPOSER require "contentacms/contenta_jsonapi:*" "phpunit/phpunit:~5.7" --no-progress
 
 cd $DOCROOT
 echo "-----------------------------------------------"
