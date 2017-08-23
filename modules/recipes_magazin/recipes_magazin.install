@@ -17,6 +17,11 @@ function recipes_magazin_install() {
     'recipes_magazin__authors',
     'recipes_magazin__pages',
     'recipes_magazin__recipes',
+    'recipes_magazin__article',
+    'recipes_magazin__article_authors',
+    'recipes_magazin__article_images_url',
+    'recipes_magazin__article_media_images_url',
+    'recipes_magazin__article_tags',
   ]);
 }
 
@@ -32,5 +37,10 @@ function recipes_magazin_uninstall() {
     'recipes_magazin__authors',
     'recipes_magazin__pages',
     'recipes_magazin__recipes',
+    'recipes_magazin__article',
+    'recipes_magazin__article_authors',
+    'recipes_magazin__article_images_url',
+    'recipes_magazin__article_media_images_url',
+    'recipes_magazin__article_tags',
   ]);
 }
