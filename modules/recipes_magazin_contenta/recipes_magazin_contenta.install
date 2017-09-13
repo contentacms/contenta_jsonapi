@@ -16,6 +16,7 @@ function recipes_magazin_contenta_install() {
     'recipes_magazin_contenta__pages',
     'recipes_magazin_contenta__embeddable',
     'recipes_magazin_contenta__tutorial',
+    'recipes_magazin_contenta__consumers',
   ]);
 }
 
@@ -30,5 +31,6 @@ function recipes_magazin_contenta_uninstall() {
     'recipes_magazin_contenta__pages',
     'recipes_magazin_contenta__embeddable',
     'recipes_magazin_contenta__tutorial',
+    'recipes_magazin_contenta__consumers',
   ]);
 }
