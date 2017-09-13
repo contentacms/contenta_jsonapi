@@ -1,0 +1,14 @@
+uuid: 16d6fbb1-ccec-428c-8e2a-d2d040f71816
+langcode: en
+status: true
+dependencies: {  }
+name: recipe_detail_750_550
+label: 'Recipe Detail (750×550)'
+effects:
+  719ae2ab-99f4-449c-ac06-7961b9195f64:
+    uuid: 719ae2ab-99f4-449c-ac06-7961b9195f64
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 750
+      height: 550

@@ -4,6 +4,8 @@ module:
   ckeditor: 0
   comment: 0
   config: 0
+  consumer_image_styles: 0
+  consumers: 0
   contenta_enhancements: 0
   datetime: 0
   datetime_range: 0
