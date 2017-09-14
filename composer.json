@@ -53,7 +53,7 @@
         "cweagans/composer-patches": "~1.0",
         "drupal/core": "^8.3.4",
         "drupal/jsonapi": "^1.0",
-        "drupal/simple_oauth": "^2.0",
+        "drupal/simple_oauth": "^3.0",
         "drupal/jsonapi_extras": "^1.0",
         "drupal/subrequests": "^2.0@beta",
         "drupal/fieldable_path": "^1.0",
