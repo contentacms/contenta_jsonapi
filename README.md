@@ -38,13 +38,13 @@ cd <DESTINATION>/web
 Once your site is running locally, you might want to use Curl to examine the pre-installed content:
 
 ```bash
-curl --header 'Accept: application/vnd.api+json' http://127.0.0.1:8888/api/recipes
+curl --header 'Accept: application/vnd.api+json' http://127.0.0.1:8888/api/node/recipe
 ```
 
 The result will be a list of recipes. Note that:
 
 - The Drupal implementation of the jsonapi uses entity uuids to identify individual content resources. Append a `/{{uuid}}` to the URL above to fetch a single recipe. 
-- Contenta uses the [JSON API Extras](https://www.drupal.org/project/jsonapi_extras) module to customize the URL to resources: `/api/recipes` instead of `/jsonapi/node/recipes`, for example. Contenta also configures JSON API Extras to customize the output of the request to eliminate unnecessary fields.
+- Contenta uses the [JSON API Extras](https://www.drupal.org/project/jsonapi_extras) module to customize the URL to resources: `/api/node/recipe` instead of `/jsonapi/node/recipe`, for example. Contenta also configures JSON API Extras to customize the output of the request to eliminate unnecessary fields.
 
 ### CORS
 
