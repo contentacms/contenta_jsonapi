@@ -14,7 +14,7 @@ use Drupal\Core\Menu\MenuTreeParameters;
 function contenta_enhancements_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match) {
   switch ($route_name) {
     case 'entity.user.collection':
-      return '<p>' . t('A user represents a human. Users can log in to Contenta if they have the <q>Content administrator</q> or <q>Client developer</q> <a href=":role">role</a>. Otherwise, they can only perform actions via a <a href=":client">Client</a>', [':role' => Url::fromRoute('entity.user_role.collection'), ':client' => Url::fromRoute('entity.oauth2_client.collection')]) . '</p>';
+      return '<p>' . t('A user represents a human. Users can log in to Contenta if they have the <q>Content administrator</q> or <q>Client developer</q> <a href=":role">role</a>. Otherwise, they can only perform actions via a <a href=":client">Client</a>', [':role' => Url::fromRoute('entity.user_role.collection'), ':client' => Url::fromRoute('entity.consumer.collection')]) . '</p>';
 
     // @todo override the default help from user.module, but hook_help() doesn't allow overriding this…
     //case 'user.admin_permissions':
@@ -22,7 +22,7 @@ function contenta_enhancements_help($route_name, \Drupal\Core\Routing\RouteMatch
     // @todo override the default help from user.module, but hook_help() doesn't allow overriding this…
     //case 'entity.user_role.collection':
 
-    case 'entity.oauth2_client.collection':
+    case 'entity.consumer.collection':
       return '<p>' . t('A client represents an app, native or web, that users can log in to and interact with the content in this Contenta, via OAuth2 authentication.') . '</p>';
 
     case 'entity.oauth2_token.collection':
@@ -62,9 +62,9 @@ function contenta_enhancements_page_attachments(array &$page) {
  * Implements hook_local_tasks_alter().
  */
 function contenta_enhancements_local_tasks_alter(&$local_tasks) {
-  $local_tasks['entity.oauth2_client.collection']['title'] = '📱 Clients';
-  $local_tasks['entity.oauth2_client.collection']['base_route'] = 'entity.user.collection';
-  $local_tasks['entity.oauth2_client.collection']['weight'] = 90;
+  $local_tasks['entity.consumer.collection']['title'] = '📱 Clients';
+  $local_tasks['entity.consumer.collection']['base_route'] = 'entity.user.collection';
+  $local_tasks['entity.consumer.collection']['weight'] = 90;
 
   $local_tasks['entity.oauth2_token.collection']['title'] = '🔑 Tokens';
   $local_tasks['entity.oauth2_token.collection']['base_route'] = 'entity.user.collection';
@@ -381,9 +381,9 @@ HTML;
  * Implements hook_entity_type_alter().
  */
 function contenta_enhancements_entity_type_alter(array &$entity_types) {
-  if (!empty($entity_types['oauth2_client'])) {
+  if (!empty($entity_types['consumer'])) {
     /** @var $entity_types \Drupal\Core\Entity\EntityTypeInterface[] */
-    $entity_types['oauth2_client']->setLinkTemplate('canonical', '/client/{oauth2_client}');
+    $entity_types['consumer']->setLinkTemplate('canonical', '/client/{consumer}');
   }
 }
 
@@ -391,7 +391,7 @@ function contenta_enhancements_entity_type_alter(array &$entity_types) {
  * Implements hook_form_alter().
  */
 function contenta_enhancements_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  if ($form_id === 'oauth2_client_add_form' || $form_id === 'oauth2_client_edit_form') {
+  if ($form_id === 'consumer_add_form' || $form_id === 'consumer_edit_form') {
     // Unset the two reserved Contenta UI roles.
     unset($form['roles']['widget']['#options']['content_administrator']);
     unset($form['roles']['widget']['#options']['client_developer']);
@@ -407,7 +407,7 @@ function contenta_enhancements_form_alter(&$form, FormStateInterface $form_state
 
     $form['roles']['widget']['#description'] .= '<br>' . $recommendation_text;
 
-    if ($form_id === 'oauth2_client_add_form' && empty($form['roles']['widget']['#options'])) {
+    if ($form_id === 'consumer_add_form' && empty($form['roles']['widget']['#options'])) {
       drupal_set_message($recommendation_text, 'error');
       $form['actions']['#disabled'] = TRUE;
     }

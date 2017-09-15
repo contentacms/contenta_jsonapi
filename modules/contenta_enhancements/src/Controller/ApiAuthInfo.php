@@ -15,7 +15,7 @@ class ApiAuthInfo {
     $host = $request->getSchemeAndHttpHost() . $request->getBaseUrl();
 
     $users_url = Url::fromRoute('entity.user.collection')->toString();
-    $clients_url = Url::fromRoute('entity.oauth2_client.collection')->toString();
+    $clients_url = Url::fromRoute('entity.consumer.collection')->toString();
 
     $demo_user = User::load(2);
     $demo_client = Oauth2Client::load(1);
