@@ -10,3 +10,4 @@ permissions:
   - 'access openapi api docs'
   - 'administer simple_oauth entities'
   - 'grant simple_oauth codes'
+  - 'access user profiles'
