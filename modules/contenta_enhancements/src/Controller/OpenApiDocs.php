@@ -6,6 +6,7 @@ use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Url;
 use Drupal\jsonapi\ResourceType\ResourceType;
 use Drupal\jsonapi\ResourceType\ResourceTypeRepository;
+use Drupal\jsonapi\ResourceType\ResourceTypeRepositoryInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -18,10 +19,10 @@ class OpenApiDocs extends ControllerBase {
   /**
    * OpenApiDocs constructor.
    *
-   * @param \Drupal\jsonapi\ResourceType\ResourceTypeRepository $resourceTypeRepository
+   * @param \Drupal\jsonapi\ResourceType\ResourceTypeRepositoryInterface $resourceTypeRepository
    *   The resource type repository.
    */
-  public function __construct(ResourceTypeRepository $resourceTypeRepository) {
+  public function __construct(ResourceTypeRepositoryInterface $resourceTypeRepository) {
     $this->resourceTypeRepository = $resourceTypeRepository;
   }
 
