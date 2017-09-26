@@ -13,3 +13,4 @@ permissions:
   - 'administer media bundles'
   - 'administer taxonomy'
   - 'bypass node access'
+  - 'access user profiles'

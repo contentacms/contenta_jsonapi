@@ -12,7 +12,6 @@ process:
     plugin: migration_lookup
     migration: recipes_magazin__images_url
     source: image
-  name: image
   uid:
     plugin: default_value
     default_value: 1

@@ -1,0 +1,32 @@
+# Site Information
+site_name: Contenta CMS
+repo_url: https://github.com/contentacms/contenta_jsonapi/
+repo_name: contentacms/contenta_jsonapi
+site_description: Contenta CMS Documentation
+docs_dir: docs
+site_favicon: favicon.ico
+
+# Site Structure
+pages:
+  - Home: index.md
+  - Development: development.md
+  - Guidelines:
+    - 'Consumers Implementation Guidelines': demos-consumers-implementation-guidelines.md
+  - About: about.md
+
+# Site Configuration
+theme: readthedocs
+markdown_extensions:
+  - smarty
+  - toc:
+      permalink: True
+  - sane_lists
+  - nl2br
+  - codehilite:
+      linenums: True
+  - wikilinks
+  - abbr
+  - attr_list
+  - def_list
+  - tables
+  - footnotes

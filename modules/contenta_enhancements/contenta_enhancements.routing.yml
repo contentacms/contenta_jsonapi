@@ -1,0 +1,41 @@
+contenta_enhancements.api:
+  path: '/admin/api'
+  defaults:
+    _controller: '\Drupal\contenta_enhancements\Controller\OpenApiDocs::generateDocs'
+    entity_mode: 'content_entities'
+  methods: [GET]
+  requirements:
+    _permission: 'access openapi api docs'
+
+contenta_enhancements.api.config:
+  path: '/admin/api/config'
+  defaults:
+    _controller: '\Drupal\contenta_enhancements\Controller\OpenApiDocs::generateDocs'
+    entity_mode: 'config_entities'
+  methods: [GET]
+  requirements:
+    _permission: 'access openapi api docs'
+
+contenta_enhancements.api.authentication:
+  path: '/admin/api/authentication'
+  defaults:
+    _controller: '\Drupal\contenta_enhancements\Controller\ApiAuthInfo::info'
+  methods: [GET]
+  requirements:
+    _permission: 'access openapi api docs'
+
+contenta_enhancements.api.advanced:
+  path: '/admin/api/advanced'
+  defaults:
+    _form: 'Drupal\contenta_enhancements\Form\ApiAdvancedForm'
+    _title: 'Advanced'
+  requirements:
+    _access: 'TRUE'
+
+contenta_enhancements.revert:
+  path: '/admin/contenta/revert'
+  defaults:
+    _form: 'Drupal\contenta_enhancements\Form\RevertForm'
+    _title: 'Revert'
+  requirements:
+    _permission: 'administer site configuration'

@@ -1,0 +1,25 @@
+# https://www.drupal.org/node/2886816
+fix-2886816:
+  version: VERSION
+  css:
+    theme:
+      css/fix-2886816.css: {}
+
+# https://www.drupal.org/node/2887220
+fix-2887220:
+  version: VERSION
+  css:
+    theme:
+      css/fix-2887220.css: {}
+
+custom:
+  version: VERSION
+  css:
+    theme:
+      css/custom.css: {}
+
+contenta_enhancements:
+  version: '1.0'
+  css:
+    component:
+      css/contenta_enhancements.css: {}

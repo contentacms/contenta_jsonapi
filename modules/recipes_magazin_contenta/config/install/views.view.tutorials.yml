@@ -72,7 +72,7 @@ display:
               rendered: false
               rendered_strip: false
           columns: 2
-          automatic_width: true
+          automatic_width: false
           alignment: horizontal
           col_class_default: true
           col_class_custom: 'col s12 m6'
@@ -427,6 +427,51 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
+        field_topic_value:
+          id: field_topic_value
+          table: node__field_topic
+          field: field_topic_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_topic_value_op
+            label: Topic
+            description: ''
+            use_operator: false
+            operator: field_topic_value_op
+            identifier: field_topic_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              content_administrator: '0'
+              client_developer: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: 'Topic (field_topic)'
+            description: null
+            identifier: field_topic_value
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1: {  }
+              2: {  }
+              3: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
       sorts:
         created:
           id: created
@@ -455,7 +500,7 @@ display:
           empty: false
           tokenize: false
           content:
-            value: "          <div class=\"card blue-grey darken-1\">\n<div class=\"card-content white-text\">\n              <span class=\"card-title\">About tutorials</span>\n              <p class=\"white-text\">  Tutorials are pointers to other documentation resources. They are an aggregation of all the <strong>community documentation</strong> regarding decoupled architectures. You will find here a wide variety of documentation topics, from the JSON API server to the OAuth2 authentication, schema generation, and hand picked blog posts. If you want to suggest adding a new tutorial to this unstructured list, please open an issue on the GitHub issue queue.\n</p>\n            </div>\n            <div class=\"card-action\">\n              <a href=\"https://github.com/contentacms/contenta_jsonapi/issues/new\">Suggest a tutorial</a>\n            </div>\n          </div>\n"
+            value: "          <div class=\"card blue darken-1\">\n<div class=\"card-content white-text\">\n              <span class=\"card-title\">About tutorials</span>\n              <p class=\"white-text\">  Tutorials are pointers to other documentation resources. They are an aggregation of all the <strong>community documentation</strong> regarding decoupled architectures. You will find here a wide variety of documentation topics, from the JSON API server to the OAuth2 authentication, schema generation, and hand picked blog posts. If you want to suggest adding a new tutorial to this unstructured list, please open an issue on the GitHub issue queue.\n</p>\n            </div>\n            <div class=\"card-action\">\n              <a href=\"https://github.com/contentacms/contenta_jsonapi/issues/new\">Suggest a tutorial</a>\n            </div>\n          </div>\n"
             format: full_html
           plugin_id: text
       footer: {  }
@@ -477,6 +522,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -506,6 +552,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - 'user.node_grants:view'
         - user.permissions
       tags:

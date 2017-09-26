@@ -12,7 +12,6 @@ process:
     plugin: skip_on_empty
     source: image
     method: row
-  filename: image
   uri: image
   uid:
     plugin: default_value

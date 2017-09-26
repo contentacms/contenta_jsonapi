@@ -4,6 +4,8 @@ module:
   ckeditor: 0
   comment: 0
   config: 0
+  consumer_image_styles: 0
+  consumers: 0
   contenta_enhancements: 0
   datetime: 0
   datetime_range: 0
@@ -27,6 +29,7 @@ module:
   language: 0
   link: 0
   media_entity: 0
+  media_entity_browser: 0
   media_entity_image: 0
   menu_ui: 0
   migrate: 0
@@ -58,8 +61,6 @@ module:
 theme:
   stable: 0
   classy: 0
-  materialize: 0
-  materialize_contenta: 0
   material_admin: 0
 profile: contenta_jsonapi
 _core:

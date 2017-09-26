@@ -1,17 +1,44 @@
 <?php
 
 use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Url;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\NodeInterface;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Render\Markup;
+use Drupal\Core\Menu\MenuTreeParameters;
+
+/**
+ * Implements hook_help().
+ */
+function contenta_enhancements_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'entity.user.collection':
+      return '<p>' . t('A user represents a human. Users can log in to Contenta if they have the <q>Content administrator</q> or <q>Client developer</q> <a href=":role">role</a>. Otherwise, they can only perform actions via a <a href=":client">Client</a>', [':role' => Url::fromRoute('entity.user_role.collection'), ':client' => Url::fromRoute('entity.consumer.collection')]) . '</p>';
+
+    // @todo override the default help from user.module, but hook_help() doesn't allow overriding this…
+    //case 'user.admin_permissions':
+
+    // @todo override the default help from user.module, but hook_help() doesn't allow overriding this…
+    //case 'entity.user_role.collection':
+
+    case 'entity.consumer.collection':
+      return '<p>' . t('A client represents an app, native or web, that users can log in to and interact with the content in this Contenta, via OAuth2 authentication.') . '</p>';
+
+    case 'entity.oauth2_token.collection':
+      return '<p>' . t('OAuth2 uses tokens to allow users to interact with content in this Contenta via clients. Clients initially get an <code>access_token</code>, which is usable for a limited time. They use a <code>refresh_token</code> to refresh their <code>access_token</code>. This provides stronger security.') . '</p>';
+  }
+}
 
 /**
  * Implements hook_entity_type_build().
  */
 function contenta_enhancements_entity_type_build(array &$entity_types) {
   /** @var $entity_types \Drupal\Core\Entity\EntityTypeInterface[] */
-  
+
   $entity_types['entity_view_display']->set('admin_permission', 'administer display modes');
   $entity_types['entity_form_display']->set('admin_permission', 'administer display modes');
 }
-
 
 /**
  * Implements hook_entity_base_field_info_alter().
@@ -19,5 +46,370 @@ function contenta_enhancements_entity_type_build(array &$entity_types) {
 function contenta_enhancements_entity_base_field_info_alter(&$fields, EntityTypeInterface $entity_type) {
   if ($entity_type->id() === 'node') {
     $fields['title']->setDisplayConfigurable('view', TRUE);
+  }
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function contenta_enhancements_page_attachments(array &$page) {
+  $page['#attached']['library'][] = 'contenta_enhancements/fix-2886816';
+  $page['#attached']['library'][] = 'contenta_enhancements/fix-2887220';
+  $page['#attached']['library'][] = 'contenta_enhancements/custom';
+}
+
+/**
+ * Implements hook_local_tasks_alter().
+ */
+function contenta_enhancements_local_tasks_alter(&$local_tasks) {
+  $local_tasks['entity.consumer.collection']['title'] = '📱 Clients';
+  $local_tasks['entity.consumer.collection']['base_route'] = 'entity.user.collection';
+  $local_tasks['entity.consumer.collection']['weight'] = 90;
+
+  $local_tasks['entity.oauth2_token.collection']['title'] = '🔑 Tokens';
+  $local_tasks['entity.oauth2_token.collection']['base_route'] = 'entity.user.collection';
+  $local_tasks['entity.oauth2_token.collection']['weight'] = 100;
+
+  $local_tasks['entity.user.collection']['title'] = '🙋 Users';
+}
+
+/**
+ * Implements hook_toolbar_alter()
+ */
+function contenta_enhancements_toolbar_alter(&$items) {
+  $current_user = \Drupal::currentUser();
+
+  unset($items['home']);
+
+  $empty_item_cacheability = [
+    '#cache' => [
+      'contexts' => [
+        'user.permissions',
+      ],
+    ],
+  ];
+
+  $manipulators = array(
+    array('callable' => 'menu.default_tree_manipulators:checkAccess'),
+    array('callable' => 'menu.default_tree_manipulators:generateIndexAndSort'),
+    array('callable' => 'toolbar_menu_navigation_links'),
+  );
+  $menu_tree_contenta = \Drupal::service('toolbar.menu_tree');
+  $parameters = new MenuTreeParameters();
+  $parameters->setMinDepth(1)->setMaxDepth(3)->onlyEnabledLinks();
+  $tree = $menu_tree_contenta->load('contenta', $parameters);
+  $tree = $menu_tree_contenta->transform($tree, $manipulators);
+  $renderable_menu = $menu_tree_contenta->build($tree);
+
+  $items['contenta'] = [
+    '#type' => 'toolbar_item',
+    'tab' => [
+      '#type' => 'link',
+      '#title' => t('Contenta CMS'),
+      '#url' => Url::fromRoute('<front>'),
+      '#attributes' => [
+        'title' => t('Welcome to Contenta CMS'),
+        'class' => [
+          'toolbar-icon',
+          'toolbar-icon-menu',
+          'toolbar-icon-contenta',
+        ],
+      ],
+    ],
+    'tray' => [
+      '#heading' => t('Contenta CMS'),
+      '#wrapper_attributes' => [],
+      'menu' => $renderable_menu,
+    ],
+    '#attached' => [
+      'library' => ['contenta_enhancements/contenta_enhancements'],
+    ],
+    '#weight' => -45,
+  ];
+
+  if ($current_user->hasPermission('access content overview')) {
+    $items['contenta_content'] = [
+      '#type' => 'toolbar_item',
+      'tab' => [
+        '#type' => 'link',
+        '#title' => t('Content'),
+        '#url' => Url::fromRoute('system.admin_content'),
+        '#options' => [
+          'set_active_class' => TRUE,
+        ],
+        '#attributes' => [
+          'class' => ['toolbar-icon', 'toolbar-icon-system-admin-content'],
+        ],
+      ],
+      'tray' => [
+        '#heading' => t('Content'),
+        'items' => [
+          '#theme' => 'menu__toolbar',
+          '#items' => [
+            'content' => [
+              'title' => t('Content'),
+              'url' => Url::fromRoute('system.admin_content'),
+              '#attributes' => ['class' => ['menu-item']]
+            ],
+            'add_content' => [
+              'title' => t('Add Content'),
+              'url' => Url::fromRoute('node.add_page'),
+              '#attributes' => ['class' => ['menu-item']]
+            ],
+          ],
+        ],
+      ],
+      '#weight' => -35,
+    ];
+  }
+  else {
+    $items['contenta_content'] = $empty_item_cacheability;
+  }
+
+  if ($current_user->hasPermission('access media overview')) {
+    $items['contenta_media'] = [
+      '#type' => 'toolbar_item',
+      'tab' => [
+        '#type' => 'link',
+        '#title' => t('Media'),
+        '#url' => Url::fromRoute('view.media.media_page_list'),
+        '#options' => [
+          'set_active_class' => TRUE,
+        ],
+        '#attributes' => [
+          'class' => ['toolbar-icon', 'toolbar-icon-system-themes-page'],
+        ],
+      ],
+      'tray' => [
+        '#heading' => t('Media'),
+        'items' => [
+          '#theme' => 'menu__toolbar',
+          '#items' => [
+            'content' => [
+              'title' => t('Media'),
+              'url' => Url::fromRoute('view.media.media_page_list'),
+              'attributes' => ['class' => ['menu-item']]
+            ],
+            'add_content' => [
+              'title' => t('Add Media'),
+              'url' => Url::fromRoute('entity.media.add_page'),
+              '#attributes' => ['class' => ['menu-item']]
+            ],
+          ],
+        ],
+      ],
+      '#weight' => -32,
+    ];
+  }
+  else {
+    $items['contenta_media'] = $empty_item_cacheability;
+  }
+
+  if ($current_user->hasPermission('administer content types')) {
+    $items['contenta_content_models'] = [
+      '#type' => 'toolbar_item',
+      'tab' => [
+        '#type' => 'link',
+        '#title' => t('Content Models'),
+        '#url' => Url::fromRoute('entity.node_type.collection'),
+        '#options' => [
+          'set_active_class' => TRUE,
+        ],
+        '#attributes' => [
+          'class' => ['toolbar-icon', 'toolbar-icon-system-admin-structure'],
+        ],
+      ],
+      '#weight' => -30,
+    ];
+  }
+  else {
+    $items['contenta_content_models'] = $empty_item_cacheability;
+  }
+
+  if ($current_user->hasPermission('access openapi api docs')) {
+    $items['contenta_api'] = [
+      '#type' => 'toolbar_item',
+      'tab' => [
+        '#type' => 'link',
+        '#title' => t('API'),
+        '#url' => Url::fromRoute('contenta_enhancements.api'),
+        '#options' => [
+          'set_active_class' => TRUE,
+        ],
+        '#attributes' => [
+          'class' => ['toolbar-icon', 'toolbar-icon-system-modules-list'],
+        ],
+      ],
+      '#weight' => -25,
+    ];
+  }
+  else {
+    $items['contenta_api'] = $empty_item_cacheability;
+  }
+
+  if ($current_user->hasPermission('administer users') || $current_user->hasPermission('administer simple_oauth entities')) {
+    $items['contenta_data_access'] = [
+      '#type' => 'toolbar_item',
+      'tab' => [
+        '#type' => 'link',
+        '#options' => [
+          'set_active_class' => TRUE,
+        ],
+        '#title' => t('Access control'),
+        '#url' => $current_user->hasPermission('administer users')
+          ? Url::fromRoute('entity.user.collection')
+          : Url::fromRoute('entity.oauth2_token.collection'),
+        '#attributes' => [
+          'class' => ['toolbar-icon', 'toolbar-icon-entity-user-collection'],
+        ],
+      ],
+      '#weight' => -20,
+    ];
+  }
+  else {
+    $items['contenta_data_access'] = $empty_item_cacheability;
+  }
+
+  if ($current_user->hasPermission('access site reports')) {
+    $menu_tree_contenta = \Drupal::service('toolbar.menu_tree');
+    $parameters = new MenuTreeParameters();
+    $parameters->setMinDepth(1)->setMaxDepth(3)->onlyEnabledLinks();
+    $parameters->setRoot('system.admin_reports');
+    $tree = $menu_tree_contenta->load('administration', $parameters);
+    $tree = $menu_tree_contenta->transform($tree, $manipulators);
+    $renderable_reports = $menu_tree_contenta->build($tree);
+    $items['reports'] = [
+      '#type' => 'toolbar_item',
+      'tab' => [
+        '#type' => 'link',
+        '#title' => t('Reports'),
+        '#url' => Url::fromRoute('system.admin_reports'),
+        '#attributes' => [
+          'title' => t('Reports'),
+          'class' => [
+            'toolbar-icon',
+            'toolbar-icon-system-admin-reports',
+          ],
+        ],
+      ],
+      'tray' => [
+        '#heading' => t('Reports'),
+        '#wrapper_attributes' => [],
+        'menu' => $renderable_reports,
+      ],
+      '#weight' => -5,
+    ];
+  }
+  else {
+    $items['reports'] = $empty_item_cacheability;
+  }
+
+  if ($current_user->isAnonymous()) {
+    $items['login'] = [
+      '#type' => 'toolbar_item',
+      'tab' => [
+        '#type' => 'link',
+        '#options' => [
+          'set_active_class' => TRUE,
+        ],
+        '#title' => t('Log in'),
+        '#url' => Url::fromRoute('user.login'),
+      ],
+      '#attributes' => ['class' => ['login-tab']],
+      '#wrapper_attributes' => ['class' => ['login-tab']],
+      '#weight' => 99,
+    ];
+  }
+  else {
+    $items['login'] = [
+      '#type' => 'toolbar_item',
+      'tab' => [
+        '#type' => 'link',
+        '#options' => [
+          'set_active_class' => TRUE,
+        ],
+        '#title' => t('Log out'),
+        '#url' => Url::fromRoute('user.logout'),
+      ],
+      '#wrapper_attributes' => ['class' => ['login-tab']],
+      '#weight' => 99,
+    ];
+  }
+
+  $items['administration']['tab']['#title'] = t('Advanced');
+  $items['administration']['#weight'] = 30;
+  if (!$current_user->hasPermission('access administration pages')) {
+    $items['administration'] = $empty_item_cacheability;
+  }
+
+  unset($items['user']);
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view_alter().
+ *
+ * @todo Instead of this hack, override the route definition for entity.node.canonical, and specify a custom controller to use instead of NodeViewController. Alters are brittle. Then we perhaps could also list *every* field, without relying on an EntityViewDisplay?
+ */
+function contenta_enhancements_node_view_alter(array &$build, NodeInterface $entity, EntityViewDisplayInterface $display) {
+  // Make sure the help pages are left alone.
+  // TODO: Use the concept of view modes to solve this problem, not this hack.
+  if ($entity->bundle() === 'page') {
+    return;
+  }
+  // Retrieve JSON API representation of this node.
+  $normalized = \Drupal::service('jsonapi.entity.to_jsonapi')->normalize($entity);
+
+  // Generate markup.
+  $json = json_encode($normalized, JSON_PRETTY_PRINT);
+  $markup = <<<HTML
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+<pre class="prettyprint lang-js">$json</pre>
+HTML;
+
+  // Add to render array.
+  $build['jsonapi_prefix'] = [
+    '#weight' => -100000,
+    '#prefix' => '<div class="row"><div class="col s12 m4">',
+  ];
+  $build['jsonapi'] = [
+    '#weight' => 100000,
+    '#prefix' => '</div><div class="col s12 m8"><div class="node-jsonapi-preview">' . Markup::create($markup) . '</div></div></div>',
+  ];
+}
+
+/**
+ * Implements hook_entity_type_alter().
+ */
+function contenta_enhancements_entity_type_alter(array &$entity_types) {
+  if (!empty($entity_types['consumer'])) {
+    /** @var $entity_types \Drupal\Core\Entity\EntityTypeInterface[] */
+    $entity_types['consumer']->setLinkTemplate('canonical', '/client/{consumer}');
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function contenta_enhancements_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id === 'consumer_add_form' || $form_id === 'consumer_edit_form') {
+    // Unset the two reserved Contenta UI roles.
+    unset($form['roles']['widget']['#options']['content_administrator']);
+    unset($form['roles']['widget']['#options']['client_developer']);
+    if (empty($form['roles']['widget']['#options'])) {
+      unset($form['roles']['widget']);
+    }
+
+    $recommendation_text = t('Create a <a href=":tour">role</a> for every logical group of permissions you want to assign to a client.', [
+      ':tour' => Url::fromRoute('entity.user_role.collection')
+        ->setOption('query', ['tour' => TRUE])
+        ->toString()
+    ]);
+
+    $form['roles']['widget']['#description'] .= '<br>' . $recommendation_text;
+
+    if ($form_id === 'consumer_add_form' && empty($form['roles']['widget']['#options'])) {
+      drupal_set_message($recommendation_text, 'error');
+      $form['actions']['#disabled'] = TRUE;
+    }
   }
 }

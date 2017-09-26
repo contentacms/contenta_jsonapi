@@ -1,0 +1,48 @@
+.toolbar-bar .toolbar-icon-menu.toolbar-icon-contenta:before,
+.toolbar-bar .toolbar-icon-menu.toolbar-icon-contenta:before {
+  background-image: url("../img/contenta-logo.svg");
+}
+
+.no-svg .toolbar-bar .toolbar-icon-menu.toolbar-icon-contenta:before,
+.no-svg .toolbar-bar .toolbar-icon-menu.toolbar-icon-contenta:before {
+  background-image: url("../img/contenta-logo.png");
+}
+.toolbar-bar .toolbar-icon-menu.toolbar-icon-contenta:active:before,
+.toolbar-bar .toolbar-icon-menu.toolbar-icon-contenta.is-active:before {
+  background-image: url("../img/contenta-logo-dark.svg");
+}
+
+.no-svg .toolbar-bar .toolbar-icon-menu.toolbar-icon-contenta:active:before,
+.no-svg .toolbar-bar .toolbar-icon-menu.toolbar-icon-contenta.is-active:before {
+  background-image: url("../img/contenta-logo-dark.png");
+}
+.toolbar nav.toolbar-bar {
+  background-color: #212D35;
+}
+
+.card-content > .fa {
+  color: #03A9F4;
+  font-size: 2rem;
+}
+
+.fa.left {
+  float: left;
+  margin-right: 15px;
+}
+
+.card .card-content .section h5 {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.layout-container > main {
+  background-color: #FAFAFA;
+}
+
+details.form-wrapper .details-wrapper {
+  background-color: #FFFFFF;
+}
+
+.card .card-image img {
+  height: auto;
+}

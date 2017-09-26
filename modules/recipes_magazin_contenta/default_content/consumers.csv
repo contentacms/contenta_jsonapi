@@ -1,0 +1,7 @@
+label,uuid,owner,description,image,image_styles
+Umami Site Elm,0eecd0b9-b149-418f-b5ef-266b9aeeddab,Contenta team,The Umami Site consumer written in Elm.,elm.png,"recipe_list_350_300,recipe_detail_750_550"
+Umami Site React,8be46df2-4cf7-48f8-ba70-6280ea62a0be,Contenta team,The Umami Site consumer written in React.,reactjs.png,"recipe_list_350_300,recipe_detail_750_550"
+Umami Site Angular,69224566-9861-4b18-acf0-a3a5f3e6b5cf,Contenta team,The Umami Site consumer written in Angular.,angular.png,"recipe_list_350_300,recipe_detail_750_550"
+Umami Site Ember,6998b8ae-5de5-4b8e-9a2f-dc199ac8dc60,Contenta team,The Umami Site consumer written in Ember.,ember.png,"recipe_list_350_300,recipe_detail_750_550"
+Umami Site Ionic,d40cbfd6-cb44-431a-8434-3874ca89363b,Contenta team,The Umami Site consumer written in Ionic.,ionic.png,"recipe_list_350_300,recipe_detail_750_550"
+Umami Site Vue,cc152d32-fc0f-42e0-84c2-2415eb64f403,Contenta team,The Umami Site consumer written in Vue.,vue.png,"recipe_list_350_300,recipe_detail_750_550"
