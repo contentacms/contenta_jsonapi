@@ -1,0 +1,11 @@
+{
+  "name": "drupal/contenta_graphql",
+  "type": "drupal-module",
+  "description": "GraphQl API (Experimental)",
+  "keywords": ["Drupal", "GraphQl"],
+  "license": "GPL-2.0",
+  "minimum-stability": "dev",
+  "require": {
+    "drupal/graphql": "~3.0 || ~8.3.0"
+  }
+}

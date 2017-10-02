@@ -67,7 +67,8 @@
         "drupal/material_admin": "1.x-dev",
         "drupal/consumers": "^1.0@beta",
         "drupal/consumer_image_styles": "^2.0@rc",
-        "drupal/media_entity_browser": "^1.0@beta"
+        "drupal/media_entity_browser": "^1.0@beta",
+        "drupal/graphql": "^3.0@alpha"
     },
     "config": {
       "process-timeout": 0

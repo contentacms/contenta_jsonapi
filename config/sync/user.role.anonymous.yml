@@ -13,5 +13,6 @@ permissions:
   - 'access jsonapi resource list'
   - 'access openapi api docs'
   - 'access toolbar'
+  - 'execute graphql requests'
   - 'issue subrequests'
   - 'view media'

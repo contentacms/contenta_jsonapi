@@ -1,0 +1,69 @@
+types:
+  node:
+    exposed: true
+    bundles:
+      recipe:
+        exposed: true
+        view_mode: node.full
+      article:
+        exposed: false
+        view_mode: '0'
+      embeddable:
+        exposed: false
+        view_mode: '0'
+      page:
+        exposed: false
+        view_mode: '0'
+      tutorial:
+        exposed: false
+        view_mode: '0'
+  comment:
+    exposed: false
+    bundles:
+      comment:
+        exposed: false
+        view_mode: '0'
+      recipe_review:
+        exposed: false
+        view_mode: '0'
+  consumer:
+    exposed: false
+    bundles:
+      consumer:
+        exposed: false
+        view_mode: '0'
+  file:
+    exposed: false
+    bundles:
+      file:
+        exposed: false
+        view_mode: '0'
+  media:
+    exposed: false
+    bundles:
+      image:
+        exposed: false
+        view_mode: '0'
+  oauth2_token:
+    exposed: false
+  taxonomy_term:
+    exposed: false
+    bundles:
+      category:
+        exposed: false
+        view_mode: '0'
+      tags:
+        exposed: false
+        view_mode: '0'
+  user:
+    exposed: false
+    bundles:
+      user:
+        exposed: false
+        view_mode: '0'
+  menu_link_content:
+    exposed: false
+    bundles:
+      menu_link_content:
+        exposed: false
+        view_mode: '0'

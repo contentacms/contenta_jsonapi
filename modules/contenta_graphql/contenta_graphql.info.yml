@@ -1,0 +1,24 @@
+name: Contenta GraphQl
+type: module
+description: GraphQl API (Experimental)
+core: 8.x
+package: Contenta (Experimental)
+dependencies:
+  - graphql
+  - graphql_block
+  - graphql_breadcrumbs
+  - graphql_content
+  - graphql_content_mutation
+  - graphql_core
+  - graphql_entity_reference
+  - graphql_file
+  - graphql_graphiql
+  - graphql_image
+  - graphql_link
+  - graphql_menu
+  - graphql_mutation
+  - graphql_query_map_entity
+  - graphql_query_map_json
+  - graphql_views
+  - graphql_voyager
+  - graphql_xml

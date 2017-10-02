@@ -69,4 +69,15 @@ class InstallationTest extends TestCase {
     );
   }
 
+  public function testGraphQLQuery() {
+    $query = '{"query":"query{nodeQuery{entities{entityLabel ... on NodeRecipe { fieldIngredients }}}}","variables":null}';
+    $response = $this->httpClient->post($this->baseUrl . '/graphql', [
+      'body' => $query,
+    ]);
+    $this->assertEquals(200, $response->getStatusCode());
+    $body = $response->getBody()->getContents();
+    $output = Json::decode($body);
+    $entities = $output['data']['nodeQuery']['entities'];
+    $this->assertFalse(empty($entities));
+  }
 }
