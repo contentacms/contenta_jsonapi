@@ -78,6 +78,7 @@ function contenta_enhancements_local_tasks_alter(&$local_tasks) {
  */
 function contenta_enhancements_toolbar_alter(&$items) {
   $current_user = \Drupal::currentUser();
+  $moduleHandler = \Drupal::service('module_handler');
 
   unset($items['home']);
 
@@ -166,7 +167,7 @@ function contenta_enhancements_toolbar_alter(&$items) {
     $items['contenta_content'] = $empty_item_cacheability;
   }
 
-  if ($current_user->hasPermission('access media overview')) {
+  if ($current_user->hasPermission('access media overview') && $moduleHandler->moduleExists('media_entity')) {
     $items['contenta_media'] = [
       '#type' => 'toolbar_item',
       'tab' => [
