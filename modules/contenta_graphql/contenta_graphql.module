@@ -3,23 +3,27 @@
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Implements hook_form_alter().
+ * Implements hook_entity_bundle_create().
  */
-function contenta_graphql_form_node_type_add_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  foreach (array_keys($form['actions']) as $action) {
-    if ($action != 'preview' && isset($form['actions'][$action]['#type']) && $form['actions'][$action]['#type'] === 'submit') {
-      $form['actions'][$action]['#submit'][] = 'contenta_graphql_node_type_submit';
-    }
-  }
-}
-
-function contenta_graphql_node_type_submit(&$form, FormStateInterface $form_state) {
-  // By default expose created content type as GraphQL Schema
+function contenta_graphql_entity_bundle_create($entity_type_id, $bundle) {
+  // By default, expose created content type as GraphQL Schema
   $config = \Drupal::service('config.factory')->getEditable('graphql_content.schema');
   $bundles = $config->get('types.node.bundles');
-  $bundles[$form_state->getValue('type')] = ['exposed' => true, 'view_mode' => 'node.full'];
+  $bundles[$bundle] = ['exposed' => true, 'view_mode' => 'node.full'];
   $config->set('types.node.bundles', $bundles)->save();
 
-  //@todo expose mutations
+  //@todo: add mutations support.
 }
 
+/**
+ * Implements hook_entity_bundle_delete().
+ */
+function contenta_graphql_entity_bundle_delete($entity_type_id, $bundle) {
+  // By default, expose created content type as GraphQL Schema
+  $config = \Drupal::service('config.factory')->getEditable('graphql_content.schema');
+  $bundles = $config->get('types.node.bundles');
+  unset($bundles[$bundle]);
+  $config->set('types.node.bundles', $bundles)->save();
+
+  //@todo: add mutations support.
+}
