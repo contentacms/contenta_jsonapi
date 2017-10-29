@@ -22,23 +22,7 @@ module:
   file: 0
   filter: 0
   graphql: 0
-  graphql_block: 0
-  graphql_breadcrumbs: 0
-  graphql_content: 0
-  graphql_content_mutation: 0
   graphql_core: 0
-  graphql_entity_reference: 0
-  graphql_file: 0
-  graphql_graphiql: 0
-  graphql_image: 0
-  graphql_link: 0
-  graphql_menu: 0
-  graphql_mutation: 0
-  graphql_query_map_entity: 0
-  graphql_query_map_json: 0
-  graphql_views: 0
-  graphql_voyager: 0
-  graphql_xml: 0
   hal: 0
   help: 0
   image: 0
