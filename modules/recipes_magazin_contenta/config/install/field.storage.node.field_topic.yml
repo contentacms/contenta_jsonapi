@@ -29,6 +29,12 @@ settings:
     -
       value: Subrequests
       label: Subrequests
+    -
+      value: GraphQL
+      label: GraphQL
+    -
+      value: Miscelaneous
+      label: Miscelaneous
   allowed_values_function: ''
 module: options
 locked: false
