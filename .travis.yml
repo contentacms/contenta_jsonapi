@@ -66,7 +66,7 @@ jobs:
         - composer run-script install-contenta $PROJECT_BASE_PATH --timeout=0
         # Set Deployment Variable
         - RELEASE_DATE=$( date +%Y-%m-%d)
-        - TRAVIS_TAG="${PROJECT_NAME}_release-${RELEASE_DATE}_build_${TRAVIS_BUILD_NUMBER}"
+        - TRAVIS_TAG="v1.${TRAVIS_BUILD_NUMBER}"
         # Clean the Contenta Profile Folder
         - composer run-script ci:before-deploy contentacms_profile_cleanup "$PROJECT_BASE_PATH/web" --timeout=0
         # Remove Site files
