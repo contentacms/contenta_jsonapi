@@ -111,7 +111,7 @@ class EntityInputDeriver extends DeriverBase implements ContainerDeriverInterfac
         ] + $basePluginDefinition;
 
         $this->derivatives["$entityTypeId:$bundleName:update"] = [
-          'name' => StringHelper::camelCase([$entityTypeId, $bundleName, 'update', 'input']),
+          'name' => ucfirst($entityTypeId) . ucfirst($bundleName) . 'UpdateInput',
           'fields' => $updateFields,
           'entity_type' => $entityTypeId,
           'entity_bundle' => $bundleName,
