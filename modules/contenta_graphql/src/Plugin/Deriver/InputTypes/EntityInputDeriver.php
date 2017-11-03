@@ -9,7 +9,6 @@ use Drupal\Core\Entity\EntityTypeBundleInfoInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Plugin\Discovery\ContainerDeriverInterface;
 use Drupal\graphql\Utility\StringHelper;
-//use Drupal\graphql_content_mutation\ContentEntityMutationSchemaConfig;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class EntityInputDeriver extends DeriverBase implements ContainerDeriverInterface {
@@ -76,7 +75,7 @@ class EntityInputDeriver extends DeriverBase implements ContainerDeriverInterfac
             continue;
           }
 
-          $type = StringHelper::camelCase([$entityTypeId, $fieldName, 'field', 'input']);
+          $type = ucfirst($entityTypeId) . ucfirst($fieldName) . 'FieldInput';
           $fieldStorage = $field->getFieldStorageDefinition();
           $propertyDefinitions = $fieldStorage->getPropertyDefinitions();
 
