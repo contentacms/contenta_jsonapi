@@ -3,6 +3,7 @@
 namespace Drupal\Tests\contenta_jsonapi\Functional;
 
 use Drupal\Component\Serialization\Json;
+use Drupal\graphql\Utility\StringHelper;
 use PHPUnit\Framework\TestCase;
 use GuzzleHttp\Client;
 
@@ -13,6 +14,12 @@ use GuzzleHttp\Client;
  */
 class InstallationTest extends TestCase {
 
+  /**
+   * Modules to install.
+   *
+   * @var array
+   */
+  public static $modules = ['graphql_core'];
   /**
    * @var Client
    */
@@ -70,6 +77,7 @@ class InstallationTest extends TestCase {
   }
 
   public function testGraphQLQuery() {
+      var_dump(StringHelper::camelCase(['camel','case']));
     $query = '{"query":"query{nodeQuery{entities{entityLabel ... on NodeRecipe { fieldIngredients }}}}","variables":null}';
     $response = $this->httpClient->post($this->baseUrl . '/graphql', [
       'body' => $query,

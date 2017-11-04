@@ -78,8 +78,7 @@ class EntityInputFieldDeriver extends DeriverBase implements ContainerDeriverInt
         }
 
         $this->derivatives["$entityTypeId:$fieldName"] = [
-          //@todo: Check StringHelper::camelCase.
-          'name' => ucfirst($entityTypeId) . ucfirst($fieldName) . 'FieldInput',
+          'name' => StringHelper::camelCase($entityTypeId, $fieldName, 'field', 'input'),
           'fields' => $properties,
           'entity_type' => $entityTypeId,
           'field_name' => $fieldName,
