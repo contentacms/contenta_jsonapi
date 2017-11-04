@@ -8,7 +8,6 @@ use Drupal\Core\Entity\EntityTypeBundleInfoInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Plugin\Discovery\ContainerDeriverInterface;
 use Drupal\graphql\Utility\StringHelper;
-//use Drupal\graphql_content_mutation\ContentEntityMutationSchemaConfig;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class CreateEntityDeriver extends DeriverBase implements ContainerDeriverInterface {
