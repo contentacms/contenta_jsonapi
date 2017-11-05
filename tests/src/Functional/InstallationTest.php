@@ -3,7 +3,6 @@
 namespace Drupal\Tests\contenta_jsonapi\Functional;
 
 use Drupal\Component\Serialization\Json;
-use Drupal\graphql\Utility\StringHelper;
 use PHPUnit\Framework\TestCase;
 use GuzzleHttp\Client;
 
@@ -77,7 +76,6 @@ class InstallationTest extends TestCase {
   }
 
   public function testGraphQLQuery() {
-      var_dump(StringHelper::camelCase(['camel','case']));
     $query = '{"query":"query{nodeQuery{entities{entityLabel ... on NodeRecipe { fieldIngredients }}}}","variables":null}';
     $response = $this->httpClient->post($this->baseUrl . '/graphql', [
       'body' => $query,
@@ -88,4 +86,23 @@ class InstallationTest extends TestCase {
     $entities = $output['data']['nodeQuery']['entities'];
     $this->assertFalse(empty($entities));
   }
+
+    public function testGraphQLMutationsPermissionError() {
+        $query = <<<EOF
+{
+  "query": "mutation(\$node: NodePageCreateInput!){ createNodePage (input: \$node) { entity { entityLabel } errors violations { code message }}}",
+  "variables": {"node": {"title": "Test page"}}
+}
+EOF;
+
+        $response = $this->httpClient->post($this->baseUrl . '/graphql', [
+            'body' => $query,
+        ]);
+
+        $this->assertEquals(200, $response->getStatusCode());
+        $body = $response->getBody()->getContents();
+
+        $output = Json::decode($body);
+        $this->assertEquals('You do not have the necessary permissions to create entities of this type.', $output['data']['createNodePage']['errors'][0]);
+    }
 }
