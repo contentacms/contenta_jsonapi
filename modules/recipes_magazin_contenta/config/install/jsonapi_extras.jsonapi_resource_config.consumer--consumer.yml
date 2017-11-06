@@ -1,0 +1,83 @@
+uuid: af615bd4-9e1c-4254-ae27-e3babaa1ced8
+langcode: en
+status: true
+dependencies:
+  config:
+    - consumers
+id: consumer--consumer
+disabled: false
+path: consumers
+resourceType: consumers
+resourceFields:
+  id:
+    fieldName: id
+    publicName: internalId
+    enhancer:
+      id: ''
+    disabled: false
+  uuid:
+    disabled: true
+    fieldName: uuid
+    publicName: uuid
+    enhancer:
+      id: ''
+  owner_id:
+    fieldName: owner_id
+    publicName: owner
+    enhancer:
+      id: ''
+    disabled: false
+  label:
+    fieldName: label
+    publicName: label
+    enhancer:
+      id: ''
+    disabled: false
+  description:
+    fieldName: description
+    publicName: description
+    enhancer:
+      id: ''
+    disabled: false
+  image:
+    fieldName: image
+    publicName: image
+    enhancer:
+      id: ''
+    disabled: false
+  image_styles:
+    fieldName: image_styles
+    publicName: imageStyles
+    enhancer:
+      id: ''
+    disabled: false
+  secret:
+    fieldName: secret
+    publicName: secret
+    enhancer:
+      id: ''
+    disabled: false
+  confidential:
+    fieldName: confidential
+    publicName: confidential
+    enhancer:
+      id: ''
+    disabled: false
+  roles:
+    fieldName: roles
+    publicName: roles
+    enhancer:
+      id: ''
+    disabled: false
+  redirect:
+    fieldName: redirect
+    publicName: redirect
+    enhancer:
+      id: ''
+    disabled: false
+  user_id:
+    fieldName: user_id
+    publicName: defaultUser
+    enhancer:
+      id: ''
+    disabled: false
