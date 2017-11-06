@@ -2,8 +2,8 @@
 
 namespace Drupal\contenta_enhancements\Controller;
 
+use Drupal\consumers\Entity\Consumer;
 use Drupal\Core\Url;
-use Drupal\simple_oauth\Entity\Oauth2Client;
 use Drupal\user\Entity\User;
 
 class ApiAuthInfo {
@@ -18,7 +18,7 @@ class ApiAuthInfo {
     $clients_url = Url::fromRoute('entity.consumer.collection')->toString();
 
     $demo_user = User::load(2);
-    $demo_client = Oauth2Client::load(1);
+    $demo_client = Consumer::load(1);
 
     if ($demo_user && $demo_client) {
       $client_id = $demo_client->uuid();
