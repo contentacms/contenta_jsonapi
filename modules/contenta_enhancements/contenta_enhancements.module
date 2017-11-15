@@ -12,9 +12,17 @@ use Drupal\Core\Menu\MenuTreeParameters;
  * Implements hook_help().
  */
 function contenta_enhancements_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match) {
+  $entity_user_role_collection_route = Url::fromRoute('entity.user_role.collection');
+  $entity_consumer_collection_route = Url::fromRoute('entity.consumer.collection');
   switch ($route_name) {
     case 'entity.user.collection':
-      return '<p>' . t('A user represents a human. Users can log in to Contenta if they have the <q>Content administrator</q> or <q>Client developer</q> <a href=":role">role</a>. Otherwise, they can only perform actions via a <a href=":client">Client</a>', [':role' => Url::fromRoute('entity.user_role.collection'), ':client' => Url::fromRoute('entity.consumer.collection')]) . '</p>';
+      return '<p>' . t(
+        'A user represents a human. Users can log in to Contenta if they have the <q>Content administrator</q> or <q>Client developer</q> <a href=":role">role</a>.Otherwise, they can only perform actions via a <a href=":client">Client</a>',
+        [
+          ':role' => $entity_user_role_collection_route->toString(),
+          ':client' => $entity_consumer_collection_route->toString()
+        ]
+      ) . '</p>';
 
     // @todo override the default help from user.module, but hook_help() doesn't allow overriding this…
     //case 'user.admin_permissions':
