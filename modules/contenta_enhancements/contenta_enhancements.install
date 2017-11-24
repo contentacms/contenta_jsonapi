@@ -34,6 +34,7 @@ function contenta_enhancements_install() {
     catch (\Exception $e) {
       // Unable to generate files after all.
       $logger->error($e->getMessage());
+      return;
     }
   }
   // At this point the keys should be set. Now save the configuration.
