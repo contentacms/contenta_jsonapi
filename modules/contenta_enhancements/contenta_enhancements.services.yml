@@ -3,3 +3,6 @@ services:
     class: \Drupal\contenta_enhancements\EventSubscriber\RoutingDisabler
     tags:
       - { name: event_subscriber }
+  logger.channel.contentacms:
+    parent: logger.channel_base
+    arguments: ['contentacms']
