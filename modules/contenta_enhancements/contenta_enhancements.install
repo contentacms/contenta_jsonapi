@@ -20,6 +20,10 @@ function contenta_enhancements_install() {
   $pub_filename = sprintf('%s/public.key', $keys_path);
   $pri_filename = sprintf('%s/private.key', $keys_path);
 
+  if (!$file_system->isDirectory($keys_path)) {
+    $file_system->mkdir($keys_path);
+  }
+
   if ($file_system->fileExist($pub_filename) && $file_system->fileExist($pri_filename)) {
     // 1. If the file already exists, then just set the correct permissions.
     $file_system->chmod($pub_filename, 0600);
