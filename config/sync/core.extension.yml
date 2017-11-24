@@ -6,7 +6,7 @@ module:
   config: 0
   consumer_image_styles: 0
   consumers: 0
-  contenta_enhancements: 0
+  contenta_enhancements: -1
   datetime: 0
   datetime_range: 0
   dropzonejs: 0
