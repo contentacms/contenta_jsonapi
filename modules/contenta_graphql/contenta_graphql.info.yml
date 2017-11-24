@@ -1,0 +1,7 @@
+name: Contenta GraphQl
+type: module
+description: GraphQl API (Experimental)
+core: 8.x
+package: Contenta (Experimental)
+dependencies:
+  - graphql_core
