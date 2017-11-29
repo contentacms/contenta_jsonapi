@@ -56,7 +56,7 @@
         "drupal/jsonapi_extras": "^1.0@beta",
         "drupal/subrequests": "^2.0@beta",
         "drupal/fieldable_path": "^1.0",
-        "drupal/simple_oauth": "^3.2",
+        "drupal/simple_oauth": "^3.3",
         "drupal/media_entity": "^1.6",
         "drupal/entity_browser": "^1.0",
         "drupal/remote_stream_wrapper": "1.0",
