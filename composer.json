@@ -41,9 +41,6 @@
             },
             "drupal/remote_stream_wrapper": {
                 "Module installation fails when shipped as part of an install profile": "https://www.drupal.org/files/issues/2886691-2.patch"
-            },
-            "asm89/stack-cors": {
-                "(November 29 2017 06:22:06 PM: See issue #223 on contentacms/contenta_jsonapi) Add origin matcher for wildcard matching": "https://raw.githubusercontent.com/cjgratacos/patches/master/asm89_stack-cors/pull_request_42.patch"
             }
         }
     },
