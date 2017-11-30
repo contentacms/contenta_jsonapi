@@ -1,7 +1,8 @@
-uuid: edcfd2b7-3fbe-450b-bfbd-2f0c5ba974c2
 langcode: en
 status: true
 dependencies:
+  config:
+    - comment.type.recipe_review
   enforced:
     module:
       - recipes_magazin_contenta

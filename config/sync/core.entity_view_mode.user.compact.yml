@@ -4,8 +4,6 @@ status: true
 dependencies:
   module:
     - user
-_core:
-  default_config_hash: PwDC1TMgn-Frdib_Rvhs0hvBhLT6ifxGpMNAVhHMuJQ
 id: user.compact
 label: Compact
 targetEntityType: user

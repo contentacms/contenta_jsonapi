@@ -4,8 +4,6 @@ status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: EWjU-_UYvpucMHGJeCxSb8yXSvZRCt1c7OmExyJEW-U
 id: node_delete_action
 label: 'Delete content'
 type: node

@@ -1,10 +1,11 @@
-uuid: d4fe238e-51ee-4c66-a5c4-2755bd28aaee
 langcode: en
 status: true
 dependencies:
   enforced:
     module:
       - recipes_magazin_contenta
+  module:
+    - entity_browser
 id: entity_browser--entity_browser
 disabled: true
 path: entity_browser/entity_browser

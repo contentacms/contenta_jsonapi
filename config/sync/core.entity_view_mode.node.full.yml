@@ -4,8 +4,6 @@ status: false
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: UhMgHrjc3intuu0xOrSOHAvBulQ-_2FCThJ1uOxQnEo
 id: node.full
 label: 'Full content'
 targetEntityType: node

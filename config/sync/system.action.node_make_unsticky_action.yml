@@ -4,8 +4,6 @@ status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: LNXmdt9yEpVQHpLUzN1qLHyAqO0LGJPlf-eGWr3mUyU
 id: node_make_unsticky_action
 label: 'Make content unsticky'
 type: node

@@ -14,8 +14,6 @@ dependencies:
     - entity_browser
     - path
     - text
-_core:
-  default_config_hash: N7Oootb5XKr4sai1qYgJkCMekTASv4pwtAqwdUYnvO8
 id: node.article.default
 targetEntityType: node
 bundle: article
@@ -81,6 +79,13 @@ content:
     settings:
       display_label: true
     weight: 15
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
     region: content
     third_party_settings: {  }
   sticky:

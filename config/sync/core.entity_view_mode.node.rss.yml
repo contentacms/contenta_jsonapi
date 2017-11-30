@@ -4,8 +4,6 @@ status: false
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: ZwSgyotjOPmMt4e5WA91VrM8udhRWLjNyP5Seijjpj8
 id: node.rss
 label: RSS
 targetEntityType: node

@@ -1,10 +1,11 @@
-uuid: 9209b0fb-6fcc-4e29-b95e-3959b3667eec
 langcode: en
 status: true
 dependencies:
   enforced:
     module:
       - recipes_magazin_contenta
+  module:
+    - field
 id: field_config--field_config
 disabled: true
 path: field_config/field_config

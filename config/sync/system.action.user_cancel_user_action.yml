@@ -4,8 +4,6 @@ status: true
 dependencies:
   module:
     - user
-_core:
-  default_config_hash: UykYzQqNfvO1W9Nq9Ci8Bux9wloYRsR8N_u1n1DNi-k
 id: user_cancel_user_action
 label: 'Cancel the selected user account(s)'
 type: user

@@ -4,8 +4,6 @@ status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: iJ9vycSix6WTx_AFVigLHflQrW9Xd5eeWCRI3wVNpeY
 id: node.teaser
 label: Teaser
 targetEntityType: node

@@ -4,8 +4,6 @@ status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: bx3IuYuUCrvSsZQWBY3VTp7IlPGglCi1vmsWYO7czS4
 id: node_unpublish_action
 label: 'Unpublish content'
 type: node

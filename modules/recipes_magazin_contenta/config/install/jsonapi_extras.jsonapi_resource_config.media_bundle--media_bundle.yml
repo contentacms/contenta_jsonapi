@@ -1,10 +1,11 @@
-uuid: 4f1360eb-b6ad-45a0-b959-25cf208e1743
 langcode: en
 status: true
 dependencies:
   enforced:
     module:
       - recipes_magazin_contenta
+  module:
+    - media_entity
 id: media_bundle--media_bundle
 disabled: false
 path: mediaBundles

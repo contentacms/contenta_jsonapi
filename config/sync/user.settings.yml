@@ -14,5 +14,3 @@ cancel_method: user_cancel_block
 password_reset_timeout: 86400
 password_strength: true
 langcode: en
-_core:
-  default_config_hash: QE-a4SDDeObk45lps3lsjr_yqhCjNauFTGtftv143F0

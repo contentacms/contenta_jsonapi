@@ -4,8 +4,6 @@ status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: yZJGdr7WLsCiSLFB-lXF4BWC23_7gw3gEAppr2jTDk4
 id: node_publish_action
 label: 'Publish content'
 type: node

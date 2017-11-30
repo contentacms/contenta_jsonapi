@@ -7,8 +7,6 @@ dependencies:
   module:
     - path
     - text
-_core:
-  default_config_hash: bDeF8w8PgefJYkvz5saU0oGheR_lnW4QRk5Gu9ryZZk
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -46,6 +44,13 @@ content:
     settings:
       display_label: true
     weight: 15
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
     region: content
     third_party_settings: {  }
   sticky:

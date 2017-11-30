@@ -6,8 +6,6 @@ dependencies:
     - user
   theme:
     - material_admin
-_core:
-  default_config_hash: 8LEyMO8BKhrdirJnCGpbVdYsn8sUmp7R9U6mus8e7UU
 id: material_admin_login
 theme: material_admin
 region: content

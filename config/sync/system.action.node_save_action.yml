@@ -4,8 +4,6 @@ status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: RSxLip35vVhsqB41p4GQOZSHTmCon8BRjcPZPMy6Mgc
 id: node_save_action
 label: 'Save content'
 type: node

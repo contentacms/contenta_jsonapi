@@ -4,8 +4,6 @@ status: true
 dependencies:
   theme:
     - material_admin
-_core:
-  default_config_hash: bO8fBXGlS1178pNs_EdlrUqmbrlENg9iYnSsxPW2P8A
 id: material_admin_primary_local_tasks
 theme: material_admin
 region: header

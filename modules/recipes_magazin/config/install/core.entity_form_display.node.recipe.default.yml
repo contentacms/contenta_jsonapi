@@ -19,8 +19,6 @@ dependencies:
     - entity_browser
     - path
     - text
-_core:
-  default_config_hash: aycXzVYFsiPKcpg_G2en-M4Ffi2yduIcxFarkWfGRBE
 id: node.recipe.default
 targetEntityType: node
 bundle: recipe
@@ -131,6 +129,13 @@ content:
     region: content
     settings:
       display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox

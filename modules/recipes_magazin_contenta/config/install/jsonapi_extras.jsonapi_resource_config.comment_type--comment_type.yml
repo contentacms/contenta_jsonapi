@@ -1,10 +1,11 @@
-uuid: 5d507363-10ee-4077-a52a-6e4b0c1dfde8
 langcode: en
 status: true
 dependencies:
   enforced:
     module:
       - recipes_magazin_contenta
+  module:
+    - comment
 id: comment_type--comment_type
 disabled: false
 path: commentTypes

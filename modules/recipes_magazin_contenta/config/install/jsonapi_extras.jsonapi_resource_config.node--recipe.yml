@@ -1,7 +1,8 @@
-uuid: a943b0a6-8417-4724-9280-5fb78bbdb1f3
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.recipe
   enforced:
     module:
       - recipes_magazin_contenta

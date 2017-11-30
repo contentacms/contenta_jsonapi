@@ -1,7 +1,8 @@
-uuid: 227ed15d-318c-47ab-8c72-55e6d3ec7e56
 langcode: en
 status: true
 dependencies:
+  config:
+    - taxonomy.vocabulary.category
   enforced:
     module:
       - recipes_magazin_contenta

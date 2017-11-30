@@ -1,10 +1,11 @@
-uuid: 5ff83e05-e571-4f5e-b955-01f1c7f78c68
 langcode: en
 status: true
 dependencies:
   enforced:
     module:
       - recipes_magazin_contenta
+  module:
+    - menu_link_content
 id: menu_link_content--menu_link_content
 disabled: false
 path: menuLinks

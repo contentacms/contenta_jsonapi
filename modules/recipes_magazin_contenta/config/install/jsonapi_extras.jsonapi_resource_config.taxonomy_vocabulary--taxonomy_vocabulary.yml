@@ -1,10 +1,11 @@
-uuid: 48fbc193-2b03-4c98-824b-b8ddc894e6ce
 langcode: en
 status: true
 dependencies:
   enforced:
     module:
       - recipes_magazin_contenta
+  module:
+    - taxonomy
 id: taxonomy_vocabulary--taxonomy_vocabulary
 disabled: false
 path: vocabularies
