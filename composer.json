@@ -15,7 +15,6 @@
 
     ],
     "extra": {
-        "enable-patching": true,
         "installer-paths": {
             "web/core": [
                 "type:drupal-core"
