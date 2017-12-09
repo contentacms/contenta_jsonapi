@@ -12,15 +12,13 @@ function recipes_magazin_install() {
   \Drupal::service('recipes.migration_runner')->run([
     'recipes_magazin__category',
     'recipes_magazin__tags',
-    'recipes_magazin__images_url',
-    'recipes_magazin__media_images_url',
+    'recipes_magazin__images',
+    'recipes_magazin__media_images',
     'recipes_magazin__authors',
     'recipes_magazin__pages',
     'recipes_magazin__recipes',
     'recipes_magazin__article',
     'recipes_magazin__article_authors',
-    'recipes_magazin__article_images_url',
-    'recipes_magazin__article_media_images_url',
     'recipes_magazin__article_tags',
   ]);
 }
@@ -32,15 +30,13 @@ function recipes_magazin_uninstall() {
   \Drupal::service('recipes.migration_runner')->remove([
     'recipes_magazin__category',
     'recipes_magazin__tags',
-    'recipes_magazin__images_url',
-    'recipes_magazin__media_images_url',
+    'recipes_magazin__images',
+    'recipes_magazin__media_images',
     'recipes_magazin__authors',
     'recipes_magazin__pages',
     'recipes_magazin__recipes',
     'recipes_magazin__article',
     'recipes_magazin__article_authors',
-    'recipes_magazin__article_images_url',
-    'recipes_magazin__article_media_images_url',
     'recipes_magazin__article_tags',
   ]);
 }

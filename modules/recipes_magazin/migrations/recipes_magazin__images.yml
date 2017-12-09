@@ -1,0 +1,27 @@
+status: true
+id: recipes_magazin__images
+source:
+  constants:
+    uri_file: 'public://'
+  plugin: recipes_magazin__dir
+  path: default_content/images
+  track_changes: true
+process:
+  source_full_path: pathname
+  uri_file:
+    -
+      plugin: concat
+      delimiter: ''
+      source:
+        - constants/uri_file
+        - filename
+    -
+      plugin: urlencode
+  filename: filename
+  uri:
+    plugin: file_copy
+    source:
+      - '@source_full_path'
+      - '@uri_file'
+destination:
+  plugin: 'entity:file'
