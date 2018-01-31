@@ -75,7 +75,7 @@ In order to allow browsers to request the contenta back-end you need to:
 
 Join the discussion in the [#contenta Slack channel](https://drupal.slack.com/messages/C5A70F7D1).
 
-For documention on the development on contenta_jsonapi itself, see [docs/development](https://github.com/contentacms/contenta_jsonapi/blob/master/docs/development.md).
+For documention on the development on contenta_jsonapi itself, see [docs/development](https://github.com/contentacms/contenta_jsonapi/blob/8.x-1.x/docs/development.md).
 
 [Code of conduct](https://https://github.com/contentacms/contenta_jsonapi/blob/8.x-1.x/CODE_OF_CONDUCT.md)
 
