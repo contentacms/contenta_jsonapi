@@ -128,9 +128,9 @@ Expanded/expandable search field that send you to a list of results.
 - Month Edition block : how to implement this ?
 - unique path for content : when snail will be ready, we may want to fill "path" field for nodes
 
-## Minimum Viable Product
+## Minimal Suggested Implementation
 
-Those features compose the minimal viable product for your recipes magazine.
+Those features compose the minimal suggested implementation for your recipes magazine.
 
 HOMEPAGE PAGE
 
