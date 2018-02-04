@@ -2,8 +2,6 @@ uuid: d5a42946-6a52-4e46-a31f-225bde7534a8
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: kyNpSwmg-lAVp2WSkg0mEkXaF6nvxrj_xxHqM6iPoCU
 name: media_entity_browser_thumbnail
 label: 'Media Entity Browser thumbnail'
 effects:

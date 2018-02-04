@@ -21,6 +21,8 @@ module:
   fieldable_path: 0
   file: 0
   filter: 0
+  graphql: 0
+  graphql_core: 0
   hal: 0
   help: 0
   image: 0
@@ -39,7 +41,6 @@ module:
   options: 0
   page_cache: 0
   path: 0
-  remote_stream_wrapper: 0
   rest: 0
   schemata: 0
   schemata_json_schema: 0
@@ -58,10 +59,9 @@ module:
   views: 0
   menu_link_content: 1
   contenta_jsonapi: 1000
+  contenta_graphql: 1001
 theme:
   stable: 0
   classy: 0
   material_admin: 0
 profile: contenta_jsonapi
-_core:
-  default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

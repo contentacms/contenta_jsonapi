@@ -1,4 +1,2 @@
 interface:
   default: php_mail
-_core:
-  default_config_hash: K7LsFOjA5ifxYZ1dlwcRM4Vh6p5B4TtJy6bhsUlKEbQ

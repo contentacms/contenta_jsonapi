@@ -1,10 +1,11 @@
-uuid: 48a1c946-8ebd-46d6-8251-de01684d047b
 langcode: en
 status: true
 dependencies:
   enforced:
     module:
       - recipes_magazin_contenta
+  module:
+    - file
 id: file--file
 disabled: false
 path: files

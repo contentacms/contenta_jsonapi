@@ -1,7 +1,8 @@
-uuid: bfaa07af-27ff-48ba-82d0-5bc1cd2ec7d6
 langcode: en
 status: true
 dependencies:
+  config:
+    - comment.type.comment
   enforced:
     module:
       - recipes_magazin_contenta

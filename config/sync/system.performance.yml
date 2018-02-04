@@ -13,5 +13,3 @@ js:
   preprocess: true
   gzip: true
 stale_file_threshold: 2592000
-_core:
-  default_config_hash: V-TVIVn8qHe9I2Ow7z36avK77nWBlpWhKjNxYRD1kjo

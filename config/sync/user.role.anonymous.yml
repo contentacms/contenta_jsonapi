@@ -2,8 +2,6 @@ uuid: 85be1d9b-3787-4cb1-93cd-d243921acd0a
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: DUKSI6aOPQQqvlDprXriTATdiQy9s-0UzJbuVvHp71E
 id: anonymous
 label: 'Anonymous user'
 weight: 0
@@ -13,5 +11,6 @@ permissions:
   - 'access jsonapi resource list'
   - 'access openapi api docs'
   - 'access toolbar'
+  - 'execute graphql requests'
   - 'issue subrequests'
   - 'view media'

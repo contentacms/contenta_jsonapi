@@ -5,8 +5,6 @@ dependencies:
   module:
     - comment
     - user
-_core:
-  default_config_hash: HacS-nsDH7uyoKhQHNyV_MNRClmPVuhU_fWZgNuEyIs
 id: comments_recent
 label: 'Recent comments'
 module: views

@@ -6,8 +6,6 @@ dependencies:
     - field.field.comment.recipe_review.comment_body
   module:
     - text
-_core:
-  default_config_hash: yiKm7r58hKrdYboxXYiR8AxtjKVTkEvVJoIDShw3ErQ
 id: comment.recipe_review.default
 targetEntityType: comment
 bundle: recipe_review

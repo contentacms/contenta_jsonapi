@@ -4,8 +4,6 @@ status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: ZxbdYiDwLbr9svsDhyW_P1gsiezagedDOa9ktp6pkhs
 id: node_make_sticky_action
 label: 'Make content sticky'
 type: node

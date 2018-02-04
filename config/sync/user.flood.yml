@@ -3,5 +3,3 @@ ip_limit: 50
 ip_window: 3600
 user_limit: 5
 user_window: 21600
-_core:
-  default_config_hash: UM9YY0vOEfBqlnLOn27faeKtMB9AuSQUpIS3NURLJmU

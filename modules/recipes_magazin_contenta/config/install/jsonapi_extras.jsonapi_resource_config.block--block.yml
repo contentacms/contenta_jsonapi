@@ -1,10 +1,11 @@
-uuid: 2763f554-cd5d-4c4e-a9df-4cd228f1a8b2
 langcode: en
 status: true
 dependencies:
   enforced:
     module:
       - recipes_magazin_contenta
+  module:
+    - block
 id: block--block
 disabled: false
 path: blocks

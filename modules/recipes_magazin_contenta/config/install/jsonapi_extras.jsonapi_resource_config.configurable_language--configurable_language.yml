@@ -1,10 +1,11 @@
-uuid: b2badd9d-b4f6-4ee7-8ef3-98c40c232dd2
 langcode: en
 status: true
 dependencies:
   enforced:
     module:
       - recipes_magazin_contenta
+  module:
+    - language
 id: configurable_language--configurable_language
 disabled: true
 path: configurable_language/configurable_language

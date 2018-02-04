@@ -4,8 +4,6 @@ status: true
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: Km45w8_wHYLQok4DP0Mjl7Ong5otgWwPoSyszyI3Qlw
 id: node_promote_action
 label: 'Promote content to front page'
 type: node

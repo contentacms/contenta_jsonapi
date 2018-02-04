@@ -4,8 +4,6 @@ status: true
 dependencies:
   module:
     - user
-_core:
-  default_config_hash: HlGfrmZZWxwrAPqbSa24wRkPVZ6FgjaPgphY-57oU8U
 id: user.register
 label: Register
 targetEntityType: user

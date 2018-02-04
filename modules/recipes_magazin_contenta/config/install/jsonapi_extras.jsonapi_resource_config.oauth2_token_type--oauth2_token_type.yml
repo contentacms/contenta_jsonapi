@@ -1,10 +1,11 @@
-uuid: 6d59b42a-4f12-46d9-b821-8a38e235ea5f
 langcode: en
 status: true
 dependencies:
   enforced:
     module:
       - recipes_magazin_contenta
+  module:
+    - simple_oauth
 id: oauth2_token_type--oauth2_token_type
 disabled: true
 path: oauth2_token_type/oauth2_token_type

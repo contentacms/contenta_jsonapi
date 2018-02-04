@@ -2,8 +2,6 @@ uuid: 417cc1a6-3c52-40ba-a114-20b3712d237a
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: Tiy7U-fiWXULZTcYXuMdCEjhhootWEi1EEz9At7KfkM
 id: und
 label: 'Not specified'
 direction: ltr

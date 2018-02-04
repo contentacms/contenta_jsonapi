@@ -6,8 +6,6 @@ dependencies:
     - help
   theme:
     - material_admin
-_core:
-  default_config_hash: CByUiQBlpQzpbNY4H2AMzmX6ml23iqLd34hR-qw62kw
 id: material_admin_help
 theme: material_admin
 region: help

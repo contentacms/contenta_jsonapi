@@ -4,8 +4,6 @@ status: true
 dependencies:
   module:
     - user
-_core:
-  default_config_hash: ZA9shkk4HJy2cY9oKvb4j8vAzQ8FVLPLviW1dxRX9XI
 id: user_block_user_action
 label: 'Block the selected user(s)'
 type: user

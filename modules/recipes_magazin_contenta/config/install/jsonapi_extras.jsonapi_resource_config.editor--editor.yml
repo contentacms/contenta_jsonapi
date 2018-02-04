@@ -1,10 +1,11 @@
-uuid: bf10adbf-1d9e-4953-a580-69eedd2cffd2
 langcode: en
 status: true
 dependencies:
   enforced:
     module:
       - recipes_magazin_contenta
+  module:
+    - editor
 id: editor--editor
 disabled: true
 path: editor/editor

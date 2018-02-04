@@ -26,5 +26,3 @@ status_canceled:
   body: "[user:display-name],\n\nYour account on [site:name] has been canceled.\n\n--  [site:name] team"
   subject: 'Account details for [user:display-name] at [site:name] (canceled)'
 langcode: en
-_core:
-  default_config_hash: HfbIIA1hulP-_ouUjd5bKw7QEJBi79jfITT3TQkaWzo

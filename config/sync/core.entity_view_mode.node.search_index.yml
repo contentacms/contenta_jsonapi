@@ -4,8 +4,6 @@ status: false
 dependencies:
   module:
     - node
-_core:
-  default_config_hash: iNcqYckuPVeYdIhCZIi6DqQP5cQ86n07xn-w9_UYWDI
 id: node.search_index
 label: 'Search index'
 targetEntityType: node

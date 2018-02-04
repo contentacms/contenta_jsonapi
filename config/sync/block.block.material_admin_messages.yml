@@ -6,8 +6,6 @@ dependencies:
     - system
   theme:
     - material_admin
-_core:
-  default_config_hash: 6ANfHFYdqyPgGyd6fgurzphLbqLUVo2aa7rcjNyZ-_0
 id: material_admin_messages
 theme: material_admin
 region: status
