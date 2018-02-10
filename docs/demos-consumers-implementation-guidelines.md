@@ -127,3 +127,37 @@ Expanded/expandable search field that send you to a list of results.
 - there are not articles for now to create "features" pages : http://live-contentacms.pantheonsite.io/api/articles
 - Month Edition block : how to implement this ?
 - unique path for content : when snail will be ready, we may want to fill "path" field for nodes
+
+## Minimal Suggested Implementation
+
+Those features compose the minimal suggested implementation for your recipes magazine.
+
+HOMEPAGE PAGE
+
+- 3 latest promoted recipes and articles
+- 4 latest promoted recipes
+- 4 blocks  (Dinner to impress, Learn to cook, etc…)
+
+RECIPES PAGE
+
+- 1 promoted recipe at the top
+- 4 latest recipes + view more button at the top
+- 4 recipes for each category + view more button
+
+RECIPES CATEGORY PAGE
+
+- all recipes by category
+
+LATEST RECIPES PAGE
+
+- all latest recipes
+
+RECIPE PAGE
+
+- full recipe page
+- block « recipes from the same category »
+
+NAVIGATION
+- A menu with "home" and "recipes"
+
+
