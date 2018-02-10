@@ -1,0 +1,4 @@
+services:
+  logger.channel.contentacms:
+    parent: logger.channel_base
+    arguments: ['contentacms']
