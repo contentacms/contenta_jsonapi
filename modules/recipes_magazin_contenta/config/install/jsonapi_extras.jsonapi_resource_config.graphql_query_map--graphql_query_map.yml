@@ -4,6 +4,9 @@ status: true
 dependencies:
   module:
     - graphql
+  enforced:
+    module:
+      - recipes_magazin_contenta
 id: graphql_query_map--graphql_query_map
 disabled: true
 path: graphql_query_map/graphql_query_map
