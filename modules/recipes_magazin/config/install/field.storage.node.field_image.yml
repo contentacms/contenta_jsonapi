@@ -1,6 +1,9 @@
 langcode: en
 status: true
 dependencies:
+  enforced:
+    module:
+      - recipes_magazin
   module:
     - media_entity
     - node
