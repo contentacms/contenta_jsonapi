@@ -4,6 +4,9 @@ status: true
 dependencies:
   module:
     - consumers
+  enforced:
+    module:
+      - recipes_magazin_contenta
 id: consumer--consumer
 disabled: true
 path: consumer/consumer
