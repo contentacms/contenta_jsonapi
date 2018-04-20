@@ -62,7 +62,7 @@
         "drupal/material_admin": "1.x-dev",
         "drupal/consumers": "^1.0@beta",
         "drupal/consumer_image_styles": "^2.0@rc",
-        "drupal/media_entity_browser": "^2.0@alpha",
+        "drupal/media_entity_browser": "^1.0@beta",
         "drupal/graphql": "^3.0@beta",
         "drupal/decoupled_router": "^1.0@beta",
         "drupal/admin_toolbar": "^1.23"
