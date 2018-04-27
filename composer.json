@@ -47,9 +47,9 @@
     "require": {
         "composer/installers": "^1.0.24",
         "cweagans/composer-patches": "^1.6.0",
-        "drupal/core": "^8.4.2",
-        "drupal/jsonapi": "^1.7",
-        "drupal/jsonapi_extras": "^1.0@rc",
+        "drupal/core": "^8.5.1",
+        "drupal/jsonapi": "^1.14",
+        "drupal/jsonapi_extras": "^2.0@rc",
         "drupal/subrequests": "^2.0@beta",
         "drupal/fieldable_path": "^1.0",
         "drupal/simple_oauth": "^3.3",
@@ -59,12 +59,13 @@
         "drupal/dropzonejs": "^1.0@alpha",
         "drupal/schemata": "^1.0@alpha",
         "drupal/openapi": "^1.0@alpha",
-        "drupal/material_admin": "^1.0@alpha",
+        "drupal/material_admin": "1.x-dev",
         "drupal/consumers": "^1.0@beta",
         "drupal/consumer_image_styles": "^2.0@rc",
         "drupal/media_entity_browser": "^1.0@beta",
         "drupal/graphql": "^3.0@beta",
-        "drupal/decoupled_router": "^1.0@beta"
+        "drupal/decoupled_router": "^1.0@beta",
+        "drupal/admin_toolbar": "^1.23"
     },
     "config": {
       "process-timeout": 0

@@ -64,9 +64,15 @@ class OpenApiDocs extends ControllerBase {
     $extract_resource_type_id = function (ResourceType $resource_type) {
       return $resource_type->getEntityTypeId();
     };
-    $enabled = array_map($extract_resource_type_id, $this->resourceTypeRepository->all());
-    $all = array_map($extract_resource_type_id, $this->resourceTypeRepository->getResourceTypes(TRUE));
-    $options['exclude'] = array_diff($all, $enabled);
+    $filter_disabled = function (ResourceType $resourceType) {
+      // If there is an isInternal method and the resource is marked as internal
+      // then consider it disabled. If not, then it's enabled.
+      return method_exists($resourceType, 'isInternal') && $resourceType->isInternal();
+    };
+    $all = $this->resourceTypeRepository->all();
+    $disabled_resources = array_filter($all, $filter_disabled);
+    $disabled = array_map($extract_resource_type_id, $disabled_resources);
+    $options['exclude'] = $disabled;
     return $this->generateDocsFromQuery(['options' => $options]);
   }
 
