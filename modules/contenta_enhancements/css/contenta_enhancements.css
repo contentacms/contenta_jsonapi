@@ -16,11 +16,12 @@
 .no-svg .toolbar-bar .toolbar-icon-menu.toolbar-icon-contenta.is-active:before {
   background-image: url("../img/contenta-logo-dark.png");
 }
+
 .toolbar nav.toolbar-bar {
   background-color: #212D35;
 }
 
-.card-content > .fa {
+.material_admin .card-content > .fa {
   color: #03A9F4;
   font-size: 2rem;
 }
@@ -35,14 +36,15 @@
   text-transform: uppercase;
 }
 
-.layout-container > main {
+.material_admin .layout-container > main {
   background-color: #FAFAFA;
 }
 
-details.form-wrapper .details-wrapper {
+.material_admin details.form-wrapper .details-wrapper {
   background-color: #FFFFFF;
 }
 
 .card .card-image img {
   height: auto;
 }
+
