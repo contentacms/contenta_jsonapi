@@ -46,7 +46,7 @@
                 "Small inaccuracies for JSON API schemas": "https://www.drupal.org/files/issues/2018-04-28/2967571--openapi--multiple-minor-adjustments--2.patch"
             },
             "drupal/schemata": {
-                "Make the file URLs full URLs": "https://www.drupal.org/files/issues/2018-04-28/2967572--schemata--multiple-minor-adjustments--3.patch"
+                "Small inaccuracies for JSON API schemas": "https://www.drupal.org/files/issues/2018-04-28/2967572--schemata--multiple-minor-adjustments--3.patch"
             }
         }
     },
