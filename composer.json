@@ -53,10 +53,10 @@
     "require": {
         "composer/installers": "^1.0.24",
         "cweagans/composer-patches": "^1.6.0",
-        "drupal/core": "^8.5.1",
-        "drupal/jsonapi": "^1.14",
-        "drupal/jsonapi_extras": "^2.0@rc3",
-        "drupal/subrequests": "^2.0@beta",
+        "drupal/core": "^8.5.3",
+        "drupal/jsonapi": "^1.16",
+        "drupal/jsonapi_extras": "^2.0",
+        "drupal/subrequests": "^2.0@rc",
         "drupal/fieldable_path": "^1.0",
         "drupal/simple_oauth": "^3.3",
         "drupal/media_entity": "^1.6",
@@ -70,7 +70,7 @@
         "drupal/consumer_image_styles": "^2.0@rc",
         "drupal/media_entity_browser": "^1.0@beta",
         "drupal/graphql": "^3.0@beta",
-        "drupal/decoupled_router": "^1.0@beta",
+        "drupal/decoupled_router": "^1.0@rc",
         "drupal/admin_toolbar": "^1.23"
     },
     "config": {
