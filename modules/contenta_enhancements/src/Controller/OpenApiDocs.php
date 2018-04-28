@@ -62,7 +62,11 @@ class OpenApiDocs extends ControllerBase {
       'entity_mode' => $entity_mode,
     ];
     $extract_resource_type_id = function (ResourceType $resource_type) {
-      return $resource_type->getEntityTypeId();
+      return sprintf(
+        '%s:%s',
+        $resource_type->getEntityTypeId(),
+        $resource_type->getBundle()
+      );
     };
     $filter_disabled = function (ResourceType $resourceType) {
       // If there is an isInternal method and the resource is marked as internal
