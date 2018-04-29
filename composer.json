@@ -73,6 +73,7 @@
         "drupal/schemata": "^1.0@alpha",
         "drupal/simple_oauth": "^3.3",
         "drupal/subrequests": "^2.0@rc",
+        "drupal/type_style": "1.x-dev",
         "drupal/video_embed_field": "^2.0"
     },
     "config": {
