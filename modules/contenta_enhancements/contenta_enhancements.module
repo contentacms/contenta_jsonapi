@@ -175,7 +175,7 @@ function contenta_enhancements_toolbar_alter(&$items) {
     $items['contenta_content'] = $empty_item_cacheability;
   }
 
-  if ($current_user->hasPermission('access content overview') && $moduleHandler->moduleExists('media_entity')) {
+  if ($current_user->hasPermission('access content overview') && $moduleHandler->moduleExists('media')) {
     $items['contenta_media'] = [
       '#type' => 'toolbar_item',
       'tab' => [

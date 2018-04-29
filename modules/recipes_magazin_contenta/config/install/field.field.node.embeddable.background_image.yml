@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.background_image
-    - media_entity.bundle.image
+    - media.type.image
     - node.type.embeddable
 id: node.embeddable.background_image
 field_name: background_image

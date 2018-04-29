@@ -5,7 +5,7 @@ dependencies:
     module:
       - recipes_magazin_contenta
   module:
-    - media_entity
+    - media
     - node
 id: node.background_image
 field_name: background_image

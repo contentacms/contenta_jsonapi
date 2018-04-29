@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_image
-    - media_entity.bundle.image
+    - media.type.image
     - node.type.article
 id: node.article.field_image
 field_name: field_image

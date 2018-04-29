@@ -12,7 +12,7 @@ dependencies:
   module:
     - image
     - link
-    - media_entity
+    - media
     - node
     - options
     - text
