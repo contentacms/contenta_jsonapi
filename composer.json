@@ -67,6 +67,7 @@
         "drupal/jsonapi": "^1.16",
         "drupal/jsonapi_extras": "^2.0",
         "drupal/material_admin": "1.x-dev",
+        "drupal/material_admin_support": "1.x-dev",
         "drupal/media_entity_browser": "^2.0@alpha",
         "drupal/openapi": "^1.0@alpha",
         "drupal/schemata": "^1.0@alpha",
