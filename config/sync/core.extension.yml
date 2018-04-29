@@ -35,7 +35,6 @@ module:
   link: 0
   media: 0
   media_entity_browser: 0
-  media_entity_image: 0
   menu_ui: 0
   migrate: 0
   node: 0
