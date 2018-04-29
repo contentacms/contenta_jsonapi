@@ -6,7 +6,7 @@ dependencies:
     - image.style.thumbnail
   module:
     - image
-    - media_entity
+    - media
     - user
 id: media
 label: Media
@@ -26,7 +26,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'access media overview'
+          perm: 'access content overview'
       cache:
         type: tag
         options: {  }
