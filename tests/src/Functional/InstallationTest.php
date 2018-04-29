@@ -50,7 +50,6 @@ class InstallationTest extends TestCase {
       'files',
       'imageStyles',
       'images',
-      'mediaBundles',
       'articles',
       'pages',
       'recipes',
