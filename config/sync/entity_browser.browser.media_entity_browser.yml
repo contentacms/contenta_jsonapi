@@ -3,10 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - media_entity.bundle.image
+    - media.type.image
   module:
     - dropzonejs_eb_widget
-    - media_entity
+    - media
     - views
 name: media_entity_browser
 label: 'Media Entity Browser'

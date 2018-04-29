@@ -8,9 +8,8 @@ weight: 3
 is_admin: null
 permissions:
   - 'access content overview'
-  - 'access media overview'
   - 'access user profiles'
   - 'administer media'
-  - 'administer media bundles'
+  - 'administer media types'
   - 'administer taxonomy'
   - 'bypass node access'

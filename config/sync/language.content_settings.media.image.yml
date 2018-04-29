@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - media_entity.bundle.image
+    - media.type.image
 id: media.image
 target_entity_type_id: media
 target_bundle: image

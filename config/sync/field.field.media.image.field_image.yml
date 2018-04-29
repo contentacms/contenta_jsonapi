@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.media.field_image
-    - media_entity.bundle.image
+    - media.type.image
   module:
     - image
 id: media.image.field_image
