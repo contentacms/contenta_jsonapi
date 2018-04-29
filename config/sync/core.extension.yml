@@ -33,7 +33,6 @@ module:
   jsonapi_extras: 0
   language: 0
   link: 0
-  material_admin_support: 0
   media: 0
   media_entity_browser: 0
   menu_ui: 0

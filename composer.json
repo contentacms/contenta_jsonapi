@@ -67,13 +67,11 @@
         "drupal/jsonapi": "^1.16",
         "drupal/jsonapi_extras": "^2.0",
         "drupal/material_admin": "1.x-dev",
-        "drupal/material_admin_support": "1.x-dev",
         "drupal/media_entity_browser": "^2.0@alpha",
         "drupal/openapi": "^1.0@alpha",
         "drupal/schemata": "^1.0@alpha",
         "drupal/simple_oauth": "^3.3",
         "drupal/subrequests": "^2.0@rc",
-        "drupal/type_style": "1.x-dev",
         "drupal/video_embed_field": "^2.0"
     },
     "config": {
