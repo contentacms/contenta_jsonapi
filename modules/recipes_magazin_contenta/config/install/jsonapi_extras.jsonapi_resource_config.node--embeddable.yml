@@ -7,7 +7,7 @@ dependencies:
     module:
       - recipes_magazin_contenta
 id: node--embeddable
-disabled: true
+disabled: false
 path: embeddables
 resourceType: embeddables
 resourceFields:
