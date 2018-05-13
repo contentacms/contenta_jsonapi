@@ -14,3 +14,4 @@ permissions:
   - 'execute graphql requests'
   - 'issue subrequests'
   - 'view media'
+  - 'use jsonrpc services'

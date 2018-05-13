@@ -13,3 +13,4 @@ permissions:
   - 'access toolbar'
   - 'issue subrequests'
   - 'view media'
+  - 'use jsonrpc services'
