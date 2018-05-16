@@ -7,7 +7,7 @@ addons:
 
 php:
   - 7.1
-  - 5.6
+  - 7.2
 
 notifications:
   webhooks:
@@ -59,7 +59,7 @@ jobs:
     # Deployment Stage
     # This stage promotes a successful artifact from the deployment branch to GitHub
     - stage: Release
-      php: 7.1
+      php: 7.2
       install: skip
       before_script: skip
       script: skip

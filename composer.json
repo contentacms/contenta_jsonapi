@@ -1,102 +1,104 @@
 {
-    "name": "contentacms/contenta_jsonapi",
-    "description": "",
-    "type": "drupal-profile",
-    "authors": [
-    ],
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "license": "GPL-2.0+",
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        }
-
-    ],
-    "extra": {
-        "installer-paths": {
-            "web/core": [
-                "type:drupal-core"
-            ],
-            "web/modules/contrib/{$name}": [
-                "type:drupal-module"
-            ],
-            "web/libraries/{$name}": [
-                "type:drupal-library"
-            ],
-            "web/profiles/contrib/{$name}": [
-                "type:drupal-profile"
-            ],
-            "web/themes/contrib/{$name}": [
-                "type:drupal-theme"
-            ],
-            "drush/contrib/{$name}": [
-                "type:drupal-drush"
-            ]
-        },
-        "patches": {
-            "drupal/core": {
-                "Allow a profile to be installed from existing config": "https://www.drupal.org/files/issues/drupal-n2788777-105.patch"
-            },
-            "drupal/jsonapi": {
-                "Make the file URLs full URLs": "https://www.drupal.org/files/issues/2929600--use-full-url-file--2.patch"
-            },
-            "drupal/openapi": {
-                "Small inaccuracies for JSON API schemas": "https://www.drupal.org/files/issues/2018-04-28/2967571--openapi--multiple-minor-adjustments--2.patch"
-            },
-            "drupal/schemata": {
-                "Small inaccuracies for JSON API schemas": "https://www.drupal.org/files/issues/2018-04-28/2967572--schemata--multiple-minor-adjustments--3.patch"
-            }
-        }
-    },
-    "require": {
-        "composer/installers": "^1.0.24",
-        "cweagans/composer-patches": "^1.6.0",
-        "drupal/admin_toolbar": "^1.23",
-        "drupal/consumer_image_styles": "^2.0@rc",
-        "drupal/consumers": "^1.0@beta",
-        "drupal/core": "^8.5.3",
-        "drupal/decoupled_router": "^1.0@rc",
-        "drupal/dropzonejs": "^2.0@alpha",
-        "drupal/entity_browser": "^2.0@alpha",
-        "drupal/fieldable_path": "^1.0",
-        "drupal/graphql": "^3.0@beta",
-        "drupal/image_widget_crop": "^2.1",
-        "drupal/inline_entity_form": "^1.0@beta",
-        "drupal/jsonapi": "^1.16",
-        "drupal/jsonapi_extras": "^2.0",
-        "drupal/jsonrpc": "^1.0@alpha",
-        "drupal/material_admin": "1.x-dev",
-        "drupal/media_entity_browser": "^2.0@alpha",
-        "drupal/openapi": "^1.0@alpha",
-        "drupal/schemata": "^1.0@alpha",
-        "drupal/simple_oauth": "^3.3",
-        "drupal/subrequests": "^2.0@rc",
-        "drupal/video_embed_field": "^2.0"
-    },
-    "config": {
-      "process-timeout": 0
-    },
-    "scripts": {
-        "install-contenta": "scripts/development/build-contenta_jsonapi.sh",
-        "start-contenta": "scripts/development/start-contenta_jsonapi.sh",
-        "ci:helper": "scripts/ci/travis/tests/contenta_ci_tests_helper.sh",
-        "ci:before-deploy": "scripts/ci/travis/before_deploy.sh",
-        "post-package-install": [
-            "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup"
-        ],
-        "post-package-update": [
-            "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup"
-        ]
-    },
-    "provide": {
-    },
-    "require-dev": {
-        "burdamagazinorg/thunder-dev-tools": "dev-master",
-        "drupal/config_inspector": "1.x-dev",
-        "drupal/coder": "^8.2",
-        "drupal/features": "^3.5",
-        "guzzlehttp/guzzle": "~6.0"
+  "name": "contentacms/contenta_jsonapi",
+  "description": "",
+  "type": "drupal-profile",
+  "authors": [
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "license": "GPL-2.0+",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
     }
+  ],
+  "extra": {
+    "installer-paths": {
+      "web/core": [
+        "type:drupal-core"
+      ],
+      "web/modules/contrib/{$name}": [
+        "type:drupal-module"
+      ],
+      "web/libraries/{$name}": [
+        "type:drupal-library"
+      ],
+      "web/profiles/contrib/{$name}": [
+        "type:drupal-profile"
+      ],
+      "web/themes/contrib/{$name}": [
+        "type:drupal-theme"
+      ],
+      "drush/contrib/{$name}": [
+        "type:drupal-drush"
+      ]
+    },
+    "patches": {
+      "drupal/core": {
+        "Allow a profile to be installed from existing config": "https://www.drupal.org/files/issues/drupal-n2788777-105.patch"
+      },
+      "drupal/jsonapi": {
+        "Make the file URLs full URLs": "https://www.drupal.org/files/issues/2929600--use-full-url-file--2.patch"
+      },
+      "drupal/openapi": {
+        "Small inaccuracies for JSON API schemas": "https://www.drupal.org/files/issues/2018-04-28/2967571--openapi--multiple-minor-adjustments--2.patch"
+      },
+      "drupal/schemata": {
+        "Small inaccuracies for JSON API schemas": "https://www.drupal.org/files/issues/2018-04-28/2967572--schemata--multiple-minor-adjustments--3.patch"
+      }
+    }
+  },
+  "require": {
+    "composer/installers": "^1.0.24",
+    "cweagans/composer-patches": "^1.6.0",
+    "drupal/admin_toolbar": "^1.23",
+    "drupal/consumer_image_styles": "^2.0@rc",
+    "drupal/consumers": "^1.0@beta",
+    "drupal/core": "^8.5.3",
+    "drupal/decoupled_router": "^1.0@rc",
+    "drupal/dropzonejs": "^2.0@alpha",
+    "drupal/entity_browser": "^2.0@alpha",
+    "drupal/fieldable_path": "^1.0",
+    "drupal/graphql": "^3.0@beta",
+    "drupal/image_widget_crop": "^2.1",
+    "drupal/inline_entity_form": "^1.0@beta",
+    "drupal/jsonapi": "^1.16",
+    "drupal/jsonapi_extras": "^2.0",
+    "drupal/jsonrpc": "^1.0@alpha",
+    "drupal/material_admin": "1.x-dev",
+    "drupal/media_entity_browser": "^2.0@alpha",
+    "drupal/openapi": "^1.0@alpha",
+    "drupal/schemata": "^1.0@alpha",
+    "drupal/simple_oauth": "^3.3",
+    "drupal/subrequests": "^2.0@rc",
+    "drupal/video_embed_field": "^2.0"
+  },
+  "config": {
+    "process-timeout": 0,
+    "platform": {
+      "php": "^7"
+    }
+  },
+  "scripts": {
+    "install-contenta": "scripts/development/build-contenta_jsonapi.sh",
+    "start-contenta": "scripts/development/start-contenta_jsonapi.sh",
+    "ci:helper": "scripts/ci/travis/tests/contenta_ci_tests_helper.sh",
+    "ci:before-deploy": "scripts/ci/travis/before_deploy.sh",
+    "post-package-install": [
+      "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup"
+    ],
+    "post-package-update": [
+      "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup"
+    ]
+  },
+  "provide": {
+  },
+  "require-dev": {
+    "burdamagazinorg/thunder-dev-tools": "dev-master",
+    "drupal/config_inspector": "1.x-dev",
+    "drupal/coder": "^8.2",
+    "drupal/features": "^3.5",
+    "guzzlehttp/guzzle": "~6.0"
+  }
 }

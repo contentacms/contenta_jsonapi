@@ -68,6 +68,19 @@ class InstallationTest extends TestCase {
     );
   }
 
+  public function testRpcMethod() {
+    $response = $this->httpClient->request(
+      'POST',
+      $this->baseUrl . '/jsonrpc',
+      ['body' => '{"jsonrpc":"2.0","method":"jsonapi.metadata","id":"cms-meta"}']
+    );
+    $body = $response->getBody()->getContents();
+    $output = Json::decode($body);
+    $prefix = $output['result']['prefix'];
+    $expected_prefix = 'api';
+    $this->assertEquals($expected_prefix, $prefix);
+  }
+
   public function testGraphQLQuery() {
     $query = '{"query":"query{nodeQuery{entities{entityLabel ... on NodeRecipe { fieldIngredients }}}}","variables":null}';
     $response = $this->httpClient->post($this->baseUrl . '/graphql', [
