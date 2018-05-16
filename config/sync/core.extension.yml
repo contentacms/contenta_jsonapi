@@ -31,6 +31,8 @@ module:
   inline_form_errors: 0
   jsonapi: 0
   jsonapi_extras: 0
+  jsonrpc: 0
+  jsonrpc_discovery: 0
   language: 0
   link: 0
   media: 0
