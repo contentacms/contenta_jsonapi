@@ -7,7 +7,6 @@ addons:
 
 php:
   - 7.1
-  - 5.6
 
 notifications:
   webhooks:
