@@ -75,10 +75,7 @@
     "drupal/video_embed_field": "^2.0"
   },
   "config": {
-    "process-timeout": 0,
-    "platform": {
-      "php": "^7"
-    }
+    "process-timeout": 0
   },
   "scripts": {
     "install-contenta": "scripts/development/build-contenta_jsonapi.sh",
