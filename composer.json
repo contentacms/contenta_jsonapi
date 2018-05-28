@@ -6,7 +6,7 @@
   ],
   "minimum-stability": "dev",
   "prefer-stable": true,
-  "license": "GPL-2.0+",
+  "license": "GPL-2.0-or-later",
   "repositories": [
     {
       "type": "composer",
