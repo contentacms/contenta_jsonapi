@@ -68,7 +68,7 @@
     "drupal/jsonrpc": "^1.0@alpha",
     "drupal/material_admin": "1.x-dev",
     "drupal/media_entity_browser": "^2.0@alpha",
-    "drupal/openapi": "^1.0@alpha",
+    "drupal/openapi": "1.x-dev",
     "drupal/schemata": "^1.0@alpha",
     "drupal/simple_oauth": "^3.3",
     "drupal/subrequests": "^2.0@rc",
