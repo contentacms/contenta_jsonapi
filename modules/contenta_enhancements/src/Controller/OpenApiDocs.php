@@ -95,13 +95,16 @@ class OpenApiDocs extends ControllerBase {
           '_format' => 'json',
         ] + $query,
     ];
+
+    $api_module = 'jsonapi';
+
     $build = [
       '#theme' => 'redoc',
       '#attributes' => [
         'no-auto-auth' => TRUE,
         'scroll-y-offset' => 150,
       ],
-      '#openapi_url' => Url::fromRoute('openapi.jsonapi', [], $route_options)
+      '#openapi_url' => Url::fromRoute("openapi.download", ['openapi_generator' => $api_module], $route_options)
         ->setAbsolute()
         ->toString(),
     ];
