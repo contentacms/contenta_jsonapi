@@ -1,0 +1,6 @@
+name: Recipes Redis
+description: A Redis implementation for Contenta.
+type: module
+core: 8.x
+dependencies:
+  - redis

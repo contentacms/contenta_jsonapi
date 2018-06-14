@@ -1,0 +1,15 @@
+{
+  "name": "drupal/contenta_redis",
+  "type": "drupal-module",
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Mateu Aguiló Bosch",
+      "email": "mateu.aguilo.bosch@gmail.com"
+    }
+  ],
+  "require": {
+    "drupal/redis": "^1.0@rc",
+    "predis/predis": "^1.1"
+  }
+}
