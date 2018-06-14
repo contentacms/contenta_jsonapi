@@ -101,7 +101,9 @@ class OpenApiDocs extends ControllerBase {
         'no-auto-auth' => TRUE,
         'scroll-y-offset' => 150,
       ],
-      '#openapi_url' => Url::fromRoute('openapi.jsonapi', [], $route_options)
+      '#openapi_url' => Url::fromRoute('openapi.download', [
+        'openapi_generator' => 'jsonapi',
+      ], $route_options)
         ->setAbsolute()
         ->toString(),
     ];
