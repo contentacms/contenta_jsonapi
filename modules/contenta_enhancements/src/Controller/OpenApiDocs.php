@@ -5,7 +5,6 @@ namespace Drupal\contenta_enhancements\Controller;
 use Drupal\Core\Controller\ControllerBase;
 use Drupal\Core\Url;
 use Drupal\jsonapi\ResourceType\ResourceType;
-use Drupal\jsonapi\ResourceType\ResourceTypeRepository;
 use Drupal\jsonapi\ResourceType\ResourceTypeRepositoryInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -33,25 +32,6 @@ class OpenApiDocs extends ControllerBase {
   }
 
   /**
-   * Generating documentation for node bundles.
-   *
-   * @param string $entity_type_id
-   *   The entity type.
-   * @param string $node_type
-   *   The entity bundle.
-   *
-   * @return array
-   *   The generated documentation.
-   */
-  public function generateBundleDocs($entity_type_id, $node_type) {
-    $query = [
-      'options[bundle_name]' => $node_type,
-      'options[entity_type_id]' => $entity_type_id,
-    ];
-    return $this->generateDocsFromQuery($query);
-  }
-
-  /**
    * Generate the default docs.
    *
    * @return array
@@ -61,21 +41,7 @@ class OpenApiDocs extends ControllerBase {
     $options = [
       'entity_mode' => $entity_mode,
     ];
-    $extract_resource_type_id = function (ResourceType $resource_type) {
-      return sprintf(
-        '%s:%s',
-        $resource_type->getEntityTypeId(),
-        $resource_type->getBundle()
-      );
-    };
-    $filter_disabled = function (ResourceType $resourceType) {
-      // If there is an isInternal method and the resource is marked as internal
-      // then consider it disabled. If not, then it's enabled.
-      return method_exists($resourceType, 'isInternal') && $resourceType->isInternal();
-    };
-    $all = $this->resourceTypeRepository->all();
-    $disabled_resources = array_filter($all, $filter_disabled);
-    $disabled = array_map($extract_resource_type_id, $disabled_resources);
+    $disabled = static::listDisabledResources($this->resourceTypeRepository);
     $options['exclude'] = $disabled;
     return $this->generateDocsFromQuery(['options' => $options]);
   }
@@ -108,6 +74,28 @@ class OpenApiDocs extends ControllerBase {
         ->toString(),
     ];
     return $build;
+  }
+
+  /**
+   * @return array
+   */
+  public static function listDisabledResources(ResourceTypeRepositoryInterface $resourceTypeRepository) {
+    $extract_resource_type_id = function (ResourceType $resource_type) {
+      return sprintf(
+        '%s:%s',
+        $resource_type->getEntityTypeId(),
+        $resource_type->getBundle()
+      );
+    };
+    $filter_disabled = function (ResourceType $resourceType) {
+      // If there is an isInternal method and the resource is marked as internal
+      // then consider it disabled. If not, then it's enabled.
+      return method_exists($resourceType, 'isInternal') && $resourceType->isInternal();
+    };
+    $all = $resourceTypeRepository->all();
+    $disabled_resources = array_filter($all, $filter_disabled);
+    $disabled = array_map($extract_resource_type_id, $disabled_resources);
+    return $disabled;
   }
 
 }
