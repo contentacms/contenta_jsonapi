@@ -76,9 +76,8 @@ class InstallationTest extends TestCase {
     );
     $body = $response->getBody()->getContents();
     $output = Json::decode($body);
-    $prefix = $output['result']['prefix'];
-    $expected_prefix = '/api';
-    $this->assertEquals($expected_prefix, $prefix);
+    $this->assertEquals('api', $output['result']['prefix']);
+    $this->assertEquals('/api', $output['result']['openApi']['basePath']);
   }
 
   public function testGraphQLQuery() {
