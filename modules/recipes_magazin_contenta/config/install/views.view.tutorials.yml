@@ -6,7 +6,7 @@ dependencies:
     - field.storage.node.field_link
     - field.storage.node.field_summary
     - field.storage.node.field_topic
-    - image.style.car
+    - image.style.card
     - node.type.tutorial
     - system.menu.contenta
   module:
@@ -201,7 +201,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: car
+            image_style: card
             image_link: ''
           group_column: ''
           group_columns: {  }

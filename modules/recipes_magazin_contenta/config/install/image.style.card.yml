@@ -4,7 +4,7 @@ dependencies:
   enforced:
     module:
       - recipes_magazin_contenta
-name: car
+name: card
 label: 'Card image (574×323)'
 effects:
   2d64dc69-465d-4256-badf-f39311d985d4:
