@@ -3,6 +3,7 @@ status: true
 dependencies:
   enforced:
     module:
+      - image
       - recipes_magazin_contenta
 name: card
 label: 'Card image (574×323)'
