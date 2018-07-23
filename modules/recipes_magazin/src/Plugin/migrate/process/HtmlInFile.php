@@ -2,6 +2,7 @@
 
 namespace Drupal\recipes_magazin\Plugin\migrate\process;
 
+use Drupal\migrate\MigrateException;
 use Drupal\migrate\MigrateExecutableInterface;
 use Drupal\migrate\ProcessPluginBase;
 use Drupal\migrate\Row;
@@ -10,7 +11,7 @@ use Drupal\migrate\Row;
  * Extends the CSV migration to make it possible to import terms.
  *
  * @MigrateProcessPlugin(
- *   id = "recipe_magazin__html_in_file"
+ *   id = "recipes_magazin__html_in_file"
  * )
  */
 class HtmlInFile extends ProcessPluginBase {
@@ -21,8 +22,8 @@ class HtmlInFile extends ProcessPluginBase {
   public function __construct(array $configuration, $plugin_id, $plugin_definition) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     // Filename is required.
-    if (empty($this->configuration['filename_column'])) {
-      throw new MigrateException('You must declare the "filename_column" that contains the filename of the HTML file.');
+    if (empty($this->configuration['source'])) {
+      throw new MigrateException('You must declare the "source" that contains the filename of the HTML file.');
     }
     // Directory is required.
     if (empty($this->configuration['directory'])) {
@@ -38,7 +39,7 @@ class HtmlInFile extends ProcessPluginBase {
       '%s/../../../../default_content/%s/%s',
       __DIR__,
       $this->configuration['directory'],
-      $row->getSourceProperty($this->configuration['filename_column'])
+      $row->getSourceProperty($this->configuration['source'])
     );
     if (!file_exists($path)) {
       return null;

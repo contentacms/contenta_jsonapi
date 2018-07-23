@@ -1,7 +1,7 @@
 id: recipes_magazin__consumers
 status: true
 source:
-  plugin: recipe_magazin__csv
+  plugin: recipes_magazin__csv
   path: default_content/consumers.csv
   header_row_count: 1
   keys:

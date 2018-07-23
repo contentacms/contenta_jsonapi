@@ -1,7 +1,7 @@
 id: recipes_magazin__tutorial
 status: true
 source:
-  plugin: recipe_magazin__csv
+  plugin: recipes_magazin__csv
   path: default_content/tutorial.csv
   header_row_count: 1
   keys:

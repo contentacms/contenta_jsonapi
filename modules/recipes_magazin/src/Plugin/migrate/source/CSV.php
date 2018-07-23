@@ -14,7 +14,7 @@ use Drupal\recipes_magazin\CSVFileObject;
  * UTF BOM (Byte Order Marker) so they are interpreted correctly.
  *
  * @MigrateSource(
- *   id = "recipe_magazin__csv"
+ *   id = "recipes_magazin__csv"
  * )
  */
 class CSV extends SourcePluginBase {

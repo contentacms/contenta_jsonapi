@@ -9,45 +9,43 @@
  * Implements hook_install().
  */
 function recipes_magazin_install() {
-//  \Drupal::service('recipes.migration_runner')->run([
-//    'recipes_magazin__article',
-//    'recipes_magazin__article_authors',
-//    'recipes_magazin__article_tags',
-//    'recipes_magazin__category',
-//    'recipes_magazin__consumers',
-//    'recipes_magazin__embeddable',
-//    'recipes_magazin__images',
-//    'recipes_magazin__media_images',
-//    'recipes_magazin__page_authors',
-//    'recipes_magazin__pages',
-//    'recipes_magazin__recipe_authors',
-//    'recipes_magazin__recipe_tags',
-//    'recipes_magazin__recipes',
-//    'recipes_magazin__tags',
-//    'recipes_magazin__tutorial',
-//  ]);
+  \Drupal::service('recipes.migration_runner')->run([
+    'recipes_magazin__images',
+    'recipes_magazin__media_images',
+    'recipes_magazin__tags',
+    'recipes_magazin__recipe_tags',
+    'recipes_magazin__article_tags',
+    'recipes_magazin__category',
+    'recipes_magazin__page_authors',
+    'recipes_magazin__recipe_authors',
+    'recipes_magazin__consumers',
+    'recipes_magazin__article',
+    'recipes_magazin__pages',
+    'recipes_magazin__recipes',
+    'recipes_magazin__embeddable',
+    'recipes_magazin__tutorial',
+  ]);
 }
 
 /**
  * Implements hook_uninstall().
  */
 function recipes_magazin_uninstall() {
-//  \Drupal::service('recipes.migration_runner')->remove([
-//    'recipes_magazin__article',
-//    'recipes_magazin__article_authors',
-//    'recipes_magazin__article_tags',
-//    'recipes_magazin__category',
-//    'recipes_magazin__consumers',
-//    'recipes_magazin__embeddable',
-//    'recipes_magazin__images',
-//    'recipes_magazin__media_images',
-//    'recipes_magazin__page_authors',
-//    'recipes_magazin__pages',
-//    'recipes_magazin__recipe_authors',
-//    'recipes_magazin__recipe_tags',
-//    'recipes_magazin__recipes',
-//    'recipes_magazin__tags',
-//    'recipes_magazin__tutorial',
-//  ]);
+  \Drupal::service('recipes.migration_runner')->remove([
+    'recipes_magazin__images',
+    'recipes_magazin__media_images',
+    'recipes_magazin__tags',
+    'recipes_magazin__recipe_tags',
+    'recipes_magazin__article_tags',
+    'recipes_magazin__category',
+    'recipes_magazin__page_authors',
+    'recipes_magazin__recipe_authors',
+    'recipes_magazin__consumers',
+    'recipes_magazin__article',
+    'recipes_magazin__pages',
+    'recipes_magazin__recipes',
+    'recipes_magazin__embeddable',
+    'recipes_magazin__tutorial',
+  ]);
 }
 

@@ -1,7 +1,7 @@
 id: recipes_magazin__recipes
 status: true
 source:
-  plugin: recipe_magazin__csv
+  plugin: recipes_magazin__csv
   path: default_content/recipes.csv
   header_row_count: 1
   keys:
@@ -11,14 +11,18 @@ process:
   body: summary
   field_preparation_time: preparation_time
   field_total_time: total_time
-  field_difficulty: difficulty
+  field_cooking_time: cooking_time
+  field_difficulty:
+    plugin: skip_on_empty
+    method: process
+    source: difficulty
   field_ingredients:
     plugin: explode
     delimiter: ','
     source: ingredients
   field_recipe_instruction:
-    plugin: recipe_magazin__html_in_file
-    filename_column: recipe_instruction
+    plugin: recipes_magazin__html_in_file
+    source: recipe_instruction
     directory: recipe_instructions
   number_of_servings: number_of_servings
   field_tags:
@@ -32,19 +36,11 @@ process:
   langcode:
     plugin: default_value
     default_value: 'en'
-  field_tags:
-    -
-      plugin: explode
-      delimiter: ','
-      source: tags
-    -
-      plugin: migration_lookup
-      migration: recipes_magazin__tags
   field_category:
     -
       plugin: explode
       delimiter: ','
-      source: category
+      source: recipe_category
     -
       plugin: migration_lookup
       migration: recipes_magazin__category
@@ -57,6 +53,10 @@ process:
     migration:
       - recipes_magazin__media_images
     source: image
+  path:
+    plugin: recipes_magazin__prepend
+    prefix: '/'
+    source: slug
 destination:
   plugin: 'entity:node'
   default_bundle: recipe

@@ -1,7 +1,7 @@
 id: recipes_magazin__page_authors
 status: true
 source:
-  plugin: recipe_magazin__terms
+  plugin: recipes_magazin__terms
   path: default_content/pages.csv
   header_row_count: 1
   column: author
