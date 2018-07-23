@@ -12,10 +12,9 @@ entity_type: node
 bundle: recipe
 label: 'Recipe instruction'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings:
-  display_summary: false
-field_type: text_with_summary
+settings: {  }
+field_type: text_long

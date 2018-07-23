@@ -8,7 +8,10 @@ source:
     - title
 process:
   title: title
-  'body/value': body
+  'body/value':
+    plugin: recipe_magazin__html_in_file
+    filename_column: body
+    directory: article_body
   'body/format':
     plugin: default_value
     default_value: 'full_html'

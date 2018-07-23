@@ -8,10 +8,7 @@ source:
     - title
 process:
   title: title
-#  image:
   body: summary
-#  author:
-#  category:
   field_preparation_time: preparation_time
   field_total_time: total_time
   field_difficulty: difficulty
@@ -19,18 +16,22 @@ process:
     plugin: explode
     delimiter: ','
     source: ingredients
-  field_recipe_instruction: recipe_instruction
-  # @todo does this field exist already?
-#  number_of_servings:
-#  tags:
-  # @todo This field does not exist yet
-#  recipe_review:
-
+  field_recipe_instruction:
+    plugin: recipe_magazin__html_in_file
+    filename_column: recipe_instruction
+    directory: recipe_instructions
+  number_of_servings: number_of_servings
+  field_tags:
+    -
+      plugin: explode
+      delimiter: ','
+      source: tags
+    -
+      plugin: migration_lookup
+      migration: recipes_magazin__recipe_tags
   langcode:
     plugin: default_value
     default_value: 'en'
-
-  # Note: This makes it possible to pull in values from another migration.
   field_tags:
     -
       plugin: explode
@@ -49,7 +50,7 @@ process:
       migration: recipes_magazin__category
   uid:
     plugin: migration_lookup
-    migration: recipes_magazin__authors
+    migration: recipes_magazin__recipe_authors
     source: author
   field_image:
     plugin: migration_lookup
@@ -63,6 +64,7 @@ migration_dependencies:
   required:
     - recipes_magazin__category
     - recipes_magazin__tags
-    - recipes_magazin__authors
+    - recipes_magazin__recipe_authors
     - recipes_magazin__media_images
     - recipes_magazin__images
+    - recipes_magazin__recipe_tags

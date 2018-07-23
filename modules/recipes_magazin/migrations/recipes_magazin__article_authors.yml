@@ -8,7 +8,14 @@ source:
   keys:
     - author
 process:
-  name: author
+  name:
+    -
+      plugin: recipe_magazin__existing_user
+      source: author
+    -
+      plugin: skip_on_empty
+      method: row
+    - author
   langcode:
     plugin: default_value
     default_value: 'en'

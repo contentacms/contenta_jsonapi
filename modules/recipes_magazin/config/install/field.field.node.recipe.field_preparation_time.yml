@@ -9,14 +9,14 @@ field_name: field_preparation_time
 entity_type: node
 bundle: recipe
 label: 'Preparation time'
-description: 'Preparation time in minutes'
-required: false
+description: ''
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  min: null
+  min: 0
   max: null
   prefix: ''
-  suffix: min
+  suffix: ' minutes'
 field_type: integer

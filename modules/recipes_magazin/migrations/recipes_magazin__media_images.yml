@@ -12,9 +12,6 @@ process:
     migration: recipes_magazin__images
     source: filename
   name: filename
-  uid:
-    plugin: default_value
-    default_value: 1
 destination:
   plugin: 'entity:media'
   default_bundle: image

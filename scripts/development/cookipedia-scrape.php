@@ -20,7 +20,7 @@ function fetchFields(\Goutte\Client $client, $url) {
   $fields = [];
   if ($schema_org_json = $crawler->filterXPath('//script[@type="application/ld+json"]')->text()) {
     $data = json_decode($schema_org_json, TRUE);
-    // title,image,summary,author,category,preparation_time,total_time,difficulty,ingredients,recipe_instruction,number_of_servings,tags,recipe_review
+    // title,image,summary,author,category,preparation_time,total_time,difficulty,ingredients,recipe_instruction,number_of_servings,tags
     $fields[] = $data['name'];
     $fields[] = $data['image'];
     $fields[] = $data['description'];
@@ -81,7 +81,7 @@ function fetchFields(\Goutte\Client $client, $url) {
 
     $fields[] = isset($data['recipeIngredient']) ? implode(',', $data['recipeIngredient']) : NULL;
     $fields[] = isset($data['recipeInstructions']) ? implode(',', $data['recipeInstructions']) : NULL;
-  
+
     if (isset($data['servingSize'])) {
       $servingSizeString = $data['servingSize'];
       preg_match('/(\d+)/', $servingSizeString, $match);

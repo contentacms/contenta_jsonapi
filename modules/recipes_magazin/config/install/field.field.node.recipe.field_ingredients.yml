@@ -9,7 +9,7 @@ field_name: field_ingredients
 entity_type: node
 bundle: recipe
 label: Ingredients
-description: ''
+description: 'List the ingredients required for this recipe, one per item.'
 required: false
 translatable: false
 default_value: {  }
