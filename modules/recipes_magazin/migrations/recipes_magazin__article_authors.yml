@@ -10,9 +10,6 @@ source:
 process:
   name:
     -
-      plugin: recipe_magazin__existing_user
-      source: author
-    -
       plugin: skip_on_empty
       method: row
     - author
