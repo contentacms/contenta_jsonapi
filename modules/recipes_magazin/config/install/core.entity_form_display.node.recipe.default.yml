@@ -1,7 +1,9 @@
+uuid: ee5a3c1c-03ea-4014-8448-a5f95a18976e
 langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.media_entity_browser
     - field.field.node.recipe.field_author
     - field.field.node.recipe.field_cooking_time
     - field.field.node.recipe.field_difficulty
@@ -13,12 +15,13 @@ dependencies:
     - field.field.node.recipe.field_recipe_instruction
     - field.field.node.recipe.field_summary
     - field.field.node.recipe.field_tags
-    - image.style.thumbnail
     - node.type.recipe
   module:
-    - image
+    - entity_browser
     - path
     - text
+_core:
+  default_config_hash: DKGu0Ml8Jlk8EXPjIpz3ARAChnyuj5osrp1zZdGpRdQ
 id: node.recipe.default
 targetEntityType: node
 bundle: recipe
@@ -55,10 +58,17 @@ content:
   field_image:
     weight: 8
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      entity_browser: media_entity_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      field_widget_replace: true
+      open: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: default
     third_party_settings: {  }
-    type: image_image
+    type: entity_browser_entity_reference
     region: content
   field_ingredients:
     weight: 10
@@ -84,12 +94,9 @@ content:
     region: content
   field_recipe_category:
     weight: 6
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete_tags
+    type: options_select
     region: content
   field_recipe_instruction:
     weight: 11
@@ -116,6 +123,13 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete_tags
     region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   path:
     type: path
     weight: 16

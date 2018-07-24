@@ -1,6 +1,10 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - image
+      - recipes_magazin
 name: square_medium
 label: 'Square Medium'
 effects:

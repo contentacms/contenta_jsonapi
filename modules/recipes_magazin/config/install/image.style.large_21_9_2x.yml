@@ -1,6 +1,10 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - image
+      - recipes_magazin
 name: large_21_9_2x
 label: 'Large 21:9 2x (2880x1240)'
 effects:

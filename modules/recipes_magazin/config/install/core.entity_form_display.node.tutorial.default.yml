@@ -1,3 +1,4 @@
+uuid: 79c61358-d8b0-4a23-8100-6ba24eaaf6f3
 langcode: en
 status: true
 dependencies:
@@ -13,6 +14,8 @@ dependencies:
     - link
     - path
     - text
+_core:
+  default_config_hash: JwCyL1TgsjlK8WqTnK9z3fGfi1Lg7TzyYBG8yn8-Izo
 id: node.tutorial.default
 targetEntityType: node
 bundle: tutorial
@@ -28,12 +31,14 @@ content:
     weight: 33
     settings:
       entity_browser: media_entity_browser
-      field_widget_display: label
+      field_widget_display: rendered_entity
       field_widget_edit: true
       field_widget_remove: true
+      field_widget_replace: true
+      open: true
       selection_mode: selection_append
-      open: false
-      field_widget_display_settings: {  }
+      field_widget_display_settings:
+        view_mode: default
     third_party_settings: {  }
     type: entity_browser_entity_reference
     region: content
@@ -63,7 +68,8 @@ content:
     type: language_select
     weight: 2
     region: content
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
   path:
     type: path

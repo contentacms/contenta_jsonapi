@@ -8,23 +8,39 @@ source:
     - title
 process:
   title: title
-  body: summary
-  field_preparation_time: preparation_time
-  field_total_time: total_time
+  field_author:
+    plugin: migration_lookup
+    migration: recipes_magazin__recipe_authors
+    source: author
   field_cooking_time: cooking_time
   field_difficulty:
     plugin: skip_on_empty
     method: process
     source: difficulty
+  field_image:
+    plugin: migration_lookup
+    migration:
+      - recipes_magazin__media_images
+    source: image
   field_ingredients:
     plugin: explode
     delimiter: ','
     source: ingredients
+  field_number_of_servings: number_of_servings
+  field_preparation_time: preparation_time
+  field_recipe_category:
+    -
+      plugin: explode
+      delimiter: ','
+      source: recipe_category
+    -
+      plugin: migration_lookup
+      migration: recipes_magazin__category
   field_recipe_instruction:
     plugin: recipes_magazin__html_in_file
     source: recipe_instruction
     directory: recipe_instructions
-  number_of_servings: number_of_servings
+  field_summary: summary
   field_tags:
     -
       plugin: explode
@@ -33,26 +49,14 @@ process:
     -
       plugin: migration_lookup
       migration: recipes_magazin__recipe_tags
+  field_total_time: total_time
   langcode:
     plugin: default_value
     default_value: 'en'
-  field_category:
-    -
-      plugin: explode
-      delimiter: ','
-      source: recipe_category
-    -
-      plugin: migration_lookup
-      migration: recipes_magazin__category
   uid:
     plugin: migration_lookup
     migration: recipes_magazin__recipe_authors
     source: author
-  field_image:
-    plugin: migration_lookup
-    migration:
-      - recipes_magazin__media_images
-    source: image
   path:
     plugin: recipes_magazin__prepend
     prefix: '/'

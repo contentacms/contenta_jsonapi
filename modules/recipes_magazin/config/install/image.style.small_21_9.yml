@@ -1,6 +1,10 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - image
+      - recipes_magazin
 name: small_21_9
 label: 'Small 21:9 (768x330)'
 effects:
