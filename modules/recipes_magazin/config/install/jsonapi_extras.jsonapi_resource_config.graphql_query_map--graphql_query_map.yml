@@ -1,12 +1,11 @@
-uuid: 5536d7c0-1e19-4b58-9aa9-f8494fb352c8
 langcode: en
 status: true
 dependencies:
-  module:
-    - graphql
   enforced:
     module:
       - recipes_magazin
+  module:
+    - graphql
 id: graphql_query_map--graphql_query_map
 disabled: true
 path: graphql_query_map/graphql_query_map
