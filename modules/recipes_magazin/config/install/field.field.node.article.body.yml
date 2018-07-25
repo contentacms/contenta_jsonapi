@@ -6,6 +6,9 @@ dependencies:
     - node.type.article
   module:
     - text
+  enforced:
+    module:
+      - recipes_magazin
 id: node.article.body
 field_name: body
 entity_type: node

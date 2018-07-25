@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - recipes_magazin
+name: 'Recipe cuisine'
+vid: recipe_cuisine
+description: ''
+hierarchy: 0
+weight: 0

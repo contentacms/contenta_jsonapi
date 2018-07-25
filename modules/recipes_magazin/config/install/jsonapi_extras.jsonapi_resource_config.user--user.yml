@@ -1,0 +1,121 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - recipes_magazin
+  module:
+    - user
+id: user--user
+disabled: false
+path: users
+resourceType: users
+resourceFields:
+  uid:
+    fieldName: uid
+    publicName: internalId
+    enhancer:
+      id: ''
+    disabled: false
+  uuid:
+    disabled: true
+    fieldName: uuid
+    publicName: uuid
+    enhancer:
+      id: ''
+  langcode:
+    disabled: true
+    fieldName: langcode
+    publicName: langcode
+    enhancer:
+      id: ''
+  preferred_langcode:
+    disabled: true
+    fieldName: preferred_langcode
+    publicName: preferred_langcode
+    enhancer:
+      id: ''
+  preferred_admin_langcode:
+    disabled: true
+    fieldName: preferred_admin_langcode
+    publicName: preferred_admin_langcode
+    enhancer:
+      id: ''
+  name:
+    fieldName: name
+    publicName: name
+    enhancer:
+      id: ''
+    disabled: false
+  pass:
+    disabled: true
+    fieldName: pass
+    publicName: pass
+    enhancer:
+      id: ''
+  mail:
+    fieldName: mail
+    publicName: mail
+    enhancer:
+      id: ''
+    disabled: false
+  timezone:
+    fieldName: timezone
+    publicName: timezone
+    enhancer:
+      id: ''
+    disabled: false
+  status:
+    fieldName: status
+    publicName: isActive
+    enhancer:
+      id: ''
+    disabled: false
+  created:
+    fieldName: created
+    publicName: createdAt
+    enhancer:
+      id: date_time
+      settings:
+        dateTimeFormat: 'Y-m-d\TH:i:sO'
+    disabled: false
+  changed:
+    fieldName: changed
+    publicName: updatedAt
+    enhancer:
+      id: date_time
+      settings:
+        dateTimeFormat: 'Y-m-d\TH:i:sO'
+    disabled: false
+  access:
+    fieldName: access
+    publicName: access
+    enhancer:
+      id: ''
+    disabled: false
+  login:
+    fieldName: login
+    publicName: lastLogin
+    enhancer:
+      id: date_time
+      settings:
+        dateTimeFormat: 'Y-m-d\TH:i:sO'
+    disabled: false
+  init:
+    disabled: true
+    fieldName: init
+    publicName: init
+    enhancer:
+      id: ''
+  roles:
+    fieldName: roles
+    publicName: roles
+    enhancer:
+      id: ''
+    disabled: false
+  default_langcode:
+    disabled: true
+    fieldName: default_langcode
+    publicName: default_langcode
+    enhancer:
+      id: ''

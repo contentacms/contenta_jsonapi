@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - recipes_magazin
+name: Ingredients
+vid: ingredients
+description: ''
+hierarchy: 0
+weight: 0
