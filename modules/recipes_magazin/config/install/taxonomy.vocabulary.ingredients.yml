@@ -1,6 +1,9 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - recipes_magazin
 name: Ingredients
 vid: ingredients
 description: ''

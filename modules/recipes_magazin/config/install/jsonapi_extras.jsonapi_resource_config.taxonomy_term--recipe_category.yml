@@ -3,6 +3,9 @@ status: true
 dependencies:
   config:
     - taxonomy.vocabulary.recipe_category
+  enforced:
+    module:
+      - recipes_magazin
 id: taxonomy_term--recipe_category
 disabled: false
 path: recipeCategories
@@ -91,10 +94,10 @@ resourceFields:
     advancedOptionsIcon: ''
     enhancer_label: ''
   path:
-    fieldName: path
-    publicName: path
-    enhancer:
-      id: ''
-    disabled: false
-    advancedOptionsIcon: ''
-    enhancer_label: ''
+     fieldName: path
+     publicName: path
+     enhancer:
+       id: ''
+     disabled: false
+     advancedOptionsIcon: ''
+     enhancer_label: ''

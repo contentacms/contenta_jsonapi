@@ -3,6 +3,9 @@ status: true
 dependencies:
   config:
     - node.type.page
+  enforced:
+    module:
+      - recipes_magazin
 id: node.page.promote
 field_name: promote
 entity_type: node

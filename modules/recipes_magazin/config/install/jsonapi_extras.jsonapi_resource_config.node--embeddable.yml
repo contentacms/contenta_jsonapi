@@ -118,11 +118,15 @@ resourceFields:
     enhancer:
       id: ''
   path:
-    fieldName: path
-    publicName: path
-    enhancer:
-      id: ''
-    disabled: false
+     fieldName: path
+     publicName: path
+     enhancer:
+       id: nested
+       settings:
+         path: alias
+     disabled: false
+     advancedOptionsIcon: ''
+     enhancer_label: ''
   background_image:
     fieldName: background_image
     publicName: backgroundImage

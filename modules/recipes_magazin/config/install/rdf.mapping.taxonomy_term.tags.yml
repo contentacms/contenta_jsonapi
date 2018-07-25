@@ -5,6 +5,9 @@ dependencies:
     - taxonomy.vocabulary.tags
   module:
     - taxonomy
+  enforced:
+    module:
+      - recipes_magazin
 id: taxonomy_term.tags
 targetEntityType: taxonomy_term
 bundle: tags

@@ -3,6 +3,9 @@ status: true
 dependencies:
   module:
     - node
+  enforced:
+    module:
+      - recipes_magazin
 id: node.field_cooking_time
 field_name: field_cooking_time
 entity_type: node

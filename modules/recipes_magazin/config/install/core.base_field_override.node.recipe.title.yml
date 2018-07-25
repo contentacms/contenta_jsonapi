@@ -3,6 +3,9 @@ status: true
 dependencies:
   config:
     - node.type.recipe
+  enforced:
+    module:
+      - recipes_magazin
 id: node.recipe.title
 field_name: title
 entity_type: node

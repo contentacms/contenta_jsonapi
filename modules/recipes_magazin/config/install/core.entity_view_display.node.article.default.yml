@@ -11,6 +11,9 @@ dependencies:
     - responsive_image
     - text
     - user
+  enforced:
+    module:
+      - recipes_magazin
 id: node.article.default
 targetEntityType: node
 bundle: article

@@ -3,6 +3,9 @@ status: true
 dependencies:
   config:
     - node.type.article
+  enforced:
+    module:
+      - recipes_magazin
 id: node--article
 disabled: false
 path: articles
@@ -157,13 +160,15 @@ resourceFields:
     advancedOptionsIcon: ''
     enhancer_label: ''
   path:
-    fieldName: path
-    publicName: path
-    enhancer:
-      id: ''
-    disabled: false
-    advancedOptionsIcon: ''
-    enhancer_label: ''
+     fieldName: path
+     publicName: path
+     enhancer:
+       id: nested
+       settings:
+         path: alias
+     disabled: false
+     advancedOptionsIcon: ''
+     enhancer_label: ''
   body:
     fieldName: body
     publicName: body

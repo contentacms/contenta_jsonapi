@@ -3,6 +3,9 @@ status: true
 dependencies:
   module:
     - rdf
+  enforced:
+    module:
+      - recipes_magazin
 id: rdf_mapping--rdf_mapping
 disabled: true
 path: rdf_mapping/rdf_mapping

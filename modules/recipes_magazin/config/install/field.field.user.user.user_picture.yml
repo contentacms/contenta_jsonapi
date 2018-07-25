@@ -6,6 +6,9 @@ dependencies:
   module:
     - image
     - user
+  enforced:
+    module:
+      - recipes_magazin
 id: user.user.user_picture
 field_name: user_picture
 entity_type: user

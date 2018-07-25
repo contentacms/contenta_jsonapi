@@ -7,6 +7,9 @@ dependencies:
   module:
     - path
     - text
+  enforced:
+    module:
+      - recipes_magazin
 id: node.page.default
 targetEntityType: node
 bundle: page

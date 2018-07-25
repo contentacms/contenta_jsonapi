@@ -4,6 +4,9 @@ dependencies:
   module:
     - node
     - options
+  enforced:
+    module:
+      - recipes_magazin
 id: node.field_difficulty
 field_name: field_difficulty
 entity_type: node

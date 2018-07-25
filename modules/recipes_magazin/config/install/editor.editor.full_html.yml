@@ -5,6 +5,9 @@ dependencies:
     - filter.format.full_html
   module:
     - ckeditor
+  enforced:
+    module:
+      - recipes_magazin
 format: full_html
 editor: ckeditor
 settings:

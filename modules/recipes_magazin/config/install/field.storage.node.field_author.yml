@@ -4,6 +4,9 @@ dependencies:
   module:
     - node
     - user
+  enforced:
+    module:
+      - recipes_magazin
 id: node.field_author
 field_name: field_author
 entity_type: node

@@ -12,6 +12,9 @@ dependencies:
     - entity_browser
     - path
     - text
+  enforced:
+    module:
+      - recipes_magazin
 _core:
   default_config_hash: 0StcaANBh8qzNkp_3-xqJlwQoLGxZeRoIwO16LG10d8
 id: node.article.default

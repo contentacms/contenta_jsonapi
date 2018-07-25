@@ -3,6 +3,9 @@ status: true
 dependencies:
   module:
     - media
+  enforced:
+    module:
+      - recipes_magazin
 id: media_type--media_type
 disabled: true
 path: media_type/media_type
