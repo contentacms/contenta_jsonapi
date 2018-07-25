@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.media.image.field_image
-    - image.style.media_entity_browser_thumbnail
+    - image.style.thumbnail
     - media.type.image
   module:
     - image
@@ -18,7 +18,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: media_entity_browser_thumbnail
+      image_style: thumbnail
       image_link: ''
     region: content
     third_party_settings: {  }
