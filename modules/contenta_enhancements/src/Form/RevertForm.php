@@ -18,31 +18,20 @@ class RevertForm extends ConfirmFormBase {
   protected $moduleInstaller;
 
   /**
-   * @var \Drupal\Core\Config\Config
-   */
-  protected $siteConfig;
-
-  /**
    * RevertForm constructor.
    *
    * @param \Drupal\Core\Extension\ModuleInstallerInterface $module_installer
    * @param \Drupal\Core\Extension\ModuleInstallerInterface $module_installer
-   * @param \Drupal\Core\Config\Config $theme_config
-   * @param \Drupal\Core\Config\Config $site_config
    */
-  public function __construct(ModuleInstallerInterface $module_installer, Config $site_config) {
+  public function __construct(ModuleInstallerInterface $module_installer) {
     $this->moduleInstaller = $module_installer;
-    $this->siteConfig = $site_config;
   }
 
   /**
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container) {
-    return new static(
-      $container->get('module_installer'),
-      $container->get('config.factory')->getEditable('system.site')
-    );
+    return new static($container->get('module_installer'));
   }
 
   /**
@@ -56,9 +45,6 @@ class RevertForm extends ConfirmFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    // Use the admin theme in the front-end.
-    $this->siteConfig->set('page.front', '/admin/content');
-    $this->siteConfig->save();
     $this->moduleInstaller->uninstall(['recipes_magazin']);
     drupal_set_message($this->t('Contenta has successfully reverted to a clean state!'));
     $form_state->setRedirectUrl($this->getCancelUrl());
@@ -68,7 +54,7 @@ class RevertForm extends ConfirmFormBase {
    * {@inheritdoc}
    */
   public function getQuestion() {
-    return $this->t('This action will remove all the default content and the front-end theme. Are you sure you want to proceed?');
+    return $this->t('This will remove the default content and its types. Proceed?');
   }
 
   public function getCancelUrl() {

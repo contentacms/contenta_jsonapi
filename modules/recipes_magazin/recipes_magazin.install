@@ -25,6 +25,10 @@ function recipes_magazin_install() {
     'recipes_magazin__embeddable',
     'recipes_magazin__tutorial',
   ]);
+  // Set the homepage to the Welcome screen.
+  $system = \Drupal::configFactory()->getEditable('system.site');
+  $system->set('page.front', '/welcome');
+  $system->save();
 }
 
 /**
@@ -47,5 +51,9 @@ function recipes_magazin_uninstall() {
     'recipes_magazin__embeddable',
     'recipes_magazin__tutorial',
   ]);
+  // Set the homepage to the admin content screen.
+  $system = \Drupal::configFactory()->getEditable('system.site');
+  $system->set('page.front', '/admin/content');
+  $system->save();
 }
 
