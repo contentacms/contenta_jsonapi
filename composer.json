@@ -69,7 +69,9 @@
     "drupal/schemata": "^1.0@alpha",
     "drupal/simple_oauth": "^3.3",
     "drupal/subrequests": "^2.0@rc",
-    "drupal/video_embed_field": "^2.0"
+    "drupal/video_embed_field": "^2.0",
+    "drupal/openapi_ui": "^1.0@RC",
+    "drupal/openapi_ui_swagger": "^1.0@RC"
   },
   "config": {
     "process-timeout": 0
