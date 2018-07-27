@@ -13,9 +13,3 @@ contenta_enhancements.api.authentication:
   title: Authentication
   base_route: contenta_enhancements.api
   weight: 90
-
-contenta_enhancements.api.advanced:
-  route_name: contenta_enhancements.api.advanced
-  title: Advanced
-  base_route: contenta_enhancements.api
-  weight: 100
