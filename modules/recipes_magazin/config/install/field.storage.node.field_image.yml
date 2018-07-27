@@ -4,6 +4,7 @@ dependencies:
   enforced:
     module:
       - recipes_magazin
+      - image
   module:
     - media
     - node
