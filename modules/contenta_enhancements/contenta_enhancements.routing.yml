@@ -16,14 +16,6 @@ contenta_enhancements.api.config:
   requirements:
     _permission: 'access openapi api docs'
 
-contenta_enhancements.api.authentication:
-  path: '/admin/api/authentication'
-  defaults:
-    _controller: '\Drupal\contenta_enhancements\Controller\ApiAuthInfo::info'
-  methods: [GET]
-  requirements:
-    _permission: 'access openapi api docs'
-
 contenta_enhancements.revert:
   path: '/admin/contenta/revert'
   defaults:
