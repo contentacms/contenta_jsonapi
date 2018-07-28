@@ -7,6 +7,9 @@ dependencies:
   module:
     - text
     - user
+  enforced:
+    module:
+      - recipes_magazin
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -22,13 +25,4 @@ content:
   links:
     weight: 101
     region: content
-  title:
-    label: hidden
-    type: string
-    weight: -5
-    region: content
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-hidden:
-  langcode: true
+hidden: {  }

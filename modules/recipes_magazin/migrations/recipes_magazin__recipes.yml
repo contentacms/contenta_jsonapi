@@ -1,36 +1,46 @@
 id: recipes_magazin__recipes
 status: true
 source:
-  plugin: recipe_magazin__csv
+  plugin: recipes_magazin__csv
   path: default_content/recipes.csv
   header_row_count: 1
   keys:
     - title
 process:
   title: title
-#  image:
-  body: summary
-#  author:
-#  category:
-  field_preparation_time: preparation_time
-  field_total_time: total_time
-  field_difficulty: difficulty
+  field_author:
+    plugin: migration_lookup
+    migration: recipes_magazin__recipe_authors
+    source: author
+  field_cooking_time: cooking_time
+  field_difficulty:
+    plugin: skip_on_empty
+    method: process
+    source: difficulty
+  field_image:
+    plugin: migration_lookup
+    migration:
+      - recipes_magazin__media_images
+    source: image
   field_ingredients:
     plugin: explode
     delimiter: ','
     source: ingredients
-  field_recipe_instruction: recipe_instruction
-  # @todo does this field exist already?
-#  number_of_servings:
-#  tags:
-  # @todo This field does not exist yet
-#  recipe_review:
-
-  langcode:
-    plugin: default_value
-    default_value: 'en'
-
-  # Note: This makes it possible to pull in values from another migration.
+  field_number_of_servings: number_of_servings
+  field_preparation_time: preparation_time
+  field_recipe_category:
+    -
+      plugin: explode
+      delimiter: ','
+      source: recipe_category
+    -
+      plugin: migration_lookup
+      migration: recipes_magazin__category
+  field_recipe_instruction:
+    plugin: recipes_magazin__html_in_file
+    source: recipe_instruction
+    directory: recipe_instructions
+  field_summary: summary
   field_tags:
     -
       plugin: explode
@@ -38,24 +48,19 @@ process:
       source: tags
     -
       plugin: migration_lookup
-      migration: recipes_magazin__tags
-  field_category:
-    -
-      plugin: explode
-      delimiter: ','
-      source: category
-    -
-      plugin: migration_lookup
-      migration: recipes_magazin__category
+      migration: recipes_magazin__recipe_tags
+  field_total_time: total_time
+  langcode:
+    plugin: default_value
+    default_value: 'en'
   uid:
     plugin: migration_lookup
-    migration: recipes_magazin__authors
+    migration: recipes_magazin__recipe_authors
     source: author
-  field_image:
-    plugin: migration_lookup
-    migration:
-      - recipes_magazin__media_images
-    source: image
+  path:
+    plugin: recipes_magazin__prepend
+    prefix: '/'
+    source: slug
 destination:
   plugin: 'entity:node'
   default_bundle: recipe
@@ -63,6 +68,7 @@ migration_dependencies:
   required:
     - recipes_magazin__category
     - recipes_magazin__tags
-    - recipes_magazin__authors
+    - recipes_magazin__recipe_authors
     - recipes_magazin__media_images
     - recipes_magazin__images
+    - recipes_magazin__recipe_tags

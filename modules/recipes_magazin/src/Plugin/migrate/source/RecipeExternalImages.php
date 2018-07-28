@@ -8,7 +8,7 @@ use Drupal\Component\Utility\UrlHelper;
  * Extends the CSV migration to make it possible to import terms.
  *
  * @MigrateSource(
- *   id = "recipe_magazin__external_images"
+ *   id = "recipes_magazin__external_images"
  * )
  */
 class RecipeExternalImages extends CSV {

@@ -33,7 +33,7 @@ widgets:
     id: view
   fa8a606b-934a-470e-8c9e-e24535857dae:
     settings:
-      media_entity_bundle: image
+      media_type: ''
       upload_location: 'public://[date:custom:Y]-[date:custom:m]'
       dropzone_description: 'Drop files here to upload them'
       max_filesize: 8M
@@ -46,6 +46,7 @@ widgets:
       thumbnail_method: contain
       submit_text: Select
       auto_select: false
+      media_entity_bundle: image
     uuid: fa8a606b-934a-470e-8c9e-e24535857dae
     weight: 1
     label: Upload

@@ -6,7 +6,7 @@ namespace Drupal\recipes_magazin\Plugin\migrate\source;
  * Extends the CSV migration to make it possible to import terms.
  *
  * @MigrateSource(
- *   id = "recipe_magazin__terms"
+ *   id = "recipes_magazin__terms"
  * )
  */
 class Terms extends CSV {
