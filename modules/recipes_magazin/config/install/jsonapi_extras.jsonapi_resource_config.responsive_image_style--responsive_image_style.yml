@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - responsive_image
+  enforced:
+    module:
+      - recipes_magazin
+id: responsive_image_style--responsive_image_style
+disabled: true
+path: responsive_image_style/responsive_image_style
+resourceType: responsive_image_style--responsive_image_style
+resourceFields: []

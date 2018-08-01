@@ -1,14 +1,14 @@
 id: recipes_magazin__category
 status: true
 source:
-  plugin: recipe_magazin__terms
+  plugin: recipes_magazin__terms
   path: default_content/recipes.csv
   header_row_count: 1
-  column: category
+  column: recipe_category
   keys:
-    - category
+    - recipe_category
 process:
-  name: category
+  name: recipe_category
   langcode:
     plugin: default_value
     default_value: 'en'

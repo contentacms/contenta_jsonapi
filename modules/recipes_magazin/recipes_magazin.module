@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Module file.
+ */
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function recipes_magazin_theme_registry_alter(&$theme_registry) {
+  $theme_registry['views_view_grid']['path'] = drupal_get_path('module', 'recipes_magazin') . '/templates';
+}

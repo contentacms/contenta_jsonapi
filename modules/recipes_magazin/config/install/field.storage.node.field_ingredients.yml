@@ -1,11 +1,11 @@
 langcode: en
 status: true
 dependencies:
+  module:
+    - node
   enforced:
     module:
       - recipes_magazin
-  module:
-    - node
 id: node.field_ingredients
 field_name: field_ingredients
 entity_type: node

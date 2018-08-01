@@ -1,13 +1,19 @@
 langcode: en
 status: true
 dependencies:
+  module:
+    - menu_ui
   enforced:
     module:
       - recipes_magazin
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
 name: Recipe
 type: recipe
-description: 'Recipe content type for a recipe magazine demo.'
-help: 'Use the recipe content type as an example of structured content in Drupal.'
+description: 'Add a new recipe to the site.'
+help: ''
 new_revision: true
 preview_mode: 1
-display_submitted: true
+display_submitted: false

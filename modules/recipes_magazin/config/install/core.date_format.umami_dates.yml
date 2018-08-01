@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - recipes_magazin
+id: umami_dates
+label: 'Umami dates'
+locked: false
+pattern: 'jS F Y'

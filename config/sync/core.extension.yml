@@ -46,6 +46,8 @@ module:
   options: 0
   page_cache: 0
   path: 0
+  rdf: 0
+  responsive_image: 0
   rest: 0
   schemata: 0
   schemata_json_schema: 0

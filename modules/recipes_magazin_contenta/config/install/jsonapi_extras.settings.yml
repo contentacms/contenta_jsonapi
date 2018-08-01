@@ -1,5 +1,0 @@
-path_prefix: api
-dependencies:
-  enforced:
-    module:
-      - recipes_magazin_contenta

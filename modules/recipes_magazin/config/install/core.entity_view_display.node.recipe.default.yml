@@ -2,63 +2,67 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.recipe_review.default
-    - field.field.node.recipe.field_category
+    - field.field.node.recipe.field_author
+    - field.field.node.recipe.field_cooking_time
     - field.field.node.recipe.field_difficulty
     - field.field.node.recipe.field_image
     - field.field.node.recipe.field_ingredients
-    - field.field.node.recipe.field_number_of_services
+    - field.field.node.recipe.field_number_of_servings
     - field.field.node.recipe.field_preparation_time
+    - field.field.node.recipe.field_recipe_category
     - field.field.node.recipe.field_recipe_instruction
-    - field.field.node.recipe.field_recipe_reviews_and_testimo
+    - field.field.node.recipe.field_summary
     - field.field.node.recipe.field_tags
-    - field.field.node.recipe.field_total_time
     - node.type.recipe
+    - responsive_image.styles.3_2_image
   module:
-    - comment
-    - image
     - options
+    - responsive_image
     - text
     - user
+  enforced:
+    module:
+      - recipes_magazin
 id: node.recipe.default
 targetEntityType: node
 bundle: recipe
 mode: default
 content:
-  field_category:
-    weight: 105
+  field_cooking_time:
+    weight: 1
     label: above
     settings:
-      link: true
+      thousand_separator: ''
+      prefix_suffix: true
     third_party_settings: {  }
-    type: entity_reference_label
+    type: number_integer
     region: content
   field_difficulty:
-    weight: 108
+    weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_image:
-    weight: 102
-    label: above
+    weight: 3
+    label: hidden
     settings:
-      image_style: ''
+      responsive_image_style: 3_2_image
       image_link: ''
     third_party_settings: {  }
-    type: image
+    type: responsive_image
     region: content
   field_ingredients:
-    weight: 109
+    weight: 4
     label: above
     settings:
-      link: true
+      link_to_entity: false
     third_party_settings: {  }
-    type: entity_reference_label
+    type: string
     region: content
-  field_number_of_services:
-    weight: 111
+  field_number_of_servings:
+    weight: 5
     label: above
     settings:
       thousand_separator: ''
@@ -67,7 +71,7 @@ content:
     type: number_integer
     region: content
   field_preparation_time:
-    weight: 106
+    weight: 6
     label: above
     settings:
       thousand_separator: ''
@@ -75,49 +79,40 @@ content:
     third_party_settings: {  }
     type: number_integer
     region: content
-  field_recipe_instruction:
-    weight: 110
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_recipe_reviews_and_testimo:
-    weight: 113
-    label: above
-    settings:
-      view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
-    type: comment_default
-    region: content
-  field_tags:
-    weight: 112
+  field_recipe_category:
+    weight: 7
     label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_total_time:
-    weight: 107
+  field_recipe_instruction:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_summary:
+    weight: 9
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_tags:
+    weight: 10
     label: above
     settings:
-      thousand_separator: ''
-      prefix_suffix: true
+      link: true
     third_party_settings: {  }
-    type: number_integer
+    type: entity_reference_label
     region: content
   links:
-    weight: 100
+    weight: 0
     region: content
-  title:
-    label: hidden
-    type: string
-    weight: -5
-    region: content
-    settings:
-      link_to_entity: false
+    settings: {  }
     third_party_settings: {  }
 hidden:
-  langcode: true
+  field_author: true
