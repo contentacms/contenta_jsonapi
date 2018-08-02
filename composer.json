@@ -34,20 +34,9 @@
         "type:drupal-drush"
       ]
     },
-    "patches": {
-      "drupal/core": {
-        "Allow a profile to be installed from existing config": "https://www.drupal.org/files/issues/drupal-n2788777-105.patch"
-      },
-      "drupal/jsonapi": {
-        "Make the file URLs full URLs": "https://www.drupal.org/files/issues/2929600--use-full-url-file--2.patch"
-      },
-      "drupal/schemata": {
-        "Small inaccuracies for JSON API schemas": "https://www.drupal.org/files/issues/2018-04-28/2967572--schemata--multiple-minor-adjustments--3.patch"
-      }
-    }
+    "patches": {}
   },
   "require": {
-    "composer/installers": "^1.0.24",
     "cweagans/composer-patches": "^1.6.0",
     "drupal/admin_toolbar": "^1.23",
     "drupal/consumer_image_styles": "^2.0@rc",
