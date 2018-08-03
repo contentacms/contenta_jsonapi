@@ -34,11 +34,7 @@
         "type:drupal-drush"
       ]
     },
-    "patches": {
-      "drupal/core": {
-        "Allow a profile to be installed from existing config": "https://www.drupal.org/files/issues/drupal-n2788777-105.patch"
-      }
-    }
+    "patches": {}
   },
   "require": {
     "cweagans/composer-patches": "^1.6.0",
