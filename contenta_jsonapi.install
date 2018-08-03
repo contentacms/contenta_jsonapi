@@ -24,8 +24,19 @@ function contenta_jsonapi_install() {
       file_put_contents($filename, Yaml::encode($yml_data));
     }
   }
-  // Now generate the OAuth2 keys.
-  _contenta_jsonapi_generate_keys();
+}
+
+/**
+ * Implements hook_install_tasks().
+ */
+function contenta_jsonapi_install_tasks(&$install_state) {
+  $tasks = [
+    '_contenta_jsonapi_generate_keys' => [
+      'display_name' => t('Generate OAuth 2 key/secret pair'),
+    ],
+  ];
+
+  return $tasks;
 }
 
 /**
