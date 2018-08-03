@@ -61,7 +61,7 @@ echo "-----------------------------------------------"
 echo " Installing Contenta CMS for local usage "
 echo "-----------------------------------------------"
 echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} php core/scripts/drupal contenta_jsonapi --port 8080 --site-name ContentaCMS\n\n"
-php core/scripts/drupal contenta_jsonapi --port 8080 --site-name ContentaCMS;
+php core/scripts/drupal quick-start contenta_jsonapi --port 8888 --site-name ContentaCMS;
 
 if [ $? -ne 0 ]; then
   echo -e "${FG_C}${EBG_C} ERROR ${NO_C} The Drupal installer failed to install Contenta CMS."
