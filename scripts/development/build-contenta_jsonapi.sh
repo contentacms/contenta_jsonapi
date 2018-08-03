@@ -67,6 +67,9 @@ if [ $? -ne 0 ]; then
   exit 3
 fi
 
+echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $DRUSH en -y recipes_magazin\n\n"
+$DRUSH en -y recipes_magazin
+
 echo -e "\n\n\n"
 echo -e "\t********************************"
 echo -e "\t*    Installation finished     *"

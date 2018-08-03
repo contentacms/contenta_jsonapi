@@ -22,8 +22,6 @@ module:
   fieldable_path: 0
   file: 0
   filter: 0
-  graphql: 0
-  graphql_core: 0
   hal: 0
   help: 0
   image: 0
@@ -66,7 +64,6 @@ module:
   views: 0
   menu_link_content: 1
   contenta_jsonapi: 1000
-  contenta_graphql: 1001
 theme:
   stable: 0
   classy: 0
