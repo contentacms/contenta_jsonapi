@@ -34,18 +34,14 @@
         "type:drupal-drush"
       ]
     },
-    "patches": {
-      "drupal/core": {
-        "Profile from existing config (drop in 8.6.x)": "https://www.drupal.org/files/issues/2018-06-15/2788777-3-189.patch"
-      }
-    }
+    "patches": {}
   },
   "require": {
     "cweagans/composer-patches": "^1.6.0",
     "drupal/admin_toolbar": "^1.23",
     "drupal/consumer_image_styles": "^2.0@rc",
     "drupal/consumers": "^1.0@beta",
-    "drupal/core": "^8.5.3",
+    "drupal/core": "^8.6.0@beta",
     "drupal/decoupled_router": "^1.0@rc",
     "drupal/dropzonejs": "^2.0@alpha",
     "drupal/entity_browser": "^2.0@alpha",
