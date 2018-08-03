@@ -14,3 +14,7 @@ dependencies:
   - text
   - user
   - migrate
+  - jsonapi
+  - jsonapi_extras
+  - consumer_image_styles
+  - views

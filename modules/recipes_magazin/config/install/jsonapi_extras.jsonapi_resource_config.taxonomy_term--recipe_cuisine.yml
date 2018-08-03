@@ -17,64 +17,51 @@ resourceFields:
     enhancer:
       id: ''
     disabled: false
-    advancedOptionsIcon: ''
-    enhancer_label: ''
   uuid:
     disabled: true
     fieldName: uuid
     publicName: uuid
     enhancer:
       id: ''
-    advancedOptionsIcon: ''
-    enhancer_label: ''
+
   langcode:
     disabled: true
     fieldName: langcode
     publicName: langcode
     enhancer:
       id: ''
-    advancedOptionsIcon: ''
-    enhancer_label: ''
+
   vid:
     disabled: true
     fieldName: vid
     publicName: vid
     enhancer:
       id: ''
-    advancedOptionsIcon: ''
-    enhancer_label: ''
+
   name:
     fieldName: name
     publicName: name
     enhancer:
       id: ''
     disabled: false
-    advancedOptionsIcon: ''
-    enhancer_label: ''
   description:
     fieldName: description
     publicName: description
     enhancer:
       id: ''
     disabled: false
-    advancedOptionsIcon: ''
-    enhancer_label: ''
   weight:
     fieldName: weight
     publicName: weight
     enhancer:
       id: ''
     disabled: false
-    advancedOptionsIcon: ''
-    enhancer_label: ''
   parent:
     fieldName: parent
     publicName: parent
     enhancer:
       id: ''
     disabled: false
-    advancedOptionsIcon: ''
-    enhancer_label: ''
   changed:
     fieldName: changed
     publicName: updatedAt
@@ -83,21 +70,16 @@ resourceFields:
       settings:
         dateTimeFormat: 'Y-m-d\TH:i:sO'
     disabled: false
-    advancedOptionsIcon: ''
-    enhancer_label: ''
   default_langcode:
     disabled: true
     fieldName: default_langcode
     publicName: default_langcode
     enhancer:
       id: ''
-    advancedOptionsIcon: ''
-    enhancer_label: ''
+
   path:
-     fieldName: path
-     publicName: path
-     enhancer:
-       id: ''
-     disabled: false
-     advancedOptionsIcon: ''
-     enhancer_label: ''
+    fieldName: path
+    publicName: path
+    enhancer:
+      id: ''
+    disabled: false

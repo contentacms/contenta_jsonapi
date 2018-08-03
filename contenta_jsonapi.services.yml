@@ -2,3 +2,6 @@ services:
   logger.channel.contentacms:
     parent: logger.channel_base
     arguments: ['contentacms']
+  plugin.manager.contenta_jsonapi.optional_modules:
+    class: Drupal\contenta_jsonapi\OptionalModulesManager
+    parent: default_plugin_manager
