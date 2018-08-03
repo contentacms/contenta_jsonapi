@@ -1,0 +1,160 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.article
+  enforced:
+    module:
+      - recipes_magazin
+id: node--article
+disabled: false
+path: articles
+resourceType: articles
+resourceFields:
+  nid:
+    fieldName: nid
+    publicName: internalId
+    enhancer:
+      id: ''
+    disabled: false
+  uuid:
+    disabled: true
+    fieldName: uuid
+    publicName: uuid
+    enhancer:
+      id: ''
+
+  vid:
+    disabled: true
+    fieldName: vid
+    publicName: vid
+    enhancer:
+      id: ''
+
+  langcode:
+    disabled: true
+    fieldName: langcode
+    publicName: langcode
+    enhancer:
+      id: ''
+
+  type:
+    fieldName: type
+    publicName: contentType
+    enhancer:
+      id: ''
+    disabled: false
+  revision_timestamp:
+    disabled: true
+    fieldName: revision_timestamp
+    publicName: revision_timestamp
+    enhancer:
+      id: ''
+
+  revision_uid:
+    disabled: true
+    fieldName: revision_uid
+    publicName: revision_uid
+    enhancer:
+      id: ''
+
+  revision_log:
+    disabled: true
+    fieldName: revision_log
+    publicName: revision_log
+    enhancer:
+      id: ''
+
+  status:
+    fieldName: status
+    publicName: isPublished
+    enhancer:
+      id: ''
+    disabled: false
+  title:
+    fieldName: title
+    publicName: title
+    enhancer:
+      id: ''
+    disabled: false
+  uid:
+    fieldName: uid
+    publicName: owner
+    enhancer:
+      id: ''
+    disabled: false
+  created:
+    fieldName: created
+    publicName: createdAt
+    enhancer:
+      id: date_time
+      settings:
+        dateTimeFormat: 'Y-m-d\TH:i:sO'
+    disabled: false
+  changed:
+    fieldName: changed
+    publicName: updatedAt
+    enhancer:
+      id: date_time
+      settings:
+        dateTimeFormat: 'Y-m-d\TH:i:sO'
+    disabled: false
+  promote:
+    fieldName: promote
+    publicName: isPromoted
+    enhancer:
+      id: ''
+    disabled: false
+  sticky:
+    disabled: true
+    fieldName: sticky
+    publicName: sticky
+    enhancer:
+      id: ''
+
+  default_langcode:
+    disabled: true
+    fieldName: default_langcode
+    publicName: default_langcode
+    enhancer:
+      id: ''
+
+  revision_default:
+    fieldName: revision_default
+    publicName: revision_default
+    enhancer:
+      id: ''
+    disabled: false
+  revision_translation_affected:
+    disabled: true
+    fieldName: revision_translation_affected
+    publicName: revision_translation_affected
+    enhancer:
+      id: ''
+
+  path:
+    fieldName: path
+    publicName: path
+    enhancer:
+      id: nested
+      settings:
+        path: alias
+    disabled: false
+  body:
+    fieldName: body
+    publicName: body
+    enhancer:
+      id: ''
+    disabled: false
+  field_image:
+    fieldName: field_image
+    publicName: image
+    enhancer:
+      id: ''
+    disabled: false
+  field_tags:
+    fieldName: field_tags
+    publicName: tags
+    enhancer:
+      id: ''
+    disabled: false

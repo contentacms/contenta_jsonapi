@@ -1,0 +1,208 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.recipe
+  enforced:
+    module:
+      - recipes_magazin
+id: node--recipe
+disabled: false
+path: recipes
+resourceType: recipes
+resourceFields:
+  nid:
+    fieldName: nid
+    publicName: internalId
+    enhancer:
+      id: ''
+    disabled: false
+  uuid:
+    disabled: true
+    fieldName: uuid
+    publicName: uuid
+    enhancer:
+      id: ''
+
+  vid:
+    disabled: true
+    fieldName: vid
+    publicName: vid
+    enhancer:
+      id: ''
+
+  langcode:
+    disabled: true
+    fieldName: langcode
+    publicName: langcode
+    enhancer:
+      id: ''
+
+  type:
+    fieldName: type
+    publicName: contentType
+    enhancer:
+      id: ''
+    disabled: false
+  revision_timestamp:
+    disabled: true
+    fieldName: revision_timestamp
+    publicName: revision_timestamp
+    enhancer:
+      id: ''
+
+  revision_uid:
+    disabled: true
+    fieldName: revision_uid
+    publicName: revision_uid
+    enhancer:
+      id: ''
+
+  revision_log:
+    disabled: true
+    fieldName: revision_log
+    publicName: revision_log
+    enhancer:
+      id: ''
+
+  status:
+    fieldName: status
+    publicName: isPublished
+    enhancer:
+      id: ''
+    disabled: false
+  title:
+    fieldName: title
+    publicName: title
+    enhancer:
+      id: ''
+    disabled: false
+  uid:
+    fieldName: uid
+    publicName: owner
+    enhancer:
+      id: ''
+    disabled: false
+  created:
+    fieldName: created
+    publicName: createdAt
+    enhancer:
+      id: date_time
+      settings:
+        dateTimeFormat: 'Y-m-d\TH:i:sO'
+    disabled: false
+  changed:
+    fieldName: changed
+    publicName: updatedAt
+    enhancer:
+      id: date_time
+      settings:
+        dateTimeFormat: 'Y-m-d\TH:i:sO'
+    disabled: false
+  promote:
+    fieldName: promote
+    publicName: isPromoted
+    enhancer:
+      id: ''
+    disabled: false
+  sticky:
+    disabled: true
+    fieldName: sticky
+    publicName: sticky
+    enhancer:
+      id: ''
+
+  default_langcode:
+    disabled: true
+    fieldName: default_langcode
+    publicName: default_langcode
+    enhancer:
+      id: ''
+
+  revision_default:
+    fieldName: revision_default
+    publicName: revision_default
+    enhancer:
+      id: ''
+    disabled: false
+  revision_translation_affected:
+    disabled: true
+    fieldName: revision_translation_affected
+    publicName: revision_translation_affected
+    enhancer:
+      id: ''
+
+  path:
+    fieldName: path
+    publicName: path
+    enhancer:
+      id: nested
+      settings:
+        path: alias
+    disabled: false
+  field_author:
+    fieldName: field_author
+    publicName: author
+    enhancer:
+      id: ''
+    disabled: false
+  field_cooking_time:
+    fieldName: field_cooking_time
+    publicName: cookingTime
+    enhancer:
+      id: ''
+    disabled: false
+  field_difficulty:
+    fieldName: field_difficulty
+    publicName: difficulty
+    enhancer:
+      id: ''
+    disabled: false
+  field_image:
+    fieldName: field_image
+    publicName: image
+    enhancer:
+      id: ''
+    disabled: false
+  field_ingredients:
+    fieldName: field_ingredients
+    publicName: ingredients
+    enhancer:
+      id: ''
+    disabled: false
+  field_number_of_servings:
+    fieldName: field_number_of_servings
+    publicName: numberOfservings
+    enhancer:
+      id: ''
+    disabled: false
+  field_preparation_time:
+    fieldName: field_preparation_time
+    publicName: preparationTime
+    enhancer:
+      id: ''
+    disabled: false
+  field_recipe_category:
+    fieldName: field_recipe_category
+    publicName: category
+    enhancer:
+      id: ''
+    disabled: false
+  field_recipe_instruction:
+    fieldName: field_recipe_instruction
+    publicName: instructions
+    enhancer:
+      id: ''
+    disabled: false
+  field_summary:
+    fieldName: field_summary
+    publicName: summary
+    enhancer:
+      id: ''
+    disabled: false
+  field_tags:
+    fieldName: field_tags
+    publicName: tags
+    enhancer:
+      id: ''
+    disabled: false

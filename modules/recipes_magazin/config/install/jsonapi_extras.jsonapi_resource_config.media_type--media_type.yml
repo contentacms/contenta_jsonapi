@@ -1,0 +1,97 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+  enforced:
+    module:
+      - recipes_magazin
+id: media_type--media_type
+disabled: true
+path: media_type/media_type
+resourceType: media_type--media_type
+resourceFields:
+  id:
+    fieldName: id
+    publicName: id
+    enhancer:
+      id: ''
+    disabled: false
+  uuid:
+    fieldName: uuid
+    publicName: uuid
+    enhancer:
+      id: ''
+    disabled: false
+  langcode:
+    fieldName: langcode
+    publicName: langcode
+    enhancer:
+      id: ''
+    disabled: false
+  status:
+    fieldName: status
+    publicName: status
+    enhancer:
+      id: ''
+    disabled: false
+  dependencies:
+    fieldName: dependencies
+    publicName: dependencies
+    enhancer:
+      id: ''
+    disabled: false
+  third_party_settings:
+    fieldName: third_party_settings
+    publicName: third_party_settings
+    enhancer:
+      id: ''
+    disabled: false
+  _core:
+    fieldName: _core
+    publicName: _core
+    enhancer:
+      id: ''
+    disabled: false
+  label:
+    fieldName: label
+    publicName: label
+    enhancer:
+      id: ''
+    disabled: false
+  description:
+    fieldName: description
+    publicName: description
+    enhancer:
+      id: ''
+    disabled: false
+  source:
+    fieldName: source
+    publicName: source
+    enhancer:
+      id: ''
+    disabled: false
+  queue_thumbnail_downloads:
+    fieldName: queue_thumbnail_downloads
+    publicName: queue_thumbnail_downloads
+    enhancer:
+      id: ''
+    disabled: false
+  new_revision:
+    fieldName: new_revision
+    publicName: new_revision
+    enhancer:
+      id: ''
+    disabled: false
+  source_configuration:
+    fieldName: source_configuration
+    publicName: source_configuration
+    enhancer:
+      id: ''
+    disabled: false
+  field_map:
+    fieldName: field_map
+    publicName: field_map
+    enhancer:
+      id: ''
+    disabled: false

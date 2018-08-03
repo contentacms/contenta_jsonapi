@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies: {  }
+id: client_developer
+label: 'Client developer'
+weight: 4
+is_admin: null
+permissions:
+  - 'access openapi api docs'
+  - 'access user profiles'
+  - 'administer simple_oauth entities'
+  - 'grant simple_oauth codes'

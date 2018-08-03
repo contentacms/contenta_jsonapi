@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: image
+label: Image
+description: ''
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_image
+  gather_exif: false
+field_map: {  }

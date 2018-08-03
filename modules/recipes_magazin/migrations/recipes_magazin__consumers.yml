@@ -1,0 +1,34 @@
+id: recipes_magazin__consumers
+status: true
+source:
+  plugin: recipes_magazin__csv
+  path: default_content/consumers.csv
+  header_row_count: 1
+  keys:
+    - uuid
+process:
+  label: label
+  uuid: uuid
+  owner_id:
+    plugin: migration_lookup
+    migration: recipes_magazin__page_authors
+    source: owner
+  description: description
+  image:
+    plugin: migration_lookup
+    migration: recipes_magazin__images
+    source: image
+  image_styles:
+    -
+      plugin: explode
+      delimiter: ','
+      source: image_styles
+destination:
+  plugin: 'entity:consumer'
+migration_dependencies:
+  required:
+    - recipes_magazin__images
+    - recipes_magazin__page_authors
+dependencies:
+  config:
+    - filter.format.full_html.yml

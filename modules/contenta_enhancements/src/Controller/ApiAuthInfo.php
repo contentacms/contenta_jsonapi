@@ -33,7 +33,7 @@ curl -X POST -d "grant_type=password&client_id=$client_id&client_secret=$client_
 <br>
 <p><small>This uses an OAuth2 password grant to retrieve an access token and a refresh token. Use your favorite library's OAuth2 support, or learn how OAuth2 works.</small></p>
 HTML;
-      drupal_set_message(t('You still have the demo user & client. Delete them before going into production! Add <a href=":users">users</a> and <a href=":clients">clients</a>, and take the <a href=":tour">access control tour</a>.', [':users' => $users_url, ':clients' => $clients_url, ':tour' => Url::fromRoute('entity.user.collection')->setOption('query', ['tour' => TRUE])->toString()]), 'warning');
+      drupal_set_message(t('You still have the demo user & client. Delete them before going into production! Add <a href=":users">users</a> and <a href=":clients">clients</a>.', [':users' => $users_url, ':clients' => $clients_url, ':tour' => Url::fromRoute('entity.user.collection')->setOption('query', ['tour' => TRUE])->toString()]), 'warning');
     }
     else {
       $client_id = '{client ID}';

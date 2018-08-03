@@ -1,12 +1,12 @@
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - recipes_magazin
   module:
     - node
     - options
+  enforced:
+    module:
+      - recipes_magazin
 id: node.field_difficulty
 field_name: field_difficulty
 entity_type: node
@@ -17,8 +17,8 @@ settings:
       value: easy
       label: Easy
     -
-      value: middle
-      label: Middle
+      value: medium
+      label: Medium
     -
       value: hard
       label: Hard

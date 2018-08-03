@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+id: content_administrator
+label: 'Content administrator'
+weight: 3
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access user profiles'
+  - 'administer media'
+  - 'administer media types'
+  - 'administer taxonomy'
+  - 'bypass node access'

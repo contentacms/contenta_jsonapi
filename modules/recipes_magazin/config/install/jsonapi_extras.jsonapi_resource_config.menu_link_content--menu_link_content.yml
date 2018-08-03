@@ -1,0 +1,113 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - recipes_magazin
+  module:
+    - menu_link_content
+id: menu_link_content--menu_link_content
+disabled: false
+path: menuLinks
+resourceType: menuLinks
+resourceFields:
+  id:
+    fieldName: id
+    publicName: internalId
+    enhancer:
+      id: ''
+    disabled: false
+  uuid:
+    disabled: true
+    fieldName: uuid
+    publicName: uuid
+    enhancer:
+      id: ''
+  langcode:
+    disabled: true
+    fieldName: langcode
+    publicName: langcode
+    enhancer:
+      id: ''
+  bundle:
+    fieldName: bundle
+    publicName: bundle
+    enhancer:
+      id: ''
+    disabled: false
+  title:
+    fieldName: title
+    publicName: title
+    enhancer:
+      id: ''
+    disabled: false
+  description:
+    fieldName: description
+    publicName: description
+    enhancer:
+      id: ''
+    disabled: false
+  menu_name:
+    fieldName: menu_name
+    publicName: menuInternalId
+    enhancer:
+      id: ''
+    disabled: false
+  link:
+    fieldName: link
+    publicName: link
+    enhancer:
+      id: nested
+      settings:
+        path: uri
+    disabled: false
+  external:
+    fieldName: external
+    publicName: isExternal
+    enhancer:
+      id: ''
+    disabled: false
+  rediscover:
+    disabled: true
+    fieldName: rediscover
+    publicName: rediscover
+    enhancer:
+      id: ''
+  weight:
+    fieldName: weight
+    publicName: weight
+    enhancer:
+      id: ''
+    disabled: false
+  expanded:
+    fieldName: expanded
+    publicName: isExpanded
+    enhancer:
+      id: ''
+    disabled: false
+  enabled:
+    fieldName: enabled
+    publicName: isEnabled
+    enhancer:
+      id: ''
+    disabled: false
+  parent:
+    fieldName: parent
+    publicName: parentIs
+    enhancer:
+      id: ''
+    disabled: false
+  changed:
+    fieldName: changed
+    publicName: changedAt
+    enhancer:
+      id: date_time
+      settings:
+        dateTimeFormat: 'Y-m-d\TH:i:sO'
+    disabled: false
+  default_langcode:
+    disabled: true
+    fieldName: default_langcode
+    publicName: default_langcode
+    enhancer:
+      id: ''

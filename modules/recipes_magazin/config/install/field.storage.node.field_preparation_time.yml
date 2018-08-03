@@ -1,11 +1,11 @@
 langcode: en
 status: true
 dependencies:
+  module:
+    - node
   enforced:
     module:
       - recipes_magazin
-  module:
-    - node
 id: node.field_preparation_time
 field_name: field_preparation_time
 entity_type: node

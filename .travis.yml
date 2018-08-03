@@ -31,7 +31,7 @@ env:
 
 branches:
   only:
-    - 8.x-1.x
+    - /^8\.x\-[0-9]+\.x$/
 
 before_install:
   # Fixes Composer exhausting the memory when using PHP 5.6.

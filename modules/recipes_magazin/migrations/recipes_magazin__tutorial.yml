@@ -1,0 +1,36 @@
+id: recipes_magazin__tutorial
+status: true
+source:
+  plugin: recipes_magazin__csv
+  path: default_content/tutorial.csv
+  header_row_count: 1
+  keys:
+    - title
+process:
+  title: title
+  field_image:
+    plugin: migration_lookup
+    migration: recipes_magazin__media_images
+    source: image
+  'field_link/uri': link
+  'field_link/title': link_text
+  'field_summary/value': summary
+  'field_summary/format':
+    plugin: default_value
+    default_value: 'basic_html'
+  field_topic: topic
+  uid:
+    plugin: migration_lookup
+    migration: recipes_magazin__page_authors
+    source: author
+destination:
+  plugin: 'entity:node'
+  default_bundle: tutorial
+migration_dependencies:
+  required:
+    - recipes_magazin__media_images
+    - recipes_magazin__images
+    - recipes_magazin__page_authors
+dependencies:
+  config:
+    - filter.format.basic_html.yml

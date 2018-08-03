@@ -3,22 +3,27 @@ status: true
 dependencies:
   config:
     - entity_browser.browser.media_entity_browser
-    - field.field.node.recipe.field_category
+    - field.field.node.recipe.field_author
+    - field.field.node.recipe.field_cooking_time
     - field.field.node.recipe.field_difficulty
     - field.field.node.recipe.field_image
     - field.field.node.recipe.field_ingredients
-    - field.field.node.recipe.field_number_of_services
+    - field.field.node.recipe.field_number_of_servings
     - field.field.node.recipe.field_preparation_time
+    - field.field.node.recipe.field_recipe_category
     - field.field.node.recipe.field_recipe_instruction
-    - field.field.node.recipe.field_recipe_reviews_and_testimo
+    - field.field.node.recipe.field_summary
     - field.field.node.recipe.field_tags
-    - field.field.node.recipe.field_total_time
     - node.type.recipe
   module:
-    - comment
     - entity_browser
     - path
     - text
+  enforced:
+    module:
+      - recipes_magazin
+_core:
+  default_config_hash: DKGu0Ml8Jlk8EXPjIpz3ARAChnyuj5osrp1zZdGpRdQ
 id: node.recipe.default
 targetEntityType: node
 bundle: recipe
@@ -26,12 +31,12 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 3
+    weight: 13
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_category:
-    weight: 6
+  field_author:
+    weight: 1
     settings:
       match_operator: CONTAINS
       size: 60
@@ -39,64 +44,80 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
+  field_cooking_time:
+    weight: 3
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
   field_difficulty:
-    weight: 10
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_image:
-    weight: 7
+    weight: 8
     settings:
       entity_browser: media_entity_browser
-      field_widget_display: label
+      field_widget_display: rendered_entity
       field_widget_edit: true
       field_widget_remove: true
+      field_widget_replace: true
       open: true
       selection_mode: selection_append
-      field_widget_display_settings: {  }
+      field_widget_display_settings:
+        view_mode: default
     third_party_settings: {  }
     type: entity_browser_entity_reference
     region: content
   field_ingredients:
-    weight: 11
+    weight: 10
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_number_of_services:
-    weight: 13
+  field_number_of_servings:
+    weight: 4
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_preparation_time:
-    weight: 8
+    weight: 2
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
-  field_recipe_instruction:
-    weight: 12
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea_with_summary
-    region: content
-  field_recipe_reviews_and_testimo:
-    weight: 15
+  field_recipe_category:
+    weight: 6
     settings: {  }
     third_party_settings: {  }
-    type: comment_default
+    type: options_select
+    region: content
+  field_recipe_instruction:
+    weight: 11
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_summary:
+    weight: 9
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
     region: content
   field_tags:
-    weight: 14
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60
@@ -104,18 +125,12 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete_tags
     region: content
-  field_total_time:
-    weight: 9
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-    type: number
-    region: content
   langcode:
     type: language_select
     weight: 2
     region: content
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
   path:
     type: path
@@ -125,23 +140,23 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 4
-    region: content
     settings:
       display_label: true
+    weight: 14
+    region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 17
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 5
+    weight: 15
     region: content
     third_party_settings: {  }
   title:
@@ -154,7 +169,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 1
+    weight: 12
     settings:
       match_operator: CONTAINS
       size: 60

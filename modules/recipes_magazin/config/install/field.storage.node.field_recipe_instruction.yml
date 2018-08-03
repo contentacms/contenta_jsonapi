@@ -1,16 +1,16 @@
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - recipes_magazin
   module:
     - node
     - text
+  enforced:
+    module:
+      - recipes_magazin
 id: node.field_recipe_instruction
 field_name: field_recipe_instruction
 entity_type: node
-type: text_with_summary
+type: text_long
 settings: {  }
 module: text
 locked: false

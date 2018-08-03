@@ -7,6 +7,9 @@ dependencies:
   module:
     - path
     - text
+  enforced:
+    module:
+      - recipes_magazin
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -24,12 +27,6 @@ content:
   created:
     type: datetime_timestamp
     weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  langcode:
-    type: language_select
-    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }

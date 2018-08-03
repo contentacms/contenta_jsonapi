@@ -1,0 +1,19 @@
+langcode: en
+status: false
+dependencies:
+  module:
+    - user
+  theme:
+    - material_admin
+id: material_admin_login
+theme: material_admin
+region: content
+weight: 10
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: 'User login'
+  provider: user
+  label_display: visible
+visibility: {  }

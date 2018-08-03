@@ -1,28 +1,33 @@
 id: recipes_magazin__pages
 status: true
 source:
-  plugin: recipe_magazin__csv
+  plugin: recipes_magazin__csv
   path: default_content/pages.csv
   header_row_count: 1
   keys:
     - title
 process:
   title: title
-  'body/value': body
+  'body/value':
+    plugin: recipes_magazin__html_in_file
+    source: body
+    directory: page_body
   'body/format':
     plugin: default_value
     default_value: 'full_html'
   path: slug
   uid:
     plugin: migration_lookup
-    migration: recipes_magazin__authors
+    migration: recipes_magazin__page_authors
     source: author
 destination:
   plugin: 'entity:node'
   default_bundle: page
 migration_dependencies:
   required:
-    - recipes_magazin__authors
+    - recipes_magazin__page_authors
+    - recipes_magazin__media_images
+    - recipes_magazin__images
 dependencies:
   config:
     - filter.format.full_html.yml

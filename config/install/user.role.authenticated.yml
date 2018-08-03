@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies: {  }
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access jsonapi resource list'
+  - 'access openapi api docs'
+  - 'access toolbar'
+  - 'issue subrequests'
+  - 'view media'
+  - 'use jsonrpc services'

@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - contenta_enhancements
+id: contenta
+label: Contenta
+description: 'Contenta CMS menu'
+locked: false

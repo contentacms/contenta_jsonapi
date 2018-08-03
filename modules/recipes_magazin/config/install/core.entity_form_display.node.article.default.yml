@@ -4,16 +4,18 @@ dependencies:
   config:
     - entity_browser.browser.media_entity_browser
     - field.field.node.article.body
-    - field.field.node.article.comment
     - field.field.node.article.field_image
-    - field.field.node.article.field_recipes
     - field.field.node.article.field_tags
     - node.type.article
   module:
-    - comment
     - entity_browser
     - path
     - text
+  enforced:
+    module:
+      - recipes_magazin
+_core:
+  default_config_hash: 0StcaANBh8qzNkp_3-xqJlwQoLGxZeRoIwO16LG10d8
 id: node.article.default
 targetEntityType: node
 bundle: article
@@ -28,12 +30,6 @@ content:
       summary_rows: 3
       placeholder: ''
     third_party_settings: {  }
-  comment:
-    type: comment_default
-    weight: 20
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   created:
     type: datetime_timestamp
     weight: 10
@@ -46,12 +42,14 @@ content:
     region: content
     settings:
       entity_browser: media_entity_browser
-      field_widget_display: label
+      field_widget_display: rendered_entity
       field_widget_edit: true
       field_widget_remove: true
+      field_widget_replace: true
+      open: true
       selection_mode: selection_append
-      open: false
-      field_widget_display_settings: {  }
+      field_widget_display_settings:
+        view_mode: default
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete_tags
@@ -66,7 +64,8 @@ content:
     type: language_select
     weight: 2
     region: content
-    settings: {  }
+    settings:
+      include_locked: true
     third_party_settings: {  }
   path:
     type: path
@@ -112,5 +111,4 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden:
-  field_recipes: true
+hidden: {  }

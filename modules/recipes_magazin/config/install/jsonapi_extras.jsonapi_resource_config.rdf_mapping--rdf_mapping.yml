@@ -1,0 +1,79 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - rdf
+  enforced:
+    module:
+      - recipes_magazin
+id: rdf_mapping--rdf_mapping
+disabled: true
+path: rdf_mapping/rdf_mapping
+resourceType: rdf_mapping--rdf_mapping
+resourceFields:
+  id:
+    fieldName: id
+    publicName: id
+    enhancer:
+      id: ''
+    disabled: false
+  uuid:
+    fieldName: uuid
+    publicName: uuid
+    enhancer:
+      id: ''
+    disabled: false
+  langcode:
+    fieldName: langcode
+    publicName: langcode
+    enhancer:
+      id: ''
+    disabled: false
+  status:
+    fieldName: status
+    publicName: status
+    enhancer:
+      id: ''
+    disabled: false
+  dependencies:
+    fieldName: dependencies
+    publicName: dependencies
+    enhancer:
+      id: ''
+    disabled: false
+  third_party_settings:
+    fieldName: third_party_settings
+    publicName: third_party_settings
+    enhancer:
+      id: ''
+    disabled: false
+  _core:
+    fieldName: _core
+    publicName: _core
+    enhancer:
+      id: ''
+    disabled: false
+  targetEntityType:
+    fieldName: targetEntityType
+    publicName: targetEntityType
+    enhancer:
+      id: ''
+    disabled: false
+  bundle:
+    fieldName: bundle
+    publicName: bundle
+    enhancer:
+      id: ''
+    disabled: false
+  types:
+    fieldName: types
+    publicName: types
+    enhancer:
+      id: ''
+    disabled: false
+  fieldMappings:
+    fieldName: fieldMappings
+    publicName: fieldMappings
+    enhancer:
+      id: ''
+    disabled: false
