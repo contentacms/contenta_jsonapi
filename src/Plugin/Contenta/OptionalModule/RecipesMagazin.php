@@ -25,7 +25,7 @@ class RecipesMagazin extends AbstractOptionalModule {
 
     $form = parent::buildForm($form, $form_state);
 
-    $form['recipes_magazin']['library_info'] = [
+    $form['recipes_magazin']['project_info'] = [
       '#type' => 'item',
       '#description' => $this->t("By installing the demo content Contenta will
         create a set of content types and populate them with real data. You can
@@ -34,7 +34,6 @@ class RecipesMagazin extends AbstractOptionalModule {
     ];
 
     return $form;
-
   }
 
 }

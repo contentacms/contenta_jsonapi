@@ -26,6 +26,9 @@ function contenta_jsonapi_install_tasks(&$install_state) {
     '_contenta_jsonapi_generate_keys' => [
       'display_name' => t('Generate OAuth 2 keys'),
     ],
+    '_contenta_jsonapi_enable_cors' => [
+      'display_name' => t('Enable CORS by default'),
+    ],
     'contenta_jsonapi_module_configure_form' => [
       'display_name' => t('Configure additional modules'),
       'type' => 'form',
@@ -121,4 +124,29 @@ function contenta_jsonapi_module_install(array &$install_state) {
   array_walk($instances, function (AbstractOptionalModule $instance) use ($form_values) {
     $instance->submitForm($form_values);
   });
+}
+
+/**
+ * Alters the services.yml to enable CORS by default.
+ */
+function _contenta_jsonapi_enable_cors() {
+  // Enable CORS for localhost.
+  /** @var \Drupal\Core\DrupalKernelInterface $drupal_kernel */
+  $drupal_kernel = \Drupal::service('kernel');
+  $file_path = $drupal_kernel->getAppRoot() . '/' . $drupal_kernel->getSitePath();
+  $filename = $file_path . '/services.yml';
+  if (file_exists($filename)) {
+    $services_yml = file_get_contents($filename);
+
+    $yml_data = Yaml::decode($services_yml);
+    if (empty($yml_data['parameters']['cors.config']['enabled'])) {
+      $yml_data['parameters']['cors.config']['enabled'] = TRUE;
+      $yml_data['parameters']['cors.config']['allowedHeaders'] = ['*'];
+      $yml_data['parameters']['cors.config']['allowedMethods'] = ['*'];
+      $yml_data['parameters']['cors.config']['allowedOrigins'] = ['localhost'];
+      $yml_data['parameters']['cors.config']['allowedOriginsPatterns'] = ['/localhost:\d+/'];
+
+      file_put_contents($filename, Yaml::encode($yml_data));
+    }
+  }
 }

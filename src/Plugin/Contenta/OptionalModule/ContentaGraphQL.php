@@ -23,7 +23,7 @@ class ContentaGraphQL extends AbstractOptionalModule {
 
     $form = parent::buildForm($form, $form_state);
 
-    $form['contenta_graphql']['library_info'] = [
+    $form['contenta_graphql']['project_info'] = [
       '#type' => 'item',
       '#description' => $this->t("Contenta CMS is primarily focused on JSON API.
         If you want to expose a GraphQL API consider looking at the GraphQL
@@ -32,7 +32,6 @@ class ContentaGraphQL extends AbstractOptionalModule {
     ];
 
     return $form;
-
   }
 
 }
