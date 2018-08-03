@@ -36,7 +36,7 @@
     },
     "patches": {
       "drupal/core": {
-        "Profile from existing config (drop in 8.6.x)": "https://www.drupal.org/files/issues/2018-06-18/2788777-3-191.patch"
+        "Profile from existing config (drop in 8.6.x)": "https://www.drupal.org/files/issues/2018-06-15/2788777-3-189.patch"
       }
     }
   },
