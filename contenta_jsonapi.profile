@@ -7,6 +7,7 @@
 
 use Drupal\contenta_jsonapi\Plugin\Contenta\OptionalModule\AbstractOptionalModule;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Component\Serialization\Yaml;
 
 /**
  * Implements hook_form_FORM_ID_alter() for install_configure_form().
