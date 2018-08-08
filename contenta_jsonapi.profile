@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Serialization\Yaml;
 
 /**
  * Implements hook_form_FORM_ID_alter() for install_configure_form().
