@@ -3,6 +3,7 @@
 namespace Drupal\Tests\contenta_jsonapi\Functional;
 
 use Drupal\Component\Serialization\Json;
+use Drupal\Core\Url;
 use PHPUnit\Framework\TestCase;
 use GuzzleHttp\Client;
 
@@ -69,6 +70,15 @@ class InstallationTest extends TestCase {
   }
 
   public function testRpcMethod() {
+    $url = Url::fromUri('internal:/jsonrpc', [
+      'query' => '{"jsonrpc":"2.0","method":"jsonapi.metadata","id":"cms-meta"}',
+      'absolute' => TRUE,
+    ])->toString();
+    $response = $this->httpClient->request('GET', $url);
+    $body = $response->getBody()->getContents();
+    $output = Json::decode($body);
+    $this->assertEquals('api', $output['result']['prefix']);
+    $this->assertEquals('/api', $output['result']['openApi']['basePath']);
     $response = $this->httpClient->request(
       'POST',
       $this->baseUrl . '/jsonrpc',
@@ -76,9 +86,8 @@ class InstallationTest extends TestCase {
     );
     $body = $response->getBody()->getContents();
     $output = Json::decode($body);
-    $prefix = $output['result']['prefix'];
-    $expected_prefix = '/api';
-    $this->assertEquals($expected_prefix, $prefix);
+    $this->assertEquals('api', $output['result']['prefix']);
+    $this->assertEquals('/api', $output['result']['openApi']['basePath']);
   }
 
   public function testGraphQLQuery() {

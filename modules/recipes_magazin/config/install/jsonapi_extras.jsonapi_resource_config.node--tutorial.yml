@@ -1,4 +1,3 @@
-uuid: 7a94fc49-0bb9-47b0-ada1-b25791a92d82
 langcode: en
 status: true
 dependencies:
@@ -116,15 +115,13 @@ resourceFields:
     enhancer:
       id: ''
   path:
-     fieldName: path
-     publicName: path
-     enhancer:
-       id: nested
-       settings:
-         path: alias
-     disabled: false
-     advancedOptionsIcon: ''
-     enhancer_label: ''
+    fieldName: path
+    publicName: path
+    enhancer:
+      id: nested
+      settings:
+        path: alias
+    disabled: false
   field_image:
     fieldName: field_image
     publicName: image

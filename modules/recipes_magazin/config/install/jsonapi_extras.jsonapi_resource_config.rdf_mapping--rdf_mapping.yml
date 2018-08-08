@@ -17,85 +17,63 @@ resourceFields:
     enhancer:
       id: ''
     disabled: false
-    advancedOptionsIcon: ''
-    enhancer_label: ''
   uuid:
     fieldName: uuid
     publicName: uuid
     enhancer:
       id: ''
     disabled: false
-    advancedOptionsIcon: ''
-    enhancer_label: ''
   langcode:
     fieldName: langcode
     publicName: langcode
     enhancer:
       id: ''
     disabled: false
-    advancedOptionsIcon: ''
-    enhancer_label: ''
   status:
     fieldName: status
     publicName: status
     enhancer:
       id: ''
     disabled: false
-    advancedOptionsIcon: ''
-    enhancer_label: ''
   dependencies:
     fieldName: dependencies
     publicName: dependencies
     enhancer:
       id: ''
     disabled: false
-    advancedOptionsIcon: ''
-    enhancer_label: ''
   third_party_settings:
     fieldName: third_party_settings
     publicName: third_party_settings
     enhancer:
       id: ''
     disabled: false
-    advancedOptionsIcon: ''
-    enhancer_label: ''
   _core:
     fieldName: _core
     publicName: _core
     enhancer:
       id: ''
     disabled: false
-    advancedOptionsIcon: ''
-    enhancer_label: ''
   targetEntityType:
     fieldName: targetEntityType
     publicName: targetEntityType
     enhancer:
       id: ''
     disabled: false
-    advancedOptionsIcon: ''
-    enhancer_label: ''
   bundle:
     fieldName: bundle
     publicName: bundle
     enhancer:
       id: ''
     disabled: false
-    advancedOptionsIcon: ''
-    enhancer_label: ''
   types:
     fieldName: types
     publicName: types
     enhancer:
       id: ''
     disabled: false
-    advancedOptionsIcon: ''
-    enhancer_label: ''
   fieldMappings:
     fieldName: fieldMappings
     publicName: fieldMappings
     enhancer:
       id: ''
     disabled: false
-    advancedOptionsIcon: ''
-    enhancer_label: ''

@@ -60,12 +60,16 @@ cd $DOCROOT
 echo "-----------------------------------------------"
 echo " Installing Contenta CMS for local usage "
 echo "-----------------------------------------------"
-echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $DRUSH si contenta_jsonapi --db-url=sqlite://sites/default/files/.ht.sqlite --account-pass=test -y\n\n"
-$DRUSH si contenta_jsonapi --db-url=sqlite://sites/default/files/.ht.sqlite --account-pass=test -y
+echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} php core/scripts/drupal contenta_jsonapi --port 8080 --site-name ContentaCMS\n\n"
+php core/scripts/drupal quick-start contenta_jsonapi --port 8888 --site-name ContentaCMS;
+
 if [ $? -ne 0 ]; then
   echo -e "${FG_C}${EBG_C} ERROR ${NO_C} The Drupal installer failed to install Contenta CMS."
   exit 3
 fi
+
+echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $DRUSH en -y recipes_magazin\n\n"
+$DRUSH en -y recipes_magazin
 
 echo -e "\n\n\n"
 echo -e "\t********************************"
