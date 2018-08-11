@@ -18,7 +18,6 @@ module:
   entity_reference: 0
   field: 0
   field_ui: 0
-  fieldable_path: 0
   file: 0
   filter: 0
   hal: 0
