@@ -1,6 +1,6 @@
-name: Contenta specific enhancements
+name: Contenta Enhancements
+description: Enhancements for the Contenta CMS profile.
 core: 8.x
 type: module
 dependencies:
   - simple_oauth
-  - jsonrpc
