@@ -54,22 +54,26 @@ cd ${DEST_DIR}
 
 $COMPOSER config repositories.contenta_jsonapi path ${BASE_DIR}
 
-$COMPOSER require "contentacms/contenta_jsonapi:*" "phpunit/phpunit:~5.7" --no-progress
+$COMPOSER require "contentacms/contenta_jsonapi:*" "phpunit/phpunit:^6" --no-progress
 
 cd $DOCROOT
 echo "-----------------------------------------------"
 echo " Installing Contenta CMS for local usage "
 echo "-----------------------------------------------"
 echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} php core/scripts/drupal contenta_jsonapi --port 8080 --site-name ContentaCMS\n\n"
-php core/scripts/drupal quick-start contenta_jsonapi --port 8888 --site-name ContentaCMS;
+# There is a problem installing from CLI. Drush can't locate some required services. Reinstalling a
+# second time usually does the trick.
+# TODO: We need to fix this.
+$DRUSH site-install --verbose --yes --db-url=sqlite://tmp/site.sqlite --site-mail=admin@localhost --account-mail=admin@localhost --site-name='Contenta CMS Demo' --account-name=admin --account-pass=admin > /dev/null 2>&1;
+$DRUSH site-install --verbose --yes --db-url=sqlite://tmp/site.sqlite --site-mail=admin@localhost --account-mail=admin@localhost --site-name='Contenta CMS Demo' --account-name=admin --account-pass=admin;
 
 if [ $? -ne 0 ]; then
   echo -e "${FG_C}${EBG_C} ERROR ${NO_C} The Drupal installer failed to install Contenta CMS."
   exit 3
 fi
 
-echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $DRUSH en -y recipes_magazin\n\n"
-$DRUSH en -y recipes_magazin
+echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $DRUSH en -y recipes_magazin contentajs\n\n"
+$DRUSH en -y recipes_magazin contentajs
 
 echo -e "\n\n\n"
 echo -e "\t********************************"
