@@ -28,7 +28,9 @@ cd ${DEST_DIR}
 cd ${DOCROOT}
 
 echo -e "\n"
-DRUSH="$DEST_DIR/$COMPOSER_BIN_DIR/drush"
+pwd
+ls -lisa
+DRUSH="$BASE_DIR/$COMPOSER_BIN_DIR/drush"
 
 
 echo "-------------------------------------"
