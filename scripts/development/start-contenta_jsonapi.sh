@@ -8,6 +8,7 @@ fi
 
 BASE_DIR="$(dirname $(dirname $(cd ${0%/*} && pwd)))"
 COMPOSER="$(which composer)"
+COMPOSER_BIN_DIR="$(composer config bin-dir)"
 DOCROOT="web"
 
 # Define the color scheme.
@@ -27,7 +28,7 @@ cd ${DEST_DIR}
 cd ${DOCROOT}
 
 echo -e "\n"
-DRUSH="$DEST_DIR/bin/drush"
+DRUSH="$DEST_DIR/$COMPOSER_BIN_DIR/drush"
 
 
 echo "-------------------------------------"
