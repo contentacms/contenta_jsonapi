@@ -45,13 +45,13 @@ before_install:
   - source ./scripts/ci/travis/load_env.sh
 
 install:
-  - composer run-script start-contenta $PROJECT_BASE_PATH --timeout=0 &
-  - until curl -s $WEB_HOST:$WEB_PORT; do sleep 1; done > /dev/null
+  - composer run-script install-contenta $PROJECT_BASE_PATH --timeout=0
+  - composer run-script ci:helper setup_anonymous_user "$PROJECT_BASE_PATH" --timeout=0
 
 before_script:
   # Start Contenta Local Server
   - composer run-script start-contenta $PROJECT_BASE_PATH --timeout=0 &
-  - sleep 8 # give web server some time to start
+  - until curl -s $WEB_HOST:$WEB_PORT; do sleep 1; done > /dev/null
 
 script:
   - composer run-script ci:helper run_functional_tests "$PROJECT_BASE_PATH" --timeout=0
