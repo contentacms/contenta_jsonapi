@@ -48,7 +48,8 @@ install:
 
 before_script:
   # Start Contenta Local Server
-  - sleep 8 # give web server some time to start
+  - composer run-script start-contenta $PROJECT_BASE_PATH --timeout=0 &> /dev/null &
+  - until curl -s http://127.0.0.1:8888; do true; done > /dev/null
 
 script:
   - composer run-script ci:helper run_functional_tests "$PROJECT_BASE_PATH" --timeout=0
