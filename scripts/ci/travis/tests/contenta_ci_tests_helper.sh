@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+COMPOSER_BIN_DIR="$(composer config bin-dir)"
+DOCROOT="web"
+
 # Setup Anonymous User Function
 # Gives access to anonymous user to access protected resources.
 # This function receives one argument:
@@ -12,14 +15,14 @@ setup_anonymous_user() {
 
     # Setup local variables
     current_path=`pwd`
-    drush=$1/bin/drush
-    drupal_base=$1/web
+    DRUSH=$1/$COMPOSER_BIN_DIR/drush
+    DRUPAL_BASE=$1/$DOCROOT
 
-    cd $drupal_base
+    cd $DRUPAL_BASE
     # Add Permission to anonymous user
-    $drush role-add-perm 'anonymous'  'access jsonapi resource list' -y
-    $drush updatedb -y
-    $drush cr -y
+    $DRUSH role-add-perm 'anonymous' 'access jsonapi resource list' -y
+    $DRUSH updatedb -y
+    $DRUSH cr -y
 
     cd $current_path
 }
@@ -40,8 +43,8 @@ run_functional_tests() {
     fi
 
     current_path=`pwd`
-    CONTENTA_PATH=$1/web/profiles/contrib/contenta_jsonapi/
-    PHPUNIT=$1/bin/phpunit
+    CONTENTA_PATH=$1/$DOCROOT/profiles/contrib/contenta_jsonapi/
+    PHPUNIT=$1/$COMPOSER_BIN_DIR/phpunit
 
     cd $CONTENTA_PATH
 

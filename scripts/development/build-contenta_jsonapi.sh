@@ -3,6 +3,7 @@
 BASE_DIR="$(dirname $(dirname $(cd ${0%/*} && pwd)))"
 
 COMPOSER="$(which composer)"
+COMPOSER_BIN_DIR="$(composer config bin-dir)"
 DOCROOT="web"
 
 # Define the color scheme.
@@ -21,7 +22,7 @@ else
   echo -e "${FG_C}${WBG_C} WARNING ${NO_C} No installation path provided.\nContenta will be installed in $DEST_DIR."
   echo -e "${FG_C}${BG_C} USAGE ${NO_C} ${0} [install_path] # to install in a different directory."
 fi
-DRUSH="$DEST_DIR/vendor/bin/drush"
+DRUSH="$DEST_DIR/$COMPOSER_BIN_DIR/drush"
 
 echo -e "\n\n\n"
 echo -e "\t********************************"
