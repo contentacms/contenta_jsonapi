@@ -27,11 +27,11 @@ composer create-project contentacms/contenta-jsonapi-project <DESTINATION> --sta
 cd <DESTINATION>/web 
 ```
 - Install the site with  either of these databases:
-  - SQLite `../bin/drush si contenta_jsonapi --db-url=sqlite://sites/default/files/.ht.sqlite -y` or
-  - MySQL `../bin/drush si contenta_jsonapi --db-url=mysql://root:pass@localhost:3306/dbname -y`
-  - PostgreSQL `../bin/drush si contenta_jsonapi --db-url=pgsql://root:pass@localhost:5432/dbname -y`
-- Start the web server with `../bin/drush runserver`. This defaults to `127.0.0.1:8888`, you can change this by appending a new host and port, e.g. `../bin/drush runserver local.contentacms.io:8000`
-- Generate a one-time login link `../bin/drush user-login --uri="http://127.0.0.1:8888"`
+  - SQLite `../vendor/bin/drush si contenta_jsonapi --db-url=sqlite://sites/default/files/.ht.sqlite -y` or
+  - MySQL `../vendor/bin/drush si contenta_jsonapi --db-url=mysql://root:pass@localhost:3306/dbname -y`
+  - PostgreSQL `../vendor/bin/drush si contenta_jsonapi --db-url=pgsql://root:pass@localhost:5432/dbname -y`
+- Start the web server with `../vendor/bin/drush runserver`. This defaults to `127.0.0.1:8888`, you can change this by appending a new host and port, e.g. `../vendor/bin/drush runserver local.contentacms.io:8000`
+- Generate a one-time login link `../vendor/bin/drush user-login --uri="http://127.0.0.1:8888"`
 
 ### CURL
 
@@ -69,7 +69,7 @@ In order to allow browsers to request the contenta back-end you need to:
     maxAge: false
     supportsCredentials: false
 ```
-* Run drush: ```cd <DESTINATION>/web && ../bin/drush cr```
+* Run drush: ```cd <DESTINATION>/web && ../vendor/bin/drush cr```
 
 ## Development
 
