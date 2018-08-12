@@ -45,7 +45,7 @@ before_install:
   - source ./scripts/ci/travis/load_env.sh
 
 install:
-  - composer run-script start-contenta $PROJECT_BASE_PATH --timeout=0 &> /dev/null &
+  - composer run-script start-contenta $PROJECT_BASE_PATH --timeout=0 &
   - until curl -s $WEB_HOST:$WEB_PORT; do sleep 1; done > /dev/null
 
 before_script:
