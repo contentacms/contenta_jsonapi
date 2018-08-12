@@ -60,11 +60,11 @@ cd $DOCROOT
 echo "-----------------------------------------------"
 echo " Installing Contenta CMS for local usage "
 echo "-----------------------------------------------"
-echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} php core/scripts/drupal contenta_jsonapi --port 8080 --site-name ContentaCMS\n\n"
+echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $DRUSH site-install --verbose --yes --db-url=sqlite://tmp/site.sqlite --site-mail=admin@localhost --account-mail=admin@localhost --site-name='Contenta CMS Demo' --account-name=admin --account-pass=admin\n\n"
 # There is a problem installing from CLI. Drush can't locate some required services. Reinstalling a
 # second time usually does the trick.
 # TODO: We need to fix this.
-$DRUSH site-install --verbose --yes --db-url=sqlite://tmp/site.sqlite --site-mail=admin@localhost --account-mail=admin@localhost --site-name='Contenta CMS Demo' --account-name=admin --account-pass=admin > /dev/null 2>&1;
+$DRUSH site-install --verbose --yes --db-url=sqlite://tmp/site.sqlite --site-mail=admin@localhost --account-mail=admin@localhost --site-name='Contenta CMS Demo' --account-name=admin --account-pass=admin > /dev/null 2>&1 || true;
 $DRUSH site-install --verbose --yes --db-url=sqlite://tmp/site.sqlite --site-mail=admin@localhost --account-mail=admin@localhost --site-name='Contenta CMS Demo' --account-name=admin --account-pass=admin;
 
 if [ $? -ne 0 ]; then
