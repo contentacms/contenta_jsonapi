@@ -2,6 +2,8 @@
 
 namespace Drupal\contenta_jsonapi\Plugin\Contenta\OptionalModule;
 
+use Drupal\Core\Form\FormStateInterface;
+
 /**
  * Contenta JS.
  *
