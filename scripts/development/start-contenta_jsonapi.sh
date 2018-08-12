@@ -7,7 +7,6 @@ if [ -e .env.local ]; then
 fi
 
 BASE_DIR="$(dirname $(dirname $(cd ${0%/*} && pwd)))"
-COMPOSER="$(which composer)"
 COMPOSER_BIN_DIR="$(composer config bin-dir)"
 DOCROOT="web"
 
@@ -24,13 +23,11 @@ else
   DEST_DIR="$( dirname $BASE_DIR )/test_contenta_jsonapi"
 fi
 
-cd ${DEST_DIR}
-cd ${DOCROOT}
+cd "$DEST_DIR/$DOCROOT"
 
 echo -e "\n"
-pwd
-ls -lisa
-DRUSH="$BASE_DIR/$COMPOSER_BIN_DIR/drush"
+find $DEST_DIR -name drush
+DRUSH="$DEST_DIR/$COMPOSER_BIN_DIR/drush"
 
 
 echo "-------------------------------------"
