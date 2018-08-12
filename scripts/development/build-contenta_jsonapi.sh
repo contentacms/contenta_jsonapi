@@ -74,7 +74,7 @@ if [ $? -ne 0 ]; then
 fi
 
 echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $DRUSH en -y recipes_magazin contentajs\n\n"
-$DRUSH en -y recipes_magazin contentajs
+$DRUSH en -y recipes_magazin contentajs contenta_graphql
 
 echo -e "\n\n\n"
 echo -e "\t********************************"
