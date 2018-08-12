@@ -48,7 +48,7 @@ install:
 
 before_script:
   # Start Contenta Local Server
-  - composer run-script start-contenta $PROJECT_BASE_PATH --timeout=0 &> /dev/null &
+  - composer run-script start-contenta $PROJECT_BASE_PATH --timeout=0 &
   - sleep 8 # give web server some time to start
 
 script:
