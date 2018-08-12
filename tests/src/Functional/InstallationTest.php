@@ -70,14 +70,17 @@ class InstallationTest extends TestCase {
   }
 
   public function testRpcMethod() {
-    $url = Url::fromUri('internal:/jsonrpc', [
-      'query' => '{"jsonrpc":"2.0","method":"jsonapi.metadata","id":"cms-meta"}',
-      'absolute' => TRUE,
-    ])->toString();
-    $response = $this->httpClient->request('GET', $url);
+    $response = $this->httpClient->request(
+      'GET',
+      $this->baseUrl . '/jsonrpc',
+      [
+        'query' => [
+          'query' => '{"jsonrpc":"2.0","method":"jsonapi.metadata","id":"cms-meta"}'
+        ],
+      ]);
     $body = $response->getBody()->getContents();
     $output = Json::decode($body);
-    $this->assertEquals('api', $output['result']['prefix']);
+    $this->assertEquals('/api', $output['result']['prefix']);
     $this->assertEquals('/api', $output['result']['openApi']['basePath']);
     $response = $this->httpClient->request(
       'POST',
@@ -86,7 +89,7 @@ class InstallationTest extends TestCase {
     );
     $body = $response->getBody()->getContents();
     $output = Json::decode($body);
-    $this->assertEquals('api', $output['result']['prefix']);
+    $this->assertEquals('/api', $output['result']['prefix']);
     $this->assertEquals('/api', $output['result']['openApi']['basePath']);
   }
 
