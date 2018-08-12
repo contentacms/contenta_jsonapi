@@ -21,7 +21,7 @@ else
   echo -e "${FG_C}${WBG_C} WARNING ${NO_C} No installation path provided.\nContenta will be installed in $DEST_DIR."
   echo -e "${FG_C}${BG_C} USAGE ${NO_C} ${0} [install_path] # to install in a different directory."
 fi
-DRUSH="$DEST_DIR/bin/drush"
+DRUSH="$DEST_DIR/vendor/bin/drush"
 
 echo -e "\n\n\n"
 echo -e "\t********************************"
