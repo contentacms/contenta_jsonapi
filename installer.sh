@@ -14,7 +14,7 @@ if echo "$install_path" ;then
 	install_path=$(echo $install_path|sed -e "s:~:$HOME:g")
 
 	# Download Contenta CMS using composer create-project.
-    php -r "readfile('https://raw.githubusercontent.com/contentacms/contenta_jsonapi/8.x-1.x/download.sh');" > download-contentacms.sh
+    php -r "readfile('https://raw.githubusercontent.com/contentacms/contenta_jsonapi_project/8.x-1.x/scripts/download.sh');" > download-contentacms.sh
     chmod a+x download-contentacms.sh
     ./download-contentacms.sh $install_path
 
