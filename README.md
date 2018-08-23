@@ -52,9 +52,9 @@ In order to allow browsers to request the contenta back-end you need to:
 
 Join the discussion in the [#contenta Slack channel](https://drupal.slack.com/messages/C5A70F7D1).
 
-For documention on the development on contenta_jsonapi itself, see [docs/development](https://github.com/contentacms/contenta_jsonapi/blob/8.x-1.x/docs/development.md).
+For documention on the development on contenta_jsonapi itself, see [docs/development](https://github.com/contentacms/contenta_jsonapi/blob/8.x-2.x/docs/development.md).
 
-[Code of conduct](https://https://github.com/contentacms/contenta_jsonapi/blob/8.x-1.x/CODE_OF_CONDUCT.md)
+[Code of conduct](https://https://github.com/contentacms/contenta_jsonapi/blob/8.x-2.x/CODE_OF_CONDUCT.md)
 
 ### Development Installation
 
@@ -89,4 +89,4 @@ This work is based upon a couple of contrib modules.
 
 On top of that the [thunder distrbution](http://www.thunder.org/) was used as sort of a base for this installation profile.
 
-Contenta CMS is [built by humans](https://raw.githubusercontent.com/contentacms/contenta_jsonapi/8.x-1.x/humans.txt).
+Contenta CMS is [built by humans](https://raw.githubusercontent.com/contentacms/contenta_jsonapi/8.x-2.x/humans.txt).
