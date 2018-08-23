@@ -6,36 +6,9 @@
 
 Contenta is a content API and CMS based on Drupal 8. It provides a standard, jsonapi-based platform for building decoupled applications and websites.
 
-## Quick Install
+## Install
 
-- Install [composer](https://getcomposer.org/)
-- Make sure you have the sqlite extension for PHP (if you're using the default install on a mac, this should already be there)
-`sudo apt-get install php-sqlite3`
-
-```bash
-php -r "readfile('https://raw.githubusercontent.com/contentacms/contenta_jsonapi/8.x-1.x/installer.sh');" > contentacms.sh
-chmod a+x contentacms.sh
-./contentacms.sh
-```
-
-- In your console will be a one-time login link to access your site.
-
-Check the full installation instructions below for the commands to restart the web server and regenerate the login link. You will need to install Drush.
-
-## Installation for Building Your Own Site
-
-- Install [composer](https://getcomposer.org/)
-
-```bash
-composer create-project contentacms/contenta-jsonapi-project <DESTINATION> --stability dev --no-interaction
-cd <DESTINATION>/web 
-```
-- Install the site with  either of these databases:
-  - SQLite `../vendor/bin/drush si contenta_jsonapi --db-url=sqlite://sites/default/files/.ht.sqlite -y` or
-  - MySQL `../vendor/bin/drush si contenta_jsonapi --db-url=mysql://root:pass@localhost:3306/dbname -y`
-  - PostgreSQL `../vendor/bin/drush si contenta_jsonapi --db-url=pgsql://root:pass@localhost:5432/dbname -y`
-- Start the web server with `../vendor/bin/drush runserver`. This defaults to `127.0.0.1:8888`, you can change this by appending a new host and port, e.g. `../vendor/bin/drush runserver local.contentacms.io:8000`
-- Generate a one-time login link `../vendor/bin/drush user-login --uri="http://127.0.0.1:8888"`
+Follow the [documentation instructions](http://contentacms.org/#install) to install Contenta CMS.
 
 ### CURL
 
