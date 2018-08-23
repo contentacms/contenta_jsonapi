@@ -1,4 +1,13 @@
-<h1 id="contenta-cms">Contenta CMS <img src="/contentacms/contenta_jsonapi/raw/master/logo.svg?sanitize=true" alt="Contenta logo" title="Contenta logo" style="max-width:100%;" width="100" align="right"></h1>
+<h1 id="contenta-cms">
+  Contenta CMS
+  <img
+    src="/contentacms/contenta_jsonapi/8.x-2.x/logo.svg?sanitize=true"
+    alt="Contenta logo"
+    title="Contenta logo"
+    style="max-width:100%;"
+    width="100"
+    align="right">
+</h1>
 
 
 Contenta is a content API and CMS based on Drupal 8. It provides a standard, jsonapi-based platform for building decoupled applications and websites.
@@ -86,7 +95,7 @@ For documention on the development on contenta_jsonapi itself, see [docs/develop
 - Replace the <DESTINATION>/web/profiles/contrib/contenta_jsonapi directory with a checkout of this repo
 
 ```bash
-cd <DESTINATION>
+cd -DESTINATION-
 rm -rf web/profiles/contrib/contenta_jsonapi
 git clone git@github.com:contentacms/contenta_jsonapi.git web/profiles/contrib/contenta_jsonapi
 ```
