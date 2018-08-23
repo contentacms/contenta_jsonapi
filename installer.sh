@@ -22,14 +22,14 @@ if echo "$install_path" ;then
     echo "The Quick Install uses SQLite to install Contenta CMS. This is not suited for production sites."
     # Set the .env data.
     ACCOUNT_PASS="$(LC_ALL=C tr -dc 'A-Za-z0-9!"#$%&'\''()*+,-./:;<=>?@[\]^_`{|}~' </dev/urandom | head -c 13)"
-    echo -e "SQLITE_PATH=tmp\nSQLITE_DATABASE=site.sqlite\nSITE_MAIL=admin@localhost\nACCOUNT_MAIL=admin@localhost\nSITE_NAME='Contenta CMS Demo'\nACCOUNT_NAME=admin\nACCOUNT_PASS=$ACCOUNT_PASS\n" > $install_path/.env
-    echo -e "ACCOUNT_PASS=$ACCOUNT_PASS\n" >> $install_path/.env.local
+    echo -e "SQLITE_PATH=tmp\nSQLITE_DATABASE=site.sqlite\nSITE_MAIL=admin@localhost\nACCOUNT_MAIL=admin@localhost\nSITE_NAME='Contenta CMS Demo'\nACCOUNT_NAME=admin\nACCOUNT_PASS=$ACCOUNT_PASS" >> $install_path/.env
+    echo -e "ACCOUNT_PASS=$ACCOUNT_PASS" >> $install_path/.env.local
     # Install using SQLite.
     composer run-script install:with-sqlite $install_path --timeout=0 --working-dir $install_path
 
     # Start the built-in PHP server.
-    $DRUSH runserver --default-server=builtin 127.0.0.1:8888
     $DRUSH user-login --no-browser --uri="http://127.0.0.1:8888"
+    $DRUSH runserver 127.0.0.1:8888
 	cd $original_wd
 else
     echo -e "\nBye!"
