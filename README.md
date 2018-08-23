@@ -1,12 +1,6 @@
 <h1 id="contenta-cms">
   Contenta CMS
-  <img
-    src="/contentacms/contenta_jsonapi/8.x-2.x/logo.svg?sanitize=true"
-    alt="Contenta logo"
-    title="Contenta logo"
-    style="max-width:100%;"
-    width="100"
-    align="right">
+  <img align="right" src="./logo.svg" alt="Contenta logo" title="Contenta logo" width="100">
 </h1>
 
 
