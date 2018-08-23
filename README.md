@@ -1,4 +1,4 @@
-<h1 id="contenta-cms">Contenta CMS <img src="/contentacms/contentajs/raw/master/logo.svg?sanitize=true" alt="Contenta logo" title="Contenta logo" style="max-width:100%;" width="100" align="right"></h1>
+<h1 id="contenta-cms">Contenta CMS <img src="/contentacms/contenta_jsonapi/raw/master/logo.svg?sanitize=true" alt="Contenta logo" title="Contenta logo" style="max-width:100%;" width="100" align="right"></h1>
 
 
 Contenta is a content API and CMS based on Drupal 8. It provides a standard, jsonapi-based platform for building decoupled applications and websites.
