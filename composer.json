@@ -50,7 +50,7 @@
     "drupal/image_widget_crop": "^2.1",
     "drupal/inline_entity_form": "^1.0@beta",
     "drupal/jsonapi": "^1.23",
-    "drupal/jsonapi_extras": "^2.0",
+    "drupal/jsonapi_extras": "^2.9",
     "drupal/jsonrpc": "^1.0@beta",
     "drupal/material_admin": "1.x-dev",
     "drupal/media_entity_browser": "^2.0@alpha",
