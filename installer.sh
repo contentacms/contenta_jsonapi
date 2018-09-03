@@ -28,8 +28,8 @@ if echo "$install_path" ;then
     composer run-script install:with-sqlite $install_path --timeout=0 --working-dir $install_path
 
     # Start the built-in PHP server.
-    $DRUSH user-login --no-browser --uri="http://127.0.0.1:8888"
-    $DRUSH runserver 127.0.0.1:8888
+    $DRUSH --root=$install_path/web user-login --no-browser --uri="http://127.0.0.1:8888"
+    $DRUSH --root=$install_path/web runserver 127.0.0.1:8888
 	cd $original_wd
 else
     echo -e "\nBye!"
