@@ -15,9 +15,9 @@ function recipes_magazin_modules_installed($modules) {
 }
 
 /**
- * Implements hook_modules_uninstalled().
+ * Implements hook_uninstall().
  */
-function recipes_magazin_modules_uninstalled($modules) {
+function recipes_magazin_uninstall() {
   $migrations = _recipes_magazin_migration_names();
   \Drupal::service('recipes.migration_runner')->remove($migrations);
   \Drupal::messenger()->addMessage(t('The rollback of the demo content was successful.'));
