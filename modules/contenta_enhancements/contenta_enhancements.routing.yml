@@ -1,20 +1,21 @@
 contenta_enhancements.api:
   path: '/admin/api'
   defaults:
-    _controller: '\Drupal\contenta_enhancements\Controller\OpenApiDocs::generateDocs'
-    entity_mode: 'content_entities'
-  methods: [GET]
+    _title: 'OpenAPI Documentation'
+    _controller: '\Drupal\openapi\Controller\OpenApiUiController::generate'
+    openapi_ui: redoc
+    openapi_generator: jsonapi
+  methods:
+  - GET
   requirements:
     _permission: 'access openapi api docs'
-
-contenta_enhancements.api.config:
-  path: '/admin/api/config'
-  defaults:
-    _controller: '\Drupal\contenta_enhancements\Controller\OpenApiDocs::generateDocs'
-    entity_mode: 'config_entities'
-  methods: [GET]
-  requirements:
-    _permission: 'access openapi api docs'
+    _module_dependencies: 'openapi_ui'
+  options:
+    parameters:
+      openapi_ui:
+        type: openapi_ui
+      openapi_generator:
+        type: openapi_generator
 
 contenta_enhancements.revert:
   path: '/admin/contenta/revert'

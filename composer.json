@@ -34,7 +34,12 @@
         "type:drupal-drush"
       ]
     },
-    "patches": {}
+    "patches": {
+      "drupal/openapi": {
+        "Exclude disabled JSON API resources": "https://www.drupal.org/files/issues/2018-09-18/3000458--exclude-disabled-resource-types--2.patch",
+        "Documentation for JSON API collections needs minor adjustments": "https://www.drupal.org/files/issues/2018-09-18/3000609--jsonapi-collections-fixes--2.patch"
+      }
+    }
   },
   "require": {
     "cweagans/composer-patches": "^1.6.0",
