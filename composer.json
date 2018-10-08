@@ -48,7 +48,7 @@
     "drupal/consumer_image_styles": "^2.0@rc",
     "drupal/consumers": "^1.0",
     "drupal/contentajs": "^1.0@beta",
-    "drupal/core": "^8.6.0@beta",
+    "drupal/core": "^8.6.0",
     "drupal/decoupled_router": "^1.0",
     "drupal/dropzonejs": "^2.0@alpha",
     "drupal/entity_browser": "^2.0@alpha",
