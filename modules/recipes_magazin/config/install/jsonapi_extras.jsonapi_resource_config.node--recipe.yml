@@ -192,7 +192,9 @@ resourceFields:
     fieldName: field_recipe_instruction
     publicName: instructions
     enhancer:
-      id: ''
+      id: nested
+      settings:
+        path: value
     disabled: false
   field_summary:
     fieldName: field_summary
