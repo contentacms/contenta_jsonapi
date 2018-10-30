@@ -9,6 +9,7 @@ module:
   contenta_enhancements: 0
   datetime: 0
   datetime_range: 0
+  decoupled_router: 0
   dropzonejs: 0
   dropzonejs_eb_widget: 0
   dynamic_page_cache: 0
