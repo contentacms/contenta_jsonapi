@@ -7,6 +7,7 @@ use Drupal\node\NodeInterface;
 use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 use Drupal\Core\Render\Markup;
 use Drupal\Core\Menu\MenuTreeParameters;
+use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
 
 /**
  * Implements hook_help().
@@ -366,13 +367,19 @@ function contenta_enhancements_node_view_alter(array &$build, NodeInterface $ent
     return;
   }
   // Retrieve JSON API representation of this node.
-  $normalized = \Drupal::service('jsonapi.entity.to_jsonapi')->normalize($entity);
+  try {
+    $entity_to_jsonapi = \Drupal::service('jsonapi_extras.entity.to_jsonapi');
+  }
+  catch (ServiceNotFoundException $e) {
+    $entity_to_jsonapi = \Drupal::service('jsonapi.entity.to_jsonapi');
+  }
+  $normalized = $entity_to_jsonapi->normalize($entity);
 
   // Generate markup.
   $json = json_encode($normalized, JSON_PRETTY_PRINT);
   $markup = <<<HTML
 <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-<pre class="prettyprint lang-js">$json</pre>
+<pre class="prettyprint"><code class="language-js">$json</code></pre>
 HTML;
 
   // Add to render array.
