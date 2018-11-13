@@ -39,6 +39,10 @@
         "Exclude disabled JSON API resources": "https://www.drupal.org/files/issues/2018-09-18/3000458--exclude-disabled-resource-types--2.patch",
         "Documentation for JSON API collections needs minor adjustments": "https://www.drupal.org/files/issues/2018-09-18/3000609--jsonapi-collections-fixes--2.patch",
         "Improve path method descriptions": "https://www.drupal.org/files/issues/2018-09-29/3001993--initial-description--7.patch"
+      },
+      "drupal/jsonapi": {
+        "Only serialize sparse_fieldset fields": "https://www.drupal.org/files/issues/2018-11-05/3011099-12-8.x-1.x.patch",
+        "Error: Call to a member function getIncludes() on null": "https://www.drupal.org/files/issues/2018-11-07/getIncludes-on-null-error-3011836-2.patch"
       }
     }
   },
