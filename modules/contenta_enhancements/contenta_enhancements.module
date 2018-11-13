@@ -376,11 +376,12 @@ function contenta_enhancements_node_view_alter(array &$build, NodeInterface $ent
   $normalized = $entity_to_jsonapi->normalize($entity);
 
   // Generate markup.
-  $json = json_encode($normalized, JSON_PRETTY_PRINT);
-  $markup = <<<HTML
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-<pre class="prettyprint"><code class="language-js">$json</code></pre>
-HTML;
+  $flags = JSON_HEX_TAG
+    | JSON_HEX_APOS
+    | JSON_HEX_AMP
+    | JSON_HEX_QUOT
+    | JSON_PRETTY_PRINT;
+  $json = json_encode($normalized, $flags);
 
   // Add to render array.
   $build['jsonapi_prefix'] = [
@@ -389,7 +390,14 @@ HTML;
   ];
   $build['jsonapi'] = [
     '#weight' => 100000,
-    '#prefix' => '</div><div class="col s12 m8"><div class="node-jsonapi-preview">' . Markup::create($markup) . '</div></div></div>',
+    '#prefix' => '</div><div class="col s12 m8"><div class="node-jsonapi-preview"><pre class="prettyprint"><code class="language-js">',
+    '#suffix' => '</code></pre></div></div></div>',
+    '#markup' => $json,
+    '#attached' => [
+      'library' => [
+        'contenta_enhancements/contenta_enhancements.node-preview',
+      ],
+    ],
   ];
 }
 

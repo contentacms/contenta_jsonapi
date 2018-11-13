@@ -23,3 +23,8 @@ contenta_enhancements:
   css:
     component:
       css/contenta_enhancements.css: {}
+
+contenta_enhancements.node-preview:
+  version: '1.0'
+  js:
+    https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sunburst: { type: external, minified: true }
