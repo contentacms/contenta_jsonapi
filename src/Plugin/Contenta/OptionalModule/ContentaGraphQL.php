@@ -3,6 +3,8 @@
 namespace Drupal\contenta_jsonapi\Plugin\Contenta\OptionalModule;
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Link;
+use Drupal\Core\Url;
 
 /**
  * GraphQL.
@@ -23,12 +25,18 @@ class ContentaGraphQL extends AbstractOptionalModule {
 
     $form = parent::buildForm($form, $form_state);
 
+    $link = Link::fromTextAndUrl(
+      'GraphQL integration in Contenta JS',
+      Url::fromUri('https://github.com/contentacms/contentajs-graphql')
+    )->toString();
     $form['contenta_graphql']['project_info'] = [
       '#type' => 'item',
-      '#description' => $this->t("Contenta CMS is primarily focused on JSON API.
-        If you want to expose a GraphQL API consider looking at the GraphQL
-        integration in Contenta JS. If you still want to install GraphQL inside
-        of Drupal select this module."),
+      '#description' => $this->t(
+        "Contenta CMS is primarily focused on JSON API. If you want to expose a
+        GraphQL API consider looking at the @link. If you still want to
+        install GraphQL inside of Drupal select this module.",
+        ['@link' => $link]
+      ),
     ];
 
     return $form;
