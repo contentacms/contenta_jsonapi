@@ -33,8 +33,7 @@ class ContentaGraphQL extends AbstractOptionalModule {
       '#type' => 'item',
       '#description' => $this->t(
         "Contenta CMS is primarily focused on JSON API. If you want to expose a
-        GraphQL API consider looking at the @link. If you still want to
-        install GraphQL inside of Drupal select this module.",
+        GraphQL API consider looking at the @link.",
         ['@link' => $link]
       ),
     ];
