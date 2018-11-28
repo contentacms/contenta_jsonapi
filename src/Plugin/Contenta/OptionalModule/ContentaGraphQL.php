@@ -36,6 +36,7 @@ class ContentaGraphQL extends AbstractOptionalModule {
         GraphQL API consider looking at the @link.",
         ['@link' => $link]
       ),
+      '#disabled' => TRUE,
     ];
 
     return $form;
