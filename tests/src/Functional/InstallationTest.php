@@ -4,6 +4,7 @@ namespace Drupal\Tests\contenta_jsonapi\Functional;
 
 use Drupal\Component\Serialization\Json;
 use Drupal\Core\Url;
+use Drupal\Tests\BrowserTestBase;
 use PHPUnit\Framework\TestCase;
 use GuzzleHttp\Client;
 
@@ -12,7 +13,7 @@ use GuzzleHttp\Client;
  *
  * @group ContentaInstaller
  */
-class InstallationTest extends TestCase {
+class InstallationTest extends BrowserTestBase {
 
   /**
    * @var Client
@@ -110,6 +111,11 @@ class InstallationTest extends TestCase {
     $this->assertArrayHasKey('node--recipe', $output);
   }
 
-  public function testOpenApi() {}
+  public function testOpenApi() {
+    $this->getSession()->visit('/admin/api');
+    $this->assertNotEmpty(
+      $this->getSession()->getPage()->find('css', 'a[href="#tag/Content-Recipe"]')
+    );
+  }
 
 }
