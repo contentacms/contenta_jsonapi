@@ -93,4 +93,23 @@ class InstallationTest extends TestCase {
     $this->assertEquals('/api', $output['result']['openApi']['basePath']);
   }
 
+  public function testJsonApiEntryPoint() {
+    $response = $this->httpClient->request(
+      'GET',
+      $this->baseUrl . '/api',
+      [
+        'query' => [
+          'query' => '{"jsonrpc":"2.0","method":"jsonapi.metadata","id":"cms-meta"}'
+        ],
+        'headers' => ['Accept' => 'application/vnd.api+json'],
+      ]);
+    $this->assertSame(200, $response->getStatusCode());
+    $body = $response->getBody()->getContents();
+    $output = Json::decode($body);
+    $this->assertArrayHasKey('self', $output);
+    $this->assertArrayHasKey('node--recipe', $output);
+  }
+
+  public function testOpenApi() {}
+
 }

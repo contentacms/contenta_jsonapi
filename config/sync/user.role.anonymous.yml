@@ -7,7 +7,6 @@ weight: 0
 is_admin: false
 permissions:
   - 'access content'
-  - 'access jsonapi resource list'
   - 'access openapi api docs'
   - 'access toolbar'
   - 'execute graphql requests'

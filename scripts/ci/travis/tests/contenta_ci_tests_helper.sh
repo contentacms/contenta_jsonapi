@@ -20,7 +20,6 @@ setup_anonymous_user() {
 
     cd $DRUPAL_BASE
     # Add Permission to anonymous user
-    $DRUSH role-add-perm 'anonymous' 'access jsonapi resource list' -y
     $DRUSH updatedb -y
     $DRUSH cr -y
 
