@@ -367,12 +367,7 @@ function contenta_enhancements_node_view_alter(array &$build, NodeInterface $ent
     return;
   }
   // Retrieve JSON API representation of this node.
-  try {
-    $entity_to_jsonapi = \Drupal::service('jsonapi_extras.entity.to_jsonapi');
-  }
-  catch (ServiceNotFoundException $e) {
-    $entity_to_jsonapi = \Drupal::service('jsonapi.entity.to_jsonapi');
-  }
+  $entity_to_jsonapi = \Drupal::service('jsonapi_extras.entity.to_jsonapi');
   $normalized = $entity_to_jsonapi->normalize($entity);
 
   // Generate markup.
