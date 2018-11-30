@@ -3,8 +3,6 @@
 namespace Drupal\Tests\contenta_jsonapi\Functional;
 
 use Drupal\Component\Serialization\Json;
-use Drupal\Core\Url;
-use Drupal\Tests\BrowserTestBase;
 use PHPUnit\Framework\TestCase;
 use GuzzleHttp\Client;
 
@@ -13,7 +11,7 @@ use GuzzleHttp\Client;
  *
  * @group ContentaInstaller
  */
-class InstallationTest extends BrowserTestBase {
+class InstallationTest extends TestCase {
 
   /**
    * @var Client
