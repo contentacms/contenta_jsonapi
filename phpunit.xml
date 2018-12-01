@@ -1,25 +1,56 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<phpunit
-    convertErrorsToExceptions="true"
-    colors="true"
-    convertWarningsToExceptions="true"
-    forceCoversAnnotation="false"
-    stopOnFailure="true"
->
-    <php>
-        <ini name="memory_limit" value="-1" />
-        <env name="WEB_HOST" value="127.0.0.1" />
-        <env name="WEB_HOST" value="8888" />
+<?xml version="1.0" encoding="UTF-8"?>
 
+<!-- TODO set checkForUnintentionallyCoveredCode="true" once https://www.drupal.org/node/2626832 is resolved. -->
+<!-- PHPUnit expects functional tests to be run with either a privileged user
+ or your current system user. See core/tests/README.md and
+ https://www.drupal.org/node/2116263 for details.
+-->
+<phpunit bootstrap="../../../core/tests/bootstrap.php"
+         colors="true"
+         verbose="true"
+         beStrictAboutTestsThatDoNotTestAnything="true"
+         beStrictAboutOutputDuringTests="true"
+         beStrictAboutChangesToGlobalState="true">
+    <!-- TODO set printerClass="\Drupal\Tests\Listeners\HtmlOutputPrinter" once
+     https://youtrack.jetbrains.com/issue/WI-24808 is resolved. Drupal provides a
+     result printer that links to the html output results for functional tests.
+     Unfortunately, this breaks the output of PHPStorm's PHPUnit runner. However, if
+     using the command line you can add
+     - -printer="\Drupal\Tests\Listeners\HtmlOutputPrinter" to use it (note there
+     should be no spaces between the hyphens).
+    -->
+    <php>
+        <!-- Set error reporting to E_ALL. -->
+        <ini name="error_reporting" value="32767"/>
+        <!-- Do not limit the amount of memory tests take to run. -->
+        <ini name="memory_limit" value="-1"/>
+        <!-- Example SIMPLETEST_BASE_URL value: http://localhost -->
+        <!-- Example SIMPLETEST_DB value: mysql://username:password@localhost/databasename#table_prefix -->
+        <!-- Example BROWSERTEST_OUTPUT_DIRECTORY value: ../../../sites/simpletest/browser_output -->
+        <ini name="BROWSERTEST_OUTPUT_DIRECTORY" value="../../../sites/simpletest/browser_output"/>
+        <!-- To disable deprecation testing completely uncomment the next line. -->
+        <!-- <env name="SYMFONY_DEPRECATIONS_HELPER" value="disabled"/> -->
+        <!-- Example for changing the driver class for mink tests MINK_DRIVER_CLASS value: 'Drupal\FunctionalJavascriptTests\DrupalSelenium2Driver' -->
+        <!-- Example for changing the driver args to mink tests MINK_DRIVER_ARGS value: '["http://127.0.0.1:8510"]' -->
+        <!-- Example for changing the driver args to phantomjs tests MINK_DRIVER_ARGS_PHANTOMJS value: '["http://127.0.0.1:8510"]' -->
+        <!-- Example for changing the driver args to webdriver tests MINK_DRIVER_ARGS_WEBDRIVER value: '["firefox", null, "http://localhost:4444/wd/hub"]' -->
     </php>
     <testsuites>
         <testsuite name="ContentaFunctional">
             <directory suffix="Test.php">tests/src/Functional/</directory>
         </testsuite>
     </testsuites>
+    <listeners>
+        <listener class="\Drupal\Tests\Listeners\DrupalListener">
+        </listener>
+        <!-- The Symfony deprecation listener has to come after the Drupal listener -->
+        <listener class="Symfony\Bridge\PhpUnit\SymfonyTestsListener">
+        </listener>
+    </listeners>
+    <!-- Filter for coverage reports. -->
     <filter>
         <whitelist>
-            <directory>tests/src/</directory>
+            <directory>./tests/src/</directory>
         </whitelist>
     </filter>
 </phpunit>
