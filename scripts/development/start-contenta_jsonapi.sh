@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-export $(cat .env | xargs)
+if [ -e .env ]; then
+    export $(cat .env | xargs)
+fi
 
 if [ -e .env.local ]; then
     export $(cat .env.local | xargs)
@@ -34,11 +36,11 @@ echo "-------------------------------------"
 echo " Initializing local PHP server "
 echo "-------------------------------------"
 echo -e "${FG_C}${WBG_C} INFO ${NO_C} Server started. Use Ctrl+C to stop it."
-$DRUSH runserver --default-server=builtin ${WEB_HOST}:${WEB_PORT}
+$DRUSH runserver --no-browser $SIMPLETEST_BASE_URL
 
 echo "---------------------------------"
 echo " One time admin login link "
 echo "---------------------------------"
-echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $DRUSH user-login --no-browser --uri=\"http://${WEB_HOST}:${WEB_PORT}\""
+echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $DRUSH user-login --no-browser --uri=\"$SIMPLETEST_BASE_URL\""
 echo -e "${FG_C}${WBG_C} INFO ${NO_C} Use this link to login as an administrator in your new site:"
-$DRUSH user-login --no-browser --uri="http://$WEB_HOST:$WEB_PORT"
+$DRUSH user-login --no-browser --uri="$SIMPLETEST_BASE_URL"
