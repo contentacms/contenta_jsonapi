@@ -29,7 +29,7 @@ run_functional_tests() {
     DRUSH=$1/$COMPOSER_BIN_DIR/drush
     cd $1/$DOCROOT
     $DRUSH pm-enable --yes simpletest
-    cd $CONTENTA_PATH
+    cd $1/$DOCROOT
     echo "php $1/$DOCROOT/core/scripts/run-tests.sh --php `which php` --url $SIMPLETEST_BASE_URL --suppress-deprecations --verbose --color Contenta"
     php $1/$DOCROOT/core/scripts/run-tests.sh --php `which php` --url $SIMPLETEST_BASE_URL --suppress-deprecations --verbose --color Contenta
     exit $?
