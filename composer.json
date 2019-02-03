@@ -45,7 +45,8 @@
   "require": {
     "cweagans/composer-patches": "^1.6.0",
     "drupal/admin_toolbar": "^1.23",
-    "drupal/consumers": "^1.2",
+    "drupal/consumer_image_styles": "^3.0@beta",
+    "drupal/consumers": "^1.8",
     "drupal/contentajs": "^1.0@beta",
     "drupal/core": "^8.6.0",
     "drupal/decoupled_router": "^1.1",
