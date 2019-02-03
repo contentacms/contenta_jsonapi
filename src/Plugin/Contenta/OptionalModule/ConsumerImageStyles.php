@@ -27,9 +27,7 @@ class ConsumerImageStyles extends AbstractOptionalModule {
       '#type' => 'item',
       '#description' => $this->t("This is a lower budget alternative to services
       like Cloudinary, Akamai Image Converter, etc. This module will cover your
-      needs in 90% of the decoupled projects. <strong>This project is
-      temporarily unavailable.</strong>"),
-      '#disabled' => TRUE,
+      needs in 90% of the decoupled projects."),
     ];
 
     return $form;
