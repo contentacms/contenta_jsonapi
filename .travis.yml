@@ -41,6 +41,7 @@ jobs:
       script: composer run-script ci:helper run_functional_tests "$PROJECT_BASE_PATH" --timeout=0
       after_script:
         - mysql -e "DROP DATABASE $DB_NAME;"
+        - mysql -e "SHOW DATABASES;"
         - killall php
 
     -
