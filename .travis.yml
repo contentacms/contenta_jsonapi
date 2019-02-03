@@ -24,6 +24,7 @@ jobs:
         - echo "memory_limit=-1" >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
         # Fix failing tests due to email sending.
         - echo 'sendmail_path = /bin/true' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
+        - composer selfupdate
         - mkdir $PROJECT_BASE_PATH
       install: composer run-script install-contenta $PROJECT_BASE_PATH --timeout=0
       before_script:
@@ -36,6 +37,8 @@ jobs:
 
     -
       stage: release
+      before_install:
+        - composer selfupdate
       install: composer run-script install-contenta $PROJECT_BASE_PATH --timeout=0
       before_script: skip
       script: skip
