@@ -3,13 +3,18 @@ php: 7.2
 cache:
   directories:
     - "$HOME/.composer/cache/files"
+
+services:
+  - mysql
+
 env:
   global:
     - PROJECT_NAME=contentacms
     - PROJECT_BASE_PATH=$HOME/$PROJECT_NAME
     - PROJECT_RELEASE_BRANCH=${PROJECT_RELEASE_BRANCH:-8.x-3.x}
     - SIMPLETEST_BASE_URL=http://127.0.0.1:8888
-    - SIMPLETEST_DB=sqlite://tmp/site.sqlite
+    - DB_NAME=drupal8_${TRAVIS_BUILD_NUMBER}
+    - SIMPLETEST_DB=mysql://travis@127.0.0.1/drupal8_${TRAVIS_BUILD_NUMBER}
 
 branches:
   only:
@@ -26,6 +31,7 @@ jobs:
         - echo 'sendmail_path = /bin/true' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
         - composer selfupdate
         - mkdir $PROJECT_BASE_PATH
+        - mysql -e "CREATE DATABASE IF NOT EXISTS $DB_NAME;"
       install: composer run-script install-contenta $PROJECT_BASE_PATH --timeout=0
       before_script:
         # Start Contenta CMS Local Server
@@ -33,7 +39,9 @@ jobs:
         - until curl -sS $SIMPLETEST_BASE_URL; do sleep 1; done > /dev/null
         - echo "Connected to the test server at ${SIMPLETEST_BASE_URL}"
       script: composer run-script ci:helper run_functional_tests "$PROJECT_BASE_PATH" --timeout=0
-      after_script: killall php
+      after_script:
+        - mysql -e "DROP DATABASE $DB_NAME;"
+        - killall php
 
     -
       stage: release
