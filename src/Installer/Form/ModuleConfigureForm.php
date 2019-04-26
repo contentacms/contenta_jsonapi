@@ -54,7 +54,6 @@ class ModuleConfigureForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-
     return [];
   }
 
@@ -116,12 +115,12 @@ class ModuleConfigureForm extends ConfigFormBase {
 
     $build_info = $form_state->getBuildInfo();
 
-    $install_state = $build_info['args'];
+    $install_state = $build_info['forms'];
 
-    $install_state[0]['contenta_jsonapi_additional_modules'] = $install_modules;
-    $install_state[0]['form_state_values'] = $form_state->getValues();
+    $install_state['contenta_jsonapi_additional_modules'] = $install_modules;
+    $install_state['form_state_values'] = $form_state->getValues();
 
-    $build_info['args'] = $install_state;
+    $build_info['forms'] = $install_state;
 
     $form_state->setBuildInfo($build_info);
   }
