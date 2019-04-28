@@ -117,12 +117,8 @@ class ModuleConfigureForm extends ConfigFormBase {
     }
 
     // Iterate over the form state values to determine modules to install
-    // TODO: can this be stripped in favor of using form_state_values keys?
     foreach ($install_state['form_state_values'] as $key => $value) {
       // Only operate on any values that have `install_modules_`
-      // TODO: small optimization: create default array that contains
-      // the list of of `install_modules_MODULE` with meta information
-      // and iterate over that rather than string searching
       if (strpos($key, 'install_modules_') !== false && $value) {
         // Add module to the additional list
         $install_state['contenta_jsonapi_additional_modules'][] =
