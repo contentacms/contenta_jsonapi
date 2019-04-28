@@ -86,8 +86,8 @@ class ModuleConfigureForm extends ConfigFormBase {
 
       $form = $instance->buildForm($form, $form_state);
     }
-    $form['#title'] = $this->t('Install & configure modules');
 
+    $form['#title'] = $this->t('Install & configure modules');
     $form['actions'] = ['#type' => 'actions'];
     $form['actions']['save'] = [
       '#type' => 'submit',
@@ -103,25 +103,34 @@ class ModuleConfigureForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $install_modules = [];
+    /* Get forms from build info to allow for drush overrides
+    on default form_state->getValue() that are sent */
+    $build_info = $form_state->getBuildInfo();
+    $install_state = $build_info['args'][0]['forms'];
 
-    foreach ($form_state->getValues() as $key => $value) {
+    $install_state['contenta_jsonapi_additional_modules'] = [];
+    // Determine form state based off override existance
+    if (isset($install_state['form_state_values'])) {
+      $install_state['form_state_values'] += $form_state->getValues();
+    } else {
+      $install_state['form_state_values'] = $form_state->getValues();
+    }
 
-      if (strpos($key, 'install_modules') !== FALSE && $value) {
-        preg_match('/install_modules_(?P<name>\w+)/', $key, $values);
-        $install_modules[] = $values['name'];
+    // Iterate over the form state values to determine modules to install
+    // TODO: can this be stripped in favor of using form_state_values keys?
+    foreach ($install_state['form_state_values'] as $key => $value) {
+      // Only operate on any values that have `install_modules_`
+      // TODO: small optimization: create default array that contains
+      // the list of of `install_modules_MODULE` with meta information
+      // and iterate over that rather than string searching
+      if (strpos($key, 'install_modules_') !== false && $value) {
+        // Add module to the additional list
+        $install_state['contenta_jsonapi_additional_modules'][] =
+          ltrim($key, 'install_modules_');
       }
     }
 
-    $build_info = $form_state->getBuildInfo();
-
-    $install_state = $build_info['forms'];
-
-    $install_state['contenta_jsonapi_additional_modules'] = $install_modules;
-    $install_state['form_state_values'] = $form_state->getValues();
-
-    $build_info['forms'] = $install_state;
-
+    $build_info['args'][0]['forms'] = $install_state;
     $form_state->setBuildInfo($build_info);
   }
 
