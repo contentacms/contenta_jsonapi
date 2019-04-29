@@ -92,8 +92,8 @@ function _contenta_jsonapi_generate_keys() {
 function contenta_jsonapi_module_install(array &$install_state) {
   set_time_limit(0);
 
-  $extensions = $install_state['contenta_jsonapi_additional_modules'];
-  $form_values = $install_state['form_state_values'];
+  $extensions = $install_state['forms']['contenta_jsonapi_additional_modules'];
+  $form_values = $install_state['forms']['form_state_values'];
 
   $optional_modules_manager = \Drupal::service('plugin.manager.contenta_jsonapi.optional_modules');
   $definitions = array_map(function ($extension_name) use ($optional_modules_manager) {
