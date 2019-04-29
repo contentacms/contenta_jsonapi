@@ -103,28 +103,25 @@ class ModuleConfigureForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    /* Get forms from build info to allow for drush overrides
-    on default form_state->getValue() that are sent */
+    // Get forms from build info to allow for drush overrides
+    // on default form_state->getValue() that are sent.
     $build_info = $form_state->getBuildInfo();
     $install_state = $build_info['args'][0]['forms'];
 
-    $install_state['contenta_jsonapi_additional_modules'] = [];
-    // Determine form state based off override existance
-    if (isset($install_state['form_state_values'])) {
-      $install_state['form_state_values'] += $form_state->getValues();
-    } else {
-      $install_state['form_state_values'] = $form_state->getValues();
-    }
+    // Determine form state based off override existence.
+    $install_state['form_state_values'] = isset($install_state['form_state_values'])
+      ? $install_state['form_state_values']
+      : [];
+    $install_state['form_state_values'] += $form_state->getValues();
 
-    // Iterate over the form state values to determine modules to install
-    foreach ($install_state['form_state_values'] as $key => $value) {
-      // Only operate on any values that have `install_modules_`
-      if (strpos($key, 'install_modules_') !== false && $value) {
-        // Add module to the additional list
-        $install_state['contenta_jsonapi_additional_modules'][] =
-          ltrim($key, 'install_modules_');
-      }
-    }
+    // Iterate over the form state values to determine modules to install.
+    $values = array_filter($install_state['form_state_values']);
+    $module_values = array_filter(array_keys($values), function ($key) {
+      return strpos($key, 'install_modules_') !== FALSE;
+    });
+    $install_state['contenta_jsonapi_additional_modules'] = array_map(function ($name) {
+      return substr($name, strlen('install_modules_'));
+    }, $module_values);
 
     $build_info['args'][0]['forms'] = $install_state;
     $form_state->setBuildInfo($build_info);
