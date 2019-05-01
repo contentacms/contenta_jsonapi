@@ -1,17 +1,17 @@
 favicon:
   mimetype: image/vnd.microsoft.icon
-  path: ''
+  path: profiles/contrib/contenta_jsonapi/modules/contenta_enhancements/favicon.ico
   url: ''
-  use_default: true
+  use_default: false
 features:
   comment_user_picture: true
   comment_user_verification: true
   favicon: true
   node_user_picture: false
 logo:
-  path: ''
+  path: profiles/contrib/contenta_jsonapi/modules/contenta_enhancements/logo.svg
   url: ''
-  use_default: true
+  use_default: false
 material_admin_node_actions: false
 material_admin_portal_login: true
 material_admin_jqueryui_dialog_background: true
