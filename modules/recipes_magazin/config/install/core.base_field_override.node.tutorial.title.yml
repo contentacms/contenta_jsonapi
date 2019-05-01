@@ -1,8 +1,11 @@
+uuid: 2449896a-157b-4a82-bacf-f039692329a6
 langcode: en
 status: true
 dependencies:
   config:
     - node.type.tutorial
+_core:
+  default_config_hash: vPeh7IYTu9tPWw2rMtR-zt4MEB5qSLkWIsCwdqNPbhg
 id: node.tutorial.title
 field_name: title
 entity_type: node

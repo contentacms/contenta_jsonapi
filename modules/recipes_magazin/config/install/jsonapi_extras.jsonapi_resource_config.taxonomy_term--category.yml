@@ -1,3 +1,4 @@
+uuid: 27906610-122c-4a65-980b-6ab88e868926
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
   enforced:
     module:
       - recipes_magazin
+_core:
+  default_config_hash: kNlMgtoMkkJ7B6RYSpqp3AXHGo2V-vxRU8tnVhQS3II
 id: taxonomy_term--category
 disabled: false
 path: categories

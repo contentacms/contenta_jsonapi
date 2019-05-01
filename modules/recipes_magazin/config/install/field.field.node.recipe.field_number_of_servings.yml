@@ -1,3 +1,4 @@
+uuid: afeaa35c-834a-496a-92ce-b9692b2d88df
 langcode: en
 status: true
 dependencies:
@@ -7,6 +8,8 @@ dependencies:
   enforced:
     module:
       - recipes_magazin
+_core:
+  default_config_hash: bpBEh-ubxpw84JybBA2B81oSjQj23mC7uyX1Hil1hqw
 id: node.recipe.field_number_of_servings
 field_name: field_number_of_servings
 entity_type: node

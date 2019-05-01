@@ -1,3 +1,4 @@
+uuid: 236cdaab-0e5f-4647-b962-73661b5706c2
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
       - recipes_magazin
   module:
     - language
+_core:
+  default_config_hash: Ti2LY3_d0jw2wNt1ClDmRJiGzdPey51zS82T5vvaUm4
 id: configurable_language--configurable_language
 disabled: true
 path: configurable_language/configurable_language

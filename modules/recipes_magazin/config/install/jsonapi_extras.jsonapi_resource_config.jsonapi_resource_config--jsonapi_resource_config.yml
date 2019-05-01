@@ -1,9 +1,12 @@
+uuid: 08f0e8ac-0c08-4939-921a-3ab4012c41da
 langcode: en
 status: true
 dependencies:
   enforced:
     module:
       - recipes_magazin
+_core:
+  default_config_hash: 2_aeIvjR7UPHB8vMunzM8_XAzAVsowI4l5voqH-LID8
 id: jsonapi_resource_config--jsonapi_resource_config
 disabled: true
 path: jsonapi_resource_config/jsonapi_resource_config

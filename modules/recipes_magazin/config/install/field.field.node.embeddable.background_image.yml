@@ -1,3 +1,4 @@
+uuid: 17e6816d-516f-4dc7-ad05-91f630bebc68
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - field.storage.node.background_image
     - media.type.image
     - node.type.embeddable
+_core:
+  default_config_hash: 1nvSZy_pGibEnKmr-Xv6jdAgNJLrlBzGCYKmDStOBkQ
 id: node.embeddable.background_image
 field_name: background_image
 entity_type: node

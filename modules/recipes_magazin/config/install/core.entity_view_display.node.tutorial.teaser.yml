@@ -1,3 +1,4 @@
+uuid: b595f2d5-9b37-46e4-98b4-bd1f5303968a
 langcode: en
 status: false
 dependencies:
@@ -10,6 +11,8 @@ dependencies:
     - node.type.tutorial
   module:
     - user
+_core:
+  default_config_hash: jVDQeKETcSGB7cG6KT04ej_uxnlhTjnSEo6qgwxJmT4
 id: node.tutorial.teaser
 targetEntityType: node
 bundle: tutorial

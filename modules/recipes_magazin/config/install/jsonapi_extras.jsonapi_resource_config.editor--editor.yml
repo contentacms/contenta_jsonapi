@@ -1,3 +1,4 @@
+uuid: 4f98ba90-3a76-4658-8aff-8a06fd7c0c37
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
       - recipes_magazin
   module:
     - editor
+_core:
+  default_config_hash: Cw9khZyESqdQODgL-SkUCO6fQg6W09HSABQXmFHyiOQ
 id: editor--editor
 disabled: true
 path: editor/editor

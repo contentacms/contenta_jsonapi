@@ -1,3 +1,4 @@
+uuid: 92062ab2-a317-490c-8880-e0347aac5148
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
       - recipes_magazin
   module:
     - user
+_core:
+  default_config_hash: _YioDXOnFVnT2DJuAAwPSP3cguFhbJfQB54GX0zu-0M
 id: user_role--user_role
 disabled: false
 path: roles

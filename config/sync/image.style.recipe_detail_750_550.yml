@@ -1,3 +1,4 @@
+uuid: 68be74b3-165b-46bc-8942-ca263739daae
 langcode: en
 status: true
 dependencies: {  }
@@ -11,3 +12,4 @@ effects:
     data:
       width: 750
       height: 550
+      anchor: center-center

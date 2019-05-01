@@ -1,3 +1,4 @@
+uuid: 7db6f323-8121-4598-92a4-2ecaf3700637
 langcode: en
 status: true
 dependencies:
@@ -9,6 +10,8 @@ dependencies:
       - recipes_magazin
   module:
     - text
+_core:
+  default_config_hash: komxKY49vDLOFuWNMmncHs4Bqk2ZgbR9mkAKmHoQ6kY
 id: comment.comment.comment_body
 field_name: comment_body
 entity_type: comment

@@ -1,3 +1,4 @@
+uuid: 3be125a0-acfb-4a14-bfd8-dc23bbb19536
 langcode: en
 status: true
 dependencies:
@@ -6,7 +7,7 @@ dependencies:
 id: material_admin_page_title
 theme: material_admin
 region: header
-weight: -5
+weight: 1
 provider: null
 plugin: page_title_block
 settings:

@@ -10,12 +10,8 @@ module:
   datetime: 0
   datetime_range: 0
   decoupled_router: 0
-  dropzonejs: 0
-  dropzonejs_eb_widget: 0
   dynamic_page_cache: 0
   editor: 0
-  entity_browser: 0
-  entity_browser_entity_form: 0
   entity_reference: 0
   field: 0
   field_ui: 0
@@ -33,7 +29,7 @@ module:
   language: 0
   link: 0
   media: 0
-  media_entity_browser: 0
+  media_library: 0
   menu_ui: 0
   migrate: 0
   node: 0

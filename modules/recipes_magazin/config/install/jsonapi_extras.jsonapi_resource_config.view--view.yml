@@ -1,3 +1,4 @@
+uuid: 25cea410-6517-445c-b1de-4842d1db3794
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
       - recipes_magazin
   module:
     - views
+_core:
+  default_config_hash: 6ef89jXT_By90OA-qxo4kfqn13tIrA5BqWWnCpRYUGQ
 id: view--view
 disabled: true
 path: view/view

@@ -1,8 +1,11 @@
+uuid: 98e301a8-543b-4b7c-997b-d5ea4d497eba
 langcode: en
 status: true
 dependencies:
   config:
     - node.type.tutorial
+_core:
+  default_config_hash: kYjU3IlhC4FuJkXe8sMpJacHcdrr_A3I-ZFz8N5wX-I
 id: node.tutorial.promote
 field_name: promote
 entity_type: node

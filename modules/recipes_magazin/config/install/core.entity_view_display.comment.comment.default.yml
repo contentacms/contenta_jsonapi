@@ -1,3 +1,4 @@
+uuid: 2be603eb-624b-4c7a-9d5b-b2e0d156a5de
 langcode: en
 status: true
 dependencies:
@@ -9,6 +10,8 @@ dependencies:
       - recipes_magazin
   module:
     - text
+_core:
+  default_config_hash: cBLf0TlfDnRs2F2TP_3MPbhvCg7-elsrnMfNAsI4-9c
 id: comment.comment.default
 targetEntityType: comment
 bundle: comment

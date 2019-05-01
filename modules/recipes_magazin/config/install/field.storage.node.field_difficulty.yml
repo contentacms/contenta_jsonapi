@@ -1,12 +1,15 @@
+uuid: 5e680581-84c9-42b5-ac4d-90241d5873d5
 langcode: en
 status: true
 dependencies:
-  module:
-    - node
-    - options
   enforced:
     module:
       - recipes_magazin
+  module:
+    - node
+    - options
+_core:
+  default_config_hash: do8rh_cnme-8LTHSt3gx3e5ZxbdNTuUNT2KmeMiy0gw
 id: node.field_difficulty
 field_name: field_difficulty
 entity_type: node
