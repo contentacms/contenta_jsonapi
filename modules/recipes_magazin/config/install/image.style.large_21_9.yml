@@ -7,7 +7,7 @@ dependencies:
       - image
       - recipes_magazin
 _core:
-  default_config_hash: ERhqeLWktS_rN_nCFjMvM7BML5H-b2bEhivroCvYkMM
+  default_config_hash: szoy8QpU_UhT2iD-ktWNJCMpjzRPpo4oHv8O2ptNG0k
 name: large_21_9
 label: 'Large 21:9 (1440x620)'
 effects:

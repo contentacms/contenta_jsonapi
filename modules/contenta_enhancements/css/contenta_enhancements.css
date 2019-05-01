@@ -20,29 +20,29 @@
   background-color: #212D35;
 }
 
-.card-content > .fa {
+body.material_admin .card-content > .fa {
   color: #03A9F4;
   font-size: 2rem;
 }
 
-.fa.left {
+body.material_admin .fa.left {
   float: left;
   margin-right: 15px;
 }
 
-.card .card-content .section h5 {
+body.material_admin .card .card-content .section h5 {
   font-size: 1rem;
   text-transform: uppercase;
 }
 
-.layout-container > main {
+body.material_admin .layout-container > main {
   background-color: #FAFAFA;
 }
 
-details.form-wrapper .details-wrapper {
+body.material_admin details.form-wrapper .details-wrapper {
   background-color: #FFFFFF;
 }
 
-.card .card-image img {
+body.material_admin .card .card-image img {
   height: auto;
 }

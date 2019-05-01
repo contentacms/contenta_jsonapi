@@ -8,7 +8,7 @@ dependencies:
   module:
     - comment
 _core:
-  default_config_hash: jQjnHm01JBlpKqf16rnrcv_Ay8fBG1QCjcBy-NIIgJY
+  default_config_hash: znTk_mIQHKRILJ2XrHOM4q7XVNJ4SHRhwtfKCtT4Z6Y
 id: comment_type--comment_type
 disabled: false
 path: commentTypes

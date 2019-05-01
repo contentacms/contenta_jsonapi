@@ -8,7 +8,7 @@ dependencies:
     module:
       - recipes_magazin
 _core:
-  default_config_hash: eAra1wEPzcc2jX4qqEsM-k1I3uNpohdhRBbU7e0xQgY
+  default_config_hash: UE6T-mn2BI5HgAK9PFN_PaZUEL2-R4LSFXEXXoNc4Mo
 id: comment--comment
 disabled: false
 path: comments

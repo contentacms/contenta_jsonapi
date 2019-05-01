@@ -8,7 +8,7 @@ dependencies:
   module:
     - user
 _core:
-  default_config_hash: _YioDXOnFVnT2DJuAAwPSP3cguFhbJfQB54GX0zu-0M
+  default_config_hash: nxL52NOTeydt18TGBayNC3odIRDC0VAbhUbosLrem-A
 id: user_role--user_role
 disabled: false
 path: roles

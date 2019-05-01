@@ -7,7 +7,7 @@ dependencies:
       - image
       - recipes_magazin
 _core:
-  default_config_hash: VUa8QtEzI0QIEY19K3flRrVItetDoJOcOdtrfRxKAkE
+  default_config_hash: OgZ80zgjRfc8wADAcRA0b2h4zTPRl5saEVSe4L6RBho
 name: card
 label: 'Card image (574×323)'
 effects:

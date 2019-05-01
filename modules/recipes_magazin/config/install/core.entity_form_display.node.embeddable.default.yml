@@ -11,7 +11,7 @@ dependencies:
     - media_library
     - path
 _core:
-  default_config_hash: EEGjxrMrlMAbQLrI_SP_Vc9Fp6ZSKzk6SViTog545r4
+  default_config_hash: 820KScT1FUyWqnIvSrF2wSA32FlrrIRomWc7lH_fBd0
 id: node.embeddable.default
 targetEntityType: node
 bundle: embeddable

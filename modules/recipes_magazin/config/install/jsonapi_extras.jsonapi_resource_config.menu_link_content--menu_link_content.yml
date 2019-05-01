@@ -8,7 +8,7 @@ dependencies:
   module:
     - menu_link_content
 _core:
-  default_config_hash: rDKmgNnlYD5btMrL18uwHXJpM7woO-GCJ0IHIeG1Rmc
+  default_config_hash: rIvJMySxFxrhg4ItrIa-3Gq88nYnPbzAturvEI1sQX8
 id: menu_link_content--menu_link_content
 disabled: false
 path: menuLinks

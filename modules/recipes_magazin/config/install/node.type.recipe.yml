@@ -12,7 +12,7 @@ third_party_settings:
     available_menus: {  }
     parent: ''
 _core:
-  default_config_hash: fnPgF0PzdajUXOoxV4zVnX9PxOnFHpcswtkkuLTbczY
+  default_config_hash: 0BoidyGr5rKprRJVJsufH2OvP5MP3Dsix7YPNiH2rts
 name: Recipe
 type: recipe
 description: 'Add a new recipe to the site.'

@@ -8,7 +8,7 @@ dependencies:
   module:
     - node
 _core:
-  default_config_hash: HGzCT5zLUXSvILLSIRN8sCl1pEdzy1x31cQ1uTJZQTc
+  default_config_hash: ZTzJpTEBwRcjKB0ZyzteJHlpyzsH6SanLQ48wcvWABA
 id: node.field_ingredients
 field_name: field_ingredients
 entity_type: node

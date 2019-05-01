@@ -7,7 +7,7 @@ dependencies:
     - image.style.square_medium
     - image.style.square_small
 _core:
-  default_config_hash: og75t756ursDlFFeLJ6EQaxDU0RvyFOks94sfk4V5qk
+  default_config_hash: mcVQsVlDMCNSpRXzFD1-8L1buGf2IJXZ6R9xPAycElU
 id: square
 label: Square
 image_style_mappings:

@@ -7,7 +7,7 @@ dependencies:
       - image
       - recipes_magazin
 _core:
-  default_config_hash: hQ4oSQgjtv1ENec5RZpqkujI1k2w8CU5LYlciV32NUg
+  default_config_hash: 0GWkCgGXswxKYY_wIM15Op2SsjwxsWCeCQYUe1lz808
 name: medium_8_7
 label: 'Medium 8:7 (266x236)'
 effects:

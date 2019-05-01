@@ -7,7 +7,7 @@ dependencies:
       - image
       - recipes_magazin
 _core:
-  default_config_hash: NEAHq11ZZWdkqdzWM17Mu1nW4kSsQGaAOJMKvZn2jww
+  default_config_hash: HsDHqtPyP1QDLCGsFvfE-Otg-qL9sv89fXy31F22OPw
 name: small_21_9
 label: 'Small 21:9 (768x330)'
 effects:

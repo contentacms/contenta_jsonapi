@@ -8,7 +8,7 @@ dependencies:
   module:
     - node
 _core:
-  default_config_hash: rtYaEGHr6zeVf1OEGumG7v_QH1P0lJEQgzsC9XVZ4jQ
+  default_config_hash: qkUNba3VYXEei_zCzJIcA2XeHX2yr_Zsawvi3970gCU
 id: node_type--node_type
 disabled: false
 path: contentTypes

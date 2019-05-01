@@ -8,7 +8,7 @@ dependencies:
   module:
     - views
 _core:
-  default_config_hash: 6ef89jXT_By90OA-qxo4kfqn13tIrA5BqWWnCpRYUGQ
+  default_config_hash: '-ZzRhOtslj6w8pScorZWu96sBcEa1TApi62ZRvvh9ug'
 id: view--view
 disabled: true
 path: view/view

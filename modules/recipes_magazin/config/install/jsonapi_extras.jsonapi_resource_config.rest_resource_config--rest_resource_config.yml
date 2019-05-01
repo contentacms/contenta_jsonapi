@@ -8,7 +8,7 @@ dependencies:
   module:
     - rest
 _core:
-  default_config_hash: yr_TLiHquu935YxRstofG8UjYyhbxq0Ybwe_Obs-OLw
+  default_config_hash: kWuQ3HQKAYMTmD-fFVQ9wONIJGEAlU_yl4sdnNuD_u8
 id: rest_resource_config--rest_resource_config
 disabled: true
 path: rest_resource_config/rest_resource_config

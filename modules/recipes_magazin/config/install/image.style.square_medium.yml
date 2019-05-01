@@ -7,7 +7,7 @@ dependencies:
       - image
       - recipes_magazin
 _core:
-  default_config_hash: E4bbiVE4plWHYcHrf1UGF_gNO35uS70iAM2feJ0oQ8w
+  default_config_hash: wA0qnibGgGf_8YyRXVCdeJuOvAvXb8XbawkpnQ5_Nfw
 name: square_medium
 label: 'Square Medium'
 effects:

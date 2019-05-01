@@ -5,7 +5,7 @@ dependencies:
   config:
     - node.type.tutorial
 _core:
-  default_config_hash: kYjU3IlhC4FuJkXe8sMpJacHcdrr_A3I-ZFz8N5wX-I
+  default_config_hash: lnX1MiX3Tpo6K_nSyF_pKa343sIJWb0s-pxh5Hm7TiQ
 id: node.tutorial.promote
 field_name: promote
 entity_type: node

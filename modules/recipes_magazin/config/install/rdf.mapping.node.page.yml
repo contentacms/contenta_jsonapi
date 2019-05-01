@@ -10,7 +10,7 @@ dependencies:
   module:
     - node
 _core:
-  default_config_hash: pp0SOorm374cqPy4knZqjkH3ZyAVnSf4EFVs7Gv3cKQ
+  default_config_hash: 0OjfMF7nMhbEX2OX4wPNcY4cSmVVomrYLx9fj6l1V_M
 id: node.page
 targetEntityType: node
 bundle: page

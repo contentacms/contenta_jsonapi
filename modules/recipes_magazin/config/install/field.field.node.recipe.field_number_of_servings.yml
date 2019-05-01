@@ -9,7 +9,7 @@ dependencies:
     module:
       - recipes_magazin
 _core:
-  default_config_hash: bpBEh-ubxpw84JybBA2B81oSjQj23mC7uyX1Hil1hqw
+  default_config_hash: u0raD4Ov21e24bncbp68aLMkNnT5BEHclFp0UGlAWPA
 id: node.recipe.field_number_of_servings
 field_name: field_number_of_servings
 entity_type: node

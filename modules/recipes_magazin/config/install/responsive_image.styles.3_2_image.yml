@@ -8,7 +8,7 @@ dependencies:
     - image.style.medium_3_2_2x
     - image.style.medium_3_2_600x400
 _core:
-  default_config_hash: rjGnO2GFTi0meChpgxeEbNonJ9ktNv4QFgrA3cTnGGQ
+  default_config_hash: iOuJtxkn9wL_KkWBAg1ItqFtIyBfVfNzVVqHua1eCcI
 id: 3_2_image
 label: '3:2 Image'
 image_style_mappings:

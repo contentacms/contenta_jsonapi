@@ -8,7 +8,7 @@ dependencies:
     module:
       - recipes_magazin
 _core:
-  default_config_hash: 0qPk-xqqnQ_czxar6bSgK-yqnloHCekMOlN7uI7jWEU
+  default_config_hash: Z_Qfws1hhfaVTaIgMCfwEGVEJg8OFxe7irzJTo_YJJI
 id: taxonomy_term--recipe_category
 disabled: false
 path: recipeCategories

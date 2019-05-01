@@ -6,7 +6,7 @@ dependencies:
     module:
       - recipes_magazin
 _core:
-  default_config_hash: AUGssMx_u3iY5bqeqWKjbXVw21OfrkDaB6vgo_t5Ybk
+  default_config_hash: yM5lcN59uXUHYFTCrc_DwYY1tIRG4EnSPyBsNmKtVKA
 id: entity_view_mode--entity_view_mode
 disabled: true
 path: entity_view_mode/entity_view_mode

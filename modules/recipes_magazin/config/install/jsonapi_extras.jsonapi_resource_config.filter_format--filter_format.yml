@@ -8,7 +8,7 @@ dependencies:
   module:
     - filter
 _core:
-  default_config_hash: lSyD6u_bieqb-TEQXpTr2Pd18Edo8Ku_OcNSCYKvgqc
+  default_config_hash: NUsQgPHzILTNbtzJJd4_F8XFXjJbEUU-DCXvlOkBe2c
 id: filter_format--filter_format
 disabled: true
 path: filter_format/filter_format

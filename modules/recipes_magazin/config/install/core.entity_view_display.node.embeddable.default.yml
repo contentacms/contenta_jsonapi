@@ -10,7 +10,7 @@ dependencies:
   module:
     - user
 _core:
-  default_config_hash: IRKFuwZ36DfyQbD19etIIcuj7wBVGUOTsW9LSbcAX60
+  default_config_hash: I2TOBp6ZfhS0fPsudsMNlyd9rBxO2r0TDXtE_zKulMo
 id: node.embeddable.default
 targetEntityType: node
 bundle: embeddable

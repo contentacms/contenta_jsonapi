@@ -1,18 +1,20 @@
-uuid: 5e446bf0-52c4-4d65-91c1-210f721e6c58
+uuid: 45c438fd-ab1e-4bde-8715-ab4d47065e31
 langcode: en
 status: true
 dependencies:
   theme:
     - material_admin
+_core:
+  default_config_hash: orHFC5A7yD6fHrYXUSji85zDN8Ij3Tm5BHu85SSjAxo
 id: material_admin_secondary_local_tasks
 theme: material_admin
 region: highlighted
-weight: -4
+weight: 1
 provider: null
 plugin: local_tasks_block
 settings:
   id: local_tasks_block
-  label: 'Secondary tabs'
+  label: 'Secondary tabs (Material Admin)'
   provider: core
   label_display: '0'
   primary: false

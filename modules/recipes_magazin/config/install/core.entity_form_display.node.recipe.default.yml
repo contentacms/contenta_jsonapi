@@ -23,7 +23,7 @@ dependencies:
     - path
     - text
 _core:
-  default_config_hash: 7xhEMKaiWSw9a4tUjs5tP6t5ILTQzJ0a_y7pXe92HpE
+  default_config_hash: beHQvvfuSGAMeuRSahXOWKytl0l6TaxxLTdb11o72-I
 id: node.recipe.default
 targetEntityType: node
 bundle: recipe

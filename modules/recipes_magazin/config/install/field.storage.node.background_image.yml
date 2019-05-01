@@ -10,7 +10,7 @@ dependencies:
     - media
     - node
 _core:
-  default_config_hash: 65cO-J9S6Po3bsvXwapE83_cdbxZN8yuS9iRy-v0vWs
+  default_config_hash: riFKyL5yPsZOeAdY_KWMI4QVgeVxKoex3C3DbGCXqQw
 id: node.background_image
 field_name: background_image
 entity_type: node

@@ -8,7 +8,7 @@ dependencies:
   module:
     - rdf
 _core:
-  default_config_hash: 7CUc-tK8GOayXZlLPkQbxdQvjEQFb8v9S3o2ESR6OUU
+  default_config_hash: qmC3q_crs9nBqfQLZyUiWjfCjR5_a_vrlgSy0I8YhOE
 id: rdf_mapping--rdf_mapping
 disabled: true
 path: rdf_mapping/rdf_mapping

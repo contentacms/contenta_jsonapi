@@ -8,7 +8,7 @@ dependencies:
   module:
     - language
 _core:
-  default_config_hash: Ti2LY3_d0jw2wNt1ClDmRJiGzdPey51zS82T5vvaUm4
+  default_config_hash: bp8m8HtOeypbrHVFj8WV7BzgP31U0SaV_bSlke24T64
 id: configurable_language--configurable_language
 disabled: true
 path: configurable_language/configurable_language

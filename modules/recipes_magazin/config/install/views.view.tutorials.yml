@@ -19,7 +19,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: 963TaicQgg4Oemol5lQMkP2fpadieLvI8cpe0P6hzYo
+  default_config_hash: inJU_ZV9tKNO-5Y69l8Q5ekNEqFzYF3VzivpMR850m4
 id: tutorials
 label: Tutorials
 module: views

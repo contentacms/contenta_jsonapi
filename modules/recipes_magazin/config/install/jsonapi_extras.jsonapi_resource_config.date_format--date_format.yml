@@ -6,7 +6,7 @@ dependencies:
     module:
       - recipes_magazin
 _core:
-  default_config_hash: cGRZ59rsPEEroFjv6uAyIKA5LAAAOFYmBXYduOc-UJo
+  default_config_hash: XAuDplks7a7GEjDQCHuTXOThuQ64abP8b4dBFa0pZRY
 id: date_format--date_format
 disabled: true
 path: date_format/date_format

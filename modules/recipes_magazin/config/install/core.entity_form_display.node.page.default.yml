@@ -12,7 +12,7 @@ dependencies:
     - path
     - text
 _core:
-  default_config_hash: HIKQcg66tFd04ypSIrHgf_QscXlnsLG8Q3NfNU5UatA
+  default_config_hash: N3g8aAmGYTgHgqBWrKTuMUcIwcn2de0zkVVl-ABIkZk
 id: node.page.default
 targetEntityType: node
 bundle: page

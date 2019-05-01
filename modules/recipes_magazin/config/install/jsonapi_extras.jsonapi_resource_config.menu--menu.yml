@@ -8,7 +8,7 @@ dependencies:
   module:
     - system
 _core:
-  default_config_hash: 5Ihes_0y68EN3PNmjnJShchQNNcb6HB4OMHEKRRBlcU
+  default_config_hash: AA7PQif7d6UVYLfzxOLZE7zl2TQSq1YgtawLTyT_8YM
 id: menu--menu
 disabled: false
 path: menus

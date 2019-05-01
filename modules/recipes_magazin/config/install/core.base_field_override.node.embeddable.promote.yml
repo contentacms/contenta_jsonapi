@@ -5,7 +5,7 @@ dependencies:
   config:
     - node.type.embeddable
 _core:
-  default_config_hash: 2dNvksmMx70zicK6QVdstWTDAhUMNQW7FCL-e60McN4
+  default_config_hash: dIpX62q2YdoJXSWgpRjqLTHk9KSd2FetnQo3Wlbh-4E
 id: node.embeddable.promote
 field_name: promote
 entity_type: node

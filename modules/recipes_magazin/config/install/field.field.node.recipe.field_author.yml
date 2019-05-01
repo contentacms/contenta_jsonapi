@@ -9,7 +9,7 @@ dependencies:
     module:
       - recipes_magazin
 _core:
-  default_config_hash: nYSdINn0qj5dqgtZjeq5BMiKafAym0An2BSnTQNwk38
+  default_config_hash: Ifsz2E4qc6bdQD6rUYh7ESByj3XLvh77y334o536_fo
 id: node.recipe.field_author
 field_name: field_author
 entity_type: node

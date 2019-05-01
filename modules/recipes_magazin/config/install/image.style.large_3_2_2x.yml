@@ -7,7 +7,7 @@ dependencies:
       - image
       - recipes_magazin
 _core:
-  default_config_hash: QblxHqHxRj0V32uW0Z-Si3aBx1q6lE5yoJs_KhvcmQU
+  default_config_hash: 0W3kGNRenEAWaF8Y2JswP009WRMMZb-mCG8RaX6Tf9w
 name: large_3_2_2x
 label: 'Large 3:2 2x (1536x1024)'
 effects:

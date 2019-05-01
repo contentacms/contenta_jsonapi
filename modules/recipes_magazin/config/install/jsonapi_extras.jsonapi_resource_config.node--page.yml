@@ -8,7 +8,7 @@ dependencies:
     module:
       - recipes_magazin
 _core:
-  default_config_hash: R4wMeLG18tOMDQt8H0Wk_owGawixzcaH9qI9cThnG1o
+  default_config_hash: cFCu8Hi2d-penEkHKRfdgub0PYPk-9flvp9e480CZz8
 id: node--page
 disabled: false
 path: pages
