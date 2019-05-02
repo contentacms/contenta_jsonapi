@@ -49,7 +49,7 @@
     "drupal/consumer_image_styles": "^3.0@rc",
     "drupal/consumers": "^1.8",
     "drupal/contentajs": "^1.0@beta",
-    "drupal/core": "^8.7@rc",
+    "drupal/core": "^8.7",
     "drupal/decoupled_router": "^1.1",
     "drupal/image_widget_crop": "^2.1",
     "drupal/inline_entity_form": "^1.0@beta",
