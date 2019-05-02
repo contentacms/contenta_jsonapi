@@ -1,3 +1,4 @@
+uuid: 725aaa53-1ad9-4da3-9ba3-587697c23afd
 langcode: en
 status: true
 dependencies:
@@ -45,6 +46,13 @@ content:
     weight: 30
     region: content
     settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 100
+    region: content
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete

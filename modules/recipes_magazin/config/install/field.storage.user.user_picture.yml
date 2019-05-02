@@ -1,13 +1,16 @@
+uuid: af790d48-5d2a-4b64-9ee4-fbcc4fb85739
 langcode: en
 status: true
 dependencies:
+  enforced:
+    module:
+      - recipes_magazin
   module:
     - file
     - image
     - user
-  enforced:
-    module:
-      - recipes_magazin
+_core:
+  default_config_hash: hX0YHYVGAOschvFtDzccsClb-m7SilMSh-t7VWNb8gM
 id: user.user_picture
 field_name: user_picture
 entity_type: user

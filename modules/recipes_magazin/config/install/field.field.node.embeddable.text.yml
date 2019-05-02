@@ -1,9 +1,12 @@
+uuid: 1a451987-f2f6-49b6-8189-3b8d7342827e
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.text
     - node.type.embeddable
+_core:
+  default_config_hash: 9Qpyqo8gzS5njQDMMCndkyUaI35omKx9CY5_08Y1TR4
 id: node.embeddable.text
 field_name: text
 entity_type: node

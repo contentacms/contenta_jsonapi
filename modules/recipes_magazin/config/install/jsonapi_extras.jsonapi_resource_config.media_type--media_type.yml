@@ -1,11 +1,14 @@
+uuid: 42090056-0d7d-47a9-bf40-fe6807a1d90d
 langcode: en
 status: true
 dependencies:
-  module:
-    - media
   enforced:
     module:
       - recipes_magazin
+  module:
+    - media
+_core:
+  default_config_hash: HWbpKC9Ql6SxsdYpAtcWrQUgUP7Nk1nVCax4iXHLuVc
 id: media_type--media_type
 disabled: true
 path: media_type/media_type

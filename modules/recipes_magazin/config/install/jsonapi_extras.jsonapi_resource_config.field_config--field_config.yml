@@ -1,3 +1,4 @@
+uuid: 49fac85d-8c30-42f0-9e72-aa6a17ff2308
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
       - recipes_magazin
   module:
     - field
+_core:
+  default_config_hash: SsadFEi2fbdBZ2YQYDg7UgWJb8NT9_Rrm3of17k0t3w
 id: field_config--field_config
 disabled: true
 path: field_config/field_config

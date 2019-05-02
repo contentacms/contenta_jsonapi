@@ -1,3 +1,4 @@
+uuid: 1cc69a68-548c-4d3b-ba60-6fccec44e6be
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - system
   theme:
     - material_admin
+_core:
+  default_config_hash: 6ANfHFYdqyPgGyd6fgurzphLbqLUVo2aa7rcjNyZ-_0
 id: material_admin_messages
 theme: material_admin
 region: status

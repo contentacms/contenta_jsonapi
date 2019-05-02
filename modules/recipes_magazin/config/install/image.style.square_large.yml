@@ -1,3 +1,4 @@
+uuid: c32e6188-a066-4d86-a05a-1977ee0df534
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     module:
       - image
       - recipes_magazin
+_core:
+  default_config_hash: uUYwtUUpFH_E9aa0QVeAFYEGCiwaP6li-1_b7XYA8NI
 name: square_large
 label: 'Square Large'
 effects:
@@ -15,3 +18,4 @@ effects:
     data:
       width: 900
       height: 900
+      anchor: center-center

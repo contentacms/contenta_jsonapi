@@ -1,9 +1,12 @@
+uuid: 821d5695-aba1-4d0f-8797-0b0bf94e97be
 langcode: en
 status: true
 dependencies:
   enforced:
     module:
       - recipes_magazin
+_core:
+  default_config_hash: 2XQhpmhguCmBQNIa4MBxA4ovGDbUp7HCUS-Nt1Azf0o
 id: umami_dates
 label: 'Umami dates'
 locked: false

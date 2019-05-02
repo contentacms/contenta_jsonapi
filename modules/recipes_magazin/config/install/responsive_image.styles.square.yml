@@ -1,3 +1,4 @@
+uuid: e6d78bf4-722d-476e-a4aa-ddfda7a5a641
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - image.style.square_large
     - image.style.square_medium
     - image.style.square_small
+_core:
+  default_config_hash: mcVQsVlDMCNSpRXzFD1-8L1buGf2IJXZ6R9xPAycElU
 id: square
 label: Square
 image_style_mappings:

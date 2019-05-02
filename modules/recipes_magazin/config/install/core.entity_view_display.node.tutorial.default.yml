@@ -1,3 +1,4 @@
+uuid: 7fa5180c-391d-4e04-a984-9e0bde6cf611
 langcode: en
 status: true
 dependencies:
@@ -12,6 +13,8 @@ dependencies:
     - options
     - text
     - user
+_core:
+  default_config_hash: Q-TYFQgTEbUNYjAdKzn_ZfCJuHMXsFldkLGE8bAFOTg
 id: node.tutorial.default
 targetEntityType: node
 bundle: tutorial

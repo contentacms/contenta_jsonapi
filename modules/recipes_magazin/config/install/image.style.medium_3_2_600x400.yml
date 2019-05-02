@@ -1,3 +1,4 @@
+uuid: 57431baa-c267-4519-aedc-21ac86366d47
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     module:
       - image
       - recipes_magazin
+_core:
+  default_config_hash: gz3Z_NYLm8g8lspQZdjUuVsyrGeG74-6NxlFotsB8m0
 name: medium_3_2_600x400
 label: 'Medium 3:2 (600x400)'
 effects:
@@ -15,3 +18,4 @@ effects:
     data:
       width: 600
       height: 400
+      anchor: center-center

@@ -1,3 +1,4 @@
+uuid: b3bd79ac-809d-4841-bfe4-3d3139929626
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
       - recipes_magazin
   module:
     - image
+_core:
+  default_config_hash: BKI7GQ2BYU7i9yG0lSDieRlfLh4zHZYjPI2mKbPXDTQ
 id: image_style--image_style
 disabled: false
 path: imageStyles

@@ -1,14 +1,17 @@
+uuid: 5c2f9b4f-3fb3-4013-9e2e-e105fca486cc
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.body
     - node.type.article
-  module:
-    - text
   enforced:
     module:
       - recipes_magazin
+  module:
+    - text
+_core:
+  default_config_hash: 5efuQnUKYtONY04mkBnVpbyCWpTb3Cog58pqc38n9Gs
 id: node.article.body
 field_name: body
 entity_type: node

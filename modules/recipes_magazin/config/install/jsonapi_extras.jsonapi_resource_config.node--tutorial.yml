@@ -1,8 +1,11 @@
+uuid: 3185a1d5-6638-42ef-b9a9-f0f8ea66575e
 langcode: en
 status: true
 dependencies:
   config:
     - node.type.tutorial
+_core:
+  default_config_hash: bA6CJRdwQVelQxIepMU68WlVUymjX2FRnzGM9NInl3Q
 id: node--tutorial
 disabled: false
 path: tutorials

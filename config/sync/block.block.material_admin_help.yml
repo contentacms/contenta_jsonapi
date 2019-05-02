@@ -1,3 +1,4 @@
+uuid: 1b25dfb4-71ff-4739-b8a1-1d5ca669c6c0
 langcode: en
 status: true
 dependencies:
@@ -5,10 +6,12 @@ dependencies:
     - help
   theme:
     - material_admin
+_core:
+  default_config_hash: YXXuJvi-3Qa6Gq10Q_dIYKK4FxZu2GcE6QbPsMRGBmU
 id: material_admin_help
 theme: material_admin
-region: help
-weight: 0
+region: highlighted
+weight: 10
 provider: null
 plugin: help_block
 settings:

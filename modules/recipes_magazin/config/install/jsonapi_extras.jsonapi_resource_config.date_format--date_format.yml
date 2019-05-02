@@ -1,9 +1,12 @@
+uuid: af643919-abcd-49df-8177-ef20cca13278
 langcode: en
 status: true
 dependencies:
   enforced:
     module:
       - recipes_magazin
+_core:
+  default_config_hash: XAuDplks7a7GEjDQCHuTXOThuQ64abP8b4dBFa0pZRY
 id: date_format--date_format
 disabled: true
 path: date_format/date_format

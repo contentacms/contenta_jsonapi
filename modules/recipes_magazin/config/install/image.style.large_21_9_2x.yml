@@ -1,3 +1,4 @@
+uuid: c8c66510-3360-4c24-a952-88d31fb1ec03
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     module:
       - image
       - recipes_magazin
+_core:
+  default_config_hash: DEeC3SpM0TFtQKLhrZYPJZ_h7mQ77e3J64R675TRViw
 name: large_21_9_2x
 label: 'Large 21:9 2x (2880x1240)'
 effects:
@@ -15,3 +18,4 @@ effects:
     data:
       width: 2880
       height: 1240
+      anchor: center-center

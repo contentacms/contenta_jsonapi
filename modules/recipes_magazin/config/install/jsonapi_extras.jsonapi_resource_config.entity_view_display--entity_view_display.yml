@@ -1,9 +1,12 @@
+uuid: 195c5fd8-dddb-4584-90ad-b3da79b8b87d
 langcode: en
 status: true
 dependencies:
   enforced:
     module:
       - recipes_magazin
+_core:
+  default_config_hash: CNwUmSIYllslK5uWElGAW7pCVfmN_Y6n56SNJJAbZz0
 id: entity_view_display--entity_view_display
 disabled: true
 path: entity_view_display/entity_view_display

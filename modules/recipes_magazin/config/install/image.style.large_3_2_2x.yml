@@ -1,3 +1,4 @@
+uuid: 9e543eec-c162-48e5-ac54-3912cb712f67
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     module:
       - image
       - recipes_magazin
+_core:
+  default_config_hash: 0W3kGNRenEAWaF8Y2JswP009WRMMZb-mCG8RaX6Tf9w
 name: large_3_2_2x
 label: 'Large 3:2 2x (1536x1024)'
 effects:
@@ -15,3 +18,4 @@ effects:
     data:
       width: 1536
       height: 1024
+      anchor: center-center

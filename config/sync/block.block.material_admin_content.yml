@@ -1,3 +1,4 @@
+uuid: aec552a9-9e2a-40a7-b5fa-870471a12bad
 langcode: en
 status: true
 dependencies:
@@ -5,10 +6,12 @@ dependencies:
     - system
   theme:
     - material_admin
+_core:
+  default_config_hash: NgLsbLszEUM6yHAE9EUvz8meZCPjf9g959hMEwrai6o
 id: material_admin_content
 theme: material_admin
 region: content
-weight: 5
+weight: 0
 provider: null
 plugin: system_main_block
 settings:

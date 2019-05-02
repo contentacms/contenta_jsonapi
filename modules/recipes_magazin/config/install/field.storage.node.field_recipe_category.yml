@@ -1,12 +1,15 @@
+uuid: fb7d8d2e-7b63-4132-b5c4-04eb728c26d4
 langcode: en
 status: true
 dependencies:
-  module:
-    - node
-    - taxonomy
   enforced:
     module:
       - recipes_magazin
+  module:
+    - node
+    - taxonomy
+_core:
+  default_config_hash: w98rEGnJAwRxRoTCy9lwDLN26MSfjP2_Sqmn24lnGng
 id: node.field_recipe_category
 field_name: field_recipe_category
 entity_type: node

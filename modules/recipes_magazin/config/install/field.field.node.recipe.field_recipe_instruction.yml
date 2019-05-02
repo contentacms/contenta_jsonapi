@@ -1,14 +1,17 @@
+uuid: db72736f-5055-4505-9c6a-481ccc73ec00
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_recipe_instruction
     - node.type.recipe
-  module:
-    - text
   enforced:
     module:
       - recipes_magazin
+  module:
+    - text
+_core:
+  default_config_hash: fzclKMj_79nPRJM2N6nmRmSzYPR2ANSckJcIjkX_GMI
 id: node.recipe.field_recipe_instruction
 field_name: field_recipe_instruction
 entity_type: node

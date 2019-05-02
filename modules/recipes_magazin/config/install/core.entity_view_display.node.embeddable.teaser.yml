@@ -1,3 +1,4 @@
+uuid: 99f2dde1-5f8d-495c-b954-49df552e15b3
 langcode: en
 status: true
 dependencies:
@@ -9,6 +10,8 @@ dependencies:
     - node.type.embeddable
   module:
     - user
+_core:
+  default_config_hash: _0I4UBfpi80yIdpAa6Mp8b3GkPxEaytnDrl0xWkQzN8
 id: node.embeddable.teaser
 targetEntityType: node
 bundle: embeddable

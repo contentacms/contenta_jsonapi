@@ -5,9 +5,7 @@ namespace Drupal\contenta_jsonapi\Annotation;
 use Drupal\Component\Annotation\Plugin;
 
 /**
- * Defines an entity browser widget annotation object.
- *
- * @see hook_entity_browser_widget_info_alter()
+ * Defines an optional module annotation object.
  *
  * @Annotation
  */

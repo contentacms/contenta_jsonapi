@@ -1,3 +1,4 @@
+uuid: 91a2b205-636f-4e14-87a0-065a7490c636
 langcode: en
 status: false
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - user
   theme:
     - material_admin
+_core:
+  default_config_hash: 8LEyMO8BKhrdirJnCGpbVdYsn8sUmp7R9U6mus8e7UU
 id: material_admin_login
 theme: material_admin
 region: content

@@ -1,9 +1,12 @@
+uuid: 111a9318-6811-4014-8829-75043a78c365
 langcode: en
 status: true
 dependencies:
   enforced:
     module:
       - recipes_magazin
+_core:
+  default_config_hash: TLXWU1bw1HFVNOgxMYmpphCtuIOaE77-jMFcw1o8Pd4
 name: Article
 type: article
 description: 'Use <em>articles</em> for time-sensitive content like news, press releases or blog posts.'

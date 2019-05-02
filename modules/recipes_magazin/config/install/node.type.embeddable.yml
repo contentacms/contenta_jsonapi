@@ -1,3 +1,4 @@
+uuid: b687700d-a47c-4256-8a43-e04b37ad2f19
 langcode: en
 status: true
 dependencies:
@@ -11,6 +12,8 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
+_core:
+  default_config_hash: 14dfMYCujxqBJ9DTAMNtJAKzV4wTXHvtHAkFr4_eQwk
 name: Embeddable
 type: embeddable
 description: "Provides a piece of embeddable content, something to be used by the frontend on their \"frontpages\" or individual pages.\r\nThese embeddables have a machine name, so you can reference to them, if you like."

@@ -1,15 +1,18 @@
+uuid: f91031c3-45aa-4499-a7c8-917a07ab58ae
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.user.user.user_picture
     - image.style.thumbnail
-  module:
-    - image
-    - user
   enforced:
     module:
       - recipes_magazin
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: qb-T-QH0q3T1octA_fh04LsW5qpV0oMeQZGsfeeiPJg
 id: user.user.default
 targetEntityType: user
 bundle: user
@@ -27,4 +30,5 @@ content:
       image_link: content
     third_party_settings: {  }
     label: hidden
-hidden: {  }
+hidden:
+  langcode: true

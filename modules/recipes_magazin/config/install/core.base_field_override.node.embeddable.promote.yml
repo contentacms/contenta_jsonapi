@@ -1,8 +1,11 @@
+uuid: a16966c1-5656-4aae-9004-cefce4bf4438
 langcode: en
 status: true
 dependencies:
   config:
     - node.type.embeddable
+_core:
+  default_config_hash: dIpX62q2YdoJXSWgpRjqLTHk9KSd2FetnQo3Wlbh-4E
 id: node.embeddable.promote
 field_name: promote
 entity_type: node

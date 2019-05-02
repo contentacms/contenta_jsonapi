@@ -1,3 +1,4 @@
+uuid: 007bf970-1c76-4228-b06c-b06f9baa80bd
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
       - recipes_magazin
   module:
     - simple_oauth
+_core:
+  default_config_hash: Zbony3tX_jvyD3VdhK6jJ_5_5XGuFxNUh9UBjfD73o0
 id: oauth2_token_type--oauth2_token_type
 disabled: true
 path: oauth2_token_type/oauth2_token_type

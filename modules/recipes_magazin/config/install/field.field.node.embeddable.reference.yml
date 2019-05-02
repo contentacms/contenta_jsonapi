@@ -1,3 +1,4 @@
+uuid: cff4bd6b-5f7d-4e03-b181-912db8f2b981
 langcode: en
 status: true
 dependencies:
@@ -7,6 +8,8 @@ dependencies:
     - node.type.embeddable
     - node.type.page
     - node.type.recipe
+_core:
+  default_config_hash: oDcgEjQxuktKSjxqAbjl6yM9rN0pzfMMKB3A8wfG0Sc
 id: node.embeddable.reference
 field_name: reference
 entity_type: node

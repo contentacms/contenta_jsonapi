@@ -1,3 +1,4 @@
+uuid: 50f13675-d0df-498b-874f-6c1c489d3e72
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     module:
       - image
       - recipes_magazin
+_core:
+  default_config_hash: OgZ80zgjRfc8wADAcRA0b2h4zTPRl5saEVSe4L6RBho
 name: card
 label: 'Card image (574×323)'
 effects:
@@ -15,3 +18,4 @@ effects:
     data:
       width: 574
       height: 323
+      anchor: center-center

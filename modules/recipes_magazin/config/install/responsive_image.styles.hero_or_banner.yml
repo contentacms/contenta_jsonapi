@@ -1,3 +1,4 @@
+uuid: 18c9aef8-0ace-4533-905b-287a4db57879
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - image.style.large_21_9_2x
     - image.style.medium_21_9
     - image.style.small_21_9
+_core:
+  default_config_hash: Uj48QRKWnyGEI9IqGnDgIB5kTVh0pwBFoEg5cntHv5I
 id: hero_or_banner
 label: 'Hero or Banner'
 image_style_mappings:

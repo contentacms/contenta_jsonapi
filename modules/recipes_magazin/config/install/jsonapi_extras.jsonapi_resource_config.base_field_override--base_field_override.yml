@@ -1,9 +1,12 @@
+uuid: 8eb002fc-cbdf-4c2b-b3c2-19e7ebd7b83e
 langcode: en
 status: true
 dependencies:
   enforced:
     module:
       - recipes_magazin
+_core:
+  default_config_hash: WIR2xAWKHIBP_ibCFEsjqspmzm0qBgn-00kYPbDedIs
 id: base_field_override--base_field_override
 disabled: true
 path: base_field_override/base_field_override

@@ -1,11 +1,14 @@
+uuid: 2cf70abf-dc57-4526-9838-2b2ce609f3ca
 langcode: en
 status: true
 dependencies:
-  module:
-    - rdf
   enforced:
     module:
       - recipes_magazin
+  module:
+    - rdf
+_core:
+  default_config_hash: qmC3q_crs9nBqfQLZyUiWjfCjR5_a_vrlgSy0I8YhOE
 id: rdf_mapping--rdf_mapping
 disabled: true
 path: rdf_mapping/rdf_mapping

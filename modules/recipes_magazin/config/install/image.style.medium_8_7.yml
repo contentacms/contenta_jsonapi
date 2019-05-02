@@ -1,3 +1,4 @@
+uuid: 9a1ef612-864d-4158-a00a-cec76b191ba4
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     module:
       - image
       - recipes_magazin
+_core:
+  default_config_hash: 0GWkCgGXswxKYY_wIM15Op2SsjwxsWCeCQYUe1lz808
 name: medium_8_7
 label: 'Medium 8:7 (266x236)'
 effects:
@@ -15,3 +18,4 @@ effects:
     data:
       width: 266
       height: 236
+      anchor: center-center

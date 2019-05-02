@@ -1,3 +1,4 @@
+uuid: 3fd2ba95-3a76-441d-a8df-670dc3ae0542
 langcode: en
 status: true
 dependencies:
@@ -7,6 +8,8 @@ dependencies:
   module:
     - node
     - options
+_core:
+  default_config_hash: o-o6lgwpBeqbemEX_t689OCx5ONvNeAMj8beourxlc4
 id: node.field_topic
 field_name: field_topic
 entity_type: node

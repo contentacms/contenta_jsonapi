@@ -1,3 +1,4 @@
+uuid: 31f9ac26-4419-4b43-b65e-e65ff4156082
 langcode: en
 status: true
 dependencies:
@@ -7,6 +8,8 @@ dependencies:
   enforced:
     module:
       - recipes_magazin
+_core:
+  default_config_hash: WEGlZBt4nKFbRM_8Wmlk-6N4SU31PXOQa_7jMjfKI8s
 id: node.recipe.field_cooking_time
 field_name: field_cooking_time
 entity_type: node

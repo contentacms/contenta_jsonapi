@@ -1,3 +1,4 @@
+uuid: f401da69-7f44-4dd4-9821-92b1f6181122
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
       - recipes_magazin
   module:
     - block
+_core:
+  default_config_hash: jrvizSvEjI1zshblqwKcgLyQXGONvVO_ETJEW0kUtvs
 id: block--block
 disabled: false
 path: blocks

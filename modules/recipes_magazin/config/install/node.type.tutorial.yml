@@ -1,3 +1,4 @@
+uuid: c4052544-e630-473f-ae0d-7b39982e39bb
 langcode: en
 status: true
 dependencies:
@@ -10,6 +11,8 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
+_core:
+  default_config_hash: 0JxSCG57m_HnE8O46pqy8sIjxalwiVnUEG9wj0_O9eI
 name: Tutorial
 type: tutorial
 description: 'A brief wrapper on external documentation for a particular piece in Contenta CMS.'
