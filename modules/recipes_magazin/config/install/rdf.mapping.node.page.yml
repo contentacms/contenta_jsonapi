@@ -1,13 +1,16 @@
+uuid: 29d0064e-6a43-473f-bae6-c44d75462042
 langcode: en
 status: true
 dependencies:
   config:
     - node.type.page
-  module:
-    - node
   enforced:
     module:
       - recipes_magazin
+  module:
+    - node
+_core:
+  default_config_hash: 0OjfMF7nMhbEX2OX4wPNcY4cSmVVomrYLx9fj6l1V_M
 id: node.page
 targetEntityType: node
 bundle: page

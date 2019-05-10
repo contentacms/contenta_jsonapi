@@ -1,3 +1,4 @@
+uuid: 30a81da1-a053-4825-99ca-07c119523020
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
       - recipes_magazin
   module:
     - consumers
+_core:
+  default_config_hash: 8rzg8upZDcgdY0h6iqSaPtB7cQNbzXx7Z2LkHuQh1MA
 id: consumer--consumer
 disabled: true
 path: consumer/consumer

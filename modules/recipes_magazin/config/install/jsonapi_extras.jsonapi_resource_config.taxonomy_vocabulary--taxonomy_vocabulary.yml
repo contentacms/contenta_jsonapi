@@ -1,3 +1,4 @@
+uuid: 766fe5e3-adea-4e05-8b4b-d5f7e84ad915
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
       - recipes_magazin
   module:
     - taxonomy
+_core:
+  default_config_hash: 1T9jsY_1lHVtfEOMRltP_5JfEEdhD6-YAWyhzegbQPE
 id: taxonomy_vocabulary--taxonomy_vocabulary
 disabled: false
 path: vocabularies

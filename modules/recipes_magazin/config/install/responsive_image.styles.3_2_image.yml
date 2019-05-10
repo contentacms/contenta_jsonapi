@@ -1,3 +1,4 @@
+uuid: 093f1648-dc32-487c-8b63-da8f2349bd3c
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - image.style.large_3_2_768x512
     - image.style.medium_3_2_2x
     - image.style.medium_3_2_600x400
+_core:
+  default_config_hash: iOuJtxkn9wL_KkWBAg1ItqFtIyBfVfNzVVqHua1eCcI
 id: 3_2_image
 label: '3:2 Image'
 image_style_mappings:

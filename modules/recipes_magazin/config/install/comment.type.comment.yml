@@ -1,9 +1,12 @@
+uuid: 78a7b997-520e-48ac-bc2d-3b0d3f76a2c4
 langcode: en
 status: true
 dependencies:
   enforced:
     module:
       - recipes_magazin
+_core:
+  default_config_hash: rPGM-2cWTKeVb7qBpYWMJ0kl-Bom8ioUohvvVVLxPLM
 id: comment
 label: 'Default comments'
 target_entity_type_id: node

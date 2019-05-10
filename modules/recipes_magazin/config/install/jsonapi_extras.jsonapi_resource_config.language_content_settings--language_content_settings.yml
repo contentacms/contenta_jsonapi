@@ -1,3 +1,4 @@
+uuid: b1a10a09-1486-4820-bfa7-6bb6beb8ff1b
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
       - recipes_magazin
   module:
     - language
+_core:
+  default_config_hash: DCOF8KBCkh1qR9VEb9hqphTU1xbALZ1bIq-ras7I0qk
 id: language_content_settings--language_content_settings
 disabled: true
 path: language_content_settings/language_content_settings

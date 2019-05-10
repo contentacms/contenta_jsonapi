@@ -1,3 +1,4 @@
+uuid: e3983a91-881c-44a9-9ebe-187f2acdf4c5
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
       - recipes_magazin
   module:
     - field
+_core:
+  default_config_hash: F2SaNZaH2o5CWrrhtye5JO3-9LOJ7eins66pveFXSl8
 id: field_storage_config--field_storage_config
 disabled: true
 path: field_storage_config/field_storage_config

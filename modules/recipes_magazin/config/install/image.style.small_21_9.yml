@@ -1,3 +1,4 @@
+uuid: f23a702d-f684-4bcb-9a54-6e1f97f73347
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     module:
       - image
       - recipes_magazin
+_core:
+  default_config_hash: HsDHqtPyP1QDLCGsFvfE-Otg-qL9sv89fXy31F22OPw
 name: small_21_9
 label: 'Small 21:9 (768x330)'
 effects:
@@ -15,3 +18,4 @@ effects:
     data:
       width: 768
       height: 330
+      anchor: center-center

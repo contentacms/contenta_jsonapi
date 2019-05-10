@@ -1,3 +1,4 @@
+uuid: 60c09ed9-67dc-40b2-a474-bf81ca5ac4d0
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
       - recipes_magazin
   module:
     - filter
+_core:
+  default_config_hash: NUsQgPHzILTNbtzJJd4_F8XFXjJbEUU-DCXvlOkBe2c
 id: filter_format--filter_format
 disabled: true
 path: filter_format/filter_format

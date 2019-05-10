@@ -1,13 +1,16 @@
+uuid: f0df130f-8dc0-4672-9b61-b227c073c688
 langcode: en
 status: true
 dependencies:
   config:
     - filter.format.basic_html
-  module:
-    - ckeditor
   enforced:
     module:
       - recipes_magazin
+  module:
+    - ckeditor
+_core:
+  default_config_hash: DaqlgdnJ27CZo64nOzK1YYlvqxXPmSxD2fuDjqTJAsI
 format: basic_html
 editor: ckeditor
 settings:

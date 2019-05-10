@@ -1,8 +1,8 @@
+uuid: 7e1dc4b1-2e99-4f27-9394-538391dab930
 langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.media_entity_browser
     - field.field.node.recipe.field_author
     - field.field.node.recipe.field_cooking_time
     - field.field.node.recipe.field_difficulty
@@ -15,15 +15,15 @@ dependencies:
     - field.field.node.recipe.field_summary
     - field.field.node.recipe.field_tags
     - node.type.recipe
-  module:
-    - entity_browser
-    - path
-    - text
   enforced:
     module:
       - recipes_magazin
+  module:
+    - media_library
+    - path
+    - text
 _core:
-  default_config_hash: DKGu0Ml8Jlk8EXPjIpz3ARAChnyuj5osrp1zZdGpRdQ
+  default_config_hash: beHQvvfuSGAMeuRSahXOWKytl0l6TaxxLTdb11o72-I
 id: node.recipe.default
 targetEntityType: node
 bundle: recipe
@@ -60,17 +60,9 @@ content:
   field_image:
     weight: 8
     settings:
-      entity_browser: media_entity_browser
-      field_widget_display: rendered_entity
-      field_widget_edit: true
-      field_widget_remove: true
-      field_widget_replace: true
-      open: true
-      selection_mode: selection_append
-      field_widget_display_settings:
-        view_mode: default
+      media_types: {  }
     third_party_settings: {  }
-    type: entity_browser_entity_reference
+    type: media_library_widget
     region: content
   field_ingredients:
     weight: 10

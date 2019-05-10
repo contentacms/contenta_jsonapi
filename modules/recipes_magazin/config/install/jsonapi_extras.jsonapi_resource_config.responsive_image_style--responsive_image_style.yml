@@ -1,13 +1,16 @@
+uuid: ced96cc9-cf37-4d4b-a15e-2fc61c741bb9
 langcode: en
 status: true
 dependencies:
-  module:
-    - responsive_image
   enforced:
     module:
       - recipes_magazin
+  module:
+    - responsive_image
+_core:
+  default_config_hash: eCgy0RbGISCNXZi-guEKdtj0u5e2qeRfLVFuQSiZhos
 id: responsive_image_style--responsive_image_style
 disabled: true
 path: responsive_image_style/responsive_image_style
 resourceType: responsive_image_style--responsive_image_style
-resourceFields: []
+resourceFields: {  }

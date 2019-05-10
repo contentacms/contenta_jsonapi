@@ -1,3 +1,4 @@
+uuid: d96d4cff-4bf2-48c5-88a8-d504530294e0
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - field.storage.node.field_image
     - media.type.image
     - node.type.recipe
+_core:
+  default_config_hash: aP5Hph6vnFcuxW32cvI83DHm1GyZEZG4IwOK5a-nsDA
 id: node.recipe.field_image
 field_name: field_image
 entity_type: node

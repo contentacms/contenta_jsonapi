@@ -1,3 +1,4 @@
+uuid: 1ace6741-7584-498d-9ef1-9a45eaaccafa
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     module:
       - image
       - recipes_magazin
+_core:
+  default_config_hash: m0hboJQrgGTFYmbnb_ac8AVwnbeBWUjjq883QEt6d_0
 name: scale_crop_7_3_large
 label: 'Scale crop 7:3 large'
 effects:
@@ -15,3 +18,4 @@ effects:
     data:
       width: 1440
       height: 617
+      anchor: center-center

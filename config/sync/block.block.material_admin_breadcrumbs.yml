@@ -1,3 +1,4 @@
+uuid: 577ac4f3-7276-409b-9edb-95d4485ac527
 langcode: en
 status: true
 dependencies:
@@ -5,15 +6,17 @@ dependencies:
     - system
   theme:
     - material_admin
+_core:
+  default_config_hash: FFp_FvC5FBjvUhAFzC449JS-sc6v5X6uDWmEkp1ST3c
 id: material_admin_breadcrumbs
 theme: material_admin
 region: breadcrumb
-weight: -4
+weight: 0
 provider: null
 plugin: system_breadcrumb_block
 settings:
   id: system_breadcrumb_block
-  label: Breadcrumbs
+  label: 'Breadcrumbs (Material Admin)'
   provider: system
   label_display: '0'
 visibility: {  }

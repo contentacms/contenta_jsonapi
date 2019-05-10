@@ -1,3 +1,4 @@
+uuid: 9770072c-1502-4da0-bbcd-6d47b7cd30af
 langcode: en
 status: true
 dependencies:
@@ -8,6 +9,8 @@ dependencies:
   module:
     - media
     - node
+_core:
+  default_config_hash: riFKyL5yPsZOeAdY_KWMI4QVgeVxKoex3C3DbGCXqQw
 id: node.background_image
 field_name: background_image
 entity_type: node

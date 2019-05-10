@@ -1,13 +1,16 @@
+uuid: 5f47ff4b-7168-4b96-8f0f-1264510ff157
 langcode: en
 status: true
 dependencies:
   config:
     - taxonomy.vocabulary.tags
-  module:
-    - taxonomy
   enforced:
     module:
       - recipes_magazin
+  module:
+    - taxonomy
+_core:
+  default_config_hash: VOwv3PJ_k1N_Hh1R41NFazXUkzJZn1BbYMKiT_HNJVs
 id: taxonomy_term.tags
 targetEntityType: taxonomy_term
 bundle: tags

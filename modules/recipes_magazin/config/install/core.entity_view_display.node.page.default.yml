@@ -1,15 +1,18 @@
+uuid: 031e89ba-df91-405c-833f-cd263b9c0447
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.page.body
     - node.type.page
-  module:
-    - text
-    - user
   enforced:
     module:
       - recipes_magazin
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: b3U3jHQwWhrIHyjaFa15MUZVYw64-_OErSxaYYmwgsI
 id: node.page.default
 targetEntityType: node
 bundle: page
@@ -25,4 +28,13 @@ content:
   links:
     weight: 101
     region: content
-hidden: {  }
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true

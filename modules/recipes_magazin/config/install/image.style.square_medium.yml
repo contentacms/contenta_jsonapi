@@ -1,3 +1,4 @@
+uuid: 18e67e94-be4b-4ca7-8c7e-78ea220db9c1
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     module:
       - image
       - recipes_magazin
+_core:
+  default_config_hash: wA0qnibGgGf_8YyRXVCdeJuOvAvXb8XbawkpnQ5_Nfw
 name: square_medium
 label: 'Square Medium'
 effects:
@@ -15,3 +18,4 @@ effects:
     data:
       width: 600
       height: 600
+      anchor: center-center

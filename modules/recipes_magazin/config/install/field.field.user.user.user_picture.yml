@@ -1,14 +1,17 @@
+uuid: c423f8c6-99e6-4cd2-9b80-9b19470ad0cc
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.user.user_picture
-  module:
-    - image
-    - user
   enforced:
     module:
       - recipes_magazin
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: vKsy0IrWeFKDz5kQnJ2-xgF6Ll09pDhnFyXJHShCTcI
 id: user.user.user_picture
 field_name: user_picture
 entity_type: user

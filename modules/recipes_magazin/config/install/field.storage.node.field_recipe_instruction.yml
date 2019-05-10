@@ -1,12 +1,15 @@
+uuid: c9edce69-c367-4dd2-990e-3f4942fc2416
 langcode: en
 status: true
 dependencies:
-  module:
-    - node
-    - text
   enforced:
     module:
       - recipes_magazin
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: zPZrNeAscDjYoOOwzB54UM2FdXEkQtsa93aT8Hs1KjE
 id: node.field_recipe_instruction
 field_name: field_recipe_instruction
 entity_type: node

@@ -1,11 +1,13 @@
+uuid: 6d12ebf9-b5f3-431e-8aef-8e779f42ec5c
 langcode: en
 status: true
 dependencies:
   enforced:
     module:
       - recipes_magazin
+_core:
+  default_config_hash: qYCUicMSZ2PUqFvHlt-nRHmf1-Q9FgC0W6EurA6UFtc
 name: 'Recipe cuisine'
 vid: recipe_cuisine
 description: ''
-hierarchy: 0
 weight: 0

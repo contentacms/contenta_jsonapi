@@ -1,3 +1,4 @@
+uuid: 1ad66362-bc09-4dde-8b4f-d46ee2535469
 langcode: en
 status: true
 dependencies:
@@ -17,6 +18,8 @@ dependencies:
     - options
     - text
     - user
+_core:
+  default_config_hash: inJU_ZV9tKNO-5Y69l8Q5ekNEqFzYF3VzivpMR850m4
 id: tutorials
 label: Tutorials
 module: views

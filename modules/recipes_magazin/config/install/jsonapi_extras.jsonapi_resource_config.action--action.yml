@@ -1,3 +1,4 @@
+uuid: 3ad08f17-f3d5-432e-834c-25e662a2dbe0
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
       - recipes_magazin
   module:
     - system
+_core:
+  default_config_hash: dTsnNjnk3V0_Ow2q0TT8m7K_E50txAx-RiZVkotLjec
 id: action--action
 disabled: true
 path: action/action

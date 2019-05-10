@@ -1,21 +1,21 @@
+uuid: 5bef9e6e-65a1-46db-b867-67e6fe3a3e01
 langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.media_entity_browser
     - field.field.node.article.body
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
     - node.type.article
-  module:
-    - entity_browser
-    - path
-    - text
   enforced:
     module:
       - recipes_magazin
+  module:
+    - media_library
+    - path
+    - text
 _core:
-  default_config_hash: 0StcaANBh8qzNkp_3-xqJlwQoLGxZeRoIwO16LG10d8
+  default_config_hash: aqAwHxaQknpzswL5e9oLa8dKeW5H8Cq8FjZTp-Ad7WA
 id: node.article.default
 targetEntityType: node
 bundle: article
@@ -32,28 +32,20 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   field_image:
-    type: entity_browser_entity_reference
-    weight: 4
+    type: media_library_widget
+    weight: 3
     region: content
     settings:
-      entity_browser: media_entity_browser
-      field_widget_display: rendered_entity
-      field_widget_edit: true
-      field_widget_remove: true
-      field_widget_replace: true
-      open: true
-      selection_mode: selection_append
-      field_widget_display_settings:
-        view_mode: default
+      media_types: {  }
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete_tags
-    weight: 3
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS
@@ -69,7 +61,7 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 30
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -77,21 +69,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 15
+    weight: 7
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 10
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 8
     region: content
     third_party_settings: {  }
   title:

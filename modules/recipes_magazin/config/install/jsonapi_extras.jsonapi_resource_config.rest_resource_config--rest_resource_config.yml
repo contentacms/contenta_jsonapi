@@ -1,3 +1,4 @@
+uuid: a3eb108b-15f2-4d63-bee2-ad925b695b12
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
       - recipes_magazin
   module:
     - rest
+_core:
+  default_config_hash: kWuQ3HQKAYMTmD-fFVQ9wONIJGEAlU_yl4sdnNuD_u8
 id: rest_resource_config--rest_resource_config
 disabled: true
 path: rest_resource_config/rest_resource_config

@@ -1,3 +1,4 @@
+uuid: 7deade15-2811-46ff-81e1-ee26a7c22183
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
   enforced:
     module:
       - recipes_magazin
+_core:
+  default_config_hash: lkEjl2qrQs7DBjRDSh0WogcW3EXNoLKmpuJeQ1xrw18
 id: media--image
 disabled: false
 path: images

@@ -1,11 +1,13 @@
+uuid: e8bc65eb-fafa-457e-b180-1475b62bfcad
 langcode: en
 status: true
 dependencies:
   enforced:
     module:
       - recipes_magazin
+_core:
+  default_config_hash: mp0cZp4rzDl0Lx5DvST12ipMJpz0mE8b0xtdUtMdpPM
 name: Ingredients
 vid: ingredients
 description: ''
-hierarchy: 0
 weight: 0

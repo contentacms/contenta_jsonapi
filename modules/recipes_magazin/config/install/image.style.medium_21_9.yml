@@ -1,3 +1,4 @@
+uuid: d3d08783-c003-49d0-ad68-abb4a4898468
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     module:
       - image
       - recipes_magazin
+_core:
+  default_config_hash: l8BK3G1m5HEbceZBneW_3R-GXkmViQQUf2_AvxGGg0E
 name: medium_21_9
 label: 'Medium 21:9 (1024x440)'
 effects:
@@ -15,3 +18,4 @@ effects:
     data:
       width: 1024
       height: 440
+      anchor: center-center

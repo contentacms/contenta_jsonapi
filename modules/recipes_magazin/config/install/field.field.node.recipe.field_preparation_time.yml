@@ -1,3 +1,4 @@
+uuid: f3908080-3917-41be-b3a4-a0ab17114c2a
 langcode: en
 status: true
 dependencies:
@@ -7,6 +8,8 @@ dependencies:
   enforced:
     module:
       - recipes_magazin
+_core:
+  default_config_hash: w5_BpksO7Tyd_1Q24FGlj3FFWWhOeJnY7LNBwJ9opfk
 id: node.recipe.field_preparation_time
 field_name: field_preparation_time
 entity_type: node

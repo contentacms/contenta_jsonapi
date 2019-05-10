@@ -1,3 +1,4 @@
+uuid: 707097ec-a780-4457-8760-20005c096dd5
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - node.type.tutorial
   module:
     - text
+_core:
+  default_config_hash: uOLwX_TdtAocNYQQMCn00ND8amY2CEsDK_9OHGZgfMY
 id: node.tutorial.field_summary
 field_name: field_summary
 entity_type: node

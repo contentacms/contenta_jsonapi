@@ -1,0 +1,20 @@
+uuid: 22f43eff-0815-453b-9d9f-4be2f327f95c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - seven
+_core:
+  default_config_hash: 9I_g1wEzqqihUALz9bYgroC-pDsv9GBfxui8HNsDO6M
+id: seven_page_title
+theme: seven
+region: header
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title (Material Admin)'
+  provider: core
+  label_display: '0'
+visibility: {  }

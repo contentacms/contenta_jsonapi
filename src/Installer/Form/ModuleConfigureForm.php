@@ -54,7 +54,6 @@ class ModuleConfigureForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   protected function getEditableConfigNames() {
-
     return [];
   }
 
@@ -87,8 +86,8 @@ class ModuleConfigureForm extends ConfigFormBase {
 
       $form = $instance->buildForm($form, $form_state);
     }
-    $form['#title'] = $this->t('Install & configure modules');
 
+    $form['#title'] = $this->t('Install & configure modules');
     $form['actions'] = ['#type' => 'actions'];
     $form['actions']['save'] = [
       '#type' => 'submit',
@@ -104,25 +103,27 @@ class ModuleConfigureForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $install_modules = [];
-
-    foreach ($form_state->getValues() as $key => $value) {
-
-      if (strpos($key, 'install_modules') !== FALSE && $value) {
-        preg_match('/install_modules_(?P<name>\w+)/', $key, $values);
-        $install_modules[] = $values['name'];
-      }
-    }
-
+    // Get forms from build info to allow for drush overrides
+    // on default form_state->getValue() that are sent.
     $build_info = $form_state->getBuildInfo();
+    $install_state = $build_info['args'][0]['forms'];
 
-    $install_state = $build_info['args'];
+    // Determine form state based off override existence.
+    $install_state['form_state_values'] = isset($install_state['form_state_values'])
+      ? $install_state['form_state_values']
+      : [];
+    $install_state['form_state_values'] += $form_state->getValues();
 
-    $install_state[0]['contenta_jsonapi_additional_modules'] = $install_modules;
-    $install_state[0]['form_state_values'] = $form_state->getValues();
+    // Iterate over the form state values to determine modules to install.
+    $values = array_filter($install_state['form_state_values']);
+    $module_values = array_filter(array_keys($values), function ($key) {
+      return strpos($key, 'install_modules_') !== FALSE;
+    });
+    $install_state['contenta_jsonapi_additional_modules'] = array_map(function ($name) {
+      return substr($name, strlen('install_modules_'));
+    }, $module_values);
 
-    $build_info['args'] = $install_state;
-
+    $build_info['args'][0]['forms'] = $install_state;
     $form_state->setBuildInfo($build_info);
   }
 

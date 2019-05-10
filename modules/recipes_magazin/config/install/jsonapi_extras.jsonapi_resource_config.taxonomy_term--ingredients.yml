@@ -1,3 +1,4 @@
+uuid: 17b16374-c878-4b2f-acb1-de4866ea72e0
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
   enforced:
     module:
       - recipes_magazin
+_core:
+  default_config_hash: 7Y2aHXkpNHFMKCMw7BOfRpMacYCcCq6DpJvlZaRzS94
 id: taxonomy_term--ingredients
 disabled: false
 path: ingredients
@@ -23,21 +26,18 @@ resourceFields:
     publicName: uuid
     enhancer:
       id: ''
-
   langcode:
     disabled: true
     fieldName: langcode
     publicName: langcode
     enhancer:
       id: ''
-
   vid:
     disabled: true
     fieldName: vid
     publicName: vid
     enhancer:
       id: ''
-
   name:
     fieldName: name
     publicName: name
@@ -76,7 +76,6 @@ resourceFields:
     publicName: default_langcode
     enhancer:
       id: ''
-
   path:
     fieldName: path
     publicName: path

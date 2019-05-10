@@ -52,20 +52,22 @@ function _contenta_jsonapi_generate_keys() {
   $dir_name = 'keys';
   /** @var \Drupal\simple_oauth\Service\KeyGeneratorService $key_gen */
   $key_gen = \Drupal::service('simple_oauth.key.generator');
-  /** @var \Drupal\simple_oauth\Service\Filesystem\Filesystem $file_system */
-  $file_system = \Drupal::service('simple_oauth.filesystem');
+  /** @var \Drupal\simple_oauth\Service\Filesystem\FileSystemChecker $file_system_checker */
+  $file_system_checker = \Drupal::service('simple_oauth.filesystem_checker');
+  /** @var \Drupal\Core\File\FileSystem $file_system */
+  $file_system = \Drupal::service('file_system');
   /** @var \Drupal\Core\Logger\LoggerChannelInterface $logger */
   $logger = \Drupal::service('logger.channel.contentacms');
 
   $relative_path = DRUPAL_ROOT . '/../' . $dir_name;
-  if (!$file_system->isDirectory($relative_path)) {
+  if (!$file_system_checker->isDirectory($relative_path)) {
     $file_system->mkdir($relative_path);
   }
   $keys_path = $file_system->realpath($relative_path);
   $pub_filename = sprintf('%s/public.key', $keys_path);
   $pri_filename = sprintf('%s/private.key', $keys_path);
 
-  if ($file_system->fileExist($pub_filename) && $file_system->fileExist($pri_filename)) {
+  if ($file_system_checker->fileExist($pub_filename) && $file_system_checker->fileExist($pri_filename)) {
     // 1. If the file already exists, then just set the correct permissions.
     $file_system->chmod($pub_filename, 0600);
     $file_system->chmod($pri_filename, 0600);
@@ -92,8 +94,8 @@ function _contenta_jsonapi_generate_keys() {
 function contenta_jsonapi_module_install(array &$install_state) {
   set_time_limit(0);
 
-  $extensions = $install_state['contenta_jsonapi_additional_modules'];
-  $form_values = $install_state['form_state_values'];
+  $extensions = $install_state['forms']['contenta_jsonapi_additional_modules'];
+  $form_values = $install_state['forms']['form_state_values'];
 
   $optional_modules_manager = \Drupal::service('plugin.manager.contenta_jsonapi.optional_modules');
   $definitions = array_map(function ($extension_name) use ($optional_modules_manager) {

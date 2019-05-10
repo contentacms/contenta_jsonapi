@@ -1,3 +1,4 @@
+uuid: 1ee42ea1-ab79-421f-a6e6-bc2b0f12b21b
 langcode: en
 status: true
 dependencies:
@@ -15,14 +16,16 @@ dependencies:
     - field.field.node.recipe.field_tags
     - node.type.recipe
     - responsive_image.styles.3_2_image
+  enforced:
+    module:
+      - recipes_magazin
   module:
     - options
     - responsive_image
     - text
     - user
-  enforced:
-    module:
-      - recipes_magazin
+_core:
+  default_config_hash: DDFVxIjMz0meSoHP43B4TRnxN4VIB4VqcOnyVLIIvds
 id: node.recipe.default
 targetEntityType: node
 bundle: recipe
@@ -114,5 +117,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
 hidden:
   field_author: true
+  langcode: true

@@ -1,9 +1,12 @@
+uuid: f44f7b75-17f9-4422-be61-70dc556c098b
 langcode: en
 status: true
 dependencies:
   enforced:
     module:
       - recipes_magazin
+_core:
+  default_config_hash: W1-gYM05WBFHvtZMrBAn2XltHl0faQatKUM8uICsp6o
 name: 'Basic page'
 type: page
 description: 'Use <em>basic pages</em> for your static content, such as an ''About us'' page.'

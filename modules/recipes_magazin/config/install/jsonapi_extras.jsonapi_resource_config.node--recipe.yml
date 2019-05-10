@@ -1,3 +1,4 @@
+uuid: 16c2ea22-a9ad-4ab4-835c-862cf406bb1d
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
   enforced:
     module:
       - recipes_magazin
+_core:
+  default_config_hash: NXvFdgnz0ieNMb6rfR5w2D8gx0owOOh65uTU5qJ-_Qs
 id: node--recipe
 disabled: false
 path: recipes
@@ -23,21 +26,18 @@ resourceFields:
     publicName: uuid
     enhancer:
       id: ''
-
   vid:
     disabled: true
     fieldName: vid
     publicName: vid
     enhancer:
       id: ''
-
   langcode:
     disabled: true
     fieldName: langcode
     publicName: langcode
     enhancer:
       id: ''
-
   type:
     fieldName: type
     publicName: contentType
@@ -50,21 +50,18 @@ resourceFields:
     publicName: revision_timestamp
     enhancer:
       id: ''
-
   revision_uid:
     disabled: true
     fieldName: revision_uid
     publicName: revision_uid
     enhancer:
       id: ''
-
   revision_log:
     disabled: true
     fieldName: revision_log
     publicName: revision_log
     enhancer:
       id: ''
-
   status:
     fieldName: status
     publicName: isPublished
@@ -111,14 +108,12 @@ resourceFields:
     publicName: sticky
     enhancer:
       id: ''
-
   default_langcode:
     disabled: true
     fieldName: default_langcode
     publicName: default_langcode
     enhancer:
       id: ''
-
   revision_default:
     fieldName: revision_default
     publicName: revision_default
@@ -131,7 +126,6 @@ resourceFields:
     publicName: revision_translation_affected
     enhancer:
       id: ''
-
   path:
     fieldName: path
     publicName: path

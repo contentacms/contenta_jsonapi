@@ -1,3 +1,4 @@
+uuid: 0e84372c-73e9-4ef8-a851-2ab40ac34d96
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
       - recipes_magazin
   module:
     - user
+_core:
+  default_config_hash: XMi-tSHJbwyvr6jVgRltN3u40eJasS5N2HYRzumNlck
 id: user--user
 disabled: false
 path: users

@@ -1,14 +1,17 @@
+uuid: 67cbeb02-9029-42f7-a3e2-c9503c0580e8
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_difficulty
     - node.type.recipe
-  module:
-    - options
   enforced:
     module:
       - recipes_magazin
+  module:
+    - options
+_core:
+  default_config_hash: nlk0ko9QnPU8DiFf53CTCE_KqknftwS_yaR3mDcknm8
 id: node.recipe.field_difficulty
 field_name: field_difficulty
 entity_type: node

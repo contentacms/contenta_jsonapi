@@ -1,3 +1,4 @@
+uuid: 00ab137e-21c4-4a23-9c01-aad8b31a105f
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - node.type.tutorial
   module:
     - options
+_core:
+  default_config_hash: KKMsNHViPTGQImhtv_0tt5-JeDEFhgFoph5MpXS3_ks
 id: node.tutorial.field_topic
 field_name: field_topic
 entity_type: node

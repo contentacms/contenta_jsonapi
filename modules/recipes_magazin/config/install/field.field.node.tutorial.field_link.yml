@@ -1,3 +1,4 @@
+uuid: 6d12b4f0-f961-4dfd-94ff-867a61c668b2
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
     - node.type.tutorial
   module:
     - link
+_core:
+  default_config_hash: OvrIoPqRpBmk9AsJa7GD0oQMGhtQY8yoPTt1Wtp0Jog
 id: node.tutorial.field_link
 field_name: field_link
 entity_type: node

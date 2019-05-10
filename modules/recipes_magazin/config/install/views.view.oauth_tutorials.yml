@@ -1,3 +1,4 @@
+uuid: 12b18bf7-2d5b-4b5f-96cd-e44894900790
 langcode: en
 status: true
 dependencies:
@@ -15,6 +16,8 @@ dependencies:
     - options
     - text
     - user
+_core:
+  default_config_hash: evkNWt4jNvDi3WQYTggNwKIKuanUTwAB8B-8-yJ59sM
 id: oauth_tutorials
 label: 'OAuth Tutorials'
 module: views

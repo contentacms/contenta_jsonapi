@@ -1,6 +1,8 @@
 <?php
 
 use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Render\RenderContext;
+use Drupal\Core\Render\Renderer;
 use Drupal\Core\Url;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\node\NodeInterface;
@@ -366,9 +368,14 @@ function contenta_enhancements_node_view_alter(array &$build, NodeInterface $ent
   if ($entity->bundle() === 'page') {
     return;
   }
+  $renderer = \Drupal::service('renderer');
+  assert($renderer instanceof Renderer);
   // Retrieve JSON API representation of this node.
-  $entity_to_jsonapi = \Drupal::service('jsonapi_extras.entity.to_jsonapi');
-  $normalized = $entity_to_jsonapi->normalize($entity);
+  $render_context = new RenderContext();
+  $normalized = $renderer->executeInRenderContext($render_context, function () use ($entity) {
+    $entity_to_jsonapi = \Drupal::service('jsonapi_extras.entity.to_jsonapi');
+    return $entity_to_jsonapi->normalize($entity);
+  });
 
   // Generate markup.
   $flags = JSON_HEX_TAG

@@ -1,3 +1,4 @@
+uuid: ab5a36da-068b-4453-86cb-416d0f0ee54d
 langcode: en
 status: true
 dependencies:
@@ -6,6 +7,8 @@ dependencies:
       - recipes_magazin
   module:
     - comment
+_core:
+  default_config_hash: znTk_mIQHKRILJ2XrHOM4q7XVNJ4SHRhwtfKCtT4Z6Y
 id: comment_type--comment_type
 disabled: false
 path: commentTypes

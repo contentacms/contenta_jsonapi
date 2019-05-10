@@ -1,11 +1,13 @@
+uuid: 0b12a9bc-0c98-463c-a664-cff796f4bc74
 langcode: en
 status: true
 dependencies:
   enforced:
     module:
       - recipes_magazin
+_core:
+  default_config_hash: X5tu3tTxTAO0uPXsS40nkwdezdNUyT3krNMwyDarxVI
 name: Category
 vid: category
 description: ''
-hierarchy: 0
 weight: 0
