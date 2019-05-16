@@ -85,9 +85,10 @@ There are a bunch of example consumers, see http://www.contentacms.org/#example-
 ## Update
 
 Contenta CMS is a Fork & Go solution. There is no supported upgrade path. You may update your Drupal like you usually do.
+
 Please see documented issues : 
-[Proper way to update contenta cms](https://github.com/contentacms/contenta_jsonapi/issues/269)
-[Can not update with composer](https://github.com/contentacms/contenta_jsonapi/issues/229)
+- [Proper way to update contenta cms](https://github.com/contentacms/contenta_jsonapi/issues/269)
+- [Can not update with composer](https://github.com/contentacms/contenta_jsonapi/issues/229)
 
 ## Credits
 
