@@ -34,14 +34,7 @@
         "type:drupal-drush"
       ]
     },
-    "patches": {
-      "drupal/openapi": {
-        "Issue #3000458: Exclude disabled JSON API resources": "https://www.drupal.org/files/issues/2018-09-18/3000458--exclude-disabled-resource-types--2.patch",
-        "Issue #3000609: Documentation for JSON API collections needs minor adjustments": "https://www.drupal.org/files/issues/2018-09-18/3000609--jsonapi-collections-fixes--2.patch",
-        "Issue #3001993: Improve path method descriptions": "https://www.drupal.org/files/issues/2018-09-29/3001993--initial-description--7.patch",
-        "Issue #3053264: Miscellaneous fixes for JSON:API": "https://www.drupal.org/files/issues/2019-05-10/3053264--misc-fixes--7.patch"
-      }
-    }
+    "patches": {}
   },
   "require": {
     "cweagans/composer-patches": "^1.6.0",
