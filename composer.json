@@ -52,7 +52,7 @@
     "drupal/material_admin": "^1.0@alpha",
     "drupal/openapi": "^1.0@beta",
     "drupal/schemata": "^1.0@alpha",
-    "drupal/simple_oauth": "^3.3",
+    "drupal/simple_oauth": "^4.0",
     "drupal/subrequests": "^2.0",
     "drupal/video_embed_field": "^2.0",
     "drupal/openapi_ui": "^1.0@rc",

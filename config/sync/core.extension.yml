@@ -46,7 +46,6 @@ module:
   schemata_json_schema: 0
   serialization: 0
   simple_oauth: 0
-  simple_oauth_extras: 0
   subrequests: 0
   syslog: 0
   system: 0
