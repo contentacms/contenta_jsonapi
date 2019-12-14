@@ -34,7 +34,11 @@
         "type:drupal-drush"
       ]
     },
-    "patches": {}
+    "patches": {
+        "drupal/core": {
+            "Issue #2996114: Argument 2 passed to {closure}() must be an instance of ResourceType, NULL given": "https://www.drupal.org/files/issues/2019-12-03/2996114-99.patch"
+        }
+    }
   },
   "require": {
     "cweagans/composer-patches": "^1.6.0",
@@ -47,7 +51,7 @@
     "drupal/decoupled_router": "^1.1",
     "drupal/image_widget_crop": "^2.1",
     "drupal/inline_entity_form": "^1.0@beta",
-    "drupal/jsonapi_extras": "^3.12",
+    "drupal/jsonapi_extras": "^3.13",
     "drupal/jsonrpc": "^1.0@beta",
     "drupal/material_admin": "^1.0@alpha",
     "drupal/openapi": "^1.0@beta",
