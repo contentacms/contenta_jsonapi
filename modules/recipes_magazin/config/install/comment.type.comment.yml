@@ -6,7 +6,7 @@ dependencies:
     module:
       - recipes_magazin
 _core:
-  default_config_hash: rPGM-2cWTKeVb7qBpYWMJ0kl-Bom8ioUohvvVVLxPLM
+  default_config_hash: NgM353CZKWVLXGrCr8JiFiwTpnF9A6Xad83aw_BCyJQ
 id: comment
 label: 'Default comments'
 target_entity_type_id: node

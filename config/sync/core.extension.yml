@@ -3,6 +3,7 @@ module:
   block: 0
   breakpoint: 0
   ckeditor: 0
+  color: 0
   comment: 0
   config: 0
   consumers: 0
@@ -66,7 +67,6 @@ module:
 theme:
   stable: 0
   classy: 0
-  seven: 0
-  adminimal_theme: 0
   material_admin: 0
+  claro: 0
 profile: contenta_jsonapi
