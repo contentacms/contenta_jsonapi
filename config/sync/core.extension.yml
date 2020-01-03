@@ -13,6 +13,8 @@ module:
   dynamic_page_cache: 0
   editor: 0
   entity_reference: 0
+  environment_indicator: 0
+  environment_indicator_ui: 0
   field: 0
   field_ui: 0
   file: 0
