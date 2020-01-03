@@ -48,6 +48,7 @@
     "drupal/contentajs": "^1.0@beta",
     "drupal/core": "^8.8",
     "drupal/decoupled_router": "^1.1",
+    "drupal/environment_indicator": "^3.7",
     "drupal/image_widget_crop": "^2.1",
     "drupal/inline_entity_form": "^1.0@beta",
     "drupal/jsonapi_extras": "^3.13",
