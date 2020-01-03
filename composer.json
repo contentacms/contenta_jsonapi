@@ -43,7 +43,6 @@
   "require": {
     "cweagans/composer-patches": "^1.6.0",
     "drupal/admin_toolbar": "^1.23",
-    "drupal/adminimal_theme": "^1.4",
     "drupal/consumer_image_styles": "^3.0@rc",
     "drupal/consumers": "^1.8",
     "drupal/contentajs": "^1.0@beta",
@@ -55,7 +54,7 @@
     "drupal/jsonrpc": "^1.0@beta",
     "drupal/material_admin": "^1.0@alpha",
     "drupal/openapi": "^2.0@rc",
-    "drupal/openapi": "^2.0@rc",
+    "drupal/openapi_jsonapi": "^2.0@rc",
     "drupal/schemata": "^1.0@alpha",
     "drupal/simple_oauth": "^4.0",
     "drupal/subrequests": "^2.0",
