@@ -55,7 +55,7 @@
     "drupal/jsonrpc": "^1.0@beta",
     "drupal/material_admin": "1.x-dev",
     "drupal/openapi": "^1.0@beta",
-    "drupal/schemata": "^1.0@alpha",
+    "drupal/schemata": "1.x-dev",
     "drupal/simple_oauth": "^4.0",
     "drupal/subrequests": "^2.0",
     "drupal/video_embed_field": "^2.0",
