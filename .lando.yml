@@ -1,0 +1,4 @@
+name: smrt1_contenta
+recipe: drupal8
+config:
+  webroot: .
