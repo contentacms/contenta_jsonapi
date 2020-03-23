@@ -62,6 +62,7 @@ module:
   user: 0
   views: 0
   views_ui: 0
+  warmer: 0
   menu_link_content: 1
   contenta_jsonapi: 1000
 theme:

@@ -61,7 +61,8 @@
     "drupal/subrequests": "^2.0",
     "drupal/video_embed_field": "^2.0",
     "drupal/openapi_ui": "^1.0@rc",
-    "drupal/openapi_ui_redoc": "^1.0@rc"
+    "drupal/openapi_ui_redoc": "^1.0@rc",
+    "drupal/warmer": "^1.1"
   },
   "config": {
     "process-timeout": 0
