@@ -42,7 +42,7 @@
   },
   "require": {
     "cweagans/composer-patches": "^1.6.0",
-    "drupal/admin_toolbar": "^1.23",
+    "drupal/admin_toolbar": "^2.2",
     "drupal/consumer_image_styles": "^3.0@rc",
     "drupal/consumers": "^1.8",
     "drupal/contentajs": "^1.0@beta",
