@@ -51,6 +51,7 @@
     "drupal/environment_indicator": "^3.7",
     "drupal/image_widget_crop": "^2.1",
     "drupal/inline_entity_form": "^1.0@beta",
+    "drupal/jsonapi_boost": "^1.0",
     "drupal/jsonapi_extras": "^3.13",
     "drupal/jsonrpc": "^1.0@beta",
     "drupal/material_admin": "^1.0@alpha",
