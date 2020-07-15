@@ -59,7 +59,7 @@
     "drupal/openapi_jsonapi": "^2.0@rc",
     "drupal/schemata": "^1.0@alpha",
     "drupal/simple_oauth": "^4.0",
-    "drupal/subrequests": "^2.0",
+    "drupal/subrequests": "^3",
     "drupal/video_embed_field": "^2.0",
     "drupal/openapi_ui": "^1.0@rc",
     "drupal/openapi_ui_redoc": "^1.0@rc",
