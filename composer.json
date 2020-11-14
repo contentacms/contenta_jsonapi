@@ -48,7 +48,7 @@
     "drupal/contentajs": "^1.0@beta",
     "drupal/core": "^8.8",
     "drupal/decoupled_router": "^2",
-    "drupal/environment_indicator": "^3.7",
+    "drupal/environment_indicator": "^4",
     "drupal/image_widget_crop": "^2.1",
     "drupal/inline_entity_form": "^1.0@beta",
     "drupal/jsonapi_boost": "^2",
@@ -63,7 +63,7 @@
     "drupal/video_embed_field": "^2.0",
     "drupal/openapi_ui": "^1.0@rc",
     "drupal/openapi_ui_redoc": "^1.0@rc",
-    "drupal/warmer": "^1.1"
+    "drupal/warmer": "^2"
   },
   "config": {
     "process-timeout": 0
