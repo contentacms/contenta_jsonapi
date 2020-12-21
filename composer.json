@@ -46,7 +46,7 @@
     "drupal/consumer_image_styles": "^3",
     "drupal/consumers": "^1.8",
     "drupal/contentajs": "^1.0@beta",
-    "drupal/core": "^8.8",
+    "drupal/core": "^8.9",
     "drupal/decoupled_router": "^2",
     "drupal/environment_indicator": "^4",
     "drupal/image_widget_crop": "^2.1",
