@@ -56,7 +56,7 @@
     "drupal/jsonrpc": "^2",
     "drupal/material_admin": "^1.0@alpha",
     "drupal/openapi": "^2.0@rc",
-    "drupal/openapi_jsonapi": "^2.0@rc",
+    "drupal/openapi_jsonapi": "^3",
     "drupal/schemata": "^1.0@alpha",
     "drupal/simple_oauth": "^5",
     "drupal/subrequests": "^3",
