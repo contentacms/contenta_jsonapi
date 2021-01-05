@@ -1,6 +1,7 @@
 name: Contenta Enhancements
 description: Enhancements for the Contenta CMS profile.
 core: 8.x
+core_version_requirement: ^8 || ^9
 type: module
 dependencies:
   - simple_oauth
