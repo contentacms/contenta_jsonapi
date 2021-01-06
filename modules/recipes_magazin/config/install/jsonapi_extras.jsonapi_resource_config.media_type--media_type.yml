@@ -8,7 +8,7 @@ dependencies:
   module:
     - media
 _core:
-  default_config_hash: HWbpKC9Ql6SxsdYpAtcWrQUgUP7Nk1nVCax4iXHLuVc
+  default_config_hash: dRiWCnOt3RVDSNlXnfRs8oW--aBuL2-iW37SMWdL3JQ
 id: media_type--media_type
 disabled: true
 path: media_type/media_type

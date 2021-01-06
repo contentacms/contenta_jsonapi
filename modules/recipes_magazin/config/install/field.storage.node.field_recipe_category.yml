@@ -9,7 +9,7 @@ dependencies:
     - node
     - taxonomy
 _core:
-  default_config_hash: w98rEGnJAwRxRoTCy9lwDLN26MSfjP2_Sqmn24lnGng
+  default_config_hash: 0RRz4j0Sq_376zZmORlY13zGZosNg6dwGwTPFHsP7sg
 id: node.field_recipe_category
 field_name: field_recipe_category
 entity_type: node

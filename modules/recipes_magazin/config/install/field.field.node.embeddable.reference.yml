@@ -9,7 +9,7 @@ dependencies:
     - node.type.page
     - node.type.recipe
 _core:
-  default_config_hash: oDcgEjQxuktKSjxqAbjl6yM9rN0pzfMMKB3A8wfG0Sc
+  default_config_hash: VdCzP1qiStjEAGkjoGoWHUTFviNvHo3EfXbIDCX_D0g
 id: node.embeddable.reference
 field_name: reference
 entity_type: node

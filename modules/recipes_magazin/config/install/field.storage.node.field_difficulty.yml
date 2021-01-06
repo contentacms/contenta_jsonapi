@@ -9,7 +9,7 @@ dependencies:
     - node
     - options
 _core:
-  default_config_hash: KqAZGsFoRbCnwZNyZ6cDeuToR9LWO9GSeMmb2RobhBw
+  default_config_hash: B6dvOkyU2ujJT5UlENGoWV8XRS6InHpt-BbHCUfMIkE
 id: node.field_difficulty
 field_name: field_difficulty
 entity_type: node

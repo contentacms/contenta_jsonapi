@@ -7,7 +7,7 @@ dependencies:
     - media.type.image
     - node.type.embeddable
 _core:
-  default_config_hash: r4t4L1Qk6y82_RGPAcO9nPsMnHvRfWqech4kGH-v_Bs
+  default_config_hash: lJ2iX1Vh_PXjB34VKuqLLH2IF3TlCwPrLEV8kQtFei0
 id: node.embeddable.background_image
 field_name: background_image
 entity_type: node

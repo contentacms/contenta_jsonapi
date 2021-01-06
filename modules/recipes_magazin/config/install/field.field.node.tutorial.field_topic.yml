@@ -8,7 +8,7 @@ dependencies:
   module:
     - options
 _core:
-  default_config_hash: KKMsNHViPTGQImhtv_0tt5-JeDEFhgFoph5MpXS3_ks
+  default_config_hash: hrbmgcqoR6eaw4qYj28Bm-znTQCjYb6JDkTum765GE0
 id: node.tutorial.field_topic
 field_name: field_topic
 entity_type: node

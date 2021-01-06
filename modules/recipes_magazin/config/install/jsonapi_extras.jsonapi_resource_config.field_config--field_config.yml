@@ -8,7 +8,7 @@ dependencies:
   module:
     - field
 _core:
-  default_config_hash: SsadFEi2fbdBZ2YQYDg7UgWJb8NT9_Rrm3of17k0t3w
+  default_config_hash: mqisEWS9MoyjTykiOjk-Oc9Y015VNoWfoFAYjZCYUdo
 id: field_config--field_config
 disabled: true
 path: field_config/field_config

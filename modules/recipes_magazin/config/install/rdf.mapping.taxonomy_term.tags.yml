@@ -10,7 +10,7 @@ dependencies:
   module:
     - taxonomy
 _core:
-  default_config_hash: VOwv3PJ_k1N_Hh1R41NFazXUkzJZn1BbYMKiT_HNJVs
+  default_config_hash: _YqpbUf1-30r--MjVCbSLIfy-pS1FKHPzVI4KyPyhaA
 id: taxonomy_term.tags
 targetEntityType: taxonomy_term
 bundle: tags

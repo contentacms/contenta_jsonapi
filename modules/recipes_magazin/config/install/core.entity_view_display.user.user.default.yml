@@ -12,7 +12,7 @@ dependencies:
     - image
     - user
 _core:
-  default_config_hash: qb-T-QH0q3T1octA_fh04LsW5qpV0oMeQZGsfeeiPJg
+  default_config_hash: fCtPihgfwWxrHTEdacy4pRhQ44kQ5Myz5Z595h5CxvQ
 id: user.user.default
 targetEntityType: user
 bundle: user

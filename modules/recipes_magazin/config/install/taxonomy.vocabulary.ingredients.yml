@@ -6,7 +6,7 @@ dependencies:
     module:
       - recipes_magazin
 _core:
-  default_config_hash: mp0cZp4rzDl0Lx5DvST12ipMJpz0mE8b0xtdUtMdpPM
+  default_config_hash: 0dPWZo3sVLVAueA0y8vBp2HcOAoL7faqTiLhGeKMbfI
 name: Ingredients
 vid: ingredients
 description: ''

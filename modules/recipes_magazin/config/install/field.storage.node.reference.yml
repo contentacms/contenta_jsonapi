@@ -8,7 +8,7 @@ dependencies:
   module:
     - node
 _core:
-  default_config_hash: pL6lobNN4z_wXDcj68UjaDqN3_P9A0ehM6m4OOgWhlE
+  default_config_hash: dvSrrJ4Bn1U8XFscQcJn1kgy_o6IhmLT2fZWQt2I-F4
 id: node.reference
 field_name: reference
 entity_type: node

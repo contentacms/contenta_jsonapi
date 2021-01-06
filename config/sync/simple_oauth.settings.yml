@@ -2,3 +2,7 @@ access_token_expiration: 300
 refresh_token_expiration: 870000
 public_key: ../keys/public.key
 private_key: ../keys/private.key
+authorization_code_expiration: null
+token_cron_batch_size: 0
+remember_clients: false
+use_implicit: false

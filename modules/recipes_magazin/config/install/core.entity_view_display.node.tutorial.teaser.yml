@@ -12,7 +12,7 @@ dependencies:
   module:
     - user
 _core:
-  default_config_hash: Cram1rqEYzw0Ca27_GuhTYx7_HtJvyq5itWXWcU9AYA
+  default_config_hash: RX_QVZCN7sNW3kSOp1iajYWQeWRPej9RgdI1Gdt4spU
 id: node.tutorial.teaser
 targetEntityType: node
 bundle: tutorial

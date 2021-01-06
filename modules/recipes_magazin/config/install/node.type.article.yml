@@ -6,7 +6,7 @@ dependencies:
     module:
       - recipes_magazin
 _core:
-  default_config_hash: TLXWU1bw1HFVNOgxMYmpphCtuIOaE77-jMFcw1o8Pd4
+  default_config_hash: BZnlJw3hJuMRsUuvXLHbDxGFo0d2xJ-ThAXqRcgXzUw
 name: Article
 type: article
 description: 'Use <em>articles</em> for time-sensitive content like news, press releases or blog posts.'

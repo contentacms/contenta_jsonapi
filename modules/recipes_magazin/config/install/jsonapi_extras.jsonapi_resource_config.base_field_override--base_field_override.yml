@@ -6,7 +6,7 @@ dependencies:
     module:
       - recipes_magazin
 _core:
-  default_config_hash: WIR2xAWKHIBP_ibCFEsjqspmzm0qBgn-00kYPbDedIs
+  default_config_hash: g4a2PeWfWTsjflplu0xSRgj8nuNAyO9apsCk1BH4ets
 id: base_field_override--base_field_override
 disabled: true
 path: base_field_override/base_field_override

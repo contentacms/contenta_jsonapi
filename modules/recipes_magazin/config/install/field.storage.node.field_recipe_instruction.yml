@@ -9,7 +9,7 @@ dependencies:
     - node
     - text
 _core:
-  default_config_hash: zPZrNeAscDjYoOOwzB54UM2FdXEkQtsa93aT8Hs1KjE
+  default_config_hash: PnK7d26gTtS4Rgx7Re_uwD01gmHdF0GVjyhBGfymMcI
 id: node.field_recipe_instruction
 field_name: field_recipe_instruction
 entity_type: node

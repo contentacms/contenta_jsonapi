@@ -11,7 +11,7 @@ dependencies:
   module:
     - text
 _core:
-  default_config_hash: 0BWbW3QkJED0E0XPK8EdfbIN1ji9tYAWrCb5drCkvyA
+  default_config_hash: 1CSHDYokc6_5lh5HhmvYGVnOR6OZGRY4ldULuWPXM5k
 id: node.page.body
 field_name: body
 entity_type: node

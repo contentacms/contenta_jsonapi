@@ -8,7 +8,7 @@ dependencies:
   module:
     - responsive_image
 _core:
-  default_config_hash: eCgy0RbGISCNXZi-guEKdtj0u5e2qeRfLVFuQSiZhos
+  default_config_hash: XYaXaq9a245uVvOsxZyqMQhB4yJYzYACbd8JSUIMYrY
 id: responsive_image_style--responsive_image_style
 disabled: true
 path: responsive_image_style/responsive_image_style

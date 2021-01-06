@@ -6,7 +6,7 @@ dependencies:
     module:
       - recipes_magazin
 _core:
-  default_config_hash: X5tu3tTxTAO0uPXsS40nkwdezdNUyT3krNMwyDarxVI
+  default_config_hash: xxcjX6pBiiIcnr0DJAHV7iT_xUzThaCM6AaJ5ejC6xk
 name: Category
 vid: category
 description: ''

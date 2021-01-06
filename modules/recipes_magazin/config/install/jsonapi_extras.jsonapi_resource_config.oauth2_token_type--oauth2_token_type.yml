@@ -8,7 +8,7 @@ dependencies:
   module:
     - simple_oauth
 _core:
-  default_config_hash: Zbony3tX_jvyD3VdhK6jJ_5_5XGuFxNUh9UBjfD73o0
+  default_config_hash: H4j2KH8dm3ky4JJpYtwLHHx2BeFCdPSCR6PymmR7HoU
 id: oauth2_token_type--oauth2_token_type
 disabled: true
 path: oauth2_token_type/oauth2_token_type

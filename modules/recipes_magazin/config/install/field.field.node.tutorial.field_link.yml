@@ -8,7 +8,7 @@ dependencies:
   module:
     - link
 _core:
-  default_config_hash: OvrIoPqRpBmk9AsJa7GD0oQMGhtQY8yoPTt1Wtp0Jog
+  default_config_hash: 6YvuVJH6KAUKGySw42V2hngvwWSPjRK39KoRHVWNkpM
 id: node.tutorial.field_link
 field_name: field_link
 entity_type: node

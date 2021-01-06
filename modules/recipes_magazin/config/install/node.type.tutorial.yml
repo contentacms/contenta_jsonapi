@@ -12,7 +12,7 @@ third_party_settings:
     available_menus: {  }
     parent: ''
 _core:
-  default_config_hash: 0JxSCG57m_HnE8O46pqy8sIjxalwiVnUEG9wj0_O9eI
+  default_config_hash: CSuIgWmpLDSQbX5cBY50uQQsMBuIHI5SoxyLgNsV7VU
 name: Tutorial
 type: tutorial
 description: 'A brief wrapper on external documentation for a particular piece in Contenta CMS.'

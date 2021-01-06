@@ -11,7 +11,7 @@ dependencies:
   module:
     - text
 _core:
-  default_config_hash: Py7lzmUe7xlQab2cmuPIhxPUtdOG2L865DNsURqZRvM
+  default_config_hash: h8q4SOVB6hiCBIPDZe1QX6HdncgndrpFruLEhHp9wqg
 id: node.recipe.field_summary
 field_name: field_summary
 entity_type: node

@@ -13,7 +13,7 @@ third_party_settings:
       - main
     parent: 'main:'
 _core:
-  default_config_hash: 14dfMYCujxqBJ9DTAMNtJAKzV4wTXHvtHAkFr4_eQwk
+  default_config_hash: 8QcbgZQxHmOhi-_RmtIXkgbv0NbjD49HVJ20xzcdkVs
 name: Embeddable
 type: embeddable
 description: "Provides a piece of embeddable content, something to be used by the frontend on their \"frontpages\" or individual pages.\r\nThese embeddables have a machine name, so you can reference to them, if you like."

@@ -8,7 +8,7 @@ dependencies:
   module:
     - node
 _core:
-  default_config_hash: l6geBfwM78HDov-DHyG4CWA2Wwl3ti0wUgLInFGMJ5o
+  default_config_hash: QmAcvkeZV_koHeIUJ8wF9CXZjoRvT6wLAcgjtbgbZVY
 id: node.field_cooking_time
 field_name: field_cooking_time
 entity_type: node

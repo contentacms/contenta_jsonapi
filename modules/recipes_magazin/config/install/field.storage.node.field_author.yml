@@ -9,7 +9,7 @@ dependencies:
     - node
     - user
 _core:
-  default_config_hash: CU50VGPh5Ex8eqUO-ldSr4wbydsdNAbneLRtX7ztADE
+  default_config_hash: c_kMNoRCcpM5k0i5-8rKW7qr90Tp9HbrZesD_MBdd0s
 id: node.field_author
 field_name: field_author
 entity_type: node

@@ -9,7 +9,7 @@ dependencies:
     module:
       - recipes_magazin
 _core:
-  default_config_hash: WEGlZBt4nKFbRM_8Wmlk-6N4SU31PXOQa_7jMjfKI8s
+  default_config_hash: GfRnydMpAf4FZ5qmxo8_KAI79OKUVH5p_WvsE5EY0bI
 id: node.recipe.field_cooking_time
 field_name: field_cooking_time
 entity_type: node

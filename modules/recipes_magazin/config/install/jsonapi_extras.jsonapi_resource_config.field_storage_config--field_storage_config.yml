@@ -8,7 +8,7 @@ dependencies:
   module:
     - field
 _core:
-  default_config_hash: F2SaNZaH2o5CWrrhtye5JO3-9LOJ7eins66pveFXSl8
+  default_config_hash: sOji8jzm-YVUmdGAeWG5hHV-cyWSOPC4ROWVxkeYJ2M
 id: field_storage_config--field_storage_config
 disabled: true
 path: field_storage_config/field_storage_config

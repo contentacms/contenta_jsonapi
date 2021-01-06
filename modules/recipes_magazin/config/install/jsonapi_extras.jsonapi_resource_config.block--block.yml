@@ -8,7 +8,7 @@ dependencies:
   module:
     - block
 _core:
-  default_config_hash: jrvizSvEjI1zshblqwKcgLyQXGONvVO_ETJEW0kUtvs
+  default_config_hash: 6VocLq84YEJNxRRC4QK_lX--i1Titdcsr0V4oYb78GU
 id: block--block
 disabled: false
 path: blocks

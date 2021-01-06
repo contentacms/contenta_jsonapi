@@ -8,7 +8,7 @@ dependencies:
   module:
     - consumers
 _core:
-  default_config_hash: 8rzg8upZDcgdY0h6iqSaPtB7cQNbzXx7Z2LkHuQh1MA
+  default_config_hash: DrR5vrfN2sbrOCCYVDg4I1700HLQAI8nQt2LJ5Zjkf8
 id: consumer--consumer
 disabled: true
 path: consumer/consumer

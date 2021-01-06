@@ -6,7 +6,7 @@ dependencies:
     module:
       - recipes_magazin
 _core:
-  default_config_hash: 2XQhpmhguCmBQNIa4MBxA4ovGDbUp7HCUS-Nt1Azf0o
+  default_config_hash: GG-9mZ3v9aDvELA3P7JfgjMW_XxmmssNCIkujCQx-Zc
 id: umami_dates
 label: 'Umami dates'
 locked: false

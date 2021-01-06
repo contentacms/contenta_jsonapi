@@ -9,7 +9,7 @@ dependencies:
     - node
     - options
 _core:
-  default_config_hash: o-o6lgwpBeqbemEX_t689OCx5ONvNeAMj8beourxlc4
+  default_config_hash: jc2vMf8jz3ha2nrtoHGMJjli-jRhTyeILdEK7bsnJU4
 id: node.field_topic
 field_name: field_topic
 entity_type: node

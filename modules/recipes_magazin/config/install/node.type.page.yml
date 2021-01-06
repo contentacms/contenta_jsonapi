@@ -6,7 +6,7 @@ dependencies:
     module:
       - recipes_magazin
 _core:
-  default_config_hash: W1-gYM05WBFHvtZMrBAn2XltHl0faQatKUM8uICsp6o
+  default_config_hash: hl6ngvD86NfGC0dGKPZtou5zvMiyqfRkqQi_HfhokHE
 name: 'Basic page'
 type: page
 description: 'Use <em>basic pages</em> for your static content, such as an ''About us'' page.'

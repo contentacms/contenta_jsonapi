@@ -8,7 +8,7 @@ dependencies:
   module:
     - image
 _core:
-  default_config_hash: BKI7GQ2BYU7i9yG0lSDieRlfLh4zHZYjPI2mKbPXDTQ
+  default_config_hash: 5FTr7a2XGISwZbGCKO8pWKFQPPqAysaMcZ0Z44jHKG8
 id: image_style--image_style
 disabled: false
 path: imageStyles

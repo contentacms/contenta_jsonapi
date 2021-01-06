@@ -11,7 +11,7 @@ dependencies:
   module:
     - text
 _core:
-  default_config_hash: a7mhlLz3uFHuPkd1aWsZoWN2VbzWB44Y5RZv_QySKv4
+  default_config_hash: 9aAh_9w52R-VtvQQhVneMNXdtZc2Mlab6VChpPHGBEM
 id: comment.comment.comment_body
 field_name: comment_body
 entity_type: comment

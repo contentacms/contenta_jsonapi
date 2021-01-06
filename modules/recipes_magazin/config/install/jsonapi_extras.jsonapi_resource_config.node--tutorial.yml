@@ -5,7 +5,7 @@ dependencies:
   config:
     - node.type.tutorial
 _core:
-  default_config_hash: bA6CJRdwQVelQxIepMU68WlVUymjX2FRnzGM9NInl3Q
+  default_config_hash: '-y2wKdYLpGWGaAzWvPKPmhvK3cXuoAijh4cZJnPi20A'
 id: node--tutorial
 disabled: false
 path: tutorials

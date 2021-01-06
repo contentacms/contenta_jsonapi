@@ -25,7 +25,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: DDFVxIjMz0meSoHP43B4TRnxN4VIB4VqcOnyVLIIvds
+  default_config_hash: hnW3kQccSsjgAdt0hKHss_9gg27HV1nL2xjvkwOpIsU
 id: node.recipe.default
 targetEntityType: node
 bundle: recipe

@@ -9,7 +9,7 @@ dependencies:
     module:
       - recipes_magazin
 _core:
-  default_config_hash: w5_BpksO7Tyd_1Q24FGlj3FFWWhOeJnY7LNBwJ9opfk
+  default_config_hash: JYuyoui4Yp-n_FlGspOMkxc7hWe_RpBYqmH50fvRAFY
 id: node.recipe.field_preparation_time
 field_name: field_preparation_time
 entity_type: node

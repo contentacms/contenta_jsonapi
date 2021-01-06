@@ -8,7 +8,7 @@ dependencies:
   module:
     - file
 _core:
-  default_config_hash: 38qHdGhOHA7RVVlAtb_ZmVwjvk7-nJkbuGj300tvU8I
+  default_config_hash: mHgG1Hh3mA_B-HChvPPr9IRUvDs0uH74Ju87GVLNzJI
 id: file--file
 disabled: false
 path: files

@@ -7,7 +7,7 @@ dependencies:
     - media.type.image
     - node.type.tutorial
 _core:
-  default_config_hash: UXIjFBpanj7TssyRgDdON5dwBo6pCwfJzzxG6N3kWyA
+  default_config_hash: OrbnggsBFQOejKIIAPWNAHa4lFGwX322JRH_jHYBtQ8
 id: node.tutorial.field_image
 field_name: field_image
 entity_type: node

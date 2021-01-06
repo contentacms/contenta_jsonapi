@@ -17,7 +17,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: evkNWt4jNvDi3WQYTggNwKIKuanUTwAB8B-8-yJ59sM
+  default_config_hash: OEZPb4_bLmKI5BAd-Qf6O6yEwYFxzf6u7iJfooCIxkI
 id: oauth_tutorials
 label: 'OAuth Tutorials'
 module: views

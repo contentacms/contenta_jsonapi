@@ -8,7 +8,7 @@ dependencies:
   module:
     - node
 _core:
-  default_config_hash: RALBJbVqgxSBB2nWjwZaKhLVPNvq7JuQHTVMyYJXPyw
+  default_config_hash: OWJrX3eJcF466mgrciJwkJdcL-Nsth33tIPy_dieE80
 id: node.field_number_of_servings
 field_name: field_number_of_servings
 entity_type: node

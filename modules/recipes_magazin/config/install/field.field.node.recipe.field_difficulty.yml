@@ -11,7 +11,7 @@ dependencies:
   module:
     - options
 _core:
-  default_config_hash: nlk0ko9QnPU8DiFf53CTCE_KqknftwS_yaR3mDcknm8
+  default_config_hash: DcwOHLWBLscOOiOMXsDRflb0xwQj0ZKN6drsGVe5nlU
 id: node.recipe.field_difficulty
 field_name: field_difficulty
 entity_type: node

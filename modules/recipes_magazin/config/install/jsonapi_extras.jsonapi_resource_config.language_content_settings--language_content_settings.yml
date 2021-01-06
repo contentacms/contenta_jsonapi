@@ -8,7 +8,7 @@ dependencies:
   module:
     - language
 _core:
-  default_config_hash: DCOF8KBCkh1qR9VEb9hqphTU1xbALZ1bIq-ras7I0qk
+  default_config_hash: ZhDQllpuDxBWRhdY78HSO9ngDOQn9TWUbBZvf647kKI
 id: language_content_settings--language_content_settings
 disabled: true
 path: language_content_settings/language_content_settings

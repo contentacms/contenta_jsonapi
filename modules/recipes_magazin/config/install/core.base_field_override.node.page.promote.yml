@@ -8,7 +8,7 @@ dependencies:
     module:
       - recipes_magazin
 _core:
-  default_config_hash: xC-ekoxRmRwwxFE4Atgn6yauGAkWyjnogWYsh67z1wQ
+  default_config_hash: VkwTCNmnFNIIozVgSNnC9lFeoHWxxyZo44bpav4oIGA
 id: node.page.promote
 field_name: promote
 entity_type: node

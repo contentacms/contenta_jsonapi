@@ -8,7 +8,7 @@ dependencies:
   module:
     - editor
 _core:
-  default_config_hash: JWAyrZOpmv9e-XiSYGxbk5_I0Ukj8SjRIo5_wJMC_KA
+  default_config_hash: r3LYqzHT624dPbptprIkV5p2L4YgJwhiUMvNdHroVN8
 id: editor--editor
 disabled: true
 path: editor/editor

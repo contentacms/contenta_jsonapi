@@ -5,7 +5,7 @@ dependencies:
   config:
     - node.type.tutorial
 _core:
-  default_config_hash: P9RTCoAI-xpSxXOkMgSz0ZlI3Le8rjaxbCinlvUawnM
+  default_config_hash: tOVZT5jv70xSDntxETG9fK0qR0m0DN7jytk9UIbnlAY
 id: node.tutorial.title
 field_name: title
 entity_type: node

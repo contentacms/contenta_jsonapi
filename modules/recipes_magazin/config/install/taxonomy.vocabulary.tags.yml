@@ -6,7 +6,7 @@ dependencies:
     module:
       - recipes_magazin
 _core:
-  default_config_hash: 8QLN5VXCDrRsxzHAVjtZd-JQLzxy304_afayx5e3CaU
+  default_config_hash: 31AS2UCBtmvLaDJVkoahnj-_iu8CWDUsF7UfukxSJu8
 name: Tags
 vid: tags
 description: 'Use tags to group articles on similar topics into categories.'

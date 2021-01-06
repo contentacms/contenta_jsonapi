@@ -8,7 +8,7 @@ dependencies:
   module:
     - system
 _core:
-  default_config_hash: dTsnNjnk3V0_Ow2q0TT8m7K_E50txAx-RiZVkotLjec
+  default_config_hash: 4JaUNTOflcH_AqRG-x6LHX3Iw7JtfpgbziYtJp_0Ztg
 id: action--action
 disabled: true
 path: action/action

@@ -14,7 +14,7 @@ dependencies:
     - path
     - text
 _core:
-  default_config_hash: '-_4vZY-dXhNoMc6nwguE6Nfpja0wLKKkRG_QIxqfZWk'
+  default_config_hash: oMBJIDx10N-qH53ilhiXnMK8fOxRS08WRdukOdcxFCo
 id: node.tutorial.default
 targetEntityType: node
 bundle: tutorial

@@ -8,7 +8,7 @@ dependencies:
     - image.style.medium_21_9
     - image.style.small_21_9
 _core:
-  default_config_hash: Uj48QRKWnyGEI9IqGnDgIB5kTVh0pwBFoEg5cntHv5I
+  default_config_hash: vhRJlzRwmTaT9xC7v4-eNJBSHwuOsK-HbIJ2pYGSkvU
 id: hero_or_banner
 label: 'Hero or Banner'
 image_style_mappings:

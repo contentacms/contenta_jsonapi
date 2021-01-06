@@ -8,7 +8,7 @@ dependencies:
   module:
     - node
 _core:
-  default_config_hash: rHtKXpIpmRmejNC8sXeT9loPWGC9MX60r1T48Eqs7DI
+  default_config_hash: UG4kgruZsDq8pn6tHUZhSzQnZqAVpNiNmUIWLw0Wn04
 id: node.field_preparation_time
 field_name: field_preparation_time
 entity_type: node

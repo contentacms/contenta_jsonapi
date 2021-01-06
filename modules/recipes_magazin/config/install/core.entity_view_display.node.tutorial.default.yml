@@ -14,7 +14,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: Q-TYFQgTEbUNYjAdKzn_ZfCJuHMXsFldkLGE8bAFOTg
+  default_config_hash: DCumE2L1lahH6jwVH61cB17_8vHnAFf4IcZq2m0fzLQ
 id: node.tutorial.default
 targetEntityType: node
 bundle: tutorial

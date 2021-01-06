@@ -8,7 +8,7 @@ dependencies:
   module:
     - user
 _core:
-  default_config_hash: XMi-tSHJbwyvr6jVgRltN3u40eJasS5N2HYRzumNlck
+  default_config_hash: 6PlhKpIBO7vz992v58gvwnSgMUVVBjMnpDiABdZOUCg
 id: user--user
 disabled: false
 path: users

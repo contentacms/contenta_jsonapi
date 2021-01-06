@@ -7,7 +7,7 @@ dependencies:
     - media.type.image
     - node.type.recipe
 _core:
-  default_config_hash: aP5Hph6vnFcuxW32cvI83DHm1GyZEZG4IwOK5a-nsDA
+  default_config_hash: KUXzVKizd9cT11bSH-F3WLEgE7Q1Uw5NLI9TJi5Kl0Y
 id: node.recipe.field_image
 field_name: field_image
 entity_type: node

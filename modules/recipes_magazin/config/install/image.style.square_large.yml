@@ -7,7 +7,7 @@ dependencies:
       - image
       - recipes_magazin
 _core:
-  default_config_hash: uUYwtUUpFH_E9aa0QVeAFYEGCiwaP6li-1_b7XYA8NI
+  default_config_hash: gsQAWQ8pe2MUnScd5KC_Qu4NHEgtWgpAsip0ohvTG9M
 name: square_large
 label: 'Square Large'
 effects:
