@@ -69,6 +69,5 @@ module:
 theme:
   stable: 0
   classy: 0
-  material_admin: 0
   claro: 0
 profile: contenta_jsonapi

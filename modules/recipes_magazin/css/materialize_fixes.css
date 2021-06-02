@@ -1,0 +1,20 @@
+nav {
+  background-color: unset;
+  color: unset;
+  width: unset;
+  height: unset;
+  line-height: unset;
+  box-shadow: unset;
+}
+
+.breadcrumb:last-child {
+  color: unset;
+}
+
+nav ul a {
+  font-size: unset;
+}
+
+select {
+  display: unset;
+}

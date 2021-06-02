@@ -62,7 +62,6 @@
         "drupal/jsonapi_boost": "^2",
         "drupal/jsonapi_extras": "^3.13",
         "drupal/jsonrpc": "^2",
-        "drupal/material_admin": "^2||^1.0@alpha",
         "drupal/openapi": "^2.0@rc",
         "drupal/openapi_jsonapi": "^3",
         "drupal/schemata": "^1.0@alpha",
