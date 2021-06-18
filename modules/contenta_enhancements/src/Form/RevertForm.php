@@ -7,6 +7,7 @@ use Drupal\Core\Extension\ModuleInstallerInterface;
 use Drupal\Core\Extension\ThemeInstallerInterface;
 use Drupal\Core\Form\ConfirmFormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Messenger\MessengerInterface;
 use Drupal\Core\Url;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -23,16 +24,23 @@ class RevertForm extends ConfirmFormBase {
   protected $siteConfig;
 
   /**
+   * @var \Drupal\Core\Messenger\MessengerInterface
+   */
+  protected $messenger;
+
+  /**
    * RevertForm constructor.
    *
    * @param \Drupal\Core\Extension\ModuleInstallerInterface $module_installer
    * @param \Drupal\Core\Extension\ModuleInstallerInterface $module_installer
    * @param \Drupal\Core\Config\Config $theme_config
    * @param \Drupal\Core\Config\Config $site_config
+   * @param \Drupal\Core\Messenger\MessengerInterface $messenger
    */
-  public function __construct(ModuleInstallerInterface $module_installer, Config $site_config) {
+  public function __construct(ModuleInstallerInterface $module_installer, Config $site_config, MessengerInterface $messenger) {
     $this->moduleInstaller = $module_installer;
     $this->siteConfig = $site_config;
+    $this->messenger = $messenger;
   }
 
   /**
@@ -41,7 +49,8 @@ class RevertForm extends ConfirmFormBase {
   public static function create(ContainerInterface $container) {
     return new static(
       $container->get('module_installer'),
-      $container->get('config.factory')->getEditable('system.site')
+      $container->get('config.factory')->getEditable('system.site'),
+      $container->get('messenger')
     );
   }
 
@@ -60,7 +69,7 @@ class RevertForm extends ConfirmFormBase {
     $this->siteConfig->set('page.front', '/admin/content');
     $this->siteConfig->save();
     $this->moduleInstaller->uninstall(['recipes_magazin']);
-    drupal_set_message($this->t('Contenta has successfully reverted to a clean state!'));
+    $this->messenger->addMessage($this->t('Contenta has successfully reverted to a clean state!'));
     $form_state->setRedirectUrl($this->getCancelUrl());
   }
 
