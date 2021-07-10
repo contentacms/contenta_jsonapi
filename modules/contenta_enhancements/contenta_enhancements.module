@@ -365,7 +365,7 @@ function contenta_enhancements_toolbar_alter(&$items) {
 function contenta_enhancements_node_view_alter(array &$build, NodeInterface $entity, EntityViewDisplayInterface $display) {
   // Make sure the help pages are left alone.
   // TODO: Use the concept of view modes to solve this problem, not this hack.
-  if ($entity->bundle() === 'page') {
+  if ($entity->entityTypeId != 'node') {
     return;
   }
   $renderer = \Drupal::service('renderer');
