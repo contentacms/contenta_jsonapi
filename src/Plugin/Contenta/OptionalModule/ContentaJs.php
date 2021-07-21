@@ -12,7 +12,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   label = @Translation("Contenta JS"),
  *   description = @Translation("Provides server side configuration options for Contenta JS. If you use Contenta JS you will need this module."),
  *   type = "module",
- *   standardlyEnabled = true,
+ *   standardlyEnabled = false,
  * )
  */
 class ContentaJs extends AbstractOptionalModule {

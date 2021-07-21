@@ -13,7 +13,7 @@ use Drupal\Core\Form\FormStateInterface;
  *   description = @Translation("The Recipes Magazine module adds a content model and default content for the Umami demo."),
  *   type = "module",
  *   weight = 10,
- *   standardlyEnabled = true,
+ *   standardlyEnabled = false,
  * )
  */
 class RecipesMagazin extends AbstractOptionalModule {
