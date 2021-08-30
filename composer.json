@@ -48,7 +48,7 @@
     "require": {
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.6.0",
-        "drupal/admin_toolbar": "^2.2",
+        "drupal/admin_toolbar": "^2.2||^3",
         "drupal/consumer_image_styles": "^3||^4",
         "drupal/consumers": "^1.8",
         "drupal/contentajs": "^1||^2",
