@@ -13,7 +13,6 @@ module:
   decoupled_router: 0
   dynamic_page_cache: 0
   editor: 0
-  entity_reference: 0
   environment_indicator: 0
   environment_indicator_ui: 0
   field: 0
