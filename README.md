@@ -3,6 +3,7 @@
   <img align="right" src="./logo.svg" alt="Contenta logo" title="Contenta logo" width="100">
 </h1>
 
+**LOOKING FOR HELP TO MAINTAIN CONTENTA**. It has been a while since I have found the motivation to keep Contenta CMS up-to-date and improved. I don't anticipate this changing in the near future. Please reach out if you would like to step up as a new maintainer of this project.
 
 Contenta is a content API and CMS based on Drupal 8. It provides a standard, jsonapi-based platform for building decoupled applications and websites.
 
