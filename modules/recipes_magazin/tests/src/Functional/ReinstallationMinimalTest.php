@@ -26,12 +26,14 @@ class ReinstallationMinimalTest extends BrowserTestBase {
     // there.
     $this->assertArrayHasKey('recipe', \Drupal::entityTypeManager()->getStorage('node_type')->loadMultiple());
     $count = \Drupal::entityTypeManager()->getStorage('node')->getQuery()
+      ->accessCheck()
       ->condition('type', 'recipe')
       ->count()
       ->execute();
     $this->assertGreaterThan(0, $count);
 
     $count = \Drupal::entityTypeManager()->getStorage('node')->getQuery()
+      ->accessCheck()
       ->condition('type', 'article')
       ->count()
       ->execute();
@@ -48,6 +50,7 @@ class ReinstallationMinimalTest extends BrowserTestBase {
     // there.
     $this->assertArrayHasKey('recipe', \Drupal::entityTypeManager()->getStorage('node_type')->loadMultiple());
     $count = \Drupal::entityTypeManager()->getStorage('node')->getQuery()
+      ->accessCheck()
       ->condition('type', 'recipe')
       ->count()
       ->execute();

@@ -2,7 +2,7 @@ name: Contenta JSON API
 type: profile
 description: 'Contenta distribution for API-First Drupal using JSON API.'
 core: 8.x
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^8 || ^9 || ^10
 
 # Optional: Declare your installation profile as a distribution
 # This will make the installer auto-select this installation profile.
