@@ -35,6 +35,7 @@ module:
   media_library: 0
   menu_ui: 0
   migrate: 0
+  mysql: 0
   node: 0
   openapi: 0
   openapi_jsonapi: 0
